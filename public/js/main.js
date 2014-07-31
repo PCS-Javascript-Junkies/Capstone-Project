@@ -2,15 +2,15 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
-var MainView = require('./views/main-view');
+var AdventureView = require('./views/adventure-view');
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'main'
+    '': 'callAdventureView'
   },
-  main: function () {
-    this.mainView = new MainView();
-    this.mainView.render();
+  callAdventureView: function () {
+    this.adventureView = new AdventureView();
+    this.adventureView.render();
   }
 });
 
