@@ -1,0 +1,41 @@
+
+  var ToDoAndSee = Backbone.Model.extend({
+        defaults: {
+            name: "Not specified",
+            location: "Not specified"
+            address: "Not specified"
+            season: "Not specified"
+            timeOfDay: "Not specified" 
+            outdoor: "Not specified" //boolean
+            drinking: "Not specified" //boolean
+            randomCharacteristic: "Not specified"
+            url: "Not specified"
+        },
+        initialize: function(){
+        }
+    });
+
+    var Restaurant = Backbone.Modle.extend({
+    defaults: {
+        name: "Not specified",
+        location: "Not specified"
+        address: "Not specified"
+        drinking: "Not specified" //boolean
+        type: "Not specified"
+        ethnic: "Not specified" //boolean
+        url: "Not specified"
+    }
+    })
+
+    var Adventure = Backbone.Collection.extend({
+        model: ToDoAndSee
+        model: Restaurant
+        //Doesn't have to be limited to this
+    });
+
+    var toDoAndSee1 = new ToDoAndSee({ name: "Rose City Rollers", location: ["NE", "SE"]; season: "Year round"; timeOfDay: "Evening"; outdoor: false; drinking: true; randomCharacteristic: ["Adventerous", "Kid-friendly", "Romantic"]; url: "http://www.rosecityrollers.com/events"});
+    var toDoAndSee2 = new ToDoAndSee({ name: "Sauvie Island", location: "North Portland"; address: "Sauvie Island"; season: "Summer"; timeOfDay: "Afternoon"; outdoor: true; drinking: true; randomCharacteristic: ["<3 nature", "Kid-friendly", "Solitary", "Romantic"; url: "http://sauvieisland.org/visitor-information/natural-attractions/public-beaches/"});
+    var restaurant = new Restaurant({name: "Juniors"; location: "SE"; address: "1742 SE 12th Ave"; drinking: true; type: ["Brunch", "Hipster"]; ethnic: false; url: "https://www.facebook.com/pages/Juniors-Cafe/117132245001186?sk=info"});
+    var restaurant = new Restaurant({ name: "Andina"; location: "NW"; address: "1314 NW Glisan St"; drinking: true; type: ["Peruvian", "Dress up"]; ethnic: true; url: "http://www.andinarestaurant.com/"});
+
+    // var myAdventure = new Album([ song1, song2, song3]); ... Not sure if this is appropriate for our modle

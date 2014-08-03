@@ -10,26 +10,20 @@ Backbone.$ = $;
 
 // var Todos = require('../collections/todos');
 
-// var TodoMainView = Backbone.View.extend({
-//   el: '#my-app',
-//   collection: new Todos(),
-//   initialize: function () {
-//     window.todoCollection = this.collection;
-//     this.collection.fetch();
-//     //CHALLENGE: attach todoMainTemplate to this element, replacing any html
-//     // already present
-//     // HINT: see previous examples
-//     $(this.el).html(todoMainTemplate); // ANSWER
-//   },
-//   render: function () {
-//     var todoListView = new TodoListView({collection: this.collection});
-//     todoListView.render();
-//     $('#todo-list').html(todoListView.$el);
+var MainView = Backbone.View.extend({
+  el: '#app',
+  initialize: function () {
+    console.log("hello");
+  },
+  render: function () {
+    // var todoListView = new TodoListView({collection: this.collection});
+    // todoListView.render();
+    // $('#todo-list').html(todoListView.$el);
 
-//     var todoInputView = new TodoInputView({collection: this.collection});
+    // var todoInputView = new TodoInputView({collection: this.collection});
 
-//   }
+  }
 
-// });
+});
 
-// module.exports = TodoMainView;
+module.exports = MainView;
