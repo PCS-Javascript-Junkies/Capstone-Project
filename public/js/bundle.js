@@ -12629,12 +12629,30 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var AdventureView = require('./views/adventure-view');
+var HomeView = require('./views/home-view');
+
+// var Router = Backbone.Router.extend({
+//   routes: {
+//     '': 'callAdventureView'
+//   },
+//   callAdventureView: function () {
+//     this.adventureView = new AdventureView();
+//     this.adventureView.render();
+//   }
+// });
+
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'callAdventureView'
+    '': 'callHomeView',
+    'adventure-step-1': 'callAdventureView'
+  },
+  callHomeView: function () {
+    this.homeView = new HomeView();
+    this.homeView.render();
   },
   callAdventureView: function () {
+    console.log("called from url");
     this.adventureView = new AdventureView();
     this.adventureView.render();
   }
@@ -12644,10 +12662,17 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","./views/home-view":"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
 var Backbone = require('backbone');
 
-var Adventure = Backbone.Model.extend();
+var Adventure = Backbone.Model.extend({
+  nameTest: "present adventure",
+  stepOne: '',
+  steoTwo: '',
+  callNextStep: function () {
+    
+  }
+});
 
 module.exports = Adventure;
 },{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js":[function(require,module,exports){
@@ -12658,24 +12683,50 @@ Backbone.$ = $;
 var StepOneView = require('./step-one-view.js');
 var Adventure = require('../models/adventure.js');
 
-var adventureTemplate = require('../../templates/adventure-parent.hbs')
+var adventureTemplate = require('../../templates/adventure-parent.hbs');
+var stepOneTemplate = require('../../templates/adventure-step-one.hbs');
 
 var AdventureView = Backbone.View.extend({
-  el: '#adventure-steps',
+  el: '#adventure-parent',
   model: new Adventure(),
   initialize: function () {
-    $(this.el).html(adventureTemplate);
   },
   render: function () {
+    $(this.el).html(adventureTemplate);
     var stepOneView = new StepOneView({model: this.model});
-    stepOneView.render();$
-    ('#steps').html(stepOneView.$el);
+    console.log("heeey");
+    stepOneView.render();
   }
 
 });
 
 module.exports = AdventureView;
-},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./step-one-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./step-one-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js":[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
+
+var AdventureView = require('./adventure-view.js');
+
+var homeTemplate = require('../../templates/home-view.hbs');
+var adventureTemplate = require('../../templates/adventure-parent.hbs');
+
+var HomeView = Backbone.View.extend({
+  el: '#app-home',
+  events: {
+    'click #begin-adventure': 'beginAdventure'
+  },
+  beginAdventure: function () {
+    var adventureView = new AdventureView(); //attach collections/models here, calls initialize but not render at this point
+    adventureView.render(); //order matters
+  },
+  render: function () {
+    $(this.el).html(homeTemplate);
+  }
+});
+
+module.exports = HomeView;
+},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/home-view.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs","./adventure-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12683,22 +12734,23 @@ Backbone.$ = $;
 var stepOneTemplate = require('../../templates/adventure-step-one.hbs');
 
 var StepOneView = Backbone.View.extend({
-  tagName: 'div',
-  className: 'instructions',
+  el: '#steps',
+  events: {
+    'click #step1-choice-a': 'stepOneChoiceA',
+    'click #step1-choice-b': 'step2ChoiceB'
+  },
   initialize: function () {
     this.listenTo(this.model,'all', this.render);
   },
+  stepOneChoiceA: function () {
+    console.log("clicked choice 1");
+    this.model.stepOne = 'A';
+    console.log(this.model.stepOne);
+  },
   render: function () {
-    console.log("step 1");
-    console.log(this.$el);
-    var data = [];
-    this.$el.html(stepOneTemplate());
-
-    // this.collection.models.forEach(function (item) {
-    //   data.push({title: item.escape('title'), description: item.escape('description') });
-    // });
-
-    // this.$el.html(myTemplate({todoData:data}));
+    console.log("render question 1");
+    console.log(this.model.nameTest);
+    $('#steps').html(stepOneTemplate);
   }
 });
 
@@ -12724,7 +12776,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<h2>Step 1!</h2>";
+  return "<h2>Step 1</h2>\n<p>\n  This is a sample step one. Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"step1-choice-a\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"step1-choice-b\" role=\"button\">Inside</div>";
+  });
+
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs":[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n  <div class=\"intro-block\">\n    <h1>Welcome to Choose Your Own Adventure PDX</h1>\n    <p>Introductory text!</p>\n    <p>\n      <div class=\"btn btn-primary btn-lg\" id=\"begin-adventure\" role=\"button\">Start Your Adventure</div>\n    </p>\n  </div>\n</div>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
