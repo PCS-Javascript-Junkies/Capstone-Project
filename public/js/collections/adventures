@@ -38,4 +38,4 @@
     var restaurant = new Restaurant({name: "Juniors"; location: "SE"; address: "1742 SE 12th Ave"; drinking: true; type: ["Brunch", "Hipster"]; ethnic: false; url: "https://www.facebook.com/pages/Juniors-Cafe/117132245001186?sk=info"});
     var restaurant = new Restaurant({ name: "Andina"; location: "NW"; address: "1314 NW Glisan St"; drinking: true; type: ["Peruvian", "Dress up"]; ethnic: true; url: "http://www.andinarestaurant.com/"});
 
-    // var myAdventure = new Album([ song1, song2, song3]); ... Not sure if this is appropriate for our modle
+    // var myAdventure = new Adventure([ toDoAndSee1, restaurant2, toDoAndSee3]); ... Not sure if this is appropriate for our modle
