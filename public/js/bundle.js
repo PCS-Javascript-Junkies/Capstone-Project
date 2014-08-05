@@ -12631,17 +12631,6 @@ Backbone.$ = $;
 var AdventureView = require('./views/adventure-view');
 var HomeView = require('./views/home-view');
 
-// var Router = Backbone.Router.extend({
-//   routes: {
-//     '': 'callAdventureView'
-//   },
-//   callAdventureView: function () {
-//     this.adventureView = new AdventureView();
-//     this.adventureView.render();
-//   }
-// });
-
-
 var Router = Backbone.Router.extend({
   routes: {
     '': 'callHomeView',
