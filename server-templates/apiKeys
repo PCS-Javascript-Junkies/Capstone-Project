@@ -1,1 +1,3 @@
-  var forecastAPIKey = APIKey: process.env.1f75a50387fa44c9015e4edc8fce57fc,
+  var forecastAPIKey = 1f75a50387fa44c9015e4edc8fce57fc
+
+  var googlePlacesAPIKey = AIzaSyD07D3hLnAP1yE1tNuTs2x9ytVQs8l3-Do
