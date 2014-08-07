@@ -14,7 +14,8 @@ forecast.get(latitude, longitude, function (err, res, data) {
 
 var forecastInfo = JSON.parse(data.responseText);
 
-//var time = new Date().setDate(0); // lets use an arbitrary date
+//var time = new Date().setDate(0); 
+// lets use an arbitrary date
 //forecast.getAtTime(latitude, longitude, time, function (err, res, data) {
   //if (err) throw err;
   //log('res: ' + util.inspect(res));

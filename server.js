@@ -20,13 +20,13 @@ app.engine('html', consolidate.handlebars);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/server-templates');
 
-var partials = "./server-templates/partials/";
-fs.readdirSync(partials).forEach(function (file) {
-  var source = fs.readFileSync(partials + file, "utf8"),
-      partial = /(.+)\.html/.exec(file).pop();
+// var partials = "./server-templates/partials/";
+// fs.readdirSync(partials).forEach(function (file) {
+//   var source = fs.readFileSync(partials + file, "utf8"),
+//       partial = /(.+)\.html/.exec(file).pop();
 
-  Handlebars.registerPartial(partial, source);
-});
+//   Handlebars.registerPartial(partial, source);
+// });
 
 // express routes
 
