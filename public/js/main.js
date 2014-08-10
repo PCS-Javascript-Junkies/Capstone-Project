@@ -2,15 +2,16 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
-var AdventureView = require('./views/home-view');
+var AdventureParentView = require('./views/adventure-parent-view');
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'callAdventureView'
+    '': 'callAdventureParentView'
   },
-  callAdventureView: function () {
-    this.adventureView = new AdventureView();
-    this.adventureView.render();
+  callAdventureParentView: function () {
+    console.log("adventure parent view");
+    this.adventureParentView = new AdventureParentView();
+    this.adventureParentView.render();
   }
 });
 
