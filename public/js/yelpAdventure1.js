@@ -9,7 +9,7 @@ var pickRandomOutside = require('pick-random');
               }
       $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomOutside + "&amp;location=portland"; 
       //html peeps: this search call needs to be the result of the random-generated category from the above array; please double-check me...
-      
+
         $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
         $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
         $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
