@@ -11,7 +11,7 @@ function initialize() {
 
     geocoder = new google.maps.Geocoder();
 
-    // set initial position (New York)
+    // set initial position (lat, long of Portland, Oregon)
 
     var myLatlng = new google.maps.LatLng(40.7143528,-74.0059731);
 
