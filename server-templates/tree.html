@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree Layout</title>
+    <script src="../public/database/dbMain.js"></script>
+
+</head>
+<body>
+    <h1>Tree Display</h1>
+    <script id="thetree" type="text/x-handlebars-template">
+    <style>
+    table { margin-left: auto; margin-right: auto; border: 1px dotted;}
+    tr td{ padding-left:10px; padding-right: 10px; white-space: nowrap; }
+    #lvl1Space {width:100px;}
+    .border {border: 1px solid black; align: center; }
+    </style>
+    <table>
+        <tbody>
+            <tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;</td></td></td></td></td></td></td></td></td><td class="border">{{root}}{{#each root}}<br>{{@key}}: {{this}}{{/each}}</td><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;</td></td></td></td></td><td>&nbsp;</td></td></td></td></tr>
+
+            <tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td class="border">{{#each outsideTree}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td class="border">{{#each insideTree}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;<td>&nbsp;<td>&nbsp;<td><td>&nbsp;<td>&nbsp;<td>&nbsp;</td></td></td></td></td><td>&nbsp;</td></td></td></td></tr>
+
+            <tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td class="border">{{#each outTheme}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td class="border">{{#each inTheme}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;<td>&nbsp;<td>&nbsp;<td><td>&nbsp;<td>&nbsp;<td>&nbsp;</td></td></td></td></td><td>&nbsp;</td></td></td></td></tr>
+
+            <tr><td  class="border">{{#each outChill}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outNight}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outFoodie}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outHost}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outTGIF}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outBrew}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outKid}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outActive}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td  class="border">{{#each inChill}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inNight}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inFoodie}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inHost}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inTGIF}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inBrew}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inKid}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inActive}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
+
+            <tr><td  class="border">{{#each outChill1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outNight1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outFoodie1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outHost1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outTGIF1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outBrew1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outKid1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outActive1}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td  class="border">{{#each inChill1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inNight1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inFoodie1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inHost1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inTGIF1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inBrew1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inKid1}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inActive1}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
+
+            <tr><td  class="border">{{#each outChill2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outNight2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outFoodie2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outHost2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outTGIF2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outBrew2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outKid2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each outActive2}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td  class="border">{{#each inChill2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inNight2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inFoodie2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inHost2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inTGIF2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inBrew2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inKid2}}<br>{{@key}}: {{this}}{{/each}}<td  class="border">{{#each inActive2}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
+
+            <tr><td class = "border">{{#each outChill3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outNight3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outFoodie3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outHost3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outTGIF3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outBrew3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outKid3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outActive3}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td class = "border">{{#each inChill3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inNight3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inFoodie3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inHost3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inTGIF3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inBrew3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inKid3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inActive3}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
+
+            <tr><td class = "border">{{#each outChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outActive4}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td class = "border">{{#each inChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inActive4}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
+
+        </tbody>
+    </table>
+</script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <script>
+
+    (function(){
+        var data = {
+            root: tree.root,
+            outsideTree: tree.root.outsideTree,
+            insideTree: tree.root.insideTree,
+            inTheme: tree.root.insideTree.theme,
+            inChill: tree.root.insideTree.theme.chillTheme,
+                inChill1: tree.root.insideTree.theme.chillTheme.head,
+                inChill2: tree.root.insideTree.theme.chillTheme.head.next,
+                inChill3: tree.root.insideTree.theme.chillTheme.head.next.next,
+                inChill4: tree.root.insideTree.theme.chillTheme.head.next.next.next,
+            inNight: tree.root.insideTree.theme.nightOutTheme,
+                inNight1: tree.root.insideTree.theme.nightOutTheme.head,
+                inNight2: tree.root.insideTree.theme.nightOutTheme.head.next,
+                inNight3: tree.root.insideTree.theme.nightOutTheme.head.next.next,
+                inNight4: tree.root.insideTree.theme.nightOutTheme.head.next.next.next,
+            inFoodie: tree.root.insideTree.theme.foodieTheme,
+                inFoodie1: tree.root.insideTree.theme.foodieTheme.head,
+
+                inFoodie2: tree.root.insideTree.theme.foodieTheme.head.next,
+                inFoodie3: tree.root.insideTree.theme.foodieTheme.head.next.next,
+                inFoodie4: tree.root.insideTree.theme.foodieTheme.head.next.next.next,
+            inHost: tree.root.insideTree.theme.hostingTheme,
+                inHost1: tree.root.insideTree.theme.hostingTheme.head,
+                inHost2: tree.root.insideTree.theme.hostingTheme.head.next,
+                inHost3: tree.root.insideTree.theme.hostingTheme.head.next.next,
+                inHost4: tree.root.insideTree.theme.hostingTheme.head.next.next.next,
+            inTGIF: tree.root.insideTree.theme.tgifTheme,
+                inTGIF1: tree.root.insideTree.theme.tgifTheme.head,
+                inTGIF2: tree.root.insideTree.theme.tgifTheme.head.next,
+                inTGIF3: tree.root.insideTree.theme.tgifTheme.head.next.next,
+                inTGIF4: tree.root.insideTree.theme.tgifTheme.head.next.next.next,
+            inBrew: tree.root.insideTree.theme.breweryTheme,
+                inBrew1: tree.root.insideTree.theme.breweryTheme.head,
+                // inlist2: tree.root.insideTree.theme.breweryTheme.head.next,
+                // inlist3: tree.root.insideTree.theme.breweryTheme.head.next.next,
+                // inlist4: tree.root.insideTree.theme.breweryTheme.head.next.next.next,
+            inKid: tree.root.insideTree.theme.kidFunTheme,
+                inKid1: tree.root.insideTree.theme.kidFunTheme.head,
+                inKid2: tree.root.insideTree.theme.kidFunTheme.head.next,
+                inKid3: tree.root.insideTree.theme.kidFunTheme.head.next.next,
+                inKid4: tree.root.insideTree.theme.kidFunTheme.head.next.next.next,
+            inActive: tree.root.insideTree.theme.activeTheme,
+                inActive1: tree.root.insideTree.theme.activeTheme.head,
+                inActive2: tree.root.insideTree.theme.activeTheme.head.next,
+                inActive3: tree.root.insideTree.theme.activeTheme.head.next.next,
+                inActive4: tree.root.insideTree.theme.activeTheme.head.next.next.next,
+            outTheme: tree.root.outsideTree.theme,
+            outChill: tree.root.outsideTree.theme.chillTheme,
+                outChill1: tree.root.outsideTree.theme.chillTheme.head,
+                outChill2: tree.root.outsideTree.theme.chillTheme.head.next,
+                outChill3: tree.root.outsideTree.theme.chillTheme.head.next.next,
+                outChill4: tree.root.outsideTree.theme.chillTheme.head.next.next.next,
+            outNight: tree.root.outsideTree.theme.nightOutTheme,
+                outNight1: tree.root.outsideTree.theme.nightOutTheme.head,
+                outNight2: tree.root.outsideTree.theme.nightOutTheme.head.next,
+                outNight3: tree.root.outsideTree.theme.nightOutTheme.head.next.next,
+                outNight4: tree.root.outsideTree.theme.nightOutTheme.head.next.next.next,
+            outFoodie: tree.root.outsideTree.theme.foodieTheme,
+                outFoodie1: tree.root.outsideTree.theme.foodieTheme.head,
+                outFoodie2: tree.root.outsideTree.theme.foodieTheme.head.next,
+                outFoodie3: tree.root.outsideTree.theme.foodieTheme.head.next.next,
+                outFoodie4: tree.root.outsideTree.theme.foodieTheme.head.next.next.next,
+            outHost: tree.root.outsideTree.theme.hostingTheme,
+                outHost1: tree.root.outsideTree.theme.hostingTheme.head,
+                outHost2: tree.root.outsideTree.theme.hostingTheme.head.next,
+                outHost3: tree.root.outsideTree.theme.hostingTheme.head.next.next,
+                outHost4: tree.root.outsideTree.theme.hostingTheme.head.next.next.next,
+            outTGIF: tree.root.outsideTree.theme.tgifTheme,
+                outTGIF1: tree.root.outsideTree.theme.tgifTheme.head,
+                outTGIF2: tree.root.outsideTree.theme.tgifTheme.head.next,
+                outTGIF3: tree.root.outsideTree.theme.tgifTheme.head.next.next,
+                outTGIF4: tree.root.outsideTree.theme.tgifTheme.head.next.next.next,
+            outBrew: tree.root.outsideTree.theme.breweryTheme,
+                outBrew1: tree.root.outsideTree.theme.breweryTheme.head,
+                // outlist2: tree.root.outsideTree.theme.breweryTheme.head.next,
+                // outlist3: tree.root.outsideTree.theme.breweryTheme.head.next.next,
+                // outlist4: tree.root.outsideTree.theme.breweryTheme.head.next.next.next,
+            outKid: tree.root.outsideTree.theme.kidFunTheme,
+                outKid1: tree.root.outsideTree.theme.kidFunTheme.head,
+                outKid2: tree.root.outsideTree.theme.kidFunTheme.head.next,
+                outKid3: tree.root.outsideTree.theme.kidFunTheme.head.next.next,
+                outKid4: tree.root.outsideTree.theme.kidFunTheme.head.next.next.next,
+            outActive: tree.root.outsideTree.theme.activeTheme,
+                outActive1: tree.root.outsideTree.theme.activeTheme.head,
+                outActive2: tree.root.outsideTree.theme.activeTheme.head.next,
+                outActive3: tree.root.outsideTree.theme.activeTheme.head.next.next,
+                outActive4: tree.root.outsideTree.theme.activeTheme.head.next.next.next,
+
+        }
+        var template = Handlebars.compile($('#thetree').html());
+        $(document.body).append(temp = template(data));
+
+    })();
+
+Handlebars.registerHelper('each', function(context, options) {
+  var ret = "";
+
+  for(var i=0, j=context.length; i<j; i++) {
+    ret = ret + options.fn(context[i]);
+  }
+
+  return ret;
+});
+</script>
+</body>
+</html>
