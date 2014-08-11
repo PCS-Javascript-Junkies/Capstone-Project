@@ -15,26 +15,21 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({location: "southeast"});
+    this.model.set({geolocation: "se"});
     console.log(this.model);
-    // var locationChoiceView = new LocationChoiceView({model: this.model});
-    // locationChoiceView.render();
   },
   clickNortheast: function() {
-    this.model.set({location: "northeast"});
-    console.log(this.model);
+    this.model.set({geolocation: "ne"});
   },
   clickWest: function() {
-    this.model.set({location: "west"});
-    console.log(this.model);
+    this.model.set({geolocation: "west"});
   },
   clickAll: function() {
-    this.model.set({location: "all"});
-    console.log(this.model);
+    this.model.set({geolocation: "all"});
   },
   render: function () {
     $(this.el).html(locationChoiceTemplate);
-    console.log("location choice");
+    console.log("geolocation choice");
   }
 });
 

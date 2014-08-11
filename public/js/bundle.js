@@ -12649,14 +12649,21 @@ $(function () {
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
+  urlRoot: function() {
+    return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
+  },
   defaults: {
     "weather": null,
-    "location": null,
-    "theme": null,
-    "step1": null,
-    "step2": null,
-    "step3": null,
-    "result": null
+    "geolocation": null
+  },
+  initialize: function() { 
+    this.on('change:geolocation', this.getThemes, this);
+  },
+  getThemes: function() {
+    //this.save(this, { url: '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation});
+    this.fetch();
+    console.log("here is where I get the themes!");
+    console.log(this.model);
   }
   // currentStep: "step",
   // nameTest: "present adventure",
@@ -12713,26 +12720,21 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({location: "southeast"});
+    this.model.set({geolocation: "se"});
     console.log(this.model);
-    // var locationChoiceView = new LocationChoiceView({model: this.model});
-    // locationChoiceView.render();
   },
   clickNortheast: function() {
-    this.model.set({location: "northeast"});
-    console.log(this.model);
+    this.model.set({geolocation: "ne"});
   },
   clickWest: function() {
-    this.model.set({location: "west"});
-    console.log(this.model);
+    this.model.set({geolocation: "west"});
   },
   clickAll: function() {
-    this.model.set({location: "all"});
-    console.log(this.model);
+    this.model.set({geolocation: "all"});
   },
   render: function () {
     $(this.el).html(locationChoiceTemplate);
-    console.log("location choice");
+    console.log("geolocation choice");
   }
 });
 
