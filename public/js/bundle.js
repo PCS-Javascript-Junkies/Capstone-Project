@@ -12695,25 +12695,86 @@ var AdventureParentView = Backbone.View.extend({
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
+
+var locationChoiceTemplate = require('../../templates/location-choice-template.hbs');
+
+var LocationChoiceView = Backbone.View.extend({
+  el: '#adventure-parent',
+  events: {
+    'click #location-se': 'clickSoutheast',
+    'click #location-ne': 'clickNortheast',
+    'click #location-west': 'clickWest',
+    'click #location-all': 'clickAll'
+  },
+  initialize: function () {
+  },
+  clickSoutheast: function() {
+    this.model.set({location: "southeast"});
+    console.log(this.model);
+    // var locationChoiceView = new LocationChoiceView({model: this.model});
+    // locationChoiceView.render();
+  },
+  clickNortheast: function() {
+    this.model.set({location: "northeast"});
+    console.log(this.model);
+  },
+  clickWest: function() {
+    this.model.set({location: "west"});
+    console.log(this.model);
+  },
+  clickAll: function() {
+    this.model.set({location: "all"});
+    console.log(this.model);
+  },
+  render: function () {
+    $(this.el).html(locationChoiceTemplate);
+    console.log("location choice");
+  }
+});
+
+module.exports = LocationChoiceView;
+},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
+var LocationChoiceView = require('./location-choice-view.js');
 
 var WeatherChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
+  events: {
+    'click #choice-outside': 'clickOutside',
+    'click #choice-inside': 'clickInside'
+  },
   initialize: function () {
+    var locationChoiceView = new LocationChoiceView({model: this.model});
+  },
+  clickOutside: function() {
+    console.log("clicked outside");
+    this.model.set({weather: "outside"});
+    console.log(this.model);
+    var locationChoiceView = new LocationChoiceView({model: this.model});
+    locationChoiceView.render();
+  },
+  clickInside: function() {
+    this.model.set({weather: "inside"});
+    console.log(this.model);
+    var locationChoiceView = new LocationChoiceView({model: this.model});
+    locationChoiceView.render();
   },
   render: function () {
     $(this.el).html(weatherChoiceTemplate);
-    console.log(this.model);
+    //console.log(this.model);
   }
 });
 
 module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
+},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -12725,6 +12786,18 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n</div>";
   });
 
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary\" id=\"location-all\" role=\"button\">Everywhere!</div>";
+  });
+
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
@@ -12734,7 +12807,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n</div>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"step1-choice-a\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"step1-choice-b\" role=\"button\">Inside</div>";
+  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n</div>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
