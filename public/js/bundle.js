@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
+},{"underscore":11}],2:[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
+},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
+},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
+},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
+},{"./safe-string":6}],8:[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
+},{"handlebars/runtime":8}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,35 +12623,304 @@ return jQuery;
   }
 }).call(this);
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
+},{}],12:[function(require,module,exports){
+//var db = require("./database.js");
+
+
+function QuestionTree() {
+    this.root = null;
+    this.current =null;
+}
+
+
+QuestionTree.prototype = {
+    startTree: function(insideOutsideQ, AreaQ){
+    var theme ={
+        "theme": "themeID",
+        "themeQuestions": null,
+
+        "chillTheme": null,
+        "nightOutTheme": null,
+        "foodieTheme": null,
+        "hostingTheme": null,
+        "tgifTheme":null,
+        "breweryTheme":null,
+        "kidFunTheme":null,
+        "activeTheme": null
+    };
+
+    var area ={
+        "id": "area",
+        "questions": null,
+        "area": null,
+        "themeNode": null
+
+    };
+
+    var rootNode ={
+        "id": "Root",
+        "questions": null,
+        "insideTree": null,
+        "outsideTree": null,
+    };
+
+    this.root = rootNode;
+    this.current=this.root;
+    this.root.insideTree = area;
+    this.root.outsideTree= area;
+    this.root.outsideTree.theme = theme;
+    this.root.insideTree.theme = theme;
+    },
+
+
+    buildTheme: function (inOrOut, title){
+        var node ={
+            "title": title,
+            "next": null
+        };
+
+        if(inOrOut === "inside"){
+            switch(title){
+                case "chill":
+                    this.root.insideTree.theme.chillTheme = node;
+                    break;
+                case "kids":
+                    this.root.insideTree.theme.kidFunTheme = node;
+                    break;
+                case "foodie":
+                    this.root.insideTree.theme.foodieTheme = node;
+                    break;
+                case "hosting":
+                    this.root.insideTree.theme.hostingTheme = node;
+                    break;
+                case "active":
+                    this.root.insideTree.theme.activeTheme = node;
+                    break;
+                case "tgif":
+                    this.root.insideTree.theme.tgifTheme = node;
+                    break;
+                case "nightOut":
+                    this.root.insideTree.theme.nightOutTheme = node;
+                    break;
+                case "brewery":
+                    this.root.insideTree.theme.breweryTheme = node;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }else{
+            switch(title){
+                case "chill":
+                    this.root.outsideTree.theme.chillTheme = node;
+                    break;
+                case "kids":
+                    this.root.outsideTree.theme.kidFunTheme = node;
+                    break;
+                case "foodie":
+                    this.root.outsideTree.theme.foodieTheme = node;
+                    break;
+                case "hosting":
+                    this.root.outsideTree.theme.hostingTheme = node;
+                    break;
+                case "active":
+                    this.root.outsideTree.theme.activeTheme = node;
+                    break;
+                case "tgif":
+                    this.root.outsideTree.theme.tgifTheme = node;
+                    break;
+                case "nightOut":
+                    this.root.outsideTree.theme.nightOutTheme = node;
+                    break;
+                case "brewery":
+                    this.root.outsideTree.theme.breweryTheme = node;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }
+    },
+
+    addToTheme: function (inOrOut, theme, type, qArray, cArray){
+        var pointer;
+        var node ={
+            "type": type,
+            "questions": qArray,
+            "categories": cArray,
+            "next": null
+        };
+
+        if(inOrOut === "inside"){
+            switch(theme){
+                case "chill":
+                   pointer = this.root.insideTree.theme.chillTheme;
+                    break;
+                case "kids":
+                   pointer = this.root.insideTree.theme.kidFunTheme;
+                    break;
+                case "foodie":
+                   pointer = this.root.insideTree.theme.foodieTheme;
+                    break;
+                case "hosting":
+                   pointer = this.root.insideTree.theme.hostingTheme;
+                    break;
+                case "active":
+                   pointer = this.root.insideTree.theme.activeTheme;
+                    break;
+                case "tgif":
+                   pointer = this.root.insideTree.theme.tgifTheme;
+                    break;
+                case "nightOut":
+                   pointer = this.root.insideTree.theme.nightOutTheme;
+                    break;
+                case "brewery":
+                   pointer = this.root.insideTree.theme.breweryTheme;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }else{
+            switch(theme){
+                case "chill":
+                   pointer = this.root.outsideTree.theme.chillTheme;
+                    break;
+                case "kids":
+                   pointer = this.root.outsideTree.theme.kidFunTheme;
+                    break;
+                case "foodie":
+                   pointer = this.root.outsideTree.theme.foodieTheme;
+                    break;
+                case "hosting":
+                   pointer = this.root.outsideTree.theme.hostingTheme;
+                    break;
+                case "active":
+                   pointer = this.root.outsideTree.theme.activeTheme;
+                    break;
+                case "tgif":
+                   pointer = this.root.outsideTree.theme.tgifTheme;
+                    break;
+                case "nightOut":
+                   pointer = this.root.outsideTree.theme.nightOutTheme;
+                    break;
+                case "brewery":
+                   pointer = this.root.outsideTree.theme.breweryTheme;
+                    break;
+                default:
+                    console.log("\nadd was not formatted correctly");
+            }
+        }
+        if(pointer.next === null){
+            pointer.next = node;
+        }else{
+            pointer = pointer.next;
+            while(pointer.next){
+                pointer = pointer.next;
+            }
+            pointer.next=node;
+        }
+    },
+
+initialize: function (){
+        tree = new QuestionTree();
+
+        tree.startTree();
+
+        var questions = ["Question-1 ","Question-2 ", "Question-3 ",
+         "Question-4 ","Question-5 "];
+        var theme = ["chill","kids","foodie","hosting","active",
+                    "tgif","nightOut","brewery"];
+        var level = ["","mainItem", "breatherItem", "endingItem" ];
+
+        tree.root.questions=questions; 
+
+        //outside theme building
+        theme.forEach(function(item){
+            tree.buildTheme("outside", item);
+        });
+
+        //build inside theme
+        theme.forEach(function(item){
+            tree.buildTheme("inside", item);
+        });
+        for(var i =0; i< 8; ++i){
+        tree.addToTheme("outside", theme[i],
+            level[1],questions);
+
+        tree.addToTheme("outside", theme[i],
+            level[2],questions);
+
+        tree.addToTheme("outside", theme[i],
+            level[1],questions);
+
+        tree.addToTheme("outside", theme[i],
+            level[3],questions);
+        }
+
+
+        for(var i =0; i< 8; ++i){
+        tree.addToTheme("inside", theme[i],
+            level[1],questions);
+
+        tree.addToTheme("inside", theme[i],
+            level[2],questions);
+
+        tree.addToTheme("inside", theme[i],
+            level[1],questions);
+
+        tree.addToTheme("inside", theme[i],
+            level[3],questions);
+        }
+
+},
+
+
+};
+
+
+
+
+
+
+
+
+
+
+//console.log(tree.current.outsideTree);
+
+module.exports=QuestionTree;
+
+
+
+
+},{}],13:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
+var QuestionTree = require('../database/dbMain.js');
 var AdventureView = require('./views/adventure-view');
 var HomeView = require('./views/home-view');
+var yelpAdventure1 = require('./yelpAdventure1'); //Need to confirm placement/syntax
+var questionTree = new QuestionTree();
+questionTree.initialize();
+console.log(questionTree);
+
+
+
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'callHomeView',
-    'adventure-step-1': 'callAdventureView'
+    '': 'callHomeView'
   },
   callHomeView: function () {
     this.homeView = new HomeView();
     this.homeView.render();
-  },
-  callAdventureView: function () {
-    console.log("called from url");
-    this.adventureView = new AdventureView();
-    this.adventureView.render();
   }
 });
 
-$(function () {
-  window.app = new Router();
-  Backbone.history.start();
-});
-},{"./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","./views/home-view":"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"../database/dbMain.js":12,"./views/adventure-view":15,"./views/home-view":16,"./yelpAdventure1":18,"backbone":1,"jquery":10}],14:[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -12672,7 +12941,7 @@ var Adventure = Backbone.Model.extend({
 }); //above is more like making a GET for each click
 
 module.exports = Adventure;
-},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js":[function(require,module,exports){
+},{"backbone":1}],15:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12698,7 +12967,7 @@ var AdventureView = Backbone.View.extend({
 });
 
 module.exports = AdventureView;
-},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./step-one-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent.hbs":19,"../../templates/adventure-step-one.hbs":20,"../models/adventure.js":14,"./step-one-view.js":17,"backbone":1,"jquery":10}],16:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12723,7 +12992,7 @@ var HomeView = Backbone.View.extend({
 });
 
 module.exports = HomeView;
-},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/home-view.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs","./adventure-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent.hbs":19,"../../templates/home-view.hbs":21,"./adventure-view.js":15,"backbone":1,"jquery":10}],17:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12752,7 +13021,69 @@ var StepOneView = Backbone.View.extend({
 });
 
 module.exports = StepOneView;
-},{"../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs":[function(require,module,exports){
+},{"../../templates/adventure-step-one.hbs":20,"backbone":1,"jquery":10}],18:[function(require,module,exports){
+
+// function yelpAdventure1(pickRandomOutside, pickRandomInside) {
+
+// var pickRandomOutside = require('pick-random');
+//           pickRandomOutside(['discgolf', 'hiking', 'lakes', 'parks', 'swimmmingpools', 'minigolf', 'bikerentals'], {count: 1});
+//           pickRandomOutside = this.pickRandomOutside
+//             while (this.pickRandomOutside === null) 
+//               alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+//               }
+//       $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomOutside + "&amp;location=portland"; 
+//       //html peeps: this search call needs to be the result of the random-generated category from the above array; please double-check me...
+
+//         $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+//         $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+//         $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+//         $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+
+//         $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+//         $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+//         $AuthRequest = OAuthRequest::from_consumer_and_token(
+//             $Consumer, 
+//             $AuthToken, 
+//             'GET', 
+//             $URL
+//         );
+//     </script>
+
+
+//     <script type="text/javascript"
+//       var pickRandomInside = require('pick-random');
+//           pickRandomInside(['arcades', 'bowling', 'museums', 'cinema', 'psychic_astrology', 'wineries'], {count: 1};
+//             pickRandomInside = this.pickRandomInside
+//             while (this.pickRandomInside === null) 
+//             alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+//             }
+//              $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomInside + "&amp;location=portland"; 
+//       //see above comment; ditto...
+      
+//         $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+//         $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+//         $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+//         $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+//       //Not sure if the key, secret, token, and token secret need to be in here twice...
+        
+//         $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+//         $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+//         $AuthRequest = OAuthRequest::from_consumer_and_token(
+//             $Consumer, 
+//             $AuthToken, 
+//             'GET', 
+//             $URL
+//         );
+//     </script>
+//     <script type="text/javascript">
+
+// //See http://stackoverflow.com/questions/25107990/yelp-api-getting-json-results; may be helpful
+
+//       module.exports = yelpAdventure1;
+
+},{}],19:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -12764,7 +13095,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\">\n  <h1>Choose Your Own Adventure PDX</h1>\n  <div id=\"steps\">\n  </div>\n</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],20:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -12776,7 +13107,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<h2>Step 1</h2>\n<p>\n  This is a sample step one. Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"step1-choice-a\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"step1-choice-b\" role=\"button\">Inside</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],21:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -12788,4 +13119,4 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n  <div class=\"intro-block\">\n    <h1>Welcome to Choose Your Own Adventure PDX</h1>\n    <p>Introductory text!</p>\n    <p>\n      <div class=\"btn btn-primary btn-lg\" id=\"begin-adventure\" role=\"button\">Start Your Adventure</div>\n    </p>\n  </div>\n</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
+},{"hbsfy/runtime":9}]},{},[13])
