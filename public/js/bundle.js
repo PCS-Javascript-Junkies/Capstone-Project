@@ -12623,35 +12623,302 @@ return jQuery;
   }
 }).call(this);
 
+},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
+//var db = require("./database.js");
+
+
+function QuestionTree() {
+    this.root = null;
+    this.current =null;
+}
+
+
+QuestionTree.prototype = {
+    startTree: function(insideOutsideQ, AreaQ){
+    var theme ={
+        "theme": "themeID",
+        "themeQuestions": null,
+
+        "chillTheme": null,
+        "nightOutTheme": null,
+        "foodieTheme": null,
+        "hostingTheme": null,
+        "tgifTheme":null,
+        "breweryTheme":null,
+        "kidFunTheme":null,
+        "activeTheme": null
+    };
+
+    var area ={
+        "id": "area",
+        "questions": null,
+        "area": null,
+        "themeNode": null
+
+    };
+
+    var rootNode ={
+        "id": "Root",
+        "questions": null,
+        "insideTree": null,
+        "outsideTree": null,
+    };
+
+    this.root = rootNode;
+    this.current=this.root;
+    this.root.insideTree = area;
+    this.root.outsideTree= area;
+    this.root.outsideTree.theme = theme;
+    this.root.insideTree.theme = theme;
+    },
+
+
+    buildTheme: function (inOrOut, title){
+        var node ={
+            "title": title,
+            "next": null
+        };
+
+        if(inOrOut === "inside"){
+            switch(title){
+                case "chill":
+                    this.root.insideTree.theme.chillTheme = node;
+                    break;
+                case "kids":
+                    this.root.insideTree.theme.kidFunTheme = node;
+                    break;
+                case "foodie":
+                    this.root.insideTree.theme.foodieTheme = node;
+                    break;
+                case "hosting":
+                    this.root.insideTree.theme.hostingTheme = node;
+                    break;
+                case "active":
+                    this.root.insideTree.theme.activeTheme = node;
+                    break;
+                case "tgif":
+                    this.root.insideTree.theme.tgifTheme = node;
+                    break;
+                case "nightOut":
+                    this.root.insideTree.theme.nightOutTheme = node;
+                    break;
+                case "brewery":
+                    this.root.insideTree.theme.breweryTheme = node;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }else{
+            switch(title){
+                case "chill":
+                    this.root.outsideTree.theme.chillTheme = node;
+                    break;
+                case "kids":
+                    this.root.outsideTree.theme.kidFunTheme = node;
+                    break;
+                case "foodie":
+                    this.root.outsideTree.theme.foodieTheme = node;
+                    break;
+                case "hosting":
+                    this.root.outsideTree.theme.hostingTheme = node;
+                    break;
+                case "active":
+                    this.root.outsideTree.theme.activeTheme = node;
+                    break;
+                case "tgif":
+                    this.root.outsideTree.theme.tgifTheme = node;
+                    break;
+                case "nightOut":
+                    this.root.outsideTree.theme.nightOutTheme = node;
+                    break;
+                case "brewery":
+                    this.root.outsideTree.theme.breweryTheme = node;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }
+    },
+
+    addToTheme: function (inOrOut, theme, type, qArray, cArray){
+        var pointer;
+        var node ={
+            "type": type,
+            "questions": qArray,
+            "categories": cArray,
+            "next": null
+        };
+
+        if(inOrOut === "inside"){
+            switch(theme){
+                case "chill":
+                   pointer = this.root.insideTree.theme.chillTheme;
+                    break;
+                case "kids":
+                   pointer = this.root.insideTree.theme.kidFunTheme;
+                    break;
+                case "foodie":
+                   pointer = this.root.insideTree.theme.foodieTheme;
+                    break;
+                case "hosting":
+                   pointer = this.root.insideTree.theme.hostingTheme;
+                    break;
+                case "active":
+                   pointer = this.root.insideTree.theme.activeTheme;
+                    break;
+                case "tgif":
+                   pointer = this.root.insideTree.theme.tgifTheme;
+                    break;
+                case "nightOut":
+                   pointer = this.root.insideTree.theme.nightOutTheme;
+                    break;
+                case "brewery":
+                   pointer = this.root.insideTree.theme.breweryTheme;
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
+
+            }
+        }else{
+            switch(theme){
+                case "chill":
+                   pointer = this.root.outsideTree.theme.chillTheme;
+                    break;
+                case "kids":
+                   pointer = this.root.outsideTree.theme.kidFunTheme;
+                    break;
+                case "foodie":
+                   pointer = this.root.outsideTree.theme.foodieTheme;
+                    break;
+                case "hosting":
+                   pointer = this.root.outsideTree.theme.hostingTheme;
+                    break;
+                case "active":
+                   pointer = this.root.outsideTree.theme.activeTheme;
+                    break;
+                case "tgif":
+                   pointer = this.root.outsideTree.theme.tgifTheme;
+                    break;
+                case "nightOut":
+                   pointer = this.root.outsideTree.theme.nightOutTheme;
+                    break;
+                case "brewery":
+                   pointer = this.root.outsideTree.theme.breweryTheme;
+                    break;
+                default:
+                    console.log("\nadd was not formatted correctly");
+            }
+        }
+        if(pointer.next === null){
+            pointer.next = node;
+        }else{
+            pointer = pointer.next;
+            while(pointer.next){
+                pointer = pointer.next;
+            }
+            pointer.next=node;
+        }
+    },
+
+    display: function(){
+        var pointer = this.root;
+
+    },
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+tree = new QuestionTree();
+
+tree.startTree();
+
+var questions = ["Question-1 ","Question-2 ", "Question-3 ",
+ "Question-4 ","Question-5 "];
+var theme = ["chill","kids","foodie","hosting","active",
+			"tgif","nightOut","brewery"];
+var level = ["","mainItem", "breatherItem", "endingItem" ];
+
+tree.root.questions=questions; 
+
+//outside theme building
+theme.forEach(function(item){
+	tree.buildTheme("outside", item);
+});
+
+//build inside theme
+theme.forEach(function(item){
+	tree.buildTheme("inside", item);
+});
+for(var i =0; i< 8; ++i){
+tree.addToTheme("outside", theme[i],
+    level[1],questions);
+
+tree.addToTheme("outside", theme[i],
+    level[2],questions);
+
+tree.addToTheme("outside", theme[i],
+    level[1],questions);
+
+tree.addToTheme("outside", theme[i],
+    level[3],questions);
+}
+
+
+for(var i =0; i< 8; ++i){
+tree.addToTheme("inside", theme[i],
+    level[1],questions);
+
+tree.addToTheme("inside", theme[i],
+    level[2],questions);
+
+tree.addToTheme("inside", theme[i],
+    level[1],questions);
+
+tree.addToTheme("inside", theme[i],
+    level[3],questions);
+}
+
+//console.log(tree.current.outsideTree);
+
+// module.exports=tree;
+
+
+
+
 },{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
+var dbTree = require('../database/dbMain.js');
 var AdventureView = require('./views/adventure-view');
 var HomeView = require('./views/home-view');
+var yelpAdventure1 = require('./yelpAdventure1'); //Need to confirm placement/syntax
+
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'callHomeView',
-    'adventure-step-1': 'callAdventureView'
+    '': 'callHomeView'
   },
   callHomeView: function () {
     this.homeView = new HomeView();
     this.homeView.render();
-  },
-  callAdventureView: function () {
-    console.log("called from url");
-    this.adventureView = new AdventureView();
-    this.adventureView.render();
   }
 });
 
-$(function () {
-  window.app = new Router();
-  Backbone.history.start();
-});
-},{"./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","./views/home-view":"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","./views/home-view":"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js","./yelpAdventure1":"/Users/hanna/Code/Capstone-Project/public/js/yelpAdventure1.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -12752,7 +13019,69 @@ var StepOneView = Backbone.View.extend({
 });
 
 module.exports = StepOneView;
-},{"../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs":[function(require,module,exports){
+},{"../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/yelpAdventure1.js":[function(require,module,exports){
+
+// function yelpAdventure1(pickRandomOutside, pickRandomInside) {
+
+// var pickRandomOutside = require('pick-random');
+//           pickRandomOutside(['discgolf', 'hiking', 'lakes', 'parks', 'swimmmingpools', 'minigolf', 'bikerentals'], {count: 1});
+//           pickRandomOutside = this.pickRandomOutside
+//             while (this.pickRandomOutside === null) 
+//               alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+//               }
+//       $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomOutside + "&amp;location=portland"; 
+//       //html peeps: this search call needs to be the result of the random-generated category from the above array; please double-check me...
+
+//         $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+//         $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+//         $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+//         $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+
+//         $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+//         $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+//         $AuthRequest = OAuthRequest::from_consumer_and_token(
+//             $Consumer, 
+//             $AuthToken, 
+//             'GET', 
+//             $URL
+//         );
+//     </script>
+
+
+//     <script type="text/javascript"
+//       var pickRandomInside = require('pick-random');
+//           pickRandomInside(['arcades', 'bowling', 'museums', 'cinema', 'psychic_astrology', 'wineries'], {count: 1};
+//             pickRandomInside = this.pickRandomInside
+//             while (this.pickRandomInside === null) 
+//             alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+//             }
+//              $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomInside + "&amp;location=portland"; 
+//       //see above comment; ditto...
+      
+//         $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+//         $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+//         $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+//         $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+//       //Not sure if the key, secret, token, and token secret need to be in here twice...
+        
+//         $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+//         $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+//         $AuthRequest = OAuthRequest::from_consumer_and_token(
+//             $Consumer, 
+//             $AuthToken, 
+//             'GET', 
+//             $URL
+//         );
+//     </script>
+//     <script type="text/javascript">
+
+// //See http://stackoverflow.com/questions/25107990/yelp-api-getting-json-results; may be helpful
+
+//       module.exports = yelpAdventure1;
+
+},{}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
