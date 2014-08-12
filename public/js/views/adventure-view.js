@@ -3,21 +3,27 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var StepOneView = require('./step-one-view.js');
-var Adventure = require('../models/adventure.js');
 
 var adventureTemplate = require('../../templates/adventure-parent.hbs');
 var stepOneTemplate = require('../../templates/adventure-step-one.hbs');
 
 var AdventureView = Backbone.View.extend({
   el: '#adventure-parent',
-  model: new Adventure(),
+  events: {
+    'click #0': 'clickFirst'
+  },
   initialize: function () {
+
+  },
+  pickQuestion: function () {
+
+  },
+  clickFirst: function () {
+
   },
   render: function () {
-    $(this.el).html(adventureTemplate);
-    var stepOneView = new StepOneView({model: this.model});
-    console.log("heeey");
-    stepOneView.render();
+    var currentDisplay = tree.current;
+    $(this.el).html(adventureTemplate({displayData: currentDisplay, savedQuestions: this.model}));
   }
 
 });
