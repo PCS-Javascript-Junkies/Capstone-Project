@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
+},{"underscore":11}],2:[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
+},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
+},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
+},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
+},{"./safe-string":6}],8:[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
+},{"handlebars/runtime":8}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,7 +12623,7 @@ return jQuery;
   }
 }).call(this);
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 //var db = require("./database.js");
 
 
@@ -12894,7 +12894,7 @@ module.exports=QuestionTree;
 
 
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12908,6 +12908,8 @@ questionTree.initialize();
 console.log(questionTree);
 
 
+
+
 var Router = Backbone.Router.extend({
   routes: {
     '': 'callHomeView'
@@ -12918,7 +12920,7 @@ var Router = Backbone.Router.extend({
   }
 });
 
-},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","./views/home-view":"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js","./yelpAdventure1":"/Users/hanna/Code/Capstone-Project/public/js/yelpAdventure1.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"../database/dbMain.js":12,"./views/adventure-view":15,"./views/home-view":16,"./yelpAdventure1":18,"backbone":1,"jquery":10}],14:[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -12939,7 +12941,7 @@ var Adventure = Backbone.Model.extend({
 }); //above is more like making a GET for each click
 
 module.exports = Adventure;
-},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js":[function(require,module,exports){
+},{"backbone":1}],15:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12965,7 +12967,7 @@ var AdventureView = Backbone.View.extend({
 });
 
 module.exports = AdventureView;
-},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./step-one-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/home-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent.hbs":19,"../../templates/adventure-step-one.hbs":20,"../models/adventure.js":14,"./step-one-view.js":17,"backbone":1,"jquery":10}],16:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12990,7 +12992,7 @@ var HomeView = Backbone.View.extend({
 });
 
 module.exports = HomeView;
-},{"../../templates/adventure-parent.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs","../../templates/home-view.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs","./adventure-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/step-one-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent.hbs":19,"../../templates/home-view.hbs":21,"./adventure-view.js":15,"backbone":1,"jquery":10}],17:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13019,7 +13021,7 @@ var StepOneView = Backbone.View.extend({
 });
 
 module.exports = StepOneView;
-},{"../../templates/adventure-step-one.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/yelpAdventure1.js":[function(require,module,exports){
+},{"../../templates/adventure-step-one.hbs":20,"backbone":1,"jquery":10}],18:[function(require,module,exports){
 
 // function yelpAdventure1(pickRandomOutside, pickRandomInside) {
 
@@ -13081,7 +13083,7 @@ module.exports = StepOneView;
 
 //       module.exports = yelpAdventure1;
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent.hbs":[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13093,7 +13095,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\">\n  <h1>Choose Your Own Adventure PDX</h1>\n  <div id=\"steps\">\n  </div>\n</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-step-one.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],20:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13105,7 +13107,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<h2>Step 1</h2>\n<p>\n  This is a sample step one. Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"step1-choice-a\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"step1-choice-b\" role=\"button\">Inside</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/home-view.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],21:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13117,4 +13119,4 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n  <div class=\"intro-block\">\n    <h1>Welcome to Choose Your Own Adventure PDX</h1>\n    <p>Introductory text!</p>\n    <p>\n      <div class=\"btn btn-primary btn-lg\" id=\"begin-adventure\" role=\"button\">Start Your Adventure</div>\n    </p>\n  </div>\n</div>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
+},{"hbsfy/runtime":9}]},{},[13])
