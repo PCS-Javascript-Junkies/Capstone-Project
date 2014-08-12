@@ -15,21 +15,17 @@ var WeatherChoiceView = Backbone.View.extend({
     var locationChoiceView = new LocationChoiceView({model: this.model});
   },
   clickOutside: function() {
-    console.log("clicked outside");
     this.model.set({weather: "outside"});
-    console.log(this.model);
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },
   clickInside: function() {
     this.model.set({weather: "inside"});
-    console.log(this.model);
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },
   render: function () {
     $(this.el).html(weatherChoiceTemplate);
-    //console.log(this.model);
   }
 });
 

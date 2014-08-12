@@ -40,7 +40,7 @@ app.get('/api/themes/:weather/:geoLocation', function (req, res) {
   };
   if (req.params.weather === "outside" && req.params.geoLocation === "se") {
     var data = {
-      "themes": ["breweries", "active", "tgif"]
+      "themes": [{"title":"breweries"}, {"title":"active"}, {"title":"tgif"}]
     }
   } else {
     var data = {

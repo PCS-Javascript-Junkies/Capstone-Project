@@ -3,6 +3,7 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var locationChoiceTemplate = require('../../templates/location-choice-template.hbs');
+var ThemeChoiceView = require('./theme-choice-view.js');
 
 var LocationChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -16,7 +17,7 @@ var LocationChoiceView = Backbone.View.extend({
   },
   clickSoutheast: function() {
     this.model.set({geolocation: "se"});
-    console.log(this.model);
+    this.loadThemeChoiceView();
   },
   clickNortheast: function() {
     this.model.set({geolocation: "ne"});
@@ -29,7 +30,10 @@ var LocationChoiceView = Backbone.View.extend({
   },
   render: function () {
     $(this.el).html(locationChoiceTemplate);
-    console.log("geolocation choice");
+  },
+  loadThemeChoiceView: function () {
+    var themeChoiceView = new ThemeChoiceView({model: this.model});
+    themeChoiceView.render();
   }
 });
 

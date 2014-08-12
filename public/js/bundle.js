@@ -12635,7 +12635,6 @@ var Router = Backbone.Router.extend({
     '': 'callAdventureParentView'
   },
   callAdventureParentView: function () {
-    console.log("adventure parent view");
     this.adventureParentView = new AdventureParentView();
     this.adventureParentView.render();
   }
@@ -12654,7 +12653,8 @@ var Adventure = Backbone.Model.extend({
   },
   defaults: {
     "weather": null,
-    "geolocation": null
+    "geolocation": null,
+    "themes": null
   },
   initialize: function() { 
     this.on('change:geolocation', this.getThemes, this);
@@ -12662,8 +12662,8 @@ var Adventure = Backbone.Model.extend({
   getThemes: function() {
     //this.save(this, { url: '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation});
     this.fetch();
-    console.log("here is where I get the themes!");
-    console.log(this.model);
+    // console.log("here is where I get the themes!");
+    // console.log(this.model);
   }
   // currentStep: "step",
   // nameTest: "present adventure",
@@ -12708,6 +12708,7 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var locationChoiceTemplate = require('../../templates/location-choice-template.hbs');
+var ThemeChoiceView = require('./theme-choice-view.js');
 
 var LocationChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -12721,7 +12722,7 @@ var LocationChoiceView = Backbone.View.extend({
   },
   clickSoutheast: function() {
     this.model.set({geolocation: "se"});
-    console.log(this.model);
+    this.loadThemeChoiceView();
   },
   clickNortheast: function() {
     this.model.set({geolocation: "ne"});
@@ -12734,12 +12735,49 @@ var LocationChoiceView = Backbone.View.extend({
   },
   render: function () {
     $(this.el).html(locationChoiceTemplate);
-    console.log("geolocation choice");
+  },
+  loadThemeChoiceView: function () {
+    var themeChoiceView = new ThemeChoiceView({model: this.model});
+    themeChoiceView.render();
   }
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
+
+var themeChoiceTemplate = require('../../templates/theme-choice-template.hbs');
+
+var ThemeChoiceView = Backbone.View.extend({
+  el: '#adventure-parent',
+  render: function () {
+    var themes = [];
+    console.log(this.model);
+    console.log(this.model.attributes);
+    // this.model.attributes.themes.forEach(function (item) {
+    //   themes.push(item);
+    // });
+    // $(this.el).html(themeChoiceTemplate({theme:data}));
+    console.log("theme choice view");
+  },
+});
+
+module.exports = ThemeChoiceView;
+
+
+// render: function () {
+
+//     var data = [];
+
+//     this.collection.models.forEach(function (item) {
+//       data.push({title: item.escape('title'), description: item.escape('description') });
+//     });
+
+//     this.$el.html(myTemplate({todoData:data}));
+//   }
+},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -12757,21 +12795,17 @@ var WeatherChoiceView = Backbone.View.extend({
     var locationChoiceView = new LocationChoiceView({model: this.model});
   },
   clickOutside: function() {
-    console.log("clicked outside");
     this.model.set({weather: "outside"});
-    console.log(this.model);
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },
   clickInside: function() {
     this.model.set({weather: "inside"});
-    console.log(this.model);
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },
   render: function () {
     $(this.el).html(weatherChoiceTemplate);
-    //console.log(this.model);
   }
 });
 
@@ -12797,7 +12831,36 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary\" id=\"location-all\" role=\"button\">Everywhere!</div>";
+  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>";
+  });
+
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n<div class=\"btn btn-primary\" id=\"";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" role=\"button\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n";
+  return buffer;
+  }
+
+  buffer += "<div class=\"intro-block\">\n  <h1>Pick a theme</h1>\n</div>\n<p>\n  More description here. (Only breweries work for now.)\n</p>\n";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.theme), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
