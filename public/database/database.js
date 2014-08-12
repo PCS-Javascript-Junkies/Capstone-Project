@@ -1,6 +1,14 @@
-//var db = require("./database.js");
-
-
+// var source = $("../server-templates/tree.html").html();
+// var template = Handlebars.compile(source);
+/**
+ * Creates a BinarySearchTree toolbox function
+ * that will be utilized to build a decision tree
+ * calling the BinarySearchTree function you will
+ * create a tree with a root node.
+ *
+ * To avoid errors the database should be built from the root down
+ *         []<-root
+ */
 function QuestionTree() {
     this.root = null;
     this.current =null;
@@ -32,7 +40,7 @@ QuestionTree.prototype = {
     };
 
     var rootNode ={
-        "id": "Root",
+        "id": "root",
         "questions": null,
         "insideTree": null,
         "outsideTree": null,
@@ -50,7 +58,7 @@ QuestionTree.prototype = {
     buildTheme: function (inOrOut, title){
         var node ={
             "title": title,
-            "next": null
+            "head": null
         };
 
         if(inOrOut === "inside"){
@@ -137,7 +145,7 @@ QuestionTree.prototype = {
                    pointer = this.root.insideTree.theme.foodieTheme;
                     break;
                 case "hosting":
-                   pointer = this.root.insideTree.theme.hostingTheme;
+                   pointer = this.root.insidetree.theme.hostingTHeme;
                     break;
                 case "active":
                    pointer = this.root.insideTree.theme.activeTheme;
@@ -167,7 +175,7 @@ QuestionTree.prototype = {
                    pointer = this.root.outsideTree.theme.foodieTheme;
                     break;
                 case "hosting":
-                   pointer = this.root.outsideTree.theme.hostingTheme;
+                   pointer = this.root.outsidetree.theme.hostingTHeme;
                     break;
                 case "active":
                    pointer = this.root.outsideTree.theme.activeTheme;
@@ -185,10 +193,10 @@ QuestionTree.prototype = {
                     console.log("\nadd was not formatted correctly");
             }
         }
-        if(pointer.next === null){
-            pointer.next = node;
+        if(pointer.head === null){
+            pointer.head = node;
         }else{
-            pointer = pointer.next;
+            pointer = pointer.head;
             while(pointer.next){
                 pointer = pointer.next;
             }
@@ -196,63 +204,16 @@ QuestionTree.prototype = {
         }
     },
 
-// initialize: function (){
-//         tree = new QuestionTree();
+    display: function(){
+        var pointer = this.root;
 
-//         tree.startTree();
-
-//         var questions = ["Question-1 ","Question-2 ", "Question-3 ",
-//          "Question-4 ","Question-5 "];
-//         var theme = ["chill","kids","foodie","hosting","active",
-//                     "tgif","nightOut","brewery"];
-//         var level = ["","mainItem", "breatherItem", "endingItem" ];
-
-//         tree.root.questions=questions; 
-
-//         //outside theme building
-//         theme.forEach(function(item){
-//             tree.buildTheme("outside", item);
-//         });
-
-//         //build inside theme
-//         theme.forEach(function(item){
-//             tree.buildTheme("inside", item);
-//         });
-//         for(var i =0; i< 8; ++i){
-//         tree.addToTheme("outside", theme[i],
-//             level[1],questions);
-
-//         tree.addToTheme("outside", theme[i],
-//             level[2],questions);
-
-//         tree.addToTheme("outside", theme[i],
-//             level[1],questions);
-
-//         tree.addToTheme("outside", theme[i],
-//             level[3],questions);
-//         }
-
-
-//         for(var i =0; i< 8; ++i){
-//         tree.addToTheme("inside", theme[i],
-//             level[1],questions);
-
-//         tree.addToTheme("inside", theme[i],
-//             level[2],questions);
-
-//         tree.addToTheme("inside", theme[i],
-//             level[1],questions);
-
-//         tree.addToTheme("inside", theme[i],
-//             level[3],questions);
-//         }
-
-// },
+    },
 
 
 };
 
 
+module.exports = QuestionTree;
 
 
 
@@ -261,9 +222,170 @@ QuestionTree.prototype = {
 
 
 
-//console.log(tree.current.outsideTree);
-
-module.exports=QuestionTree;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     }
+
+//     add: function (data, id){
+//     var node = {
+//         "id": id,
+//         "questions": data,
+//         "left": null,
+//         "right": null
+//     };
+
+// //console.log(node);
+
+
+//     var pointer; //pointer pointer. use to find things in the tree.
+
+//     /**
+//      * Checks to see if root is null, if it is then adds the node there
+//      * @type {[node]}
+//      */
+//     if(this.root === null){
+//         this.root = node;
+//     } else {
+//     pointer = this.root;
+
+//     /**
+//      * if root does exist traverse the tree until you reach the end.
+//      * and add where needed. All instances of pointer.left/right = node
+//      * is a creation of a new node.
+//      */
+//     while(pointer){
+//         if(id < pointer.id){
+//             if(pointer.left === null){
+//                 pointer.left = node;
+//                 break;
+//             }else{
+//                 pointer = pointer.left;
+//             }
+//         } else if (id > pointer.id){
+//             if(pointer.right === null){
+//                 pointer.right = node;
+//                 break;
+//             } else {
+//                 pointer = pointer.right;
+//             }
+//             }else {
+//                     break;
+//                 }
+//             }
+//         }
+//     },
+
+//     get: function (toFind){
+//         var found = false;
+//         var pointer = this.root;
+//         while(!found && pointer){
+//             if(toFind < pointer.id){
+//                 parent = pointer;
+//                 pointer = pointer.left;
+//             } else if ( toFind > pointer.id){
+//                 parrent = pointer;
+//                 pointer = pointer.right;
+//             } else if (toFind === pointer.id){
+//                 found = true;
+//             }
+//         }
+//         return pointer;
+//     },
+
+//     remove: function (toFind){
+//         var found = false;
+//         var parent = null;
+//         var pointer = this.root;
+//         var childCount;
+//         var replacementNode;
+//         var replacementParent;
+
+//         while(!found && pointer){
+//             if(toFind < pointer.id){
+//                 parent = pointer;
+//                 pointer = pointer.left;
+//             } else if ( toFind > pointer.id){
+//                 parrent = pointer;
+//                 pointer = pointer.right;
+//             } else if (toFind === pointer.id){
+//                 found = true;
+//             }
+//         }
+
+//         if (found){
+//             childCount = (pointer.left !== null ? 1: 0) +
+//                 (pointer.right !== null ? 1: 0);
+//             if (pointer === this.root){
+//                 switch (childCount){
+//                     case 0:
+//                         this.root = null;
+//                         break;
+//                     case 1:
+//                         this.root = (pointer.right === null ?
+//                         pointer.left : pointer.right);
+//                         break;
+//                     case 2:
+//                         replacementNode = pointer.left;
+//                         replacementParent = pointer;
+
+//                         while(replacementNode.right !== null){
+//                             replacementParent = replacementNode;
+//                             replacementNode = replacementNode.right;
+//                         }
+
+//                         replacementParent.right = replacementNode.left;
+
+//                         replacementNode.right = pointer.right;
+//                         replacementNode.left = pointer.left;
+
+//                         if (pointer.data < parent.data){
+//                             parent.left = replacementNode;
+//                         } else {
+//                             parent.right = replacementNode;
+//                         }
+//                 }
+//             }
+//         }
+//     },
+
+
+//     display: function(root){
+//        console.log("Questions in node " +root.id+ " :",root.questions);
+//         if(root.left !== null)
+//             this.display(root.left);
+//         if(root.right !== null)
+//             this.display(root.right);
+//     }
+// };
+
+// module.exports = BinarySearchTree;
