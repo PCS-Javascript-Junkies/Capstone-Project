@@ -2,27 +2,221 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
+      html { height: 30% }
+      body { height: 30%; margin: 0; padding: 0 }
       #map-canvas { height: 100% }
     </style>
+<<<<<<< HEAD
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LOwQYzUJ9qT0lYjk3hwBmVb_DJD_1F0">
+=======
+    <script type="text/javascript" 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LOwQYzUJ9qT0lYjk3hwBmVb_DJD_1F0">
+      <src="http://api.yelp.com/v2/business/yelp-portland"
+>>>>>>> 48cf664619f9a2ac31cfae4d808690bf3375fa46
     </script>
     <script type="text/javascript">
-      function initialize() {
+
+    //put this in a method and insert w/click event: 
+
+    function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-Lat, Long), //Need to insert Portland's lat & long coordinates
+           center: new google.maps.LatLng(-45.5234515, 122.6762071),
           zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
+         };
+         var map = new google.maps.Map(document.getElementById("map-canvas"),
+             mapOptions);
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+       google.maps.event.addDomListener(window, 'load', initialize);
+     </script>
   </head>
   <body>
     <div id="map-canvas"/>
   </body>
 </html>
 
+//Alternatly, bits of this (below) may be helpful...
+
+// var map;
+// function initialize() {
+//   var mapOptions = {
+//     zoom: 8,
+//     center: new google.maps.LatLng(-34.397, 150.644)
+//   };
+//   map = new google.maps.Map(document.getElementById('map-canvas'),
+//       mapOptions);
+// }
+
+// google.maps.event.addDomListener(window, 'load', initialize);
+
+// //Google weather: Just a test...
+
+// var geocoder;
+// var map;
+// var markers = Array();
+// var infos = Array();
+
+// function initialize() {
+
+//     // prepare Geocoder
+
+//     geocoder = new google.maps.Geocoder();
+
+//     // set initial position (lat, long of Portland, Oregon)
+
+//     var myLatlng = new google.maps.LatLng(40.7143528,-74.0059731);
+
+//     var myOptions = { // default map options
+//   zoom: 14,
+//  center: myLatlng,
+// mapTypeId: google.maps.MapTypeId.ROADMAP
+
+//     };
+//     map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+// }
+
+// // clear overlays function
+
+// function clearOverlays() {
+
+//     if (markers) {
+//         for (i in markers) {
+//             markers[i].setMap(null);
+//         }
+//         markers = [];
+//         infos = [];
+//     }
+// }
+
+// // clear infos function
+
+// function clearInfos() {
+
+//     if (infos) {
+//         for (i in infos) {
+//             if (infos[i].getMap()) {
+//                 infos[i].close();
+//             }
+//         }
+//     }
+// }
+ 
+// // find address function
+
+// function findAddress() {
+//     var address = document.getElementById("gmap_where").value;
+ 
+//     // script uses 'geocoder' in order to find location by address name
+
+//     geocoder.geocode( { 'address': address}, function(results, status) {
+
+//         if (status == google.maps.GeocoderStatus.OK) { // and, if everything is ok
+
+//             // center map
+
+//             var addrLocation = results[0].geometry.location;
+//             map.setCenter(addrLocation);
+
+//             // store current coordinates into hidden variables
+
+//             document.getElementById('lat').value = results[0].geometry.location.lat();
+//             document.getElementById('lng').value = results[0].geometry.location.lng();
+
+//             // add new custom marker
+
+//             var addrMarker = new google.maps.Marker({
+//                 position: addrLocation,
+//                 map: map,
+//                 title: results[0].formatted_address,
+//                 icon: 'marker.png'
+//             });
+
+//         } else {
+//             alert('Geocode was not successful because ' + status + . + ' Sorry!');
+//         }
+//     });
+// }
+
+// // find custom places function
+
+// function findPlaces() {
+
+//     // prepare variables (filter)
+
+//     var type = document.getElementById('gmap_type').value;
+//     var radius = document.getElementById('gmap_radius').value;
+//     var keyword = document.getElementById('gmap_keyword').value;
+
+//     var lat = document.getElementById('lat').value;
+//     var lng = document.getElementById('lng').value;
+//     var cur_location = new google.maps.LatLng(lat, lng);
+
+//     // prepare request to Places
+
+//     var request = {
+//         location: cur_location,
+//         radius: radius,
+//         types: [type]
+//     };
+
+//     if (keyword) {
+//         request.keyword = [keyword];
+//     }
+
+//     // send request
+
+//     service = new google.maps.places.PlacesService(map);
+//     service.search(request, createMarkers);
+// }
+
+// // create markers (from 'findPlaces' function)
+
+// function createMarkers(results, status) {
+//     if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+//         // if we have found something - clear map (overlays)
+
+//         clearOverlays();
+
+//         // create new markers by search result
+
+//     //    for (var i = 0; i < results.length; i++) {
+//             createMarker(results[i]);
+//     //    }
+//     //} else if (status == google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+//     //    alert('Sorry, nothing is found.');
+//    // }
+// //}
+
+// // create single marker function
+
+// function createMarker(obj) {
+
+//     // prepare new Marker object
+
+//     var mark = new google.maps.Marker({
+//         position: obj.geometry.location,
+//         map: map,
+//         title: obj.name
+//     });
+//     markers.push(mark);
+ 
+//     // prepare info window
+
+//     var infowindow = new google.maps.InfoWindow({
+//         content: '<img src="' + obj.icon + '" /><font style="color:#000;">' + obj.name +
+//         '<br />Rating: ' + obj.rating + '<br />Vicinity: ' + obj.vicinity + '</font>'
+//     });
+
+//     // add event handler to current marker
+
+//     google.maps.event.addListener(mark, 'click', function() {
+//         clearInfos();
+//         infowindow.open(map,mark);
+//     });
+//     infos.push(infowindow);
+// }
+
+// // initialization
+
+// google.maps.event.addDomListener(window, 'load', initialize);

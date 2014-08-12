@@ -4,12 +4,14 @@ Backbone.$ = $;
 
 var AdventureView = require('./views/adventure-view');
 var HomeView = require('./views/home-view');
+var yelpAdventure1 = require('./yelpAdventure1'); //Need to confirm placement/syntax
+
 
 var Router = Backbone.Router.extend({
   routes: {
     '': 'callHomeView',
     'adventure-step-1': 'callAdventureView'
-  },
+},
   callHomeView: function () {
     this.homeView = new HomeView();
     this.homeView.render();
@@ -19,9 +21,4 @@ var Router = Backbone.Router.extend({
     this.adventureView = new AdventureView();
     this.adventureView.render();
   }
-});
-
-$(function () {
-  window.app = new Router();
-  Backbone.history.start();
 });

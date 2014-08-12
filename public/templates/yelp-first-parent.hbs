@@ -1,0 +1,81 @@
+
+<h2>Your Next Adventure</h2>
+<p>
+  This is a sample step one. Would you like to stay outside or inside? (Hint: only outside works for now.)
+</p>
+<div class="btn btn-primary" id="step1-choice-a" role="button">Outside</div>
+<div class="btn btn-primary" id="step1-choice-b" role="button">Inside</div>
+
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 30% }
+      body { height: 30%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+
+    <script type="text/javascript" 
+    	
+
+      var pickRandomOutside = require('pick-random');
+      		pickRandomOutside(['discgolf', 'hiking', 'lakes', 'parks', 'swimmmingpools', 'minigolf', 'bikerentals'], {count: 1});
+          //'pick-random' is a cool npm module requiring the above format; I 
+      		pickRandomOutside = this.pickRandomOutside
+      			while (this.pickRandomOutside === null) 
+      				alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+              }
+      $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomOutside + "&amp;location=portland"; 
+      //html peeps: this search call needs to be the result of the random-generated category from the above array; please double-check me...
+      
+        $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+        $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+        $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+        $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+
+        $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+        $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+        $AuthRequest = OAuthRequest::from_consumer_and_token(
+            $Consumer, 
+            $AuthToken, 
+            'GET', 
+            $URL
+        );
+    </script>
+
+
+    <script type="text/javascript"
+    	var pickRandomInside = require('pick-random');
+      		pickRandomInside(['arcades', 'bowling', 'museums', 'cinema', 'psychic_astrology', 'wineries'], {count: 1};
+      			pickRandomInside = this.pickRandomInside
+      			while (this.pickRandomInside === null) 
+      			alert("Sorry, that choice isn't available in these here parts. Please choose something else by clicking the \'Inside\' or \'Outside\' button again.")
+      			}
+             $URL = "http://api.yelp.com/v2/search?term=" + $pickRandomInside + "&amp;location=portland"; 
+      //see above comment; ditto...
+      
+        $CONSUMER_KEY = 8bwLib9ZGlwEh8vuZvIJwA;
+        $CONSUMER_SECRET = 8FO6lp2UHpJPxIj33AJz2Gpq0Zg;
+        $TOKEN = Gy1xgYr1kkMgD1hw9ynEM0fDGMkyQGWs;
+        $TOKEN_SECRET = Fxpa9Z8xhfu8LSKIqsdA1ZVAFE0;
+      //Not sure if the key, secret, token, and token secret need to be in here twice...
+        
+        $AuthToken = new OAuthToken($TOKEN, $TOKEN_SECRET);
+        $Consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
+
+        $AuthRequest = OAuthRequest::from_consumer_and_token(
+            $Consumer, 
+            $AuthToken, 
+            'GET', 
+            $URL
+        );
+    </script>
+    <script type="text/javascript">
+
+
+//something like this (includes Oauth key); not sure where this goes:
+
+//See http://stackoverflow.com/questions/25107990/yelp-api-getting-json-results; may be helpful
+
+
