@@ -50,7 +50,7 @@ QuestionTree.prototype = {
     buildTheme: function (inOrOut, title){
         var node ={
             "title": title,
-            "head": null
+            "next": null
         };
 
         if(inOrOut === "inside"){
@@ -185,10 +185,10 @@ QuestionTree.prototype = {
                     console.log("\nadd was not formatted correctly");
             }
         }
-        if(pointer.head === null){
-            pointer.head = node;
+        if(pointer.next === null){
+            pointer.next = node;
         }else{
-            pointer = pointer.head;
+            pointer = pointer.next;
             while(pointer.next){
                 pointer = pointer.next;
             }
@@ -235,7 +235,7 @@ theme.forEach(function(item){
 theme.forEach(function(item){
 	tree.buildTheme("inside", item);
 });
-for(var i =0; i< 7; ++i){
+for(var i =0; i< 8; ++i){
 tree.addToTheme("outside", theme[i],
     level[1],questions);
 
@@ -250,7 +250,7 @@ tree.addToTheme("outside", theme[i],
 }
 
 
-for(var i =0; i< 7; ++i){
+for(var i =0; i< 8; ++i){
 tree.addToTheme("inside", theme[i],
     level[1],questions);
 
@@ -263,7 +263,6 @@ tree.addToTheme("inside", theme[i],
 tree.addToTheme("inside", theme[i],
     level[3],questions);
 }
-//console.log(tree.root.outsideTree.theme.activeTheme.head);
 
 //console.log(tree.current.outsideTree);
 
