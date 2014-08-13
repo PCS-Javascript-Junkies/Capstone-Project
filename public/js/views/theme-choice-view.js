@@ -3,31 +3,30 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var themeChoiceTemplate = require('../../templates/theme-choice-template.hbs');
+var QuestionView = require('./question-view.js');
 
 var ThemeChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
+  events: {
+    'click #chill': 'chooseChillTheme'
+  },
+  chooseChillTheme: function () { //repeat this for all themes...
+    this.model.set({theme: "chill"});
+    tree.current = tree.current.theme.chillTheme.next;
+    this.loadQuestionView();
+  },
+  loadQuestionView: function () { //generalized function that calls the generic question view
+    var questionView = new QuestionView({model: this.model});
+    questionView.render();
+  },
   render: function () {
-    var themes = [];
+    var themes = tree.current.themes;
     console.log(this.model);
     console.log(this.model.attributes);
-    // this.model.attributes.themes.forEach(function (item) {
-    //   themes.push(item);
-    // });
-    // $(this.el).html(themeChoiceTemplate({theme:data}));
+    var treeData = tree.current;
+    $(this.el).html(themeChoiceTemplate({treeData: treeData}));
     console.log("theme choice view");
   },
 });
 
 module.exports = ThemeChoiceView;
-
-
-// render: function () {
-
-//     var data = [];
-
-//     this.collection.models.forEach(function (item) {
-//       data.push({title: item.escape('title'), description: item.escape('description') });
-//     });
-
-//     this.$el.html(myTemplate({todoData:data}));
-//   }

@@ -21,14 +21,18 @@ var LocationChoiceView = Backbone.View.extend({
   },
   clickNortheast: function() {
     this.model.set({geolocation: "ne"});
+    this.loadThemeChoiceView();
   },
   clickWest: function() {
     this.model.set({geolocation: "west"});
+    this.loadThemeChoiceView();
   },
   clickAll: function() {
     this.model.set({geolocation: "all"});
+    this.loadThemeChoiceView();
   },
   render: function () {
+    console.log("tree after weather choice", tree.current);
     $(this.el).html(locationChoiceTemplate);
   },
   loadThemeChoiceView: function () {

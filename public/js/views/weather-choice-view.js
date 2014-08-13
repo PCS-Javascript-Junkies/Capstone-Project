@@ -12,15 +12,16 @@ var WeatherChoiceView = Backbone.View.extend({
     'click #choice-inside': 'clickInside'
   },
   initialize: function () {
-    var locationChoiceView = new LocationChoiceView({model: this.model});
   },
   clickOutside: function() {
     this.model.set({weather: "outside"});
+    tree.current = tree.current.outsideTree;
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },
   clickInside: function() {
     this.model.set({weather: "inside"});
+    tree.current = tree.current.insideTree;
     var locationChoiceView = new LocationChoiceView({model: this.model});
     locationChoiceView.render();
   },

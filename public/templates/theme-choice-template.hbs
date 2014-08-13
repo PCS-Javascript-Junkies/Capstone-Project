@@ -2,8 +2,8 @@
   <h1>Pick a theme</h1>
 </div>
 <p>
-  More description here. (Only breweries work for now.)
+  {{treeData.questions}}. (Only chill works for now.)
 </p>
-{{#each theme}}
+{{#each treeData.theme}}
 <div class="btn btn-primary" id="{{title}}" role="button">{{title}}</div>
 {{/each}}
