@@ -1,0 +1,8 @@
+  var forecastAPIKey = 1f75a50387fa44c9015e4edc8fce57fc
+
+  var googlePlacesAPIKey = AIzaSyA6LOwQYzUJ9qT0lYjk3hwBmVb_DJD_1F0
+
+	var yelpConsumerKey = RJFp3rk_b9tsJv7dZTt9-w
+	var yelpConsumerSecret = -OpEjAPEzXcoZ2iCiqMhOIHfyAI
+	var yelpToken = VeLhRGQyrLvCYum5nT72LIF8YMFOS1nS
+	var yelpTokenSecret = gSESJ23k6Pa_QJKFP7NBHycL8no

@@ -1,0 +1,25 @@
+//https://developer.forecast.io/docs/v2#forecast_call
+
+//https://api.forecast.io/forecast/1f75a50387fa44c9015e4edc8fce57fc/-45.5234515, 122.6762071
+
+var options = {
+  forecaseAPIKey,
+  timeout: 1000
+},
+forecast = new Forecast(options);
+
+forecast.get(latitude, longitude, function (err, res, data) {
+  if (err) throw err;
+  log('res: ' + util.inspect(res));
+  log('data: ' + util.inspect(data));
+});
+
+var forecastInfo = JSON.parse(data.responseText);
+
+//var time = new Date().setDate(0); 
+// lets use an arbitrary date
+//forecast.getAtTime(latitude, longitude, time, function (err, res, data) {
+  //if (err) throw err;
+  //log('res: ' + util.inspect(res));
+  //log('data: ' + util.inspect(data));
+//});
