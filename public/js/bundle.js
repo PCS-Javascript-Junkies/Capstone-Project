@@ -12827,8 +12827,28 @@ initialize: function (){
 
         tree.startTree();
 
-        var questions = ["Question-1 ","Question-2 ", "Question-3 ",
-         "Question-4 ","Question-5 "];
+        var barQuestions = ["Do you feel like beer, wine, or spirits? ",
+        "In the mood for grapes, hops, or the hard stuff? ", "Question-3 ",
+         "If you are at a bar you would order: ",];
+
+        var barSearch =[["irish_pubs","pubs"],["wine_bars","lounges"]];
+
+        var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ", 
+                            "After a few hours of drinking i feel like food, a quick snack, or more drinking "];    
+
+        var breakSearch =[["bubbletea","coffee", "foodtrucks","tea"]];   
+        
+        var wrapQuestions = ["Desert, Drinks again, or greasy food?"];    
+
+        var wrapSearch =[["cupcakes","desserts", "icecream","gelato"]];
+
+
+        var barNode = tree.root.insideTree.theme.breweryTheme;
+
+
+
+        var questions = ["Test Question-1 "," Test Question-2 ", " Test Question-3 ",
+         "Test Question-4 ","Test Question-5 "];
         var theme = ["chill","kids","foodie","hosting","active",
                     "tgif","nightOut","brewery"];
         var level = ["","mainItem", "breatherItem", "endingItem" ];
@@ -12873,6 +12893,18 @@ initialize: function (){
             level[3],questions);
         }
 
+
+
+
+        tree.root.insideTree.theme.breweryTheme.next.questions = barQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.questions = breakQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.categories = breakSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.questions = barQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.next.categories = wrapSearch;
+
 },
 
 
@@ -12890,10 +12922,6 @@ initialize: function (){
 //console.log(tree.current.outsideTree);
 
 module.exports=QuestionTree;
-
-
-
-
 },{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
@@ -13022,7 +13050,9 @@ var QuestionView = Backbone.View.extend({
     'click #step1-choice-b': 'step2ChoiceB'
   },
   pickRandomQuestion: function () {
-    var index = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
+    var max = tree.current.questions.length - 1;
+    console.log(max);
+    var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
   stepOneChoiceA: function () {
@@ -13030,7 +13060,8 @@ var QuestionView = Backbone.View.extend({
   render: function () {
     console.log("render question 1");
     var questionIndex = this.pickRandomQuestion();
-    $(this.el).html(questionTemplate({questionIndex: questionIndex}));
+    var currentTree = tree.current;
+    $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
   }
 });
 
@@ -13046,11 +13077,17 @@ var QuestionView = require('./question-view.js');
 var ThemeChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
-    'click #chill': 'chooseChillTheme'
+    'click #chill': 'chooseChillTheme',
+    'click #brewery': 'chooseBreweryTheme'
   },
   chooseChillTheme: function () { //repeat this for all themes...
     this.model.set({theme: "chill"});
     tree.current = tree.current.theme.chillTheme.next;
+    this.loadQuestionView();
+  },
+  chooseBreweryTheme: function () {
+    this.model.set({theme: "brewery"});
+    tree.current = tree.current.theme.breweryTheme.next;
     this.loadQuestionView();
   },
   loadQuestionView: function () { //generalized function that calls the generic question view
@@ -13132,14 +13169,30 @@ var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
 
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n<div class=\"btn btn-primary\" id=\"";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" role=\"button\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n";
+  return buffer;
+  }
 
   buffer += "<h2>Questions</h2>\n<p>\n  ";
   if (helper = helpers.questionIndex) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\n</p>\n<div class=\"btn btn-primary\" id=\"step1-choice-a\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"step1-choice-b\" role=\"button\">Inside</div>";
+    + "\n</p>\n";
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.categories), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
   return buffer;
   });
 

@@ -2,5 +2,6 @@
 <p>
   {{questionIndex}}
 </p>
-<div class="btn btn-primary" id="step1-choice-a" role="button">Outside</div>
-<div class="btn btn-primary" id="step1-choice-b" role="button">Inside</div>
+{{#each currentTree.categories}}
+<div class="btn btn-primary" id="{{title}}" role="button">{{title}}</div>
+{{/each}}

@@ -8,11 +8,17 @@ var QuestionView = require('./question-view.js');
 var ThemeChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
-    'click #chill': 'chooseChillTheme'
+    'click #chill': 'chooseChillTheme',
+    'click #brewery': 'chooseBreweryTheme'
   },
   chooseChillTheme: function () { //repeat this for all themes...
     this.model.set({theme: "chill"});
     tree.current = tree.current.theme.chillTheme.next;
+    this.loadQuestionView();
+  },
+  chooseBreweryTheme: function () {
+    this.model.set({theme: "brewery"});
+    tree.current = tree.current.theme.breweryTheme.next;
     this.loadQuestionView();
   },
   loadQuestionView: function () { //generalized function that calls the generic question view

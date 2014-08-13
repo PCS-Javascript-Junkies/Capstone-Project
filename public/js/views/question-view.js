@@ -11,7 +11,9 @@ var QuestionView = Backbone.View.extend({
     'click #step1-choice-b': 'step2ChoiceB'
   },
   pickRandomQuestion: function () {
-    var index = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
+    var max = tree.current.questions.length - 1;
+    console.log(max);
+    var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
   stepOneChoiceA: function () {
@@ -19,7 +21,8 @@ var QuestionView = Backbone.View.extend({
   render: function () {
     console.log("render question 1");
     var questionIndex = this.pickRandomQuestion();
-    $(this.el).html(questionTemplate({questionIndex: questionIndex}));
+    var currentTree = tree.current;
+    $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
   }
 });
 
