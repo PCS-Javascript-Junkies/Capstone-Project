@@ -13083,6 +13083,7 @@ var ThemeChoiceView = Backbone.View.extend({
   },
   chooseChillTheme: function () { //repeat this for all themes...
     this.model.set({theme: "chill"});
+    var clickedThemeId = event.target.id;
     tree.current = tree.current.theme.chillTheme.next;
     this.loadQuestionView();
   },
