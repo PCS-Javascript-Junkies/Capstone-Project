@@ -201,8 +201,28 @@ initialize: function (){
 
         tree.startTree();
 
-        var questions = ["Question-1 ","Question-2 ", "Question-3 ",
-         "Question-4 ","Question-5 "];
+        var barQuestions = ["Do you feel like beer, wine, or spirits? ",
+        "In the mood for grapes, hops, or the hard stuff? ", "Question-3 ",
+         "If you are at a bar you would order: ",];
+
+        var barSearch =[["irish_pubs","pubs"],["wine_bars","lounges"]];
+
+        var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ", 
+                            "After a few hours of drinking i feel like food, a quick snack, or more drinking "];    
+
+        var breakSearch =[["bubbletea","coffee", "foodtrucks","tea"]];   
+        
+        var wrapQuestions = ["Desert, Drinks again, or greasy food?"];    
+
+        var wrapSearch =[["cupcakes","desserts", "icecream","gelato"]];
+
+
+        var barNode = tree.root.insideTree.theme.breweryTheme;
+
+
+
+        var questions = ["Test Question-1 "," Test Question-2 ", " Test Question-3 ",
+         "Test Question-4 ","Test Question-5 "];
         var theme = ["chill","kids","foodie","hosting","active",
                     "tgif","nightOut","brewery"];
         var level = ["","mainItem", "breatherItem", "endingItem" ];
@@ -247,7 +267,19 @@ initialize: function (){
             level[3],questions);
         }
 
-},
+
+
+
+        tree.root.insideTree.theme.breweryTheme.next.questions = barQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.questions = breakQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.categories = breakSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.questions = barQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.next.categories = wrapSearch;
+
+}
 
 
 };
@@ -264,6 +296,3 @@ initialize: function (){
 //console.log(tree.current.outsideTree);
 
 module.exports=QuestionTree;
-
-
-
