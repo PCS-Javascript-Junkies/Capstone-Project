@@ -34,6 +34,23 @@ app.get('/', function (req, res) {
   res.render('./index.html');
 });
 
+app.get('/api/themes/:weather/:geoLocation', function (req, res) {
+  var data = {
+    "weather": req.params.weather,
+    "location": req.params.geoLocation,
+  };
+  if (req.params.weather === "outside" && req.params.geoLocation === "se") {
+    var data = {
+      "themes": [{"title":"breweries"}, {"title":"active"}, {"title":"tgif"}]
+    }
+  } else {
+    var data = {
+      "themes": ["not a valid param"]
+    }
+  }
+  res.json(data);
+});
+
 //db.deleteCollection('bb-todos');
 
 // app.get('/api/adventures', function (req, res) {

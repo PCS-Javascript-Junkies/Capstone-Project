@@ -279,7 +279,7 @@ initialize: function (){
         tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
         tree.root.insideTree.theme.breweryTheme.next.next.next.next.categories = wrapSearch;
 
-},
+}
 
 
 };
@@ -296,6 +296,3 @@ initialize: function (){
 //console.log(tree.current.outsideTree);
 
 module.exports=QuestionTree;
-
-
-
