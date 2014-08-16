@@ -3,12 +3,12 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
+var questionLevel = 0;
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
-    'click #step1-choice-a': 'stepOneChoiceA',
-    'click #step1-choice-b': 'step2ChoiceB'
+    'click .question-choice': 'chooseQuestion'
   },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
@@ -16,7 +16,18 @@ var QuestionView = Backbone.View.extend({
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  stepOneChoiceA: function () {
+  chooseQuestion: function () {
+    var clickedQuestionId = event.target.id;
+    var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
+    //this.model.set(yelpKeywordArray);
+    this.model.attributes["level" + questionLevel] = yelpKeywordArray;
+    console.log("model as of now:",this.model);
+    this.renderNextQuestion();
+  },
+  renderNextQuestion: function () {
+    questionLevel++;
+    tree.current = tree.current.next;
+    this.render();
   },
   render: function () {
     console.log("render question view");

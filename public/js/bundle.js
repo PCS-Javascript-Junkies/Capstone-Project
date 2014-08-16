@@ -13066,12 +13066,12 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
+var questionLevel = 0;
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
-    'click #step1-choice-a': 'stepOneChoiceA',
-    'click #step1-choice-b': 'step2ChoiceB'
+    'click .question-choice': 'chooseQuestion'
   },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
@@ -13079,7 +13079,18 @@ var QuestionView = Backbone.View.extend({
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  stepOneChoiceA: function () {
+  chooseQuestion: function () {
+    var clickedQuestionId = event.target.id;
+    var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
+    //this.model.set(yelpKeywordArray);
+    this.model.attributes["level" + questionLevel] = yelpKeywordArray;
+    console.log("model as of now:",this.model);
+    this.renderNextQuestion();
+  },
+  renderNextQuestion: function () {
+    questionLevel++;
+    tree.current = tree.current.next;
+    this.render();
   },
   render: function () {
     console.log("render question view");
@@ -13194,10 +13205,8 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"btn btn-primary\" id=\"";
-  if (helper = helpers.buttons) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.buttons); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
+  buffer += "\n<div class=\"btn btn-primary question-choice\" id=\""
+    + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" role=\"button\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
