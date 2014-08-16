@@ -19,7 +19,7 @@ QuestionTree.prototype = {
         "hostingTheme": null,
         "tgifTheme":null,
         "breweryTheme":null,
-        "kidFunTheme":null,
+        "kidsTheme":null,
         "activeTheme": null
     };
 
@@ -60,7 +60,7 @@ QuestionTree.prototype = {
                     this.root.insideTree.theme.chillTheme = node;
                     break;
                 case "kids":
-                    this.root.insideTree.theme.kidFunTheme = node;
+                    this.root.insideTree.theme.kidsTheme = node;
                     break;
                 case "foodie":
                     this.root.insideTree.theme.foodieTheme = node;
@@ -90,7 +90,7 @@ QuestionTree.prototype = {
                     this.root.outsideTree.theme.chillTheme = node;
                     break;
                 case "kids":
-                    this.root.outsideTree.theme.kidFunTheme = node;
+                    this.root.outsideTree.theme.kidsTheme = node;
                     break;
                 case "foodie":
                     this.root.outsideTree.theme.foodieTheme = node;
@@ -133,7 +133,7 @@ QuestionTree.prototype = {
                    pointer = this.root.insideTree.theme.chillTheme;
                     break;
                 case "kids":
-                   pointer = this.root.insideTree.theme.kidFunTheme;
+                   pointer = this.root.insideTree.theme.kidsTheme;
                     break;
                 case "foodie":
                    pointer = this.root.insideTree.theme.foodieTheme;
@@ -163,7 +163,7 @@ QuestionTree.prototype = {
                    pointer = this.root.outsideTree.theme.chillTheme;
                     break;
                 case "kids":
-                   pointer = this.root.outsideTree.theme.kidFunTheme;
+                   pointer = this.root.outsideTree.theme.kidsTheme;
                     break;
                 case "foodie":
                    pointer = this.root.outsideTree.theme.foodieTheme;
