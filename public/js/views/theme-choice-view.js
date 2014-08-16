@@ -12,7 +12,6 @@ var ThemeChoiceView = Backbone.View.extend({
   },
   chooseTheme: function () { //repeat this for all themes...
     var clickedThemeId = event.target.id + "Theme";
-    console.log(clickedThemeId);
     this.model.set({theme: clickedThemeId});
     tree.current = tree.current.theme[clickedThemeId].next;
     this.loadQuestionView();

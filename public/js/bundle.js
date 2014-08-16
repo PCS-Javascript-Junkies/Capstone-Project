@@ -13082,7 +13082,8 @@ var QuestionView = Backbone.View.extend({
   stepOneChoiceA: function () {
   },
   render: function () {
-    console.log("render question 1");
+    console.log("render question view");
+    console.log(this.model);
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
     $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
@@ -13105,7 +13106,6 @@ var ThemeChoiceView = Backbone.View.extend({
   },
   chooseTheme: function () { //repeat this for all themes...
     var clickedThemeId = event.target.id + "Theme";
-    console.log(clickedThemeId);
     this.model.set({theme: clickedThemeId});
     tree.current = tree.current.theme[clickedThemeId].next;
     this.loadQuestionView();
@@ -13195,8 +13195,8 @@ function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n<div class=\"btn btn-primary\" id=\"";
-  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if (helper = helpers.buttons) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.buttons); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\" role=\"button\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -13211,7 +13211,7 @@ function program1(depth0,data) {
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\n</p>\n";
-  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.categories), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.buttons), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   return buffer;
   });

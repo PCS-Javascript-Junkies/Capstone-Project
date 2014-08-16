@@ -19,7 +19,8 @@ var QuestionView = Backbone.View.extend({
   stepOneChoiceA: function () {
   },
   render: function () {
-    console.log("render question 1");
+    console.log("render question view");
+    console.log(this.model);
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
     $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
