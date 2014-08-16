@@ -10,8 +10,8 @@ function QuestionTree() {
 QuestionTree.prototype = {
     startTree: function(insideOutsideQ, AreaQ){
     var theme ={
-        "theme": "themeID",
-        "themeQuestions": null,
+        // "theme": "themeID",
+        // "themeQuestions": null,
 
         "chillTheme": null,
         "nightOutTheme": null,
@@ -27,7 +27,7 @@ QuestionTree.prototype = {
         "id": "area",
         "questions": null,
         "area": null,
-        "themeNode": null
+        "theme": null
 
     };
 
@@ -47,14 +47,15 @@ QuestionTree.prototype = {
     },
 
 
-    buildTheme: function (inOrOut, title){
+    buildTheme: function (inOrOut, id, title){
         var node ={
+            "id": id,
             "title": title,
             "next": null
         };
 
         if(inOrOut === "inside"){
-            switch(title){
+            switch(id){
                 case "chill":
                     this.root.insideTree.theme.chillTheme = node;
                     break;
@@ -84,7 +85,7 @@ QuestionTree.prototype = {
 
             }
         }else{
-            switch(title){
+            switch(id){
                 case "chill":
                     this.root.outsideTree.theme.chillTheme = node;
                     break;
@@ -116,12 +117,13 @@ QuestionTree.prototype = {
         }
     },
 
-    addToTheme: function (inOrOut, theme, type, qArray, cArray){
+    addToTheme: function (inOrOut, theme, title, type, qArray, bObj){
         var pointer;
         var node ={
-            "type": type,
+            "title": title,
+            "id": theme,
             "questions": qArray,
-            "categories": cArray,
+            "buttons": bObj,
             "next": null
         };
 
@@ -202,19 +204,35 @@ initialize: function (){
         tree.startTree();
 
         var barQuestions = ["Do you feel like beer, wine, or spirits? ",
-        "In the mood for grapes, hops, or the hard stuff? ", "Question-3 ",
-         "If you are at a bar you would order: ",];
+        "In the mood for hops, grapes, or the hard stuff? ", "If you are at a bar you would order: ",];
 
-        var barSearch =[["irish_pubs","pubs"],["wine_bars","lounges"]];
 
-        var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ", 
-                            "After a few hours of drinking i feel like food, a quick snack, or more drinking "];    
+        var barButton=[
+        {title:"Beer", id:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        {title:"Wine", id:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
+        {title:"Mixed Drinks", id:"liquor", values:["distilleries","cocktailbars","lounges","pianobars"]},
+        {title:"Surprise Me", id:"all", values:["irish_pubs","pubs","breweries","sportsbars","wine_bars",
+        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,pianobars"]},
+        ];
 
-        var breakSearch =[["bubbletea","coffee", "foodtrucks","tea"]];   
-        
-        var wrapQuestions = ["Desert, Drinks again, or greasy food?"];    
+        var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ",
+                            "After a few hours of drinking I feel like food, a quick snack, or more drinking! (resposibly)"];
 
-        var wrapSearch =[["cupcakes","desserts", "icecream","gelato"]];
+        var breakButton=[
+        {title:"Music Sounds Nice", id:"music", values:["musicvenues","pianobars","breweries","jazzandblues"]},
+        {title:"Tea Time", id:"coffee", values:["coffee","tea",]},
+        {title:"Keep the Party Gong!", id:"again", values:["distilleries","cocktailbars","lounges","pianobars"]},
+        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        ];
+
+        var wrapQuestions = ["Desert, Drinks again, or greasy food?"];
+
+        var wrapButton =[
+        {title:"Desert", id:"Desert", values:["cupcakes","desserts","donuts"]},
+        {title:"Keep the Party Gong!", id:"again", values:["irish_pubs","pubs","breweries","sportsbars",
+        "wine_bars","champagne_bars","beer_and_wine", "distilleries","cocktailbars","lounges","pianobars"]},
+        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        ];
 
 
         var barNode = tree.root.insideTree.theme.breweryTheme;
@@ -223,47 +241,52 @@ initialize: function (){
 
         var questions = ["Test Question-1 "," Test Question-2 ", " Test Question-3 ",
          "Test Question-4 ","Test Question-5 "];
+
         var theme = ["chill","kids","foodie","hosting","active",
                     "tgif","nightOut","brewery"];
+
+        var title = ["Take It Easy","Fun With The Kids","Explor My Inner Foodie","Hosting Guests","Active and Energetic",
+                    "It's Friday!","Night On the Town","Breweries, Wineries, and more"];
+
         var level = ["","mainItem", "breatherItem", "endingItem" ];
 
-        tree.root.questions=questions; 
+        tree.root.questions=questions;
 
         //outside theme building
-        theme.forEach(function(item){
-            tree.buildTheme("outside", item);
+        theme.forEach(function(item, index){
+            tree.buildTheme("outside", item, title[index]);
         });
 
         //build inside theme
-        theme.forEach(function(item){
-            tree.buildTheme("inside", item);
+        theme.forEach(function(item, index){
+            tree.buildTheme("inside", item, title[index]);
         });
         for(var i =0; i< 8; ++i){
-        tree.addToTheme("outside", theme[i],
+        tree.addToTheme("outside", theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("outside", theme[i],
+        tree.addToTheme("outside", theme[i], title[i],
             level[2],questions);
 
-        tree.addToTheme("outside", theme[i],
+        tree.addToTheme("outside", theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("outside", theme[i],
+        tree.addToTheme("outside", theme[i], title[i],
             level[3],questions);
         }
 
 
         for(var i =0; i< 8; ++i){
-        tree.addToTheme("inside", theme[i],
+        tree.addToTheme("inside", theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("inside", theme[i],
+        tree.addToTheme("inside", theme[i], title[i],
             level[2],questions);
 
-        tree.addToTheme("inside", theme[i],
+        tree.addToTheme("inside", theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("inside", theme[i],
+        tree.addToTheme("inside", theme[i], title[i],
             level[3],questions);
         }
 
@@ -271,13 +294,13 @@ initialize: function (){
 
 
         tree.root.insideTree.theme.breweryTheme.next.questions = barQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.buttons = barButton;
         tree.root.insideTree.theme.breweryTheme.next.next.questions = breakQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.categories = breakSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.buttons = breakButton;
         tree.root.insideTree.theme.breweryTheme.next.next.next.questions = barQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.categories = barSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.buttons = barButton;
         tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.next.categories = wrapSearch;
+        tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = wrapButton;
 
 }
 
