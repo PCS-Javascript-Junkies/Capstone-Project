@@ -4,6 +4,7 @@ Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
 var questionLevel = 0;
+var yelpAPI = require('../yelpAPI.js');
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -19,6 +20,8 @@ var QuestionView = Backbone.View.extend({
   chooseQuestion: function () {
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
+    var yelpresult = yelpAPI("Portland", yelpKeywordArray);
+    console.log(yelpresult);
     //this.model.set(yelpKeywordArray);
     this.model.attributes["level" + questionLevel] = yelpKeywordArray;
     console.log("model as of now:",this.model);
