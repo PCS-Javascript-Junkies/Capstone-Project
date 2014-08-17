@@ -12,7 +12,7 @@ QuestionTree.prototype = {
     var theme ={
         // "theme": "themeID",
         // "themeQuestions": null,
-
+        "node":"them hub Node",
         "chillTheme": null,
         "nightOutTheme": null,
         "foodieTheme": null,
@@ -24,6 +24,7 @@ QuestionTree.prototype = {
     };
 
     var area ={
+        "node":"area Node",
         "id": "area",
         "questions": null,
         "area": null,
@@ -49,6 +50,7 @@ QuestionTree.prototype = {
 
     buildTheme: function (inOrOut, id, title){
         var node ={
+            "node":"build Node",
             "id": id,
             "title": title,
             "next": null
@@ -84,7 +86,8 @@ QuestionTree.prototype = {
                     console.log("\nTheme was not formatted correctly");
 
             }
-        }else{
+        }
+        if(inOrOut === "outside"){
             switch(id){
                 case "chill":
                     this.root.outsideTree.theme.chillTheme = node;
@@ -120,6 +123,7 @@ QuestionTree.prototype = {
     addToTheme: function (inOrOut, theme, title, type, qArray, bObj){
         var pointer;
         var node ={
+            "node":"add Node",
             "title": title,
             "id": theme,
             "questions": qArray,
@@ -157,7 +161,8 @@ QuestionTree.prototype = {
                     console.log("\nTheme was not formatted correctly");
 
             }
-        }else{
+        }
+        if(inOrOut === "outside"){
             switch(theme){
                 case "chill":
                    pointer = this.root.outsideTree.theme.chillTheme;
@@ -276,19 +281,19 @@ initialize: function (){
         }
 
 
-        for(var i =0; i< 8; ++i){
-        tree.addToTheme("inside", theme[i], title[i],
-            level[1],questions);
+        // for(var i =0; i< 8; ++i){
+        // tree.addToTheme("inside", theme[i], title[i],
+        //     level[1],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
-            level[2],questions);
+        // tree.addToTheme("inside", theme[i], title[i],
+        //     level[2],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
-            level[1],questions);
+        // tree.addToTheme("inside", theme[i], title[i],
+        //     level[1],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
-            level[3],questions);
-        }
+        // tree.addToTheme("inside", theme[i], title[i],
+        //     level[3],questions);
+        // }
 
 
 
