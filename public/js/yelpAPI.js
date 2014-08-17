@@ -48,6 +48,7 @@
             OAuth.SignatureMethod.sign(message, accessor);
 
             var parameterMap = OAuth.getParameterMap(message.parameters);
+            console.log("Parameters we send to yelp---->",parameterMap);
 
             function cb(data){
               //not needed
@@ -59,6 +60,7 @@
                 'dataType' : 'jsonp',
                 'jsonpCallback' : 'cb',
                 'success' : function(data, textStats, XMLHttpRequest) {
+                    console.log("Data We get back from yelp --->",data);
                     var max;
                     if(data.businesses.length < 10)
                       max = businesses.length;
