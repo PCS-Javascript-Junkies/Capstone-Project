@@ -88,4 +88,4 @@
     return result;
     }
 
-module.exports = yelpApi;
+module.exports = yelpAPI;

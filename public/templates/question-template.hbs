@@ -2,6 +2,6 @@
 <p>
   {{questionIndex}}
 </p>
-{{#each currentTree.categories}}
-<div class="btn btn-primary" id="{{title}}" role="button">{{title}}</div>
+{{#each currentTree.buttons}}
+<div class="btn btn-primary question-choice" id="{{@index}}" role="button">{{title}}</div>
 {{/each}}
