@@ -49,7 +49,6 @@
 
             var parameterMap = OAuth.getParameterMap(message.parameters);
             console.log("Parameters we send to yelp---->",parameterMap);
-            window.parameterMap = parameterMap;
 
             function cb(data){
               //not needed
@@ -88,7 +87,6 @@
            });
         });
       });
-    window.yelpAPI=yelpAPI;
     return result;
     }
 
