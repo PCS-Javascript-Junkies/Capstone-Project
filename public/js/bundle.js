@@ -12964,7 +12964,7 @@ Backbone.$ = $;
 
 var AdventureParentView = require('./views/adventure-parent-view');
 
-var yelpAPI = require('./yelpAPI.js');
+//var yelpAPI = require('./yelpAPI.js');
 var QuestionTree = require('../database/dbMain.js');
 var questionTree = new QuestionTree();
 questionTree.initialize();
@@ -12984,7 +12984,7 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"./yelpAPI.js":20,"backbone":1,"jquery":10}],14:[function(require,module,exports){
+},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"backbone":1,"jquery":10}],14:[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -13027,7 +13027,7 @@ var AdventureParentView = Backbone.View.extend({
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":21,"../models/adventure.js":14,"./weather-choice-view.js":19,"backbone":1,"jquery":10}],16:[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":20,"../models/adventure.js":14,"./weather-choice-view.js":19,"backbone":1,"jquery":10}],16:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13072,14 +13072,14 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":22,"./theme-choice-view.js":18,"backbone":1,"jquery":10}],17:[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":21,"./theme-choice-view.js":18,"backbone":1,"jquery":10}],17:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
 var questionLevel = 0;
-var yelpAPI = require('../yelpAPI.js');
+//var yelpAPI = require('../yelpAPI.js');
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -13117,7 +13117,7 @@ var QuestionView = Backbone.View.extend({
 });
 
 module.exports = QuestionView;
-},{"../../templates/question-template.hbs":23,"../yelpAPI.js":20,"backbone":1,"jquery":10}],18:[function(require,module,exports){
+},{"../../templates/question-template.hbs":22,"backbone":1,"jquery":10}],18:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13152,7 +13152,7 @@ console.log("Tree Data -> ", treeData);
 });
 
 module.exports = ThemeChoiceView;
-},{"../../templates/theme-choice-template.hbs":24,"./question-view.js":17,"backbone":1,"jquery":10}],19:[function(require,module,exports){
+},{"../../templates/theme-choice-template.hbs":23,"./question-view.js":17,"backbone":1,"jquery":10}],19:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13186,104 +13186,7 @@ var WeatherChoiceView = Backbone.View.extend({
 });
 
 module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":25,"./location-choice-view.js":16,"backbone":1,"jquery":10}],20:[function(require,module,exports){
-
-    function yelpAPI(area, array){
-    var randInt = Math.floor((Math.random() * array.length) + 0);
-    var result={};
-      $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
-      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
-      {
-        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
-        {
-
-            var auth = {
-                consumerKey : "RJFp3rk_b9tsJv7dZTt9-w",
-                consumerSecret : "-0pEjAPEzXcoZ2iCiqMhOIHfyAI",
-                accessToken : "zPLB_TEBvUum9pXuIbcLKJ1zazumSkZ0",
-                accessTokenSecret : "Tk94nPTKK0yL4bHebIHBdDUDG3A",
-                serviceProvider : {
-                    signatureMethod : "HMAC-SHA1"
-                }
-            };
-
-            randInt = Math.floor((Math.random() * array.length) + 0);
-
-            var terms = array[randInt];
-            var near = area;
-
-
-            var accessor = {
-                consumerSecret : auth.consumerSecret,
-                tokenSecret : auth.accessTokenSecret
-            };
-            parameters = [];
-            parameters.push(['term', terms]);
-            parameters.push(['location', near]);
-            parameters.push(['callback', 'cb']);
-            parameters.push(["oauth_consumer_key", auth.consumerKey]);
-            parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
-            parameters.push(['oauth_token', auth.accessToken]);
-            parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
-
-            var message = {
-                'action' : 'http://api.yelp.com/v2/search',
-                'method' : 'GET',
-                'parameters' : parameters
-            };
-
-
-            OAuth.setTimestampAndNonce(message);
-            OAuth.SignatureMethod.sign(message, accessor);
-
-            var parameterMap = OAuth.getParameterMap(message.parameters);
-            console.log("Parameters we send to yelp---->",parameterMap);
-            window.parameterMap = parameterMap;
-
-            function cb(data){
-              //not needed
-            }
-
-            $.ajax({
-                'url' : message.action,
-                'data' : parameterMap,
-                'dataType' : 'jsonp',
-                'jsonpCallback' : 'cb',
-                'success' : function(data, textStats, XMLHttpRequest) {
-                    console.log("Data We get back from yelp --->",data);
-                    var max;
-                    if(data.businesses.length < 10)
-                      max = businesses.length;
-                    else
-                      max = 10;
-                    randInt = Math.floor((Math.random() * max) + 0);
-
-                    result.name = data.businesses[randInt].name;
-                    result.address = data.businesses[randInt].location.address[0];
-                    result.gps = data.businesses[randInt].location.coordinate;
-                    result.img = data.businesses[randInt].image_url;
-                    result.phoneNumber = data.businesses[randInt].display_phone;
-                    result.rating = data.businesses[randInt].rating_img_url;
-                    result.ratingCount = data.businesses[randInt].review_count;
-                    result.yelpInfoLink = data.businesses[randInt].url;
-
-                    console.log(result);
-                }
-
-
-
-
-
-           });
-        });
-      });
-    window.yelpAPI=yelpAPI;
-    return result;
-    }
-
-module.exports = yelpAPI;
-
-},{"../../node_modules/jquery":10}],21:[function(require,module,exports){
+},{"../../templates/weather-choice-template.hbs":24,"./location-choice-view.js":16,"backbone":1,"jquery":10}],20:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13295,7 +13198,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n</div>";
   });
 
-},{"hbsfy/runtime":9}],22:[function(require,module,exports){
+},{"hbsfy/runtime":9}],21:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13307,7 +13210,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>";
   });
 
-},{"hbsfy/runtime":9}],23:[function(require,module,exports){
+},{"hbsfy/runtime":9}],22:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13338,7 +13241,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],24:[function(require,module,exports){
+},{"hbsfy/runtime":9}],23:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13369,7 +13272,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],25:[function(require,module,exports){
+},{"hbsfy/runtime":9}],24:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

@@ -2,7 +2,7 @@
     function yelpAPI(area, array){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
-      $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
+   //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
       $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
       {
         $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
@@ -92,4 +92,4 @@
     return result;
     }
 
-module.exports = yelpAPI;
+//module.exports = yelpAPI;
