@@ -7,128 +7,132 @@ function QuestionTree() {
 }
 
 
-QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
-    function Theme() {
-        // this.aaID = "Theme hub Node L3";
-        this.chillTheme = null;
-        this.nightOutTheme = null;
-        this.foodieTheme = null;
-        this.hostingTheme = null;
-        this.tgifTheme = null;
-        this.breweryTheme = null;
-        this.kidsTheme = null;
-        this.activeTheme = null;
+QuestionTree.prototype = {
+    startTree: function(insideOutsideQ, AreaQ){
+    var theme ={
+        // "theme": "themeID",
+        // "themeQuestions": null,
+        "node":"theme hub Node",
+        "chillTheme": null,
+        "nightOutTheme": null,
+        "foodieTheme": null,
+        "hostingTheme": null,
+        "tgifTheme":null,
+        "breweryTheme":null,
+        "kidsTheme":null,
+        "activeTheme": null
     };
 
-    function Area() {
-        this.aaID="Area Node L2";
-        this.id= "area";
-        this.questions= null;
-        this.area= null;
-        this.theme= null;
+    var area ={
+        "node":"area Node",
+        "id": "area",
+        "questions": null,
+        "area": null,
+        "theme": null
+
     };
 
-    function RootNode() {
-        this.aaID = "Root L1";
-        this.id = "Root";
-        this.questions = null;
-        this.insideTree = null;
-        this.outsideTree = null;
+    var rootNode ={
+        "id": "Root",
+        "questions": null,
+        "insideTree": null,
+        "outsideTree": null,
     };
 
-    this.root = new RootNode;
+    this.root = rootNode;
     this.current=this.root;
-    this.root.insideTree = new Area();
-    this.root.insideTree.theme = new Theme();
-    this.root.outsideTree= new Area();
-    this.root.outsideTree.theme = new Theme();
-    };
+    this.root.insideTree = area;
+    this.root.outsideTree= area;
+    this.root.outsideTree.theme = theme;
+    this.root.insideTree.theme = theme;
+    },
 
 
-QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
-        function Node(){
-            this.aaID = "List Head Node";
-            this.id = id;
-            this.title = title;
-            this.next = null;
+    buildTheme: function (inOrOut, id, title){
+        var node ={
+            "node":"build Node",
+            "id": id,
+            "title": title,
+            "next": null
         };
 
-        if(inOrOut === "inside"){
+        if(inOrOut === true){
             switch(id){
                 case "chill":
-                    this.root.insideTree.theme.chillTheme = new Node();
+                    this.root.insideTree.theme.chillTheme = node;
                     break;
                 case "kids":
-                    this.root.insideTree.theme.kidsTheme = new Node();
+                    this.root.insideTree.theme.kidsTheme = node;
                     break;
                 case "foodie":
-                    this.root.insideTree.theme.foodieTheme = new Node();
+                    this.root.insideTree.theme.foodieTheme = node;
                     break;
                 case "hosting":
-                    this.root.insideTree.theme.hostingTheme = new Node();
+                    this.root.insideTree.theme.hostingTheme = node;
                     break;
                 case "active":
-                    this.root.insideTree.theme.activeTheme = new Node();
+                    this.root.insideTree.theme.activeTheme = node;
                     break;
                 case "tgif":
-                    this.root.insideTree.theme.tgifTheme = new Node();
+                    this.root.insideTree.theme.tgifTheme = node;
                     break;
                 case "nightOut":
-                    this.root.insideTree.theme.nightOutTheme = new Node();
+                    this.root.insideTree.theme.nightOutTheme = node;
                     break;
                 case "brewery":
-                    this.root.insideTree.theme.breweryTheme = new Node();
+                    this.root.insideTree.theme.breweryTheme = node;
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
 
             }
         }
-        if(inOrOut === "outside"){
+        if(inOrOut === false){
             switch(id){
                 case "chill":
-                    this.root.outsideTree.theme.chillTheme = new Node();
+                    this.root.outsideTree.theme.chillTheme = node;
                     break;
                 case "kids":
-                    this.root.outsideTree.theme.kidsTheme = new Node();
+                    this.root.outsideTree.theme.kidsTheme = node;
                     break;
                 case "foodie":
-                    this.root.outsideTree.theme.foodieTheme = new Node();
+                    this.root.outsideTree.theme.foodieTheme = node;
                     break;
                 case "hosting":
-                    this.root.outsideTree.theme.hostingTheme = new Node();
+                    this.root.outsideTree.theme.hostingTheme = node;
                     break;
                 case "active":
-                    this.root.outsideTree.theme.activeTheme = new Node();
+                    this.root.outsideTree.theme.activeTheme = node;
                     break;
                 case "tgif":
-                    this.root.outsideTree.theme.tgifTheme = new Node();
+                    this.root.outsideTree.theme.tgifTheme = node;
                     break;
                 case "nightOut":
-                    this.root.outsideTree.theme.nightOutTheme = new Node();
+                    this.root.outsideTree.theme.nightOutTheme = node;
                     break;
                 case "brewery":
-                    this.root.outsideTree.theme.breweryTheme = new Node();
+                    this.root.outsideTree.theme.breweryTheme = node;
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
 
             }
         }
-    };
+    },
 
-    QuestionTree.prototype.addToTheme = function (inOrOut, theme, title, type, qArray, bObj){
+    addToTheme: function (inOrOut, theme, title, type, qArray, bObj){
         var pointer;
-        function Node() {
-            this.aaID= "Added Node";
-            this.id = theme;
-            this.title= title;
-            this.questions= qArray;
-            this.buttons= bObj;
-            this.next= null;
+        var node ={
+            "node":"add Node",
+            "title": title,
+            "id": theme,
+            "questions": qArray,
+            "buttons": bObj,
+            "next": null
         };
 
-        if(inOrOut === "inside"){
+        if(inOrOut === true){
+                   console.log("inside theme");
             switch(theme){
                 case "chill":
                    pointer = this.root.insideTree.theme.chillTheme;
@@ -160,7 +164,8 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
 
             }
         }
-        if(inOrOut === "outside"){
+        if(inOrOut === false){
+                   console.log("outside theme");
             switch(theme){
                 case "chill":
                    pointer = this.root.outsideTree.theme.chillTheme;
@@ -192,33 +197,31 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             }
         }
         if(pointer.next === null){
-            pointer.next = new Node();
+            pointer.next = node;
         }else{
             pointer = pointer.next;
             while(pointer.next){
                 pointer = pointer.next;
             }
-            pointer.next= new Node();
+            pointer.next=node;
         }
     },
 
-QuestionTree.prototype.initialize = function (){
+initialize: function (){
         tree = new QuestionTree();
 
         tree.startTree();
-
-        console.log(tree);
 
         var barQuestions = ["Do you feel like beer, wine, or spirits? ",
         "In the mood for hops, grapes, or the hard stuff? ", "If you are at a bar you would order: ",];
 
 
         var barButton=[
-        {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
-        {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
-        {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktailbars",
+        {title:"Beer", id:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        {title:"Wine", id:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
+        {title:"Mixed Drinks", id:"liquor", values:["distilleries","cocktailbars",
         "lounges","pianobars"]},
-        {title:"Surprise Me", aaID:"all", values:["irish_pubs","pubs","breweries",
+        {title:"Surprise Me", id:"all", values:["irish_pubs","pubs","breweries",
         "sportsbars","wine_bars",
         "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,pianobars"]},
         ];
@@ -227,27 +230,27 @@ QuestionTree.prototype.initialize = function (){
                             "After a few hours of drinking I feel like food, a quick snack, or more drinking! (resposibly)"];
 
         var breakButton=[
-        {title:"Music Sounds Nice", aaID:"music", values:["musicvenues","pianobars",
+        {title:"Music Sounds Nice", id:"music", values:["musicvenues","pianobars",
         "breweries","jazzandblues"]},
-        {title:"Tea Time", aaID:"coffee", values:["coffee","tea",]},
-        {title:"Keep the Party Gong!", aaID:"again", values:["distilleries",
+        {title:"Tea Time", id:"coffee", values:["coffee","tea",]},
+        {title:"Keep the Party Gong!", id:"again", values:["distilleries",
         "cocktailbars","lounges","pianobars"]},
-        {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
         var wrapQuestions = ["Desert, Drinks again, or greasy food?"];
 
         var wrapButton =[
-        {title:"Desert", aaID:"Desert", values:["cupcakes","desserts","donuts"]},
-        {title:"Keep the Party Gong!", aaID:"again", values:["irish_pubs","pubs",
+        {title:"Desert", id:"Desert", values:["cupcakes","desserts","donuts"]},
+        {title:"Keep the Party Gong!", id:"again", values:["irish_pubs","pubs",
         "breweries","sportsbars",
         "wine_bars","champagne_bars","beer_and_wine", "distilleries","cocktailbars",
         "lounges","pianobars"]},
-        {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
+        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
 
-        // var barNode = tree.root.insideTree.theme.breweryTheme;
+        var barNode = tree.root.insideTree.theme.breweryTheme;
 
 
 
@@ -257,7 +260,7 @@ QuestionTree.prototype.initialize = function (){
         var theme = ["chill","kids","foodie","hosting","active",
                     "tgif","nightOut","brewery"];
 
-        var title = ["Take It Easy","Fun With The Kids","Explore My Inner Foodie","Hosting Guests","Active and Energetic",
+        var title = ["Take It Easy","Fun With The Kids","Explor My Inner Foodie","Hosting Guests","Active and Energetic",
                     "It's Friday!","Night On the Town","Breweries, Wineries, and more"];
 
         var level = ["","mainItem", "breatherItem", "endingItem" ];
@@ -265,40 +268,40 @@ QuestionTree.prototype.initialize = function (){
         tree.root.questions=questions;
 
         //outside theme building
-        theme.forEach(function(item, index){
-            tree.buildTheme("outside", item, title[index]);
-        });
+        // theme.forEach(function(item, index){
+        //     tree.buildTheme(false, item, title[index]);
+        // });
 
         //build inside theme
         theme.forEach(function(item, index){
-            tree.buildTheme("inside", item, title[index]);
+            tree.buildTheme(true, item, title[index]);
         });
+        // for(var i =0; i< 8; ++i){
+        // tree.addToTheme("outside", theme[i], title[i],
+        //     level[1], questions);
+
+        // tree.addToTheme("outside", theme[i], title[i],
+        //     level[2], questions);
+
+        // tree.addToTheme("outside", theme[i], title[i],
+        //     level[1], questions);
+
+        // tree.addToTheme("outside", theme[i], title[i],
+        //     level[3], questions);
+        // }
+
+
         for(var i =0; i< 8; ++i){
-        tree.addToTheme("outside", theme[i], title[i],
-            level[1], questions);
-
-        tree.addToTheme("outside", theme[i], title[i],
-            level[2], questions);
-
-        tree.addToTheme("outside", theme[i], title[i],
-            level[1], questions);
-
-        tree.addToTheme("outside", theme[i], title[i],
-            level[3], questions);
-        }
-
-
-        for(var i =0; i< 8; ++i){
-        tree.addToTheme("inside", theme[i], title[i],
+        tree.addToTheme(true, theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
+        tree.addToTheme(true, theme[i], title[i],
             level[2],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
+        tree.addToTheme(true, theme[i], title[i],
             level[1],questions);
 
-        tree.addToTheme("inside", theme[i], title[i],
+        tree.addToTheme(true, theme[i], title[i],
             level[3],questions);
         }
 
@@ -314,9 +317,10 @@ QuestionTree.prototype.initialize = function (){
         tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
         tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = wrapButton;
 
+}
+
+
 };
-
-
 
 
 

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-<next>
+<head>
     <title>Tree Layout</title>
-    <script src="../public/database/dbMain.js"></script>
-
-</next>
+</head>
 <body>
     <h1>Tree Display</h1>
     <script id="thetree" type="text/x-handlebars-template">
@@ -30,15 +28,16 @@
 
             <tr><td class = "border">{{#each outChill3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outNight3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outFoodie3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outHost3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outTGIF3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outBrew3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outKid3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outActive3}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td class = "border">{{#each inChill3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inNight3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inFoodie3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inHost3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inTGIF3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inBrew3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inKid3}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inActive3}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
 
-            <tr><td class = "border">{{#each outChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outActive4}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td class = "border">{{#each inChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inActive4}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr>
-
-        </tbody>
+            <tr><td class = "border">{{#each outChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each outActive4}}<br>{{@key}}: {{this}}{{/each}}<td>&nbsp;</td></td></td></td></td></td></td></td></td><td>&nbsp;</td><td>&nbsp;<td class = "border">{{#each inChill4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inNight4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inFoodie4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inHost4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inTGIF4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inBrew4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inKid4}}<br>{{@key}}: {{this}}{{/each}}<td class = "border">{{#each inActive4}}<br>{{@key}}: {{this}}{{/each}}</td></td></td></td></td></td></td></td></td><td><tr></tbody>
     </table>
 </script>
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <script src="../public/database/dbMain.js"></script>
     <script>
+var questionTree = new QuestionTree();
+questionTree.initialize();
 
     (function(){
         var data = {
@@ -77,11 +76,11 @@
                 inBrew2: tree.root.insideTree.theme.breweryTheme.next.next,
                 inBrew3: tree.root.insideTree.theme.breweryTheme.next.next.next,
                 inBrew4: tree.root.insideTree.theme.breweryTheme.next.next.next.next,
-            inKid: tree.root.insideTree.theme.kidFunTheme,
-                inKid1: tree.root.insideTree.theme.kidFunTheme.next,
-                inKid2: tree.root.insideTree.theme.kidFunTheme.next.next,
-                inKid3: tree.root.insideTree.theme.kidFunTheme.next.next.next,
-                inKid4: tree.root.insideTree.theme.kidFunTheme.next.next.next.next,
+            inKid: tree.root.insideTree.theme.kidsTheme,
+                inKid1: tree.root.insideTree.theme.kidsTheme.next,
+                inKid2: tree.root.insideTree.theme.kidsTheme.next.next,
+                inKid3: tree.root.insideTree.theme.kidsTheme.next.next.next,
+                inKid4: tree.root.insideTree.theme.kidsTheme.next.next.next.next,
             inActive: tree.root.insideTree.theme.activeTheme,
                 inActive1: tree.root.insideTree.theme.activeTheme.next,
                 inActive2: tree.root.insideTree.theme.activeTheme.next.next,
@@ -118,11 +117,11 @@
                 outBrew2: tree.root.outsideTree.theme.breweryTheme.next.next,
                 outBrew3: tree.root.outsideTree.theme.breweryTheme.next.next.next,
                 outBrew4: tree.root.outsideTree.theme.breweryTheme.next.next.next.next,
-            outKid: tree.root.outsideTree.theme.kidFunTheme,
-                outKid1: tree.root.outsideTree.theme.kidFunTheme.next,
-                outKid2: tree.root.outsideTree.theme.kidFunTheme.next.next,
-                outKid3: tree.root.outsideTree.theme.kidFunTheme.next.next.next,
-                outKid4: tree.root.outsideTree.theme.kidFunTheme.next.next.next.next,
+            outKid: tree.root.outsideTree.theme.kidsTheme,
+                outKid1: tree.root.outsideTree.theme.kidsTheme.next,
+                outKid2: tree.root.outsideTree.theme.kidsTheme.next.next,
+                outKid3: tree.root.outsideTree.theme.kidsTheme.next.next.next,
+                outKid4: tree.root.outsideTree.theme.kidsTheme.next.next.next.next,
             outActive: tree.root.outsideTree.theme.activeTheme,
                 outActive1: tree.root.outsideTree.theme.activeTheme.next,
                 outActive2: tree.root.outsideTree.theme.activeTheme.next.next,
@@ -144,6 +143,5 @@ Handlebars.registerHelper('each', function(context, options) {
 
   return ret;
 });
-</script>
-</body>
+</script></body>
 </html>

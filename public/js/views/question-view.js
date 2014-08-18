@@ -4,7 +4,7 @@ Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
 var questionLevel = 0;
-var yelpAPI = require('../yelpAPI.js');
+//var yelpAPI = require('../yelpAPI.js');
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
