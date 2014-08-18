@@ -4,7 +4,7 @@ Backbone.$ = $;
 
 var AdventureParentView = require('./views/adventure-parent-view');
 
-var yelpAPI = require('./yelpAPI.js');
+//var yelpAPI = require('./yelpAPI.js');
 var QuestionTree = require('../database/dbMain.js');
 var questionTree = new QuestionTree();
 questionTree.initialize();

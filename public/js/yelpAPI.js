@@ -2,7 +2,7 @@
     function yelpAPI(area, array){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
-      $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
+   //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
       $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
       {
         $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
@@ -32,7 +32,7 @@
             parameters.push(['term', terms]);
             parameters.push(['location', near]);
             parameters.push(['callback', 'cb']);
-            parameters.push(['oauth_consumer_key', auth.consumerKey]);
+            parameters.push(["oauth_consumer_key", auth.consumerKey]);
             parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
             parameters.push(['oauth_token', auth.accessToken]);
             parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
@@ -49,6 +49,7 @@
 
             var parameterMap = OAuth.getParameterMap(message.parameters);
             console.log("Parameters we send to yelp---->",parameterMap);
+            window.parameterMap = parameterMap;
 
             function cb(data){
               //not needed
@@ -87,7 +88,8 @@
            });
         });
       });
+    window.yelpAPI=yelpAPI;
     return result;
     }
 
-module.exports = yelpAPI;
+//module.exports = yelpAPI;
