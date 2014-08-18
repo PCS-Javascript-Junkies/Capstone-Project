@@ -25,6 +25,7 @@ var ThemeChoiceView = Backbone.View.extend({
     console.log(this.model);
     console.log(this.model.attributes);
     var treeData = tree.current;
+console.log("Tree Data -> ", treeData);
     $(this.el).html(themeChoiceTemplate({treeData: treeData}));
     console.log("theme choice view");
   },
