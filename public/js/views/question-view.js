@@ -12,13 +12,16 @@ var QuestionView = Backbone.View.extend({
   events: {
     'click .question-choice': 'chooseQuestion'
   },
+  // initialize: function () {
+  //   this.model.on("change:results", this.renderNextQuestion, this)
+  // },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
     console.log(max);
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  chooseQuestion: function () {
+  setYelpData: function () {
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
     var yelpresult = yelpAPI("Portland", yelpKeywordArray);
@@ -26,15 +29,28 @@ var QuestionView = Backbone.View.extend({
     this.model.set({ 
         "results" : this.model.get('results').concat(yelpresult)
     });
-    //this.model.set(yelpKeywordArray);
     this.model.attributes["level" + questionLevel] = yelpKeywordArray;
     console.log("model as of now:",this.model);
-    this.renderNextQuestion();
   },
-  renderNextQuestion: function () {
+  chooseQuestion: function () {
+    // var clickedQuestionId = event.target.id;
+    // var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
+    // var yelpresult = yelpAPI("Portland", yelpKeywordArray);
+    // console.log(yelpresult);
+    // this.model.set({ 
+    //     "results" : this.model.get('results').concat(yelpresult)
+    // });
+    // //this.model.set(yelpKeywordArray);
+    // this.model.attributes["level" + questionLevel] = yelpKeywordArray;
+    // console.log("model as of now:",this.model);
+    this.renderNextQuestion(this.setYelpData());
+  },
+  renderNextQuestion: function (callback) {
     if (tree.current.next === null) {
       var resultView = new ResultView({model: this.model});
-      resultView.render();
+
+        resultView.render();
+
     } else {
       questionLevel++;
       tree.current = tree.current.next;

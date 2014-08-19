@@ -12843,21 +12843,21 @@ QuestionTree.prototype.initialize = function (){
         {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
         {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
         {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktailbars",
-        "lounges","pianobars"]},
+        "lounges","piano bars"]},
         {title:"Surprise Me", aaID:"all", values:["irish_pubs","pubs","breweries",
         "sportsbars","wine_bars",
-        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,pianobars"]},
+        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,piano bars"]},
         ];
 
         var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ",
                             "After a few hours of drinking I feel like food, a quick snack, or more drinking! (resposibly)"];
 
         var breakButton=[
-        {title:"Music Sounds Nice", aaID:"music", values:["musicvenues","pianobars",
+        {title:"Music Sounds Nice", aaID:"music", values:["musicvenues","piano bars",
         "breweries","jazzandblues"]},
         {title:"Tea Time", aaID:"coffee", values:["coffee","tea",]},
         {title:"Keep the Party Gong!", aaID:"again", values:["distilleries",
-        "cocktailbars","lounges","pianobars"]},
+        "cocktailbars","lounges","piano bars"]},
         {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
@@ -12868,7 +12868,7 @@ QuestionTree.prototype.initialize = function (){
         {title:"Keep the Party Gong!", aaID:"again", values:["irish_pubs","pubs",
         "breweries","sportsbars",
         "wine_bars","champagne_bars","beer_and_wine", "distilleries","cocktailbars",
-        "lounges","pianobars"]},
+        "lounges","piano bars"]},
         {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
@@ -13088,13 +13088,16 @@ var QuestionView = Backbone.View.extend({
   events: {
     'click .question-choice': 'chooseQuestion'
   },
+  // initialize: function () {
+  //   this.model.on("change:results", this.renderNextQuestion, this)
+  // },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
     console.log(max);
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  chooseQuestion: function () {
+  setYelpData: function () {
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
     var yelpresult = yelpAPI("Portland", yelpKeywordArray);
@@ -13102,15 +13105,28 @@ var QuestionView = Backbone.View.extend({
     this.model.set({ 
         "results" : this.model.get('results').concat(yelpresult)
     });
-    //this.model.set(yelpKeywordArray);
     this.model.attributes["level" + questionLevel] = yelpKeywordArray;
     console.log("model as of now:",this.model);
-    this.renderNextQuestion();
   },
-  renderNextQuestion: function () {
+  chooseQuestion: function () {
+    // var clickedQuestionId = event.target.id;
+    // var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
+    // var yelpresult = yelpAPI("Portland", yelpKeywordArray);
+    // console.log(yelpresult);
+    // this.model.set({ 
+    //     "results" : this.model.get('results').concat(yelpresult)
+    // });
+    // //this.model.set(yelpKeywordArray);
+    // this.model.attributes["level" + questionLevel] = yelpKeywordArray;
+    // console.log("model as of now:",this.model);
+    this.renderNextQuestion(this.setYelpData());
+  },
+  renderNextQuestion: function (callback) {
     if (tree.current.next === null) {
       var resultView = new ResultView({model: this.model});
-      resultView.render();
+
+        resultView.render();
+
     } else {
       questionLevel++;
       tree.current = tree.current.next;
@@ -13224,7 +13240,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n</div>";
+  return "<div id=\"adventure-parent\">\n</div>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
@@ -13236,7 +13252,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>";
+  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n</div>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
@@ -13260,13 +13276,14 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<h2>Questions</h2>\n<p>\n  ";
+  buffer += "<div class=\"intro-block\">\n<h2>Questions</h2>\n<p>\n  ";
   if (helper = helpers.questionIndex) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\n</p>\n";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.buttons), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>";
   return buffer;
   });
 
@@ -13281,25 +13298,26 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<h1>";
+  buffer += "\n  <h1>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h1>\n<img src=";
+    + "</h1>\n  <img src=";
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + " />\n<p>";
+    + " />\n  <p>";
   if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</p>\n";
+    + "</p>\n  ";
   return buffer;
   }
 
-  buffer += "<h2>Your Adventure:</h2>\n\n";
+  buffer += "<div class=\"intro-block\">\n  <h2>Your Adventure:</h2>\n\n  ";
   stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>";
   return buffer;
   });
 
@@ -13326,11 +13344,12 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"intro-block\">\n  <h1>Pick a theme</h1>\n</div>\n<p>\n  "
+  buffer += "<div class=\"intro-block\">\n  <h1>Pick a theme</h1>\n<p>\n  "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.questions)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + ". (Only chill works for now.)\n</p>\n";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.theme), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</div>";
   return buffer;
   });
 
@@ -13343,7 +13362,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n</div>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>";
+  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside?\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>\n</div>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
