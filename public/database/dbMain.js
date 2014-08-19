@@ -217,21 +217,21 @@ QuestionTree.prototype.initialize = function (){
         {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
         {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
         {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktailbars",
-        "lounges","pianobars"]},
+        "lounges","piano bars"]},
         {title:"Surprise Me", aaID:"all", values:["irish_pubs","pubs","breweries",
         "sportsbars","wine_bars",
-        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,pianobars"]},
+        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,piano bars"]},
         ];
 
         var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ",
                             "After a few hours of drinking I feel like food, a quick snack, or more drinking! (resposibly)"];
 
         var breakButton=[
-        {title:"Music Sounds Nice", aaID:"music", values:["musicvenues","pianobars",
+        {title:"Music Sounds Nice", aaID:"music", values:["musicvenues","piano bars",
         "breweries","jazzandblues"]},
         {title:"Tea Time", aaID:"coffee", values:["coffee","tea",]},
         {title:"Keep the Party Gong!", aaID:"again", values:["distilleries",
-        "cocktailbars","lounges","pianobars"]},
+        "cocktailbars","lounges","piano bars"]},
         {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
@@ -242,7 +242,7 @@ QuestionTree.prototype.initialize = function (){
         {title:"Keep the Party Gong!", aaID:"again", values:["irish_pubs","pubs",
         "breweries","sportsbars",
         "wine_bars","champagne_bars","beer_and_wine", "distilleries","cocktailbars",
-        "lounges","pianobars"]},
+        "lounges","piano bars"]},
         {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
 
