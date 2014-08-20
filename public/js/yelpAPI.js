@@ -1,7 +1,8 @@
 
-    function yelpAPI(area, array){
+function yelpAPI(area, array){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
+    var slef = this;
    //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
       $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
       {
@@ -49,7 +50,6 @@
 
             var parameterMap = OAuth.getParameterMap(message.parameters);
             console.log("Parameters we send to yelp---->",parameterMap);
-            window.parameterMap = parameterMap;
 
             function cb(data){
               //not needed
@@ -63,33 +63,32 @@
                 'success' : function(data, textStats, XMLHttpRequest) {
                     console.log("Data We get back from yelp --->",data);
                     var max;
-                    if(data.businesses.length < 10)
-                      max = businesses.length;
-                    else
-                      max = 10;
-                    randInt = Math.floor((Math.random() * max) + 0);
+                    if(data.buisnesses !== undefined || data.buisnesses !== null){
+                        if(data.businesses.length < 10)
+                          max = businesses.length;
+                        else
+                          max = 10;
+                        randInt = Math.floor((Math.random() * max) + 0);
 
-                    result.name = data.businesses[randInt].name;
-                    result.address = data.businesses[randInt].location.address[0];
-                    result.gps = data.businesses[randInt].location.coordinate;
-                    result.img = data.businesses[randInt].image_url;
-                    result.phoneNumber = data.businesses[randInt].display_phone;
-                    result.rating = data.businesses[randInt].rating_img_url;
-                    result.ratingCount = data.businesses[randInt].review_count;
-                    result.yelpInfoLink = data.businesses[randInt].url;
+                        result.name = data.businesses[randInt].name;
+                        result.address = data.businesses[randInt].location.address[0];
+                        result.gps = data.businesses[randInt].location.coordinate;
+                        result.img = data.businesses[randInt].image_url;
+                        result.phoneNumber = data.businesses[randInt].display_phone;
+                        result.rating = data.businesses[randInt].rating_img_url;
+                        result.ratingCount = data.businesses[randInt].review_count;
+                        result.yelpInfoLink = data.businesses[randInt].url;
 
-                    console.log(result);
+                        console.log(result);
+                }else{
+                    self.yelpAPI(area, array);
                 }
 
-
-
-
-
-           });
+                }
+            });
         });
-      });
-    window.yelpAPI=yelpAPI;
-    return result;
-    }
+    });
+return result;
+}
 
 //module.exports = yelpAPI;
