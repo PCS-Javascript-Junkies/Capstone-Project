@@ -121,6 +121,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         var pointer;
         function Node() {
             this.aaID= "Added Node";
+            this.stories =[];
             this.id = theme;
             this.title= title;
             this.questions= qArray;
@@ -245,9 +246,6 @@ QuestionTree.prototype.initialize = function (){
         "lounges","piano bars"]},
         {title:"Chow Time", aaID:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
         ];
-
-
-        // var barNode = tree.root.insideTree.theme.breweryTheme;
 
 
 
