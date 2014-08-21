@@ -6,7 +6,8 @@ var Adventure = Backbone.Model.extend({
   },
   defaults: {
     "weather": null,
-    "geolocation": null
+    "geolocation": null,
+    "results": []
   },
   // initialize: function() { 
   //   this.on('change:geolocation', this.getThemes, this);
