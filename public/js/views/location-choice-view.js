@@ -17,11 +17,12 @@ var LocationChoiceView = Backbone.View.extend({
   },
   clickSoutheast: function() {
     this.model.set({geolocation: "Southeast Portland, Portland, OR"});
-    this.model.set({latlong: "45.446871,-122.653859|45.522331,-122.510522"});
+    this.model.set({latlong: "45.459871,-122.667129|45.52248,-122.537341"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
-    this.model.set({geolocation: "ne"});
+    this.model.set({geolocation: "Northeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
   clickWest: function() {

@@ -14125,11 +14125,12 @@ var LocationChoiceView = Backbone.View.extend({
   },
   clickSoutheast: function() {
     this.model.set({geolocation: "Southeast Portland, Portland, OR"});
-    this.model.set({latlong: "45.446871,-122.653859|45.522331,-122.510522"});
+    this.model.set({latlong: "45.459871,-122.667129|45.52248,-122.537341"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
-    this.model.set({geolocation: "ne"});
+    this.model.set({geolocation: "Northeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
   clickWest: function() {
@@ -14431,7 +14432,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside?\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>\n</div>";
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <p>Looks like it's sunny and 75 degrees in Portland today, how about including outdoor locations in your adventure?</p>\n    </div>\n    <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want outdoor locations.</div>\n    <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay indoors.</div>\n    </div>\n  </div>\n</section>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
