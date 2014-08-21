@@ -1,14 +1,11 @@
 
-function yelpAPI(area, array){
+function yelpAPI(area, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
     var slef = this;
    //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
-      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
-      {
-        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
-        {
-
+      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function() {
+        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function () {
             var auth = {
                 consumerKey : "RJFp3rk_b9tsJv7dZTt9-w",
                 consumerSecret : "-0pEjAPEzXcoZ2iCiqMhOIHfyAI",
@@ -80,6 +77,8 @@ function yelpAPI(area, array){
                         result.yelpInfoLink = data.businesses[randInt].url;
 
                         console.log(result);
+                        callback();
+
                 }else{
                     self.yelpAPI(area, array);
                 }
