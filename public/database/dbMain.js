@@ -48,6 +48,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
 QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         function Node(){
             this.aaID = "List Head Node";
+            this.stories =[];
             this.id = id;
             this.title = title;
             this.next = null;
@@ -121,7 +122,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         var pointer;
         function Node() {
             this.aaID= "Added Node";
-            this.stories =[];
             this.id = theme;
             this.title= title;
             this.questions= qArray;
