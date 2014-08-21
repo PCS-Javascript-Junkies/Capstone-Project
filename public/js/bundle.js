@@ -14124,7 +14124,8 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({geolocation: "se"});
+    this.model.set({geolocation: "Southeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.446871,-122.653859|45.522331,-122.510522"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
@@ -14136,7 +14137,7 @@ var LocationChoiceView = Backbone.View.extend({
     this.loadThemeChoiceView();
   },
   clickAll: function() {
-    this.model.set({geolocation: "all"});
+    this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {
@@ -14185,7 +14186,8 @@ var QuestionView = Backbone.View.extend({
     }
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    var yelpresult = yelpAPI("Portland", yelpKeywordArray, writeModel);
+    console.log("location:", this.model.attributes.geolocation);
+    var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
   },
   renderNextQuestion: function (callback) {
     if (tree.current.next === null) {

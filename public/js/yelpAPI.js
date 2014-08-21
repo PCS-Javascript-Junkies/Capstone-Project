@@ -1,5 +1,5 @@
 
-function yelpAPI(area, array, callback){
+function yelpAPI(bounds, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
     var slef = this;
@@ -19,7 +19,8 @@ function yelpAPI(area, array, callback){
             randInt = Math.floor((Math.random() * array.length) + 0);
 
             var terms = array[randInt];
-            var near = area;
+            //var near = area;
+            var boundit = bounds;
 
 
             var accessor = {
@@ -28,7 +29,8 @@ function yelpAPI(area, array, callback){
             };
             parameters = [];
             parameters.push(['term', terms]);
-            parameters.push(['location', near]);
+            //parameters.push(['location', near]);
+            parameters.push(['bounds', boundit]);
             parameters.push(['callback', 'cb']);
             parameters.push(["oauth_consumer_key", auth.consumerKey]);
             parameters.push(['oauth_consumer_secret', auth.consumerSecret]);

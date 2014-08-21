@@ -32,7 +32,8 @@ var QuestionView = Backbone.View.extend({
     }
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    var yelpresult = yelpAPI("Portland", yelpKeywordArray, writeModel);
+    console.log("location:", this.model.attributes.geolocation);
+    var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
   },
   renderNextQuestion: function (callback) {
     if (tree.current.next === null) {
