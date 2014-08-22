@@ -13738,11 +13738,12 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outKids={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["There's a time and a place for everything (parents seem fond of saying), but today is not the day for homework, chores, or writing thank-you notes. Today is for fun, kid-style!","Is that a spider, or just a dried leaf? A little blue flower or a Smurf? If you’re around Hawthorne, look for those little horses tied up along the curb. As you start your adventure to",/*place */", see how many little things you see along the way could come from the book (or movie) you just read or watched.","Next, you’re off to", /*place */"—can you even believe it? And you must be getting hungry—you should ask to have a snack. Have you ever played the game called “Candy World” where everything in the world is made of some kind of candy? The wheels of a car could be Life Savers, and the steering wheel is a Sweetart. The back seat is like a chocolate bar, hot in the summer. What can be next?","It’s",/*place */"! Are you surprised? What is the last thing that happened that made you really surprised? Was it a good or a bad surprise? Maybe you saw a spider right by your hand... or a flower bloomed overnight. Or maybe you—that would be a total surprise, huh?","It’s been a long day. You’re probably tired and maybe sticky, but you’re not done yet! You’re going to", /*place */"!", "you remember the little things you were looking for from a book or movie, during the first part of this adventure? What if you were from a book or movie? Who would you want to be? For the very last adventure of this happy day, pretend that’s who you are."],
+                ["There is a time and a place for everything, or so parents seem fond of saying, but today is not the day for homework, chores, or writing thank you notes. Today is for fun, kid-style!","Is that a spider, or just a dried leaf? A little blue flower or a Smurf? If you’re around Hawthorne, look for those little horses tied up along the curb. As you start your adventure to" + ", see how many little things you see along the way could come from the book (or movie) you just read or watched.","Next, you’re off to" + "—can you even believe it? And you must be getting hungry—you should ask to have a snack. Have you ever played the game called “Candy World” where everything in the world is made of some kind of candy? The wheels of a car could be Life Savers, and the steering wheel is a Sweetart. The back seat is like a chocolate bar, hot in the summer. What can be next?","It’s" + "! Are you surprised? What is the last thing that happened that made you really surprised? Was it a good or a bad surprise? Maybe you saw a spider right by your hand... or a flower bloomed overnight. Or maybe your brother or sister did something nice—that would be a total surprise, huh?" + " It’s been a long day. You’re probably tired and maybe sticky, but you’re not done yet! You’re going to" + " you remember the little things you were looking for from a book or movie, during the first part of this adventure? What if you were from a book or movie? Who would you want to be? For the very last adventure of this happy day, pretend that’s who you are."],
+                ["You're an adventurous human being. You like to try new things, right? Well, welcome to a place where <i>nobody</i> knows where going next! (Not even me. And who am I? A voice in your head, your alter-ego...or am I a bored computer who wants to take a break from running programs and go <i>play</i>" + "Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:" + "— start the adventure here! (Are you surprised?) Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the" + " - the best of both worlds." + "" + "" + "" + "" + ""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
@@ -13759,21 +13760,23 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"Get Going!", aaID:"get_going", values:["parks","swimming_pools","mt_tabor_park", "playgrounds", "for_kids"]},
-                {title:"Start Slow", aaID:"start_slow", values:["for_kids", "keller_fountains", "parks", "tyron_creek","crystal_springs_rhododendron_garden"]},
+                {title:"Get Going!", aaID:"get_going", values:["kid_parks","swimming_pools","mt_tabor_park", "playgrounds", "for_kids", "oregon_zoo"]},
+                {title:"Start Slow", aaID:"start_slow", values:["for_kids", "keller_fountains", "kid_parks", "tyron_creek","crystal_springs_rhododendron_garden"]},
                           ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "On a scale from red to purple, how hungry are you?",
+                "You must be hungry by now! How hungry are you, exactly?",
+                "Are you hungry enough to eat snails? Hungry enough to eat a rattle snake?",
+                "Why don't you get something to eat at picnic at the park?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [        
-                {title:"I'm hungry", aaID:"", values:["hometown_buffet"]},
-                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["buffets_kid_friendly", "Dwaraka_indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's"]},
-                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys"]},
+                {title:"I'm hungry", aaID:"", values:["hometown_buffet", "burgerville"]},
+                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["kid_friendly_restaurant", "buffets_kid_friendly", "Dwaraka_indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's"]},
+                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys", "burgerville"]},
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
@@ -13784,10 +13787,9 @@ QuestionTree.prototype.initialize = function (){
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"OMGOMGOMG,I HAVE SO MUCH ENERGY RIGHT NOW!", aaID:"", values:["sky_high_sports", "kids_play_area", "G6_airpark_portland","arcades"]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"OMGOMGOMG,I HAVE SO MUCH ENERGY RIGHT NOW!", aaID:"high_energy", values:["sky_high_sports", "kids_play_area", "oaks_park", "G6_airpark_portland","arcades"]},
+                {title:"I still have some exploring to do", aaID:"explore_more", values:["arial_tram","OMSI","community_garden", "childrens_museum", "oaks_park", "streetcar"]},
+                {title:"I'm ready to sit down!", aaID:"quiet_down", values:["library","laurelhurst_park","sauvie_island", "laurelhurst_park"]},
             ],
 
             build: function(){
