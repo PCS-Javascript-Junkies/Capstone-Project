@@ -8,6 +8,8 @@ var consolidate = require('consolidate');
 var Handlebars = require('handlebars');
 var Forecast = require('forecast.io');
 
+
+//process.env(DB_KEY)
 var db = require('orchestrate')(config.dbKey);
 
 var app = express();
