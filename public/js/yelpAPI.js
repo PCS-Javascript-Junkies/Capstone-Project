@@ -1,4 +1,3 @@
-
 function yelpAPI(area, array){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
