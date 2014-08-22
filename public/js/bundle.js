@@ -14391,13 +14391,13 @@ var ResultView = Backbone.View.extend({
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
     
-    var beg=[45.522,-122.690];
-	var mid=[45.52,-122.673];
-	var last=[45.532,-122.690];
-	var cent=[45.522, -122.672];
+    beg=[45.522,-122.690];
+  	mid=[45.52,-122.673];
+  	last=[45.532,-122.690];
+  	cent=[45.522, -122.672];
 
-  console.log("***************1");
-	googleMaps(beg,mid,last, cent);
+
+  	googleMaps(beg,mid,last, cent);
   }
 });
 
@@ -14480,7 +14480,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\"/>";
+  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
   });
 
 },{"hbsfy/runtime":9}],22:[function(require,module,exports){

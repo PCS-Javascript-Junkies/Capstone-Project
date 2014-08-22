@@ -1,23 +1,32 @@
 function googleMaps(startArray, middleArray, endArray, centerPoint){
+ directionsDisplay = new google.maps.DirectionsRenderer();
   //might not need this depending on how the file is linked
 // $.getScript( "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", function()
 //   { 
-    $.getScript( "https://maps.googleapis.com/maps/api/js?key=AIzaSyAR2EJtACUX99FT9wslL-bPMV1Ihwbe7hc", function()
-        {
+//   
+    
+    // var script = document.createElement('script');
+    // script.type = 'text/javascript';
+    // script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAR2EJtACUX99FT9wslL-bPMV1Ihwbe7hc"
+    // document.body.appendChild(script);
+
+   console.log("*************1");
+   console.log(document.getElementById("map-canvas"));
+    // $.getScript( "https://maps.googleapis.com/maps/api/js?key=AIzaSyAR2EJtACUX99FT9wslL-bPMV1Ihwbe7hc", function()
+    //     {
         console.log("*************A");
         var directionsDisplay;
         var directionsService = new google.maps.DirectionsService();
         var map;
 
         function initialize() {
-          directionsDisplay = new google.maps.DirectionsRenderer();
-          var portland = new google.maps.LatLng(45.522, -122.672);
+          console.log("*************B"); 
+          var center = new google.maps.LatLng(centerPoint[0], centerPoint[1]);
           var mapOptions = {
             zoom:14,
-            center: centerPoint
-          };
+            center: center
+          };        
           map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-          console.log("*************B");
           directionsDisplay.setMap(map);
         }
 
@@ -43,9 +52,13 @@ function googleMaps(startArray, middleArray, endArray, centerPoint){
           });
         }
           console.log("*********************C");
-        google.maps.event.addDomListener(window, 'load', initialize);
 
+        function test(){
+          console.log("in the event listener " );
+        }
+
+        initialize();
         calcRoute();
-    });
+  //   });
   // });  
 };
