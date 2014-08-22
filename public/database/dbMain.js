@@ -154,7 +154,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.insideTree.theme.breweryTheme;
-                   console.log("inBrew");
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
@@ -186,7 +185,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.outsideTree.theme.breweryTheme;
-                   console.log("outBrew");
                     break;
                 default:
                     console.log("\nadd was not formatted correctly");
