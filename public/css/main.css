@@ -103,7 +103,8 @@ header.app-title .attribution a:hover {
 }
 
 .progression-image {
-  max-width: 998px;
+  max-width: 900px;
+  height: 268px;
   margin: 0 auto;
 }
 

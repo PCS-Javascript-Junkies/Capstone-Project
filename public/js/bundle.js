@@ -14351,11 +14351,11 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\">\n    <img src=\"";
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('";
   if (helper = helpers.imageLevel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.imageLevel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" />\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Answer Some Questions</h1>\n      <p class=\"question\">";
+    + "') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Answer Some Questions</h1>\n      <p class=\"question\">";
   if (helper = helpers.questionIndex) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -14393,7 +14393,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\">\n    <img src=\"./img/5.jpg\" />\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Your Adventure:</h1>\n    </div>\n    ";
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Your Adventure:</h1>\n    </div>\n    ";
   stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </div>\n</section>";
