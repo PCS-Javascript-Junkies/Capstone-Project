@@ -8,16 +8,13 @@ var resultTemplate = require('../../templates/result-template.hbs');
 var ResultView = Backbone.View.extend({
   el: '#adventure-parent',
   render: function () {
-    console.log("render result view");
-    console.log(this.model);
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
-    
-    beg=[45.522,-122.690];
-  	mid=[45.52,-122.673];
-  	last=[45.532,-122.690];
-  	cent=[45.522, -122.672];
 
+    beg= this.model.changed.results[0].address + " Portland, OR";
+  	mid=this.model.changed.results[1].address + " Portland, OR";
+  	last=this.model.changed.results[2].address + " Portland, OR";
+  	cent= this.model._previousAttributes.geolocation;
 
   	googleMaps(beg,mid,last, cent);
   }
