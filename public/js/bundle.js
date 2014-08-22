@@ -12780,7 +12780,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.insideTree.theme.breweryTheme;
-                   console.log("inBrew");
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
@@ -12812,7 +12811,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.outsideTree.theme.breweryTheme;
-                   console.log("outBrew");
                     break;
                 default:
                     console.log("\nadd was not formatted correctly");
@@ -14392,6 +14390,14 @@ var ResultView = Backbone.View.extend({
     console.log(this.model);
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
+    
+    var beg=[45.522,-122.690];
+	var mid=[45.52,-122.673];
+	var last=[45.532,-122.690];
+	var cent=[45.522, -122.672];
+
+  console.log("***************1");
+	googleMaps(beg,mid,last, cent);
   }
 });
 
@@ -14474,7 +14480,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"adventure-parent\">\n</div>";
+  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\"/>";
   });
 
 },{"hbsfy/runtime":9}],22:[function(require,module,exports){
