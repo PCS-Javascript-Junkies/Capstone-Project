@@ -3,12 +3,12 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var config = require('./config.js');
+//var config = require('./config.js');
 var consolidate = require('consolidate');
 var Handlebars = require('handlebars');
 var Forecast = require('forecast.io');
 
-var db = require('orchestrate')(config.dbKey);
+//var db = require('orchestrate')(config.dbKey);
 
 var app = express();
 
