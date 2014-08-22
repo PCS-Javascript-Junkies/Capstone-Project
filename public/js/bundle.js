@@ -12780,7 +12780,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.insideTree.theme.breweryTheme;
-                   console.log("inBrew");
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
@@ -12812,7 +12811,6 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
                     break;
                 case "brewery":
                    pointer = this.root.outsideTree.theme.breweryTheme;
-                   console.log("outBrew");
                     break;
                 default:
                     console.log("\nadd was not formatted correctly");
@@ -14365,6 +14363,14 @@ var ResultView = Backbone.View.extend({
     console.log(this.model);
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
+    
+    beg=[45.522,-122.690];
+  	mid=[45.52,-122.673];
+  	last=[45.532,-122.690];
+  	cent=[45.522, -122.672];
+
+
+  	googleMaps(beg,mid,last, cent);
   }
 });
 
@@ -14447,7 +14453,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"adventure-parent\">\n</div>";
+  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
