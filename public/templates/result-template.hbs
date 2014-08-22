@@ -1,9 +1,15 @@
-<div class="intro-block">
-  <h2>Your Adventure:</h2>
-
-  {{#each displayResults.attributes.results}}
+<section class="question-body">
+  <div class="progression-image">
+    <img src="./img/5.jpg" />
+  </div>
+  <div class="container container-960">
+    <div class="intro-block">
+      <h1>Your Adventure:</h1>
+    </div>
+    {{#each displayResults.attributes.results}}
   <h1>{{name}}</h1>
   <img src={{img}} />
   <p>{{address}}</p>
   {{/each}}
-</div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ Backbone.$ = $;
 var questionTemplate = require('../../templates/question-template.hbs');
 var ResultView = require('./result-view.js');
 var questionLevel = 0;
+var imageLevel = 1;
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -12,6 +13,7 @@ var QuestionView = Backbone.View.extend({
     'click .question-choice': 'chooseQuestion'
   },
   initialize: function () {
+    this.model.set({imageLevel: imageLevel});
     this.model.on("change:results", this.renderNextQuestion, this)
   },
   pickRandomQuestion: function () {
@@ -46,15 +48,18 @@ var QuestionView = Backbone.View.extend({
 
     } else {
       questionLevel++;
+      imageLevel++;
+      this.model.set({imageLevel: imageLevel});
       tree.current = tree.current.next;
       this.render();
     }
   },
   render: function () {
     console.log("render question view");
+    var imageLevel = "./img/" + this.model.attributes.imageLevel + ".jpg";
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
-    $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
+    $(this.el).html(questionTemplate({imageLevel: imageLevel, questionIndex: questionIndex, currentTree: currentTree}));
   }
 });
 

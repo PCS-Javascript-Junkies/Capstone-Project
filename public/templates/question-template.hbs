@@ -1,9 +1,16 @@
-<div class="intro-block">
-<h2>Questions</h2>
-<p>
-  {{questionIndex}}
-</p>
-{{#each currentTree.buttons}}
-<div class="btn btn-primary question-choice" id="{{@index}}" role="button">{{title}}</div>
-{{/each}}
-</div>
+<section class="question-body">
+  <div class="progression-image">
+    <img src="{{imageLevel}}" />
+  </div>
+  <div class="container container-960">
+    <div class="intro-block">
+      <h1>Answer Some Questions</h1>
+      <p class="question">{{questionIndex}}</p>
+    </div>
+    <div class="button-container">
+      {{#each currentTree.buttons}}
+        <div class="btn btn-primary question-choice" id="{{@index}}" role="button">{{title}}</div>
+      {{/each}}
+    </div>
+  </div>
+</section>
