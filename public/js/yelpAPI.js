@@ -1,13 +1,10 @@
-function yelpAPI(area, array){
+function yelpAPI(bounds, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
     var slef = this;
    //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
-      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
-      {
-        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
-        {
-
+      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function() {
+        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function () {
             var auth = {
                 consumerKey : "RJFp3rk_b9tsJv7dZTt9-w",
                 consumerSecret : "-0pEjAPEzXcoZ2iCiqMhOIHfyAI",
@@ -21,7 +18,8 @@ function yelpAPI(area, array){
             randInt = Math.floor((Math.random() * array.length) + 0);
 
             var terms = array[randInt];
-            var near = area;
+            //var near = area;
+            var boundit = bounds;
 
 
             var accessor = {
@@ -30,7 +28,8 @@ function yelpAPI(area, array){
             };
             parameters = [];
             parameters.push(['term', terms]);
-            parameters.push(['location', near]);
+            //parameters.push(['location', near]);
+            parameters.push(['bounds', boundit]);
             parameters.push(['callback', 'cb']);
             parameters.push(["oauth_consumer_key", auth.consumerKey]);
             parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
@@ -79,6 +78,8 @@ function yelpAPI(area, array){
                         result.yelpInfoLink = data.businesses[randInt].url;
 
                         console.log(result);
+                        callback();
+
                 }else{
                     self.yelpAPI(area, array);
                 }
