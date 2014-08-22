@@ -14252,11 +14252,13 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({geolocation: "se"});
+    this.model.set({geolocation: "Southeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.459871,-122.667129|45.52248,-122.537341"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
-    this.model.set({geolocation: "ne"});
+    this.model.set({geolocation: "Northeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
   clickWest: function() {
@@ -14264,7 +14266,7 @@ var LocationChoiceView = Backbone.View.extend({
     this.loadThemeChoiceView();
   },
   clickAll: function() {
-    this.model.set({geolocation: "all"});
+    this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {
@@ -14286,64 +14288,61 @@ Backbone.$ = $;
 var questionTemplate = require('../../templates/question-template.hbs');
 var ResultView = require('./result-view.js');
 var questionLevel = 0;
-//var yelpAPI = require('../yelpAPI.js');
+var imageLevel = 1;
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
     'click .question-choice': 'chooseQuestion'
   },
-  // initialize: function () {
-  //   this.model.on("change:results", this.renderNextQuestion, this)
-  // },
+  initialize: function () {
+    this.model.set({imageLevel: imageLevel});
+    this.model.on("change:results", this.renderNextQuestion, this)
+  },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
     console.log(max);
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  setYelpData: function () {
+  chooseQuestion: function () {
+    var self = this;
+    function writeModel() {
+      console.log(yelpresult);
+      self.model.set({ 
+          "results" : self.model.get('results').concat(yelpresult)
+      });
+      self.model.attributes["level" + questionLevel] = yelpKeywordArray;
+      console.log("model as of now:",self.model);
+    }
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    var yelpresult = yelpAPI("Portland", yelpKeywordArray);
-    console.log(yelpresult);
-    this.model.set({ 
-        "results" : this.model.get('results').concat(yelpresult)
-    });
-    this.model.attributes["level" + questionLevel] = yelpKeywordArray;
-    console.log("model as of now:",this.model);
-  },
-  chooseQuestion: function () {
-    // var clickedQuestionId = event.target.id;
-    // var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    // var yelpresult = yelpAPI("Portland", yelpKeywordArray);
-    // console.log(yelpresult);
-    // this.model.set({ 
-    //     "results" : this.model.get('results').concat(yelpresult)
-    // });
-    // //this.model.set(yelpKeywordArray);
-    // this.model.attributes["level" + questionLevel] = yelpKeywordArray;
-    // console.log("model as of now:",this.model);
-    this.renderNextQuestion(this.setYelpData());
+    console.log("location:", this.model.attributes.geolocation);
+    var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
   },
   renderNextQuestion: function (callback) {
     if (tree.current.next === null) {
       var resultView = new ResultView({model: this.model});
+      console.log("model result length:",this.model.attributes.results.length);
+      console.log(this.model);
 
         resultView.render();
 
+
     } else {
       questionLevel++;
+      imageLevel++;
+      this.model.set({imageLevel: imageLevel});
       tree.current = tree.current.next;
       this.render();
     }
   },
   render: function () {
     console.log("render question view");
-    console.log(this.model);
+    var imageLevel = "./img/" + this.model.attributes.imageLevel + ".jpg";
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
-    $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
+    $(this.el).html(questionTemplate({imageLevel: imageLevel, questionIndex: questionIndex, currentTree: currentTree}));
   }
 });
 
@@ -14360,7 +14359,6 @@ var ResultView = Backbone.View.extend({
   el: '#adventure-parent',
   render: function () {
     console.log("render result view");
-    console.log(this.model);
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
     
@@ -14465,7 +14463,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n</div>";
+  return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n    </div>\n  </div>\n</section>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
@@ -14479,24 +14477,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"btn btn-primary question-choice\" id=\""
+  buffer += "\n        <div class=\"btn btn-primary question-choice\" id=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" role=\"button\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n";
+    + "</div>\n      ";
   return buffer;
   }
 
-  buffer += "<div class=\"intro-block\">\n<h2>Questions</h2>\n<p>\n  ";
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('";
+  if (helper = helpers.imageLevel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imageLevel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Answer Some Questions</h1>\n      <p class=\"question\">";
   if (helper = helpers.questionIndex) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\n</p>\n";
+    + "</p>\n    </div>\n    <div class=\"button-container\">\n      ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.buttons), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>";
+  buffer += "\n    </div>\n  </div>\n</section>";
   return buffer;
   });
 
@@ -14527,10 +14529,10 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"intro-block\">\n  <h2>Your Adventure:</h2>\n\n  ";
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Your Adventure:</h1>\n    </div>\n    ";
   stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>";
+  buffer += "\n  </div>\n</section>";
   return buffer;
   });
 
@@ -14545,7 +14547,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"btn btn-primary theme-choice\" id=\"";
+  buffer += "\n        <div class=\"btn btn-primary theme-choice\" id=\"";
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -14553,16 +14555,14 @@ function program1(depth0,data) {
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n";
+    + "</div>\n      ";
   return buffer;
   }
 
-  buffer += "<div class=\"intro-block\">\n  <h1>Pick a theme</h1>\n<p>\n  "
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.questions)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + ". (Only chill works for now.)\n</p>\n";
+  buffer += "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Pick <span class=\"title-secondary-word\">a</span> Theme</h1>\n      <p class=\"question\">Choose a theme to define what kind of adventure you will go on.</p>\n    </div>\n    <div class=\"button-container\">\n      ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.theme), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>";
+  buffer += "\n    </div>\n  </div>\n</section>";
   return buffer;
   });
 
@@ -14575,7 +14575,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside?\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>\n</div>";
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today, how about including outdoor locations in your adventure?</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want outdoor locations.</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay indoors.</div>\n      </div>\n    </div>\n  </div>\n</section>";
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
