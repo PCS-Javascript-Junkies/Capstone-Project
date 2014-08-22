@@ -1,9 +1,18 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
+var Adventure = require('../models/adventure.js');
 Backbone.$ = $;
 
 var resultTemplate = require('../../templates/result-template.hbs');
-//var yelpAPI = require('../yelpAPI.js');
+
+var StoryCollection = Backbone.Collection.extend({
+  model: Adventure,
+  url:'/api/stories',
+  //comparator: "title"
+});
+
+var storyCollection = new StoryCollection();
+
 
 var ResultView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -16,7 +25,8 @@ var ResultView = Backbone.View.extend({
   	last=this.model.changed.results[2].address + " Portland, OR";
   	cent= this.model._previousAttributes.geolocation;
 
-  	googleMaps(beg,mid,last, cent);
+  	storyCollection.create(this.model);
+    googleMaps(beg,mid,last, cent);
   }
 });
 

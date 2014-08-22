@@ -1,9 +1,9 @@
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
-  urlRoot: function() {
-    return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
-  },
+  // urlRoot: function() {
+  //   // return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
+  // },
   defaults: {
     "weather": null,
     "geolocation": null,
