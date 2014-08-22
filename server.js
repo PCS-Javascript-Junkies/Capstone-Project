@@ -40,6 +40,7 @@ app.get('/about', function (req, res) {
   res.render('./about.html');
 });
 
+// no longer working? is that ok?
 app.get('/api/themes/:weather/:geoLocation', function (req, res) {
   var data = {
     "weather": req.params.weather,
@@ -56,6 +57,33 @@ app.get('/api/themes/:weather/:geoLocation', function (req, res) {
   }
   res.json(data);
 });
+
+app.get('/api/stories', function (req, res) {
+  var list = [];
+  db.list('Stories')
+  .then(function (result) {
+  result.body.results.forEach(function (item){
+     list.push(item.value);
+    });
+    res.json(list);
+  })
+  .fail(function (err) {
+    console.error(err);
+  });
+});
+
+app.post('/api/stories', function (req, res){
+  var d = new Date();
+  req.accepts('application/json');
+  db.put('Stories', ('story' +d.getTime()), req.body)
+  .then(function (){
+    res.send(200, 'ok, we added your story, here is what you added');
+  })
+  .fail(function (err) {
+    console.error(err);
+  });
+});
+
 
 //db.deleteCollection('bb-todos');
 

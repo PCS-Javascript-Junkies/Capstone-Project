@@ -14220,9 +14220,9 @@ $(function () {
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
-  urlRoot: function() {
-    return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
-  },
+  // urlRoot: function() {
+  //   // return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
+  // },
   defaults: {
     "weather": null,
     "geolocation": null,
@@ -14378,31 +14378,38 @@ module.exports = QuestionView;
 },{"../../templates/question-template.hbs":23,"./result-view.js":18,"backbone":1,"jquery":10}],18:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
+var Adventure = require('../models/adventure.js');
 Backbone.$ = $;
 
 var resultTemplate = require('../../templates/result-template.hbs');
-//var yelpAPI = require('../yelpAPI.js');
+
+var StoryCollection = Backbone.Collection.extend({
+  model: Adventure,
+  url:'/api/stories',
+  //comparator: "title"
+});
+
+var storyCollection = new StoryCollection();
+
 
 var ResultView = Backbone.View.extend({
   el: '#adventure-parent',
   render: function () {
-    console.log("render result view");
-    console.log(this.model);
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
-    
-    beg=[45.522,-122.690];
-  	mid=[45.52,-122.673];
-  	last=[45.532,-122.690];
-  	cent=[45.522, -122.672];
 
+    beg= this.model.changed.results[0].address + " Portland, OR";
+  	mid=this.model.changed.results[1].address + " Portland, OR";
+  	last=this.model.changed.results[2].address + " Portland, OR";
+  	cent= this.model._previousAttributes.geolocation;
 
-  	googleMaps(beg,mid,last, cent);
+  	storyCollection.create(this.model);
+    googleMaps(beg,mid,last, cent);
   }
 });
 
 module.exports = ResultView;
-},{"../../templates/result-template.hbs":24,"backbone":1,"jquery":10}],19:[function(require,module,exports){
+},{"../../templates/result-template.hbs":24,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
