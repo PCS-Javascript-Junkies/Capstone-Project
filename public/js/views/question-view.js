@@ -26,6 +26,12 @@ var QuestionView = Backbone.View.extend({
     var self = this;
     function writeModel() {
       console.log(yelpresult);
+      if (yelpresult.img !== undefined) {
+        var imageUrl = yelpresult.img;
+        console.log(imageUrl);
+        var regExImg = /\/ms\./;
+        yelpresult.img = yelpresult.img.replace(regExImg, "/l.");
+      }
       self.model.set({ 
           "results" : self.model.get('results').concat(yelpresult)
       });
