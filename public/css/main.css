@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Gentium Book Basic', serif;
   font-weight: 400;
@@ -93,6 +97,10 @@ header.app-title .attribution a:hover {
   max-width: 960px;
 }
 
+.container-720 {
+  max-width: 720px;
+}
+
 .button-container {
   max-width: 640px;
   margin: 0 auto;
@@ -150,6 +158,42 @@ header.app-title .attribution a:hover {
 .btn.btn-primary:hover {
   background: #71aed1;
   transition: all 0.5s;
+}
+
+.result-details {
+  border-left: 10px solid #eee;
+  padding-left: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.result-details h1 {
+  font-size:2.8rem;
+  padding: 20px 0 10px 0;
+}
+
+.result-details .image-container {
+  height: 30%;
+}
+
+.result-details .business-info {
+  background-size: cover; 
+}
+
+.result-details .rating-stars {
+  padding-top: 10px;
+}
+
+.result-in-story {
+  font-family: "Open Sans", sans-serif;
+  color: #71aed1;
+  padding: 0 3px;
+  border-radius: 3px;
+  background: #E4F5FF;
+  font-weight: 700;
+}
+
+a .result-in-story:hover {
+  background: #8ed5ff;
 }
 
 footer.main {

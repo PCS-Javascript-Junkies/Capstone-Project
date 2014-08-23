@@ -1,14 +1,45 @@
 <section class="question-body">
   <div class="progression-image" style="background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;">
   </div>
-  <div class="container container-960">
+  <div class="container">
     <div class="intro-block">
       <h1>Your Adventure:</h1>
     </div>
-    {{#each displayResults.attributes.results}}
-  <h1>{{name}}</h1>
-  <img src={{img}} />
-  <p>{{address}}</p>
-  {{/each}}
+    <div class="col-md-6 result-story">
+      <p>{{displayResults.attributes.story.[0]}} {{displayResults.attributes.story.[1]}}
+      <a href="{{displayResults.attributes.results.[0].yelpInfoLink}}"><span class="result-in-story">{{displayResults.attributes.results.[0].name}}</span></a>
+      {{displayResults.attributes.story.[2]}}
+      </p>
+      <p>
+      {{displayResults.attributes.story.[3]}}
+      <a href="{{displayResults.attributes.results.[1].yelpInfoLink}}"><span class="result-in-story">{{displayResults.attributes.results.[1].name}}</span></a>
+      {{displayResults.attributes.story.[4]}}
+      </p>
+      <p>
+      {{displayResults.attributes.story.[5]}}
+      <a href="{{displayResults.attributes.results.[2].yelpInfoLink}}"><span class="result-in-story">{{displayResults.attributes.results.[2].name}}</span></a>
+      {{displayResults.attributes.story.[6]}}
+      </p>
+      <p>
+      {{displayResults.attributes.story.[7]}}
+      <a href="{{displayResults.attributes.results.[3].yelpInfoLink}}"><span class="result-in-story">{{displayResults.attributes.results.[3].name}}</span></a>
+      {{displayResults.attributes.story.[8]}}
+      </p>
+    </div>
+    <div class="col-md-6 result-details">
+        {{#each displayResults.attributes.results}}
+        <div class="col-md-12">
+          <h1>{{name}}</h1>
+          <div class="image-container col-md-6" style="background: url({{img}}) 50% 50% no-repeat;background-size: cover;">
+          </div>
+          <div class="business-info col-md-6">
+            <img src='{{rating}}' class="rating-stars"/> 
+            <p>out of {{ratingCount}} reviews</p>
+            <p>{{address}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </section>
+<div id="map-canvas" style = "height: 400px"/>

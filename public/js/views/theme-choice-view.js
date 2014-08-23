@@ -13,9 +13,16 @@ var ThemeChoiceView = Backbone.View.extend({
   chooseTheme: function () { //repeat this for all themes...
     var clickedThemeId = event.target.id + "Theme";
     this.model.set({theme: clickedThemeId});
+    this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
+    console.log(this.model);
     tree.current = tree.current.theme[clickedThemeId].next;
+    //this.selectStory();
     this.loadQuestionView();
   },
+  // selectStory: function () {
+
+  //   this.loadQuestionView();
+  // },
   loadQuestionView: function () { //generalized function that calls the generic question view
     var questionView = new QuestionView({model: this.model});
     questionView.render();
