@@ -14488,10 +14488,11 @@ var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "";
 
 
-  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\" style = \"height: 400px\"/>\n";
+  buffer += "<div id=\"adventure-parent\">\n</div>\n\n";
+  return buffer;
   });
 
 },{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
@@ -14614,7 +14615,7 @@ function program1(depth0,data) {
     + "\n      </p>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
   stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </div>\n  </div>\n</section>";
+  buffer += "\n    </div>\n  </div>\n</section>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
   return buffer;
   });
 
