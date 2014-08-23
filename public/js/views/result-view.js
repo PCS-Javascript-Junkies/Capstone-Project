@@ -24,6 +24,7 @@ var ResultView = Backbone.View.extend({
   	mid=this.model.changed.results[1].address + " Portland, OR";
   	last=this.model.changed.results[2].address + " Portland, OR";
   	cent= this.model._previousAttributes.geolocation;
+    console.log("----------->",this.model);
 
   	storyCollection.create(this.model);
     googleMaps(beg,mid,last, cent);

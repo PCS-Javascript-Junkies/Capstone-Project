@@ -14374,6 +14374,7 @@ var ResultView = Backbone.View.extend({
   	mid=this.model.changed.results[1].address + " Portland, OR";
   	last=this.model.changed.results[2].address + " Portland, OR";
   	cent= this.model._previousAttributes.geolocation;
+    console.log("----------->",this.model);
 
   	storyCollection.create(this.model);
     googleMaps(beg,mid,last, cent);
@@ -14381,6 +14382,7 @@ var ResultView = Backbone.View.extend({
 });
 
 module.exports = ResultView;
+
 },{"../../templates/result-template.hbs":24,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
@@ -14459,7 +14461,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
+  return "<div id=\"adventure-parent\">\n</div>\n<div id=\"map-canvas\" style = \"height: 400px\"/>\n";
   });
 
 },{"hbsfy/runtime":9}],22:[function(require,module,exports){
