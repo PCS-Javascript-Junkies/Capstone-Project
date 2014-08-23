@@ -14553,19 +14553,27 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n      <h1>";
+  buffer += "\n        <div class=\"col-md-12\">\n          <h1>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h1>\n      <img src=";
+    + "</h1>\n          <div class=\"image-container col-md-6\" style=\"background: url(";
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + " />\n      <p>";
+    + ") 50% 50% no-repeat;background-size: cover;\">\n          </div>\n          <div class=\"business-info col-md-6\">\n            <img src='";
+  if (helper = helpers.rating) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rating); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "' class=\"rating-stars\"/> \n            <p>out of ";
+  if (helper = helpers.ratingCount) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.ratingCount); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " reviews</p>\n            <p>";
   if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</p>\n      ";
+    + "</p>\n          </div>\n        </div>\n      ";
   return buffer;
   }
 
@@ -14573,27 +14581,35 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[0])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[1])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n      <span class=\"result-in-story\">"
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span>\n      "
+    + "</span></a>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[2])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n      </p>\n      <p>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[3])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n      <span class=\"result-in-story\">"
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[1])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[1])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span>\n      "
+    + "</span></a>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[4])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n      </p>\n      <p>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[5])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n      <span class=\"result-in-story\">"
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[2])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[2])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span>\n      "
+    + "</span></a>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[6])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n      </p>\n      <p>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[7])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n      <span class=\"result-in-story\">"
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[3])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[3])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span>\n      "
+    + "</span></a>\n      "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[8])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n      </p>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
   stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});

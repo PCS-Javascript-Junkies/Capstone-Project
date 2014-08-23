@@ -80,9 +80,9 @@ function yelpAPI(bounds, array, callback){
                         console.log(result);
                         callback();
 
-                }else{
-                    self.yelpAPI(area, array);
-                }
+                    }else{
+                        self.yelpAPI(area, array);
+                    }
 
                 }
             });
