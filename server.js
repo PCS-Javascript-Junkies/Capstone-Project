@@ -10,7 +10,7 @@ var Forecast = require('forecast.io');
 
 
 //process.env(DB_KEY)
-var db = require('orchestrate')(config.dbKey);
+var db = (require('orchestrate')(config.dbKey) || require('orchestrate')(process.env(DB_KEY)));
 
 var app = express();
 
