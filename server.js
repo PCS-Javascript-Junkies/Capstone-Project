@@ -7,7 +7,8 @@ var config = require('./config.js');
 var consolidate = require('consolidate');
 var Handlebars = require('handlebars');
 var Forecast = require('forecast.io');
-
+var util = require('util');
+// var forecaster = require('./forecast.js');
 
 //process.env(DB_KEY)
 var db = (require('orchestrate')(config.dbKey) || require('orchestrate')(process.env(DB_KEY)));
@@ -84,6 +85,34 @@ app.post('/api/stories', function (req, res){
   });
 });
 
+app.get("/weather", function (req, res) {
+  function forecastRequester (){
+    var options = {
+      APIKey: "1f75a50387fa44c9015e4edc8fce57fc",
+      timeout: 1000
+    };
+
+      var forecast = new Forecast(options);
+    var latitude = "45.5234515";
+      var longitude = "-122.6762071";
+
+    forecast.get(latitude, longitude, function (err, res, data) {
+      if (err) throw err;
+      console.log('res: ' + util.inspect(res));
+      console.log('data: ' + util.inspect(data));
+      //use a return statement to retrieve the return data.forcast.summary (or something) 
+    });
+  }
+  var results = forecastRequester();
+  res.send(200, results);
+});
+
+// if(queryThis('foo')) { doThat(); }
+
+// function queryThis(parameter) {
+//     // some code
+//     return true;
+// }
 
 //db.deleteCollection('bb-todos');
 
