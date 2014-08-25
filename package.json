@@ -23,6 +23,7 @@
     "body-parser": "^1.4.3",
     "consolidate": "^0.10.0",
     "express": "^4.6.1",
+    "forecast.io": "0.0.9",
     "handlebars": "^1.3.0",
     "hbsfy": "^1.3.2",
     "jquery": "^2.1.1",
