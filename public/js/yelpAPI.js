@@ -1,13 +1,10 @@
-function yelpAPI(area, array){
+function yelpAPI(bounds, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
     var slef = this;
    //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
-      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
-      {
-        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
-        {
-
+      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function() {
+        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function () {
             var auth = {
                 consumerKey : "RJFp3rk_b9tsJv7dZTt9-w",
                 consumerSecret : "-0pEjAPEzXcoZ2iCiqMhOIHfyAI",
@@ -21,7 +18,8 @@ function yelpAPI(area, array){
             randInt = Math.floor((Math.random() * array.length) + 0);
 
             var terms = array[randInt];
-            var near = area;
+            //var near = area;
+            var boundit = bounds;
 
 
             var accessor = {
@@ -30,7 +28,8 @@ function yelpAPI(area, array){
             };
             parameters = [];
             parameters.push(['term', terms]);
-            parameters.push(['location', near]);
+            //parameters.push(['location', near]);
+            parameters.push(['bounds', boundit]);
             parameters.push(['callback', 'cb']);
             parameters.push(["oauth_consumer_key", auth.consumerKey]);
             parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
@@ -62,31 +61,38 @@ function yelpAPI(area, array){
                 'success' : function(data, textStats, XMLHttpRequest) {
                     console.log("Data We get back from yelp --->",data);
                     var max;
-                    if(data.buisnesses !== undefined || data.buisnesses !== null){
+                    if(data.total !== 0){
                         if(data.businesses.length < 10)
-                          max = businesses.length;
+                          max = data.businesses.length;
                         else
                           max = 10;
-                        randInt = Math.floor((Math.random() * max) + 0);
+
+                        var randInt = Math.floor((Math.random() * max) + 0);
+                        console.log(randInt);
 
                         result.name = data.businesses[randInt].name;
                         result.address = data.businesses[randInt].location.address[0];
                         result.gps = data.businesses[randInt].location.coordinate;
-                        result.img = data.businesses[randInt].image_url;
-                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.rating = data.businesses[randInt].rating_img_url;
+                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.ratingCount = data.businesses[randInt].review_count;
                         result.yelpInfoLink = data.businesses[randInt].url;
+                        if(data.businesses[randInt].image_url !== undefined){
+                            result.img = data.businesses[randInt].image_url;
+                        } else { result.img = "./img/PortlandSign.jpg"};
+                        callback();
 
-                        console.log(result);
-                }else{
-                    self.yelpAPI(area, array);
-                }
+                    }else{
+                        self.yelpAPI(bounds, array, callback);
+                    }
 
                 }
             });
         });
     });
+// var imageUrl = result.img;
+// var regExImg = /\/ms\./;
+// imageUrl.replace(regExImg, "l.");
 return result;
 }
 

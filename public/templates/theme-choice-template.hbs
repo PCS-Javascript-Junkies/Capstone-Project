@@ -1,9 +1,13 @@
-<div class="intro-block">
-  <h1>Pick a theme</h1>
-<p>
-  {{treeData.questions}}. (Only chill works for now.)
-</p>
-{{#each treeData.theme}}
-<div class="btn btn-primary theme-choice" id="{{id}}" role="button">{{title}}</div>
-{{/each}}
-</div>
+<section class="question-body">
+  <div class="container container-960">
+    <div class="intro-block">
+      <h1>Pick <span class="title-secondary-word">a</span> Theme</h1>
+      <p class="question">Choose a theme to define what kind of adventure you will go on.</p>
+    </div>
+    <div class="button-container">
+      {{#each treeData.theme}}
+        <div class="btn btn-primary theme-choice" id="{{id}}" role="button">{{title}}</div>
+      {{/each}}
+    </div>
+  </div>
+</section>

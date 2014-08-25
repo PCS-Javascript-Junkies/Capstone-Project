@@ -1,4 +1,4 @@
-function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
+function googleMaps(startPoint, middlePoint, secondMiddlePoint, endPoint, centerPoint){
  directionsDisplay = new google.maps.DirectionsRenderer();
 
    console.log(document.getElementById("map-canvas"));
@@ -8,13 +8,16 @@ function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
         function initialize() {
         var centLatLong =[];
         switch(centerPoint){
-          case "se":
+          case "Southeast Portland, Portland, OR":
             centLatLong.push(45.513,-122.631);
             break;
-          case "ne":
+          case "Northeast Portland, Portland, OR":
             centLatLong.push(45.513,-122.631);
             break;
-          case "all":
+          case "west":
+            centLatLong.push(45.524,-122.680);
+            break;
+          case "Portland":
             centLatLong.push(45.513,-122.631);
             break;
           default:
@@ -24,7 +27,7 @@ function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
           var mapOptions = {
             zoom:14,
             center: center,
-          };        
+          };
           map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
           directionsDisplay.setMap(map);
         }
@@ -36,6 +39,10 @@ function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
           waypoints: [
             {
               location: middlePoint,
+              stopover:true
+            },
+            {
+              location: secondMiddlePoint,
               stopover:true
             }],
           provideRouteAlternatives: false,

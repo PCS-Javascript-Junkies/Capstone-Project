@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js":[function(require,module,exports){
-=======
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
->>>>>>> master
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1612,11 +1608,7 @@
 
 }));
 
-<<<<<<< HEAD
-},{"underscore":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\underscore\\underscore.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars.runtime.js":[function(require,module,exports){
-=======
-},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
->>>>>>> master
+},{"underscore":11}],2:[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1649,11 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-<<<<<<< HEAD
-},{"./handlebars/base":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js","./handlebars/exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./handlebars/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js","./handlebars/safe-string":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js","./handlebars/utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js":[function(require,module,exports){
-=======
-},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
->>>>>>> master
+},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1834,11 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-<<<<<<< HEAD
-},{"./exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js":[function(require,module,exports){
-=======
-},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
->>>>>>> master
+},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1867,11 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-<<<<<<< HEAD
-},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js":[function(require,module,exports){
-=======
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
->>>>>>> master
+},{}],5:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -2009,11 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-<<<<<<< HEAD
-},{"./base":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js","./exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js":[function(require,module,exports){
-=======
-},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
->>>>>>> master
+},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2025,11 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-<<<<<<< HEAD
-},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js":[function(require,module,exports){
-=======
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
->>>>>>> master
+},{}],7:[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2106,26 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-<<<<<<< HEAD
-},{"./safe-string":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\runtime.js":[function(require,module,exports){
-=======
-},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
->>>>>>> master
+},{"./safe-string":6}],8:[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-<<<<<<< HEAD
-},{"./dist/cjs/handlebars.runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars.runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js":[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js":[function(require,module,exports){
-=======
-},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
-module.exports = require("handlebars/runtime")["default"];
-
-},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
->>>>>>> master
+},{"handlebars/runtime":8}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11317,11 +11278,7 @@ return jQuery;
 
 }));
 
-<<<<<<< HEAD
-},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\underscore\\underscore.js":[function(require,module,exports){
-=======
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
->>>>>>> master
+},{}],11:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12666,12 +12623,8 @@ return jQuery;
   }
 }).call(this);
 
-<<<<<<< HEAD
-},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\database\\dbMain.js":[function(require,module,exports){
-=======
-},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
->>>>>>> master
-//var db = require("./database.js");
+},{}],12:[function(require,module,exports){
+
 
 
 function QuestionTree() {
@@ -12680,124 +12633,125 @@ function QuestionTree() {
 }
 
 
-QuestionTree.prototype = {
-    startTree: function(insideOutsideQ, AreaQ){
-    var theme ={
-        // "theme": "themeID",
-        // "themeQuestions": null,
-
-        "chillTheme": null,
-        "nightOutTheme": null,
-        "foodieTheme": null,
-        "hostingTheme": null,
-        "tgifTheme":null,
-        "breweryTheme":null,
-        "kidsTheme":null,
-        "activeTheme": null
+QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
+    function Theme() {
+        this.chillTheme = null;
+        this.nightOutTheme = null;
+        this.foodieTheme = null;
+        this.hostingTheme = null;
+        this.tgifTheme = null;
+        this.breweryTheme = null;
+        this.kidsTheme = null;
+        this.activeTheme = null;
     };
 
-    var area ={
-        "id": "area",
-        "questions": null,
-        "area": null,
-        "theme": null
-
+    function Area() {
+        this.aaID="Area Node L2";
+        this.id= "area";
+        this.questions= null;
+        this.area= null;
+        this.theme= null;
     };
 
-    var rootNode ={
-        "id": "Root",
-        "questions": null,
-        "insideTree": null,
-        "outsideTree": null,
+    function RootNode() {
+        this.aaID = "Root L1";
+        this.id = "Root";
+        this.questions = null;
+        this.insideTree = null;
+        this.outsideTree = null;
     };
 
-    this.root = rootNode;
+    this.root = new RootNode;
     this.current=this.root;
-    this.root.insideTree = area;
-    this.root.outsideTree= area;
-    this.root.outsideTree.theme = theme;
-    this.root.insideTree.theme = theme;
-    },
+    this.root.insideTree = new Area();
+    this.root.insideTree.theme = new Theme();
+    this.root.outsideTree= new Area();
+    this.root.outsideTree.theme = new Theme();
+    };
 
 
-    buildTheme: function (inOrOut, id, title){
-        var node ={
-            "id": id,
-            "title": title,
-            "next": null
+QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
+        function Node(){
+            this.aaID = "List Head Node";
+            this.stories =[];
+            this.id = id;
+            this.title = title;
+            this.next = null;
         };
 
         if(inOrOut === "inside"){
             switch(id){
                 case "chill":
-                    this.root.insideTree.theme.chillTheme = node;
+                    this.root.insideTree.theme.chillTheme = new Node();
                     break;
                 case "kids":
-                    this.root.insideTree.theme.kidsTheme = node;
+                    this.root.insideTree.theme.kidsTheme = new Node();
                     break;
                 case "foodie":
-                    this.root.insideTree.theme.foodieTheme = node;
+                    this.root.insideTree.theme.foodieTheme = new Node();
                     break;
                 case "hosting":
-                    this.root.insideTree.theme.hostingTheme = node;
+                    this.root.insideTree.theme.hostingTheme = new Node();
                     break;
                 case "active":
-                    this.root.insideTree.theme.activeTheme = node;
+                    this.root.insideTree.theme.activeTheme = new Node();
                     break;
                 case "tgif":
-                    this.root.insideTree.theme.tgifTheme = node;
+                    this.root.insideTree.theme.tgifTheme = new Node();
                     break;
                 case "nightOut":
-                    this.root.insideTree.theme.nightOutTheme = node;
+                    this.root.insideTree.theme.nightOutTheme = new Node();
                     break;
                 case "brewery":
-                    this.root.insideTree.theme.breweryTheme = node;
-                    break;
-                default:
-                    console.log("\nTheme was not formatted correctly");
-
-            }
-        }else{
-            switch(id){
-                case "chill":
-                    this.root.outsideTree.theme.chillTheme = node;
-                    break;
-                case "kids":
-                    this.root.outsideTree.theme.kidsTheme = node;
-                    break;
-                case "foodie":
-                    this.root.outsideTree.theme.foodieTheme = node;
-                    break;
-                case "hosting":
-                    this.root.outsideTree.theme.hostingTheme = node;
-                    break;
-                case "active":
-                    this.root.outsideTree.theme.activeTheme = node;
-                    break;
-                case "tgif":
-                    this.root.outsideTree.theme.tgifTheme = node;
-                    break;
-                case "nightOut":
-                    this.root.outsideTree.theme.nightOutTheme = node;
-                    break;
-                case "brewery":
-                    this.root.outsideTree.theme.breweryTheme = node;
+                    this.root.insideTree.theme.breweryTheme = new Node();
                     break;
                 default:
                     console.log("\nTheme was not formatted correctly");
 
             }
         }
-    },
+        if(inOrOut === "outside"){
+            switch(id){
+                case "chill":
+                    this.root.outsideTree.theme.chillTheme = new Node();
+                    break;
+                case "kids":
+                    this.root.outsideTree.theme.kidsTheme = new Node();
+                    break;
+                case "foodie":
+                    this.root.outsideTree.theme.foodieTheme = new Node();
+                    break;
+                case "hosting":
+                    this.root.outsideTree.theme.hostingTheme = new Node();
+                    break;
+                case "active":
+                    this.root.outsideTree.theme.activeTheme = new Node();
+                    break;
+                case "tgif":
+                    this.root.outsideTree.theme.tgifTheme = new Node();
+                    break;
+                case "nightOut":
+                    this.root.outsideTree.theme.nightOutTheme = new Node();
+                    break;
+                case "brewery":
+                    this.root.outsideTree.theme.breweryTheme = new Node();
+                    break;
+                default:
+                    console.log("\nTheme was not formatted correctly");
 
-    addToTheme: function (inOrOut, theme, title, type, qArray, bObj){
+            }
+        }
+    };
+
+    QuestionTree.prototype.addToTheme = function (inOrOut, theme, title, type, qArray, bObj){
         var pointer;
-        var node ={
-            "title": title,
-            "id": theme,
-            "questions": qArray,
-            "buttons": bObj,
-            "next": null
+        function Node() {
+            this.aaID= "Added Node";
+            this.id = theme;
+            this.title= title;
+            this.questions= qArray;
+            this.buttons= bObj;
+            this.next= null;
         };
 
         if(inOrOut === "inside"){
@@ -12830,7 +12784,8 @@ QuestionTree.prototype = {
                     console.log("\nTheme was not formatted correctly");
 
             }
-        }else{
+        }
+        if(inOrOut === "outside"){
             switch(theme){
                 case "chill":
                    pointer = this.root.outsideTree.theme.chillTheme;
@@ -12861,64 +12816,35 @@ QuestionTree.prototype = {
             }
         }
         if(pointer.next === null){
-            pointer.next = node;
+            pointer.next = new Node();
         }else{
             pointer = pointer.next;
             while(pointer.next){
                 pointer = pointer.next;
             }
-            pointer.next=node;
+            pointer.next= new Node();
         }
     },
 
-initialize: function (){
+QuestionTree.prototype.initialize = function (){
         tree = new QuestionTree();
 
         tree.startTree();
 
-        var barQuestions = ["Do you feel like beer, wine, or spirits? ",
-        "In the mood for hops, grapes, or the hard stuff? ", "If you are at a bar you would order: ",];
 
 
-        var barButton=[
-        {title:"Beer", id:"beer", values:["irish_pubs","pubs","breweries","sportsbars"]},
-        {title:"Wine", id:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
-        {title:"Mixed Drinks", id:"liquor", values:["distilleries","cocktailbars","lounges","pianobars"]},
-        {title:"Surprise Me", id:"all", values:["irish_pubs","pubs","breweries","sportsbars","wine_bars",
-        "champagne_bars","beer_and_wine","distilleries","cocktailbars","lounges,pianobars"]},
-        ];
-
-        var breakQuestions = ["To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I dont understand the words take a break' ",
-                            "After a few hours of drinking I feel like food, a quick snack, or more drinking! (resposibly)"];
-
-        var breakButton=[
-        {title:"Music Sounds Nice", id:"music", values:["musicvenues","pianobars","breweries","jazzandblues"]},
-        {title:"Tea Time", id:"coffee", values:["coffee","tea",]},
-        {title:"Keep the Party Gong!", id:"again", values:["distilleries","cocktailbars","lounges","pianobars"]},
-        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
-        ];
-
-        var wrapQuestions = ["Desert, Drinks again, or greasy food?"];
-
-        var wrapButton =[
-        {title:"Desert", id:"Desert", values:["cupcakes","desserts","donuts"]},
-        {title:"Keep the Party Gong!", id:"again", values:["irish_pubs","pubs","breweries","sportsbars",
-        "wine_bars","champagne_bars","beer_and_wine", "distilleries","cocktailbars","lounges","pianobars"]},
-        {title:"Chow Time", id:"food", values:["irish_pubs","pubs","breweries","sportsbars"]},
-        ];
-
-
-        var barNode = tree.root.insideTree.theme.breweryTheme;
-
-
-
+        /**
+         * General theme building is in this block. This block just adds general themes and questions to
+         * each branch of the tree.
+         * @type {Array}
+         */
         var questions = ["Test Question-1 "," Test Question-2 ", " Test Question-3 ",
          "Test Question-4 ","Test Question-5 "];
 
         var theme = ["chill","kids","foodie","hosting","active",
                     "tgif","nightOut","brewery"];
 
-        var title = ["Take It Easy","Fun With The Kids","Explor My Inner Foodie","Hosting Guests","Active and Energetic",
+        var title = ["Take It Easy","Fun With The Kids","Explore My Inner Foodie","Hosting Guests","Active and Energetic",
                     "It's Friday!","Night On the Town","Breweries, Wineries, and more"];
 
         var level = ["","mainItem", "breatherItem", "endingItem" ];
@@ -12936,16 +12862,16 @@ initialize: function (){
         });
         for(var i =0; i< 8; ++i){
         tree.addToTheme("outside", theme[i], title[i],
-            level[1],questions);
+            level[1], questions);
 
         tree.addToTheme("outside", theme[i], title[i],
-            level[2],questions);
+            level[2], questions);
 
         tree.addToTheme("outside", theme[i], title[i],
-            level[1],questions);
+            level[1], questions);
 
         tree.addToTheme("outside", theme[i], title[i],
-            level[3],questions);
+            level[3], questions);
         }
 
 
@@ -12965,20 +12891,1286 @@ initialize: function (){
 
 
 
-
-        tree.root.insideTree.theme.breweryTheme.next.questions = barQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.buttons = barButton;
-        tree.root.insideTree.theme.breweryTheme.next.next.questions = breakQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.buttons = breakButton;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.questions = barQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.buttons = barButton;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = wrapQuestions;
-        tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = wrapButton;
-
-}
+        /**
+         * Here is the Generated content block.
+         */
 
 
-};
+
+         var inBar={
+            active: true,
+            themeStories: [
+                ["Ah, I see your are up for a little tour of Portland's local bars, wineries and breweries",
+                "well we can't think of a better place to get started than ",
+                "then as you wonder through the city might we suggest that you also stop at ","",
+                "whew, now its time to take a bit of a breather at ","",
+                "Then its back at it! and through your answers we can tell ","is going to be the perfect place for you",
+                "Finally, to finish the eventing off, no place could be better than stopping by "],
+               //["","","","","","","","",""],
+               // ["","","","","","","","",""]
+            ],
+            themeQuestions: [
+                "When you go out to drinks, do you feel like beer, wine, or cocktails? ",
+                "On your adventure are you going to be in the mood for hops, grapes, or the hard stuff? ",
+                "Pop quiz hotshot!... Your at a restaurant, the waiter comes up before you had a chance to look at the menu what do you order? "
+            ],
+            themeButtons: [
+                {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sports_bars"]},
+                {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine", "winery"]},
+                {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktail_bars",
+                    "lounges","piano_bars","martini_bars"]},
+                {title:"Surprise Me", aaID:"all", values:["the_best_irish_pubs","pubs","breweries",
+                    "sports_bars","wine_bars", "champagne_bars","beer_and_wine","distilleries",
+                "cocktail_bars","lounges","piano_bars","martini_bars"]}
+            ],
+            breakQuestions: [
+                "Lets plan a little break, what sounds nice? Music, Tea/Coffee, Food, or Keep the party going!?",
+                "To take it down a notch you: A) listen to music, B) drink coffee or tee, C) 'I don't understand the words take a break!!!' ",
+                "After a few hours of drinking I feel like food, a quick snack, or more drinking! (responsibly)"
+            ],
+            breakButtons: [
+                {title:"Music Sounds Nice", aaID:"music", values:["music_venues","piano_bars",
+                    ,"jazz_and_blues"]},
+                {title:"Tea Time", aaID:"coffee", values:["coffee","tea",]},
+                {title:"Keep the Party Gong!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","lounges","piano_bars"]},
+                {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","grill","bar_food"]},
+            ],
+            wrapQuestions: ["Desert, Drinks again, or greasy food?",
+            "Sadly all good things have to come to an end... but what do we want to end it with?",
+            "Whew, your going to be tired! how should we end the night?",],
+
+            wrapButtons: [
+                {title:"Desert", aaID:"Desert", values:["cupcakes","desserts","donuts"]},
+                {title:"Grab One Last Drink", aaID:"again", values:["irish_pubs","pubs",
+                    "breweries","sports_bars", "wine_bars","champagne_bars","beer_and_wine",
+                    "distilleries","cocktail_bars", "lounges","piano bars"]},
+                {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","chicken_wings","desert"]},
+            ],
+
+            build: function(){
+                if(inBar.active === true){
+                    tree.root.insideTree.theme.breweryTheme.stories = inBar.themeStories;
+                    tree.root.insideTree.theme.breweryTheme.next.questions = inBar.themeQuestions;
+                    tree.root.insideTree.theme.breweryTheme.next.buttons = inBar.themeButtons;
+                    tree.root.insideTree.theme.breweryTheme.next.next.questions = inBar.breakQuestions;
+                    tree.root.insideTree.theme.breweryTheme.next.next.buttons = inBar.breakButtons;
+                    tree.root.insideTree.theme.breweryTheme.next.next.next.questions = inBar.themeQuestions;
+                    tree.root.insideTree.theme.breweryTheme.next.next.next.buttons = inBar.themeButtons;
+                    tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = inBar.wrapQuestions;
+                    tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = inBar.wrapButtons;
+                }
+            },
+
+         }
+
+
+         var outBar={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outBar.active === true){
+                    tree.root.outsideTree.theme.breweryTheme.stories = outBar.themeStories;
+                    tree.root.outsideTree.theme.breweryTheme.next.questions = outBar.themeQuestions;
+                    tree.root.outsideTree.theme.breweryTheme.next.buttons = outBar.themeButtons;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.questions = outBar.breakQuestions;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.buttons = outBar.breakButtons;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.next.questions = outBar.themeQuestions;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.next.buttons = outBar.themeButtons;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.next.next.questions = outBar.wrapQuestions;
+                    tree.root.outsideTree.theme.breweryTheme.next.next.next.next.buttons = outBar.wrapButtons;
+                }
+            },
+
+         }
+
+
+         var inChill={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inChill.active === true){
+                    tree.root.insideTree.theme.chillTheme.stories = inChill.themeStories;
+                    tree.root.insideTree.theme.chillTheme.next.questions = inChill.themeQuestions;
+                    tree.root.insideTree.theme.chillTheme.next.buttons = inChill.themeButtons;
+                    tree.root.insideTree.theme.chillTheme.next.next.questions = inChill.breakQuestions;
+                    tree.root.insideTree.theme.chillTheme.next.next.buttons = inChill.breakButtons;
+                    tree.root.insideTree.theme.chillTheme.next.next.next.questions = inChill.themeQuestions;
+                    tree.root.insideTree.theme.chillTheme.next.next.next.buttons = inChill.themeButtons;
+                    tree.root.insideTree.theme.chillTheme.next.next.next.next.questions = inChill.wrapQuestions;
+                    tree.root.insideTree.theme.chillTheme.next.next.next.next.buttons = inChill.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outChill={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outChill.active === true){
+                    tree.root.outsideTree.theme.chillTheme.stories = outChill.themeStories;
+                    tree.root.outsideTree.theme.chillTheme.next.questions = outChill.themeQuestions;
+                    tree.root.outsideTree.theme.chillTheme.next.buttons = outChill.themeButtons;
+                    tree.root.outsideTree.theme.chillTheme.next.next.questions = outChill.breakQuestions;
+                    tree.root.outsideTree.theme.chillTheme.next.next.buttons = outChill.breakButtons;
+                    tree.root.outsideTree.theme.chillTheme.next.next.next.questions = outChill.themeQuestions;
+                    tree.root.outsideTree.theme.chillTheme.next.next.next.buttons = outChill.themeButtons;
+                    tree.root.outsideTree.theme.chillTheme.next.next.next.next.questions = outChill.wrapQuestions;
+                    tree.root.outsideTree.theme.chillTheme.next.next.next.next.buttons = outChill.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+
+         var inActive={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inActive.active === true){
+                    tree.root.insideTree.theme.activeTheme.stories = inActive.themeStories;
+                    tree.root.insideTree.theme.activeTheme.next.questions = inActive.themeQuestions;
+                    tree.root.insideTree.theme.activeTheme.next.buttons = inActive.themeButtons;
+                    tree.root.insideTree.theme.activeTheme.next.next.questions = inActive.breakQuestions;
+                    tree.root.insideTree.theme.activeTheme.next.next.buttons = inActive.breakButtons;
+                    tree.root.insideTree.theme.activeTheme.next.next.next.questions = inActive.themeQuestions;
+                    tree.root.insideTree.theme.activeTheme.next.next.next.buttons = inActive.themeButtons;
+                    tree.root.insideTree.theme.activeTheme.next.next.next.next.questions = inActive.wrapQuestions;
+                    tree.root.insideTree.theme.activeTheme.next.next.next.next.buttons = inActive.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outActive={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outActive.active === true){
+                    tree.root.outsideTree.theme.activeTheme.stories = outActive.themeStories;
+                    tree.root.outsideTree.theme.activeTheme.next.questions = outActive.themeQuestions;
+                    tree.root.outsideTree.theme.activeTheme.next.buttons = outActive.themeButtons;
+                    tree.root.outsideTree.theme.activeTheme.next.next.questions = outActive.breakQuestions;
+                    tree.root.outsideTree.theme.activeTheme.next.next.buttons = outActive.breakButtons;
+                    tree.root.outsideTree.theme.activeTheme.next.next.next.questions = outActive.themeQuestions;
+                    tree.root.outsideTree.theme.activeTheme.next.next.next.buttons = outActive.themeButtons;
+                    tree.root.outsideTree.theme.activeTheme.next.next.next.next.questions = outActive.wrapQuestions;
+                    tree.root.outsideTree.theme.activeTheme.next.next.next.next.buttons = outActive.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+         var inHost={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [ 
+                "Do you want to start slow?", 
+                "Do you love the arts (be honest)?" ,
+                "Does the smell of paper and ink inspire?"
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
+                {title:"Yes, we are! (*Looks around to see if friends are paying attention*) We are cultured individuals", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"Not right now. We need to move!", aaID:"move_much", values:["climbing_wall","arcade","paint_ball", "swimming_pools"]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
+                {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
+                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "radio_room", "produce_row"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar",""]},
+                {title:"OMG, is NOTHING here not open late?", aaID:"", values:["tattoo","",""]},
+                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's"]}
+            ],
+
+            build: function(){
+                if(inHost.active === true){
+                    tree.root.insideTree.theme.hostingTheme.stories = inHost.themeStories;
+                    tree.root.insideTree.theme.hostingTheme.next.questions = inHost.themeQuestions;
+                    tree.root.insideTree.theme.hostingTheme.next.buttons = inHost.themeButtons;
+                    tree.root.insideTree.theme.hostingTheme.next.next.questions = inHost.breakQuestions;
+                    tree.root.insideTree.theme.hostingTheme.next.next.buttons = inHost.breakButtons;
+                    tree.root.insideTree.theme.hostingTheme.next.next.next.questions = inHost.themeQuestions;
+                    tree.root.insideTree.theme.hostingTheme.next.next.next.buttons = inHost.themeButtons;
+                    tree.root.insideTree.theme.hostingTheme.next.next.next.next.questions = inHost.wrapQuestions;
+                    tree.root.insideTree.theme.hostingTheme.next.next.next.next.buttons = inHost.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outHost={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outHost.active === true){
+                    tree.root.outsideTree.theme.breweryTheme.stories = outHost.themeStories;
+                    tree.root.outsideTree.theme.hostingTheme.next.questions = outHost.themeQuestions;
+                    tree.root.outsideTree.theme.hostingTheme.next.buttons = outHost.themeButtons;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.questions = outHost.breakQuestions;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.buttons = outHost.breakButtons;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.next.questions = outHost.themeQuestions;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.next.buttons = outHost.themeButtons;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.next.next.questions = outHost.wrapQuestions;
+                    tree.root.outsideTree.theme.hostingTheme.next.next.next.next.buttons = outHost.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+         var inTGIF={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inTGIF.active === true){
+                    tree.root.insideTree.theme.tgifTheme.stories = inTGIF.themeStories;
+                    tree.root.insideTree.theme.tgifTheme.next.questions = inTGIF.themeQuestions;
+                    tree.root.insideTree.theme.tgifTheme.next.buttons = inTGIF.themeButtons;
+                    tree.root.insideTree.theme.tgifTheme.next.next.questions = inTGIF.breakQuestions;
+                    tree.root.insideTree.theme.tgifTheme.next.next.buttons = inTGIF.breakButtons;
+                    tree.root.insideTree.theme.tgifTheme.next.next.next.questions = inTGIF.themeQuestions;
+                    tree.root.insideTree.theme.tgifTheme.next.next.next.buttons = inTGIF.themeButtons;
+                    tree.root.insideTree.theme.tgifTheme.next.next.next.next.questions = inTGIF.wrapQuestions;
+                    tree.root.insideTree.theme.tgifTheme.next.next.next.next.buttons = inTGIF.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outTGIF={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outTGIF.active === true){
+                    tree.root.outsideTree.theme.tgifTheme.stories = outTGIF.themeStories;
+                    tree.root.outsideTree.theme.tgifTheme.next.questions = outTGIF.themeQuestions;
+                    tree.root.outsideTree.theme.tgifTheme.next.buttons = outTGIF.themeButtons;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.questions = outTGIF.breakQuestions;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.buttons = outTGIF.breakButtons;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.next.questions = outTGIF.themeQuestions;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.next.buttons = outTGIF.themeButtons;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.next.next.questions = outTGIF.wrapQuestions;
+                    tree.root.outsideTree.theme.tgifTheme.next.next.next.next.buttons = outTGIF.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+         var inKids={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inKids.active === true){
+                    tree.root.insideTree.theme.kidsTheme.stories = inKids.themeStories;
+                    tree.root.insideTree.theme.kidsTheme.next.questions = inKids.themeQuestions;
+                    tree.root.insideTree.theme.kidsTheme.next.buttons = inKids.themeButtons;
+                    tree.root.insideTree.theme.kidsTheme.next.next.questions = inKids.breakQuestions;
+                    tree.root.insideTree.theme.kidsTheme.next.next.buttons = inKids.breakButtons;
+                    tree.root.insideTree.theme.kidsTheme.next.next.next.questions = inKids.themeQuestions;
+                    tree.root.insideTree.theme.kidsTheme.next.next.next.buttons = inKids.themeButtons;
+                    tree.root.insideTree.theme.kidsTheme.next.next.next.next.questions = inKids.wrapQuestions;
+                    tree.root.insideTree.theme.kidsTheme.next.next.next.next.buttons = inKids.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outKids={
+            active: true,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["There is a time and a place for everything, or so parents seem fond of saying, but today is not the day for homework, chores, or writing thank you notes. Today is for fun, kid-style!",
+                "Is that a spider, or just a dried leaf? A little blue flower or a Smurf? If you’re around Hawthorne, look for those little horses tied up along the curb. As you start your adventure to",
+                ", see how many little things you see along the way could come from the book (or movie) you just read or watched.",
+                "Next, you’re off to",
+                "—can you even believe it? And you must be getting hungry—you should ask to have a snack. Have you ever played the game called “Candy World” where everything in the world is made of some kind of candy? The wheels of a car could be Life Savers, and the steering wheel is a Sweetart. The back seat is like a chocolate bar, hot in the summer. What can be next?",
+                "It’s",
+                "! Are you surprised? What is the last thing that happened that made you really surprised? Was it a good or a bad surprise? Maybe you saw a spider right by your hand... or a flower bloomed overnight. Or maybe your brother or sister did something nice—that would be a total surprise, huh?",
+                " It’s been a long day. You’re probably tired and maybe sticky, but you’re not done yet! You’re going to",
+                " you remember the little things you were looking for from a book or movie, during the first part of this adventure? What if you were from a book or movie? Who would you want to be? For the very last adventure of this happy day, pretend that’s who you are."],
+                ["You're an adventurous human being. You like to try new things, right? Well, welcome to a place where <i>nobody</i> knows where going next! (Not even me. And who am I? A voice in your head, your alter-ego...or am I a bored computer who wants to take a break from running programs and go <i>play</i>",
+                    "Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:",
+                    "— start the adventure here! (Are you surprised?) Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the",
+                    " - the best of both worlds.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "I like to start my days slowly. Adventure means taking my time!",
+                "Let's go. Go! Go! Go!",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"Get Going!", aaID:"get_going", values:["kid_parks","swimming_pools","mt_tabor_park", "playgrounds", "for_kids", "oregon_zoo"]},
+                {title:"Start Slow", aaID:"start_slow", values:["for_kids", "keller_fountains", "kid_parks", "tyron_creek","crystal_springs_rhododendron_garden"]},
+                          ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "On a scale from red to purple, how hungry are you?",
+                "You must be hungry by now! How hungry are you, exactly?",
+                "Are you hungry enough to eat snails? Hungry enough to eat a rattle snake?",
+                "Why don't you get something to eat at picnic at the park?"
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"I'm hungry", aaID:"", values:["hometown_buffet", "burgerville"]},
+                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["kid_friendly_restaurant", "buffets_kid_friendly", "Dwaraka_indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's"]},
+                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys", "burgerville"]},
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"OMGOMGOMG,I HAVE SO MUCH ENERGY RIGHT NOW!", aaID:"high_energy", values:["sky_high_sports", "kids_play_area", "oaks_park", "G6_airpark_portland","arcades"]},
+                {title:"I still have some exploring to do", aaID:"explore_more", values:["arial_tram","OMSI","community_garden", "childrens_museum", "oaks_park", "streetcar"]},
+                {title:"I'm ready to sit down!", aaID:"quiet_down", values:["library","laurelhurst_park","sauvie_island", "laurelhurst_park"]},
+            ],
+
+            build: function(){
+                if(outKids.active === true){
+                    tree.root.outsideTree.theme.kidsTheme.stories = outKids.themeStories;
+                    tree.root.outsideTree.theme.kidsTheme.next.questions = outKids.themeQuestions;
+                    tree.root.outsideTree.theme.kidsTheme.next.buttons = outKids.themeButtons;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.questions = outKids.breakQuestions;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.buttons = outKids.breakButtons;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.next.questions = outKids.themeQuestions;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.next.buttons = outKids.themeButtons;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.next.next.questions = outKids.wrapQuestions;
+                    tree.root.outsideTree.theme.kidsTheme.next.next.next.next.buttons = outKids.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+         var inNightOut={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inNightOut.active === true){
+                    tree.root.insideTree.theme.nightOutTheme.stories = inNightOut.themeStories;
+                    tree.root.insideTree.theme.nightOutTheme.next.questions = inNightOut.themeQuestions;
+                    tree.root.insideTree.theme.nightOutTheme.next.buttons = inNightOut.themeButtons;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.questions = inNightOut.breakQuestions;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.buttons = inNightOut.breakButtons;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.next.questions = inNightOut.themeQuestions;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.next.buttons = inNightOut.themeButtons;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.next.next.questions = inNightOut.wrapQuestions;
+                    tree.root.insideTree.theme.nightOutTheme.next.next.next.next.buttons = inNightOut.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outNightOut={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outNightOut.active === true){
+                    tree.root.outsideTree.theme.nightOutTheme.stories = outNightOut.themeStories;
+                    tree.root.outsideTree.theme.nightOutTheme.next.questions = outNightOut.themeQuestions;
+                    tree.root.outsideTree.theme.nightOutTheme.next.buttons = outNightOut.themeButtons;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.questions = outNightOut.breakQuestions;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.buttons = outNightOut.breakButtons;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.questions = outNightOut.themeQuestions;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.buttons = outNightOut.themeButtons;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.next.questions = outNightOut.wrapQuestions;
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.next.buttons = outNightOut.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+         var inFood={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(inFood.active === true){
+                    tree.root.insideTree.theme.foodieTheme.stories = inFood.themeStories;
+                    tree.root.insideTree.theme.foodieTheme.next.questions = inFood.themeQuestions;
+                    tree.root.insideTree.theme.foodieTheme.next.buttons = inFood.themeButtons;
+                    tree.root.insideTree.theme.foodieTheme.next.next.questions = inFood.breakQuestions;
+                    tree.root.insideTree.theme.foodieTheme.next.next.buttons = inFood.breakButtons;
+                    tree.root.insideTree.theme.foodieTheme.next.next.next.questions = inFood.themeQuestions;
+                    tree.root.insideTree.theme.foodieTheme.next.next.next.buttons = inFood.themeButtons;
+                    tree.root.insideTree.theme.foodieTheme.next.next.next.next.questions = inFood.wrapQuestions;
+                    tree.root.insideTree.theme.foodieTheme.next.next.next.next.buttons = inFood.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+        var outFood={
+            active: false,  //make true when done
+            // input stories for this theme
+            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
+            themeStories: [
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
+            ],
+            //Add strings for the displayed questions
+            //the more you add, the more random it will feel.
+            themeQuestions: [
+                "",
+                "",
+                ""
+            ],
+            //Add button content.
+            //Depending on how many search terms you have you want 2-4 buttons
+            //Delete any extra button lines
+            //You may want to add more strings for search terms.
+                //tittle: what will be displayed on the button.
+                //aaID: just an id to track in the logs. simple id for the button
+                //values: strings of search terms. break up words with '_'
+            themeButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+            //Add strings for the displayed questions
+            wrapQuestions: [
+                "",
+                ""
+            ],
+            //tittle: what will be displayed on the button.
+            //aaID: just an id to track in the logs. simple id for the button
+            //values: strings of search terms. break up words with '_'
+            wrapButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+            ],
+
+            build: function(){
+                if(outFood.active === true){
+                    tree.root.outsideTree.theme.foodieTheme.stories = outFood.themeStories;
+                    tree.root.outsideTree.theme.foodieTheme.next.questions = outFood.themeQuestions;
+                    tree.root.outsideTree.theme.foodieTheme.next.buttons = outFood.themeButtons;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.questions = outFood.breakQuestions;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.buttons = outFood.breakButtons;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.next.questions = outFood.themeQuestions;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.next.buttons = outFood.themeButtons;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.next.next.questions = outFood.wrapQuestions;
+                    tree.root.outsideTree.theme.foodieTheme.next.next.next.next.buttons = outFood.wrapButtons;
+                }
+            },
+
+         }
+
+
+
+
+
+
+        /*Content build Block No Need To edit*/
+
+        inBar.build();
+        outBar.build();
+        inChill.build();
+        outChill.build();
+        inActive.build();
+        outActive.build();
+        inTGIF.build();
+        outTGIF.build();
+        inHost.build();
+        outHost.build();
+        inNightOut.build();
+        outNightOut.build();
+        inKids.build();
+        outKids.build();
+        inFood.build();
+        outFood.build();
+
+    },
+
+
+
+
+
 
 
 
@@ -12993,18 +14185,14 @@ initialize: function (){
 
 module.exports=QuestionTree;
 
-<<<<<<< HEAD
-},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\main.js":[function(require,module,exports){
-=======
-},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
->>>>>>> master
+},{}],13:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
 var AdventureParentView = require('./views/adventure-parent-view');
 
-var yelpAPI = require('./yelpAPI.js');
+//var yelpAPI = require('./yelpAPI.js');
 var QuestionTree = require('../database/dbMain.js');
 var questionTree = new QuestionTree();
 questionTree.initialize();
@@ -13024,20 +14212,17 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-<<<<<<< HEAD
-},{"../database/dbMain.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\database\\dbMain.js","./views/adventure-parent-view":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\adventure-parent-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js":[function(require,module,exports){
-=======
-},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-parent-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js","./yelpAPI.js":"/Users/hanna/Code/Capstone-Project/public/js/yelpAPI.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
->>>>>>> master
+},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"backbone":1,"jquery":10}],14:[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
-  urlRoot: function() {
-    return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
-  },
+  // urlRoot: function() {
+  //   // return '/api/themes/' + this.attributes.weather + '/' + this.attributes.geolocation;
+  // },
   defaults: {
     "weather": null,
-    "geolocation": null
+    "geolocation": null,
+    "results": []
   },
   // initialize: function() { 
   //   this.on('change:geolocation', this.getThemes, this);
@@ -13051,11 +14236,7 @@ var Adventure = Backbone.Model.extend({
 });
 
 module.exports = Adventure;
-<<<<<<< HEAD
-},{"backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\adventure-parent-view.js":[function(require,module,exports){
-=======
-},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js":[function(require,module,exports){
->>>>>>> master
+},{"backbone":1}],15:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13067,19 +14248,24 @@ var adventureParentTemplate = require('../../templates/adventure-parent-template
 var AdventureParentView = Backbone.View.extend({
   el: '#app-home',
   model: new Adventure(),
+
   render: function () {
     $(this.el).html(adventureParentTemplate);
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
+
+    $.get( "ajax/test.html", function( data ) {
+      var outputHtml = "";
+      //combine data I want to change w/html...
+      $( "#weather-display" ).html( outputHtml );
+      console.log( "Load was performed." );
+    });
+
   }
 });
 
 module.exports = AdventureParentView;
-<<<<<<< HEAD
-},{"../../templates/adventure-parent-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\adventure-parent-template.hbs","../models/adventure.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js","./weather-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-choice-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\location-choice-view.js":[function(require,module,exports){
-=======
-},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
->>>>>>> master
+},{"../../templates/adventure-parent-template.hbs":21,"../models/adventure.js":14,"./weather-choice-view.js":20,"backbone":1,"jquery":10}],16:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13098,11 +14284,13 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({geolocation: "se"});
+    this.model.set({geolocation: "Southeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.459871,-122.667129|45.52248,-122.537341"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
-    this.model.set({geolocation: "ne"});
+    this.model.set({geolocation: "Northeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
   clickWest: function() {
@@ -13110,7 +14298,7 @@ var LocationChoiceView = Backbone.View.extend({
     this.loadThemeChoiceView();
   },
   clickAll: function() {
-    this.model.set({geolocation: "all"});
+    this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {
@@ -13124,23 +14312,24 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-<<<<<<< HEAD
-},{"../../templates/location-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\location-choice-template.hbs","./theme-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\theme-choice-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\question-view.js":[function(require,module,exports){
-=======
-},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js":[function(require,module,exports){
->>>>>>> master
+},{"../../templates/location-choice-template.hbs":22,"./theme-choice-view.js":19,"backbone":1,"jquery":10}],17:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
 var questionTemplate = require('../../templates/question-template.hbs');
+var ResultView = require('./result-view.js');
 var questionLevel = 0;
-var yelpAPI = require('../yelpAPI.js');
+var imageLevel = 1;
 
 var QuestionView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
     'click .question-choice': 'chooseQuestion'
+  },
+  initialize: function () {
+    this.model.set({imageLevel: imageLevel});
+    this.model.on("change:results", this.renderNextQuestion, this)
   },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
@@ -13149,35 +14338,91 @@ var QuestionView = Backbone.View.extend({
     return tree.current.questions[index];
   },
   chooseQuestion: function () {
+    var self = this;
+    function writeModel() {
+      console.log(yelpresult);
+      if (yelpresult.img !== undefined) {
+        var imageUrl = yelpresult.img;
+        console.log(imageUrl);
+        var regExImg = /\/ms\./;
+        yelpresult.img = yelpresult.img.replace(regExImg, "/l.");
+      }
+      self.model.set({ 
+          "results" : self.model.get('results').concat(yelpresult)
+      });
+      self.model.attributes["level" + questionLevel] = yelpKeywordArray;
+      console.log("model as of now:",self.model);
+    }
     var clickedQuestionId = event.target.id;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    var yelpresult = yelpAPI("Portland", yelpKeywordArray);
-    console.log(yelpresult);
-    //this.model.set(yelpKeywordArray);
-    this.model.attributes["level" + questionLevel] = yelpKeywordArray;
-    console.log("model as of now:",this.model);
-    this.renderNextQuestion();
+    console.log("location:", this.model.attributes.geolocation);
+    var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
   },
-  renderNextQuestion: function () {
-    questionLevel++;
-    tree.current = tree.current.next;
-    this.render();
+  renderNextQuestion: function (callback) {
+    if (tree.current.next === null) {
+      var resultView = new ResultView({model: this.model});
+      console.log("model result length:",this.model.attributes.results.length);
+      console.log(this.model);
+
+        resultView.render();
+
+
+    } else {
+      questionLevel++;
+      imageLevel++;
+      this.model.set({imageLevel: imageLevel});
+      tree.current = tree.current.next;
+      this.render();
+    }
   },
   render: function () {
     console.log("render question view");
-    console.log(this.model);
+    var imageLevel = "./img/" + this.model.attributes.imageLevel + ".jpg";
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
-    $(this.el).html(questionTemplate({questionIndex: questionIndex, currentTree: currentTree}));
+    $(this.el).html(questionTemplate({imageLevel: imageLevel, questionIndex: questionIndex, currentTree: currentTree}));
   }
 });
 
 module.exports = QuestionView;
-<<<<<<< HEAD
-},{"../../templates/question-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\question-template.hbs","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\theme-choice-view.js":[function(require,module,exports){
-=======
-},{"../../templates/question-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs","../yelpAPI.js":"/Users/hanna/Code/Capstone-Project/public/js/yelpAPI.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
->>>>>>> master
+},{"../../templates/question-template.hbs":23,"./result-view.js":18,"backbone":1,"jquery":10}],18:[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+var Adventure = require('../models/adventure.js');
+Backbone.$ = $;
+
+var resultTemplate = require('../../templates/result-template.hbs');
+
+var StoryCollection = Backbone.Collection.extend({
+  model: Adventure,
+  url:'/api/stories',
+  //comparator: "title"
+});
+
+var storyCollection = new StoryCollection();
+
+
+var ResultView = Backbone.View.extend({
+  el: '#adventure-parent',
+  render: function () {
+    var displayResults = this.model;
+    $(this.el).html(resultTemplate({displayResults: displayResults}));
+
+    beg= this.model.changed.results[0].address + " Portland, OR";
+  	mid=this.model.changed.results[1].address + " Portland, OR";
+    secMid=this.model.changed.results[2].address + " Portland, OR";
+  	last=this.model.changed.results[3].address + " Portland, OR";
+  	cent= this.model._previousAttributes.geolocation;
+    console.log("----------->",this.model);
+
+  	storyCollection.create(this.model);
+    googleMaps(beg,mid,secMid, last, cent);
+  }
+});
+
+module.exports = ResultView;
+
+},{"../../templates/result-template.hbs":24,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13193,9 +14438,16 @@ var ThemeChoiceView = Backbone.View.extend({
   chooseTheme: function () { //repeat this for all themes...
     var clickedThemeId = event.target.id + "Theme";
     this.model.set({theme: clickedThemeId});
+    this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
+    console.log(this.model);
     tree.current = tree.current.theme[clickedThemeId].next;
+    //this.selectStory();
     this.loadQuestionView();
   },
+  // selectStory: function () {
+
+  //   this.loadQuestionView();
+  // },
   loadQuestionView: function () { //generalized function that calls the generic question view
     var questionView = new QuestionView({model: this.model});
     questionView.render();
@@ -13205,17 +14457,14 @@ var ThemeChoiceView = Backbone.View.extend({
     console.log(this.model);
     console.log(this.model.attributes);
     var treeData = tree.current;
+console.log("Tree Data -> ", treeData);
     $(this.el).html(themeChoiceTemplate({treeData: treeData}));
     console.log("theme choice view");
   },
 });
 
 module.exports = ThemeChoiceView;
-<<<<<<< HEAD
-},{"../../templates/theme-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\theme-choice-template.hbs","./question-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\question-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-choice-view.js":[function(require,module,exports){
-=======
-},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","./question-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
->>>>>>> master
+},{"../../templates/theme-choice-template.hbs":25,"./question-view.js":17,"backbone":1,"jquery":10}],20:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -13249,104 +14498,20 @@ var WeatherChoiceView = Backbone.View.extend({
 });
 
 module.exports = WeatherChoiceView;
-<<<<<<< HEAD
-},{"../../templates/weather-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-choice-template.hbs","./location-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\location-choice-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\adventure-parent-template.hbs":[function(require,module,exports){
-=======
-},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/yelpAPI.js":[function(require,module,exports){
-
-    function yelpAPI(area, array){
-    var randInt = Math.floor((Math.random() * array.length) + 0);
-    var result={};
-      $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
-      $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function()
-      {
-        $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function ()
-        {
-
-            var auth = {
-                consumerKey : "RJFp3rk_b9tsJv7dZTt9-w",
-                consumerSecret : "-0pEjAPEzXcoZ2iCiqMhOIHfyAI",
-                accessToken : "zPLB_TEBvUum9pXuIbcLKJ1zazumSkZ0",
-                accessTokenSecret : "Tk94nPTKK0yL4bHebIHBdDUDG3A",
-                serviceProvider : {
-                    signatureMethod : "HMAC-SHA1"
-                }
-            };
-
-            randInt = Math.floor((Math.random() * array.length) + 0);
-
-            var terms = array[randInt];
-            var near = area;
+},{"../../templates/weather-choice-template.hbs":26,"./location-choice-view.js":16,"backbone":1,"jquery":10}],21:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "";
 
 
-            var accessor = {
-                consumerSecret : auth.consumerSecret,
-                tokenSecret : auth.accessTokenSecret
-            };
-            parameters = [];
-            parameters.push(['term', terms]);
-            parameters.push(['location', near]);
-            parameters.push(['callback', 'cb']);
-            parameters.push(['oauth_consumer_key', auth.consumerKey]);
-            parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
-            parameters.push(['oauth_token', auth.accessToken]);
-            parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
+  buffer += "<div id=\"adventure-parent\">\n</div>\n\n";
+  return buffer;
+  });
 
-            var message = {
-                'action' : 'http://api.yelp.com/v2/search',
-                'method' : 'GET',
-                'parameters' : parameters
-            };
-
-
-            OAuth.setTimestampAndNonce(message);
-            OAuth.SignatureMethod.sign(message, accessor);
-
-            var parameterMap = OAuth.getParameterMap(message.parameters);
-
-            function cb(data){
-              //not needed
-            }
-
-            $.ajax({
-                'url' : message.action,
-                'data' : parameterMap,
-                'dataType' : 'jsonp',
-                'jsonpCallback' : 'cb',
-                'success' : function(data, textStats, XMLHttpRequest) {
-                    var max;
-                    if(data.businesses.length < 10)
-                      max = businesses.length;
-                    else
-                      max = 10;
-                    randInt = Math.floor((Math.random() * max) + 0);
-
-                    result.name = data.businesses[randInt].name;
-                    result.address = data.businesses[randInt].location.address[0];
-                    result.gps = data.businesses[randInt].location.coordinate;
-                    result.img = data.businesses[randInt].image_url;
-                    result.phoneNumber = data.businesses[randInt].display_phone;
-                    result.rating = data.businesses[randInt].rating_img_url;
-                    result.ratingCount = data.businesses[randInt].review_count;
-                    result.yelpInfoLink = data.businesses[randInt].url;
-
-                    console.log(result);
-                }
-
-
-
-
-
-           });
-        });
-      });
-    return result;
-    }
-
-module.exports = yelpAPI;
-
-},{"../../node_modules/jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
->>>>>>> master
+},{"hbsfy/runtime":9}],22:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13355,30 +14520,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"page-header main-header\" id=\"adventure-parent\">\n</div>";
+  return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n    </div>\n  </div>\n</section>";
   });
 
-<<<<<<< HEAD
-},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\location-choice-template.hbs":[function(require,module,exports){
-=======
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
->>>>>>> master
-// hbsfy compiled Handlebars template
-var Handlebars = require('hbsfy/runtime');
-module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<div class=\"intro-block\">\n  <h1>Where do you want to go?</h1>\n</div>\n<p>\n  More description here. (Hint: only Southeast works for now.)\n</p>\n<div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n<div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>";
-  });
-
-<<<<<<< HEAD
-},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\question-template.hbs":[function(require,module,exports){
-=======
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
->>>>>>> master
+},{"hbsfy/runtime":9}],23:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13389,31 +14534,32 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"btn btn-primary question-choice\" id=\""
+  buffer += "\n        <div class=\"btn btn-primary question-choice\" id=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" role=\"button\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n";
+    + "</div>\n      ";
   return buffer;
   }
 
-  buffer += "<h2>Questions</h2>\n<p>\n  ";
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('";
+  if (helper = helpers.imageLevel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imageLevel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Answer Some Questions</h1>\n      <p class=\"question\">";
   if (helper = helpers.questionIndex) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.questionIndex); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\n</p>\n";
+    + "</p>\n    </div>\n    <div class=\"button-container\">\n      ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.currentTree)),stack1 == null || stack1 === false ? stack1 : stack1.buttons), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n  </div>\n</section>";
   return buffer;
   });
 
-<<<<<<< HEAD
-},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\theme-choice-template.hbs":[function(require,module,exports){
-=======
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
->>>>>>> master
+},{"hbsfy/runtime":9}],24:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13424,7 +14570,83 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"btn btn-primary theme-choice\" id=\"";
+  buffer += "\n        <div class=\"col-md-12\">\n          <h1>";
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\n          <div class=\"image-container col-md-6\" style=\"background: url(";
+  if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + ") 50% 50% no-repeat;background-size: cover;\">\n          </div>\n          <div class=\"business-info col-md-6\">\n            <img src='";
+  if (helper = helpers.rating) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rating); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "' class=\"rating-stars\"/> \n            <p>out of ";
+  if (helper = helpers.ratingCount) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.ratingCount); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " reviews</p>\n            <p>";
+  if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n          </div>\n        </div>\n      ";
+  return buffer;
+  }
+
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container\">\n    <div class=\"intro-block\">\n      <h1>Your Adventure:</h1>\n    </div>\n    <div class=\"col-md-6 result-story\">\n      <p>"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[0])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + " "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[1])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></a>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[2])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      </p>\n      <p>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[3])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[1])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[1])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></a>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[4])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      </p>\n      <p>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[5])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[2])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[2])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></a>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[6])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      </p>\n      <p>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[7])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      <a href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[3])),stack1 == null || stack1 === false ? stack1 : stack1.yelpInfoLink)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"><span class=\"result-in-story\">"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results)),stack1 == null || stack1 === false ? stack1 : stack1[3])),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span></a>\n      "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.story)),stack1 == null || stack1 === false ? stack1 : stack1[8])),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\n      </p>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
+  stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n  </div>\n</section>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
+  return buffer;
+  });
+
+},{"hbsfy/runtime":9}],25:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n        <div class=\"btn btn-primary theme-choice\" id=\"";
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -13432,23 +14654,18 @@ function program1(depth0,data) {
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n";
+    + "</div>\n      ";
   return buffer;
   }
 
-  buffer += "<div class=\"intro-block\">\n  <h1>Pick a theme</h1>\n</div>\n<p>\n  "
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.questions)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + ". (Only chill works for now.)\n</p>\n";
+  buffer += "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Pick <span class=\"title-secondary-word\">a</span> Theme</h1>\n      <p class=\"question\">Choose a theme to define what kind of adventure you will go on.</p>\n    </div>\n    <div class=\"button-container\">\n      ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.treeData)),stack1 == null || stack1 === false ? stack1 : stack1.theme), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n  </div>\n</section>";
   return buffer;
   });
 
-<<<<<<< HEAD
-},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-choice-template.hbs":[function(require,module,exports){
-=======
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
->>>>>>> master
+},{"hbsfy/runtime":9}],26:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -13457,11 +14674,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-block\">\n  <h1>Welcome to Choose Your Own Adventure PDX</h1>\n</div>\n<p>\n  (Dynamic weather data here) Would you like to stay outside or inside? (Hint: only outside works for now.)\n</p>\n<div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Outside</div>\n<div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">Inside</div>";
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1><br>\n     <h2>Click your way through the Rose City<br>\n      and get your own story that you can take and go do</h2>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n\n    <!--   <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?\n      </p> -->\n\n      <div id=\"weather-display\">\n        replace me\n      </div>\n    \n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>";
   });
 
-<<<<<<< HEAD
-},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}]},{},["C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\main.js"]);
-=======
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
->>>>>>> master
+},{"hbsfy/runtime":9}]},{},[13])

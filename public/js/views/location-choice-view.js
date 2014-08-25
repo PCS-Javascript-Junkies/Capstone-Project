@@ -16,11 +16,13 @@ var LocationChoiceView = Backbone.View.extend({
   initialize: function () {
   },
   clickSoutheast: function() {
-    this.model.set({geolocation: "se"});
+    this.model.set({geolocation: "Southeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.459871,-122.667129|45.52248,-122.537341"});
     this.loadThemeChoiceView();
   },
   clickNortheast: function() {
-    this.model.set({geolocation: "ne"});
+    this.model.set({geolocation: "Northeast Portland, Portland, OR"});
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
   clickWest: function() {
@@ -28,7 +30,7 @@ var LocationChoiceView = Backbone.View.extend({
     this.loadThemeChoiceView();
   },
   clickAll: function() {
-    this.model.set({geolocation: "all"});
+    this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {

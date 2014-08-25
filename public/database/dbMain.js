@@ -9,7 +9,6 @@ function QuestionTree() {
 
 QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
     function Theme() {
-        // this.aaID = "Theme hub Node L3";
         this.chillTheme = null;
         this.nightOutTheme = null;
         this.foodieTheme = null;
@@ -267,49 +266,57 @@ QuestionTree.prototype.initialize = function (){
 
 
         /**
-         * Here is the Generated content block. 
+         * Here is the Generated content block.
          */
 
-        
+
 
          var inBar={
             active: true,
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["Ah, I see your are up for a little tour of Portland's local bars, wineries and breweries",
+                "well we can't think of a better place to get started than ",
+                "then as you wonder through the city might we suggest that you also stop at ","",
+                "whew, now its time to take a bit of a breather at ","",
+                "Then its back at it! and through your answers we can tell ","is going to be the perfect place for you",
+                "Finally, to finish the eventing off, no place could be better than stopping by "],
+               //["","","","","","","","",""],
+               // ["","","","","","","","",""]
             ],
-            themeQuestions: [ 
-                "Do you feel like beer, wine, or spirits? ",
-                "In the mood for hops, grapes, or the hard stuff? ", 
-                "If you are at a bar you would order: "
+            themeQuestions: [
+                "When you go out to drinks, do you feel like beer, wine, or cocktails? ",
+                "On your adventure are you going to be in the mood for hops, grapes, or the hard stuff? ",
+                "Pop quiz hotshot!... Your at a restaurant, the waiter comes up before you had a chance to look at the menu what do you order? "
             ],
             themeButtons: [
                 {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sports_bars"]},
-                {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine"]},
+                {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine", "winery"]},
                 {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktail_bars",
-                    "lounges","piano_bars"]},
+                    "lounges","piano_bars","martini_bars"]},
                 {title:"Surprise Me", aaID:"all", values:["the_best_irish_pubs","pubs","breweries",
                     "sports_bars","wine_bars", "champagne_bars","beer_and_wine","distilleries",
-                "cocktail_bars","lounges","piano_bars"]}
+                "cocktail_bars","lounges","piano_bars","martini_bars"]}
             ],
             breakQuestions: [
-                "To take it down a notch you A) listen to music, B) like coffee and tee, C) 'I don't understand the words take a break' ",
+                "Lets plan a little break, what sounds nice? Music, Tea/Coffee, Food, or Keep the party going!?",
+                "To take it down a notch you: A) listen to music, B) drink coffee or tee, C) 'I don't understand the words take a break!!!' ",
                 "After a few hours of drinking I feel like food, a quick snack, or more drinking! (responsibly)"
             ],
-            breakButtons: [        
+            breakButtons: [
                 {title:"Music Sounds Nice", aaID:"music", values:["music_venues","piano_bars",
-                    "breweries","jazz_and_blues"]},
+                    ,"jazz_and_blues"]},
                 {title:"Tea Time", aaID:"coffee", values:["coffee","tea",]},
-                {title:"Keep the Party Gong!", aaID:"again", values:["distilleries", "cocktail_bars","lounges","piano_bars"]},
-                {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","chicken_wings","desert"]},
+                {title:"Keep the Party Gong!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","lounges","piano_bars"]},
+                {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","grill","bar_food"]},
             ],
-            wrapQuestions: ["Desert, Drinks again, or greasy food?"],
+            wrapQuestions: ["Desert, Drinks again, or greasy food?",
+            "Sadly all good things have to come to an end... but what do we want to end it with?",
+            "Whew, your going to be tired! how should we end the night?",],
 
             wrapButtons: [
                 {title:"Desert", aaID:"Desert", values:["cupcakes","desserts","donuts"]},
-                {title:"Keep the Party Gong!", aaID:"again", values:["irish_pubs","pubs",
-                    "breweries","sports_bars", "wine_bars","champagne_bars","beer_and_wine", 
+                {title:"Grab One Last Drink", aaID:"again", values:["irish_pubs","pubs",
+                    "breweries","sports_bars", "wine_bars","champagne_bars","beer_and_wine",
                     "distilleries","cocktail_bars", "lounges","piano bars"]},
                 {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","chicken_wings","desert"]},
             ],
@@ -324,7 +331,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.breweryTheme.next.next.next.questions = inBar.themeQuestions;
                     tree.root.insideTree.theme.breweryTheme.next.next.next.buttons = inBar.themeButtons;
                     tree.root.insideTree.theme.breweryTheme.next.next.next.next.questions = inBar.wrapQuestions;
-                    tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = inBar.wrapButtons; 
+                    tree.root.insideTree.theme.breweryTheme.next.next.next.next.buttons = inBar.wrapButtons;
                 }
             },
 
@@ -349,15 +356,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -375,7 +382,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -406,7 +413,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.breweryTheme.next.next.next.questions = outBar.themeQuestions;
                     tree.root.outsideTree.theme.breweryTheme.next.next.next.buttons = outBar.themeButtons;
                     tree.root.outsideTree.theme.breweryTheme.next.next.next.next.questions = outBar.wrapQuestions;
-                    tree.root.outsideTree.theme.breweryTheme.next.next.next.next.buttons = outBar.wrapButtons; 
+                    tree.root.outsideTree.theme.breweryTheme.next.next.next.next.buttons = outBar.wrapButtons;
                 }
             },
 
@@ -424,15 +431,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -450,7 +457,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -481,7 +488,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.chillTheme.next.next.next.questions = inChill.themeQuestions;
                     tree.root.insideTree.theme.chillTheme.next.next.next.buttons = inChill.themeButtons;
                     tree.root.insideTree.theme.chillTheme.next.next.next.next.questions = inChill.wrapQuestions;
-                    tree.root.insideTree.theme.chillTheme.next.next.next.next.buttons = inChill.wrapButtons; 
+                    tree.root.insideTree.theme.chillTheme.next.next.next.next.buttons = inChill.wrapButtons;
                 }
             },
 
@@ -501,15 +508,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -527,7 +534,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -558,7 +565,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.chillTheme.next.next.next.questions = outChill.themeQuestions;
                     tree.root.outsideTree.theme.chillTheme.next.next.next.buttons = outChill.themeButtons;
                     tree.root.outsideTree.theme.chillTheme.next.next.next.next.questions = outChill.wrapQuestions;
-                    tree.root.outsideTree.theme.chillTheme.next.next.next.next.buttons = outChill.wrapButtons; 
+                    tree.root.outsideTree.theme.chillTheme.next.next.next.next.buttons = outChill.wrapButtons;
                 }
             },
 
@@ -580,15 +587,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -606,7 +613,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -637,7 +644,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.activeTheme.next.next.next.questions = inActive.themeQuestions;
                     tree.root.insideTree.theme.activeTheme.next.next.next.buttons = inActive.themeButtons;
                     tree.root.insideTree.theme.activeTheme.next.next.next.next.questions = inActive.wrapQuestions;
-                    tree.root.insideTree.theme.activeTheme.next.next.next.next.buttons = inActive.wrapButtons; 
+                    tree.root.insideTree.theme.activeTheme.next.next.next.next.buttons = inActive.wrapButtons;
                 }
             },
 
@@ -657,15 +664,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -683,7 +690,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -714,7 +721,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.activeTheme.next.next.next.questions = outActive.themeQuestions;
                     tree.root.outsideTree.theme.activeTheme.next.next.next.buttons = outActive.themeButtons;
                     tree.root.outsideTree.theme.activeTheme.next.next.next.next.questions = outActive.wrapQuestions;
-                    tree.root.outsideTree.theme.activeTheme.next.next.next.next.buttons = outActive.wrapButtons; 
+                    tree.root.outsideTree.theme.activeTheme.next.next.next.next.buttons = outActive.wrapButtons;
                 }
             },
 
@@ -729,29 +736,29 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","","","","",""],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+                "Do you want to start slow?", 
+                "Do you love the arts (be honest)?" ,
+                "Does the smell of paper and ink inspire?"
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
+                {title:"Yes, we are! (*Looks around to see if friends are paying attention*) We are cultured individuals", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"Not right now. We need to move!", aaID:"move_much", values:["climbing_wall","arcade","paint_ball", "swimming_pools"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
@@ -761,11 +768,11 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+            breakButtons: [
+                {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
+                {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
+                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
@@ -776,10 +783,10 @@ QuestionTree.prototype.initialize = function (){
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "radio_room", "produce_row"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar",""]},
+                {title:"OMG, is NOTHING here not open late?", aaID:"", values:["tattoo","",""]},
+                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's"]}
             ],
 
             build: function(){
@@ -792,7 +799,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.hostingTheme.next.next.next.questions = inHost.themeQuestions;
                     tree.root.insideTree.theme.hostingTheme.next.next.next.buttons = inHost.themeButtons;
                     tree.root.insideTree.theme.hostingTheme.next.next.next.next.questions = inHost.wrapQuestions;
-                    tree.root.insideTree.theme.hostingTheme.next.next.next.next.buttons = inHost.wrapButtons; 
+                    tree.root.insideTree.theme.hostingTheme.next.next.next.next.buttons = inHost.wrapButtons;
                 }
             },
 
@@ -812,15 +819,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -838,7 +845,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -869,7 +876,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.hostingTheme.next.next.next.questions = outHost.themeQuestions;
                     tree.root.outsideTree.theme.hostingTheme.next.next.next.buttons = outHost.themeButtons;
                     tree.root.outsideTree.theme.hostingTheme.next.next.next.next.questions = outHost.wrapQuestions;
-                    tree.root.outsideTree.theme.hostingTheme.next.next.next.next.buttons = outHost.wrapButtons; 
+                    tree.root.outsideTree.theme.hostingTheme.next.next.next.next.buttons = outHost.wrapButtons;
                 }
             },
 
@@ -890,15 +897,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -916,7 +923,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -947,7 +954,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.tgifTheme.next.next.next.questions = inTGIF.themeQuestions;
                     tree.root.insideTree.theme.tgifTheme.next.next.next.buttons = inTGIF.themeButtons;
                     tree.root.insideTree.theme.tgifTheme.next.next.next.next.questions = inTGIF.wrapQuestions;
-                    tree.root.insideTree.theme.tgifTheme.next.next.next.next.buttons = inTGIF.wrapButtons; 
+                    tree.root.insideTree.theme.tgifTheme.next.next.next.next.buttons = inTGIF.wrapButtons;
                 }
             },
 
@@ -967,15 +974,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -993,7 +1000,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1024,7 +1031,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.tgifTheme.next.next.next.questions = outTGIF.themeQuestions;
                     tree.root.outsideTree.theme.tgifTheme.next.next.next.buttons = outTGIF.themeButtons;
                     tree.root.outsideTree.theme.tgifTheme.next.next.next.next.questions = outTGIF.wrapQuestions;
-                    tree.root.outsideTree.theme.tgifTheme.next.next.next.next.buttons = outTGIF.wrapButtons; 
+                    tree.root.outsideTree.theme.tgifTheme.next.next.next.next.buttons = outTGIF.wrapButtons;
                 }
             },
 
@@ -1045,15 +1052,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -1071,7 +1078,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1102,7 +1109,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.kidsTheme.next.next.next.questions = inKids.themeQuestions;
                     tree.root.insideTree.theme.kidsTheme.next.next.next.buttons = inKids.themeButtons;
                     tree.root.insideTree.theme.kidsTheme.next.next.next.next.questions = inKids.wrapQuestions;
-                    tree.root.insideTree.theme.kidsTheme.next.next.next.next.buttons = inKids.wrapButtons; 
+                    tree.root.insideTree.theme.kidsTheme.next.next.next.next.buttons = inKids.wrapButtons;
                 }
             },
 
@@ -1112,71 +1119,61 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outKids={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-//                 ["Theres a time and a place for everything (parents seem fond of saying), but today is not the day for homework, chores, or writing thank-you notes." +
-//                 "Today is for fun, kid-style!","Is that a spider, or just a dried leaf? A little blue flower or a Smurf? If you’re around" + 
-
-// Hawthorne, look for those little horses tied up along the curb. As you start your 
-
-// adventure to",/*place */", see how many little things you see along the way could come from
-
-// the book (or movie) you just read or watched.","Next, you’re off to", /*place */"—can you even believe it? And you must be getting hungry—
-
-// you should ask to have a snack. Have you ever played the game called “Candy 
-
-// World” where everything in the world is made of some kind of candy? The wheels of 
-
-// a car could be Life Savers, and the steering wheel is a Sweetart. The back seat is like 
-
-// a chocolate bar, hot in the summer. What can be next?","It’s",/*place */"! Are you surprised? What is the last thing that happened that made you really
-
-// surprised? Was it a good or a bad surprise? Maybe you saw a spider right by your 
-
-// hand... or a flower bloomed overnight. Or maybe
-
-// you—that would be a total surprise, huh?","It’s been a long day. You’re probably tired and maybe sticky, but you’re not done 
-
-// yet! You’re going to", /*place */"!", "you remember the little things you were looking for from a
-
-// book or movie, during the first part of this adventure? What if you were from a book 
-
-// or movie? Who would you want to be? For the very last adventure of this happy day, 
-
-// pretend that’s who you are."],
+                ["There is a time and a place for everything, or so parents seem fond of saying, but today is not the day for homework, chores, or writing thank you notes. Today is for fun, kid-style!",
+                "Is that a spider, or just a dried leaf? A little blue flower or a Smurf? If you’re around Hawthorne, look for those little horses tied up along the curb. As you start your adventure to",
+                ", see how many little things you see along the way could come from the book (or movie) you just read or watched.",
+                "Next, you’re off to",
+                "—can you even believe it? And you must be getting hungry—you should ask to have a snack. Have you ever played the game called “Candy World” where everything in the world is made of some kind of candy? The wheels of a car could be Life Savers, and the steering wheel is a Sweetart. The back seat is like a chocolate bar, hot in the summer. What can be next?",
+                "It’s",
+                "! Are you surprised? What is the last thing that happened that made you really surprised? Was it a good or a bad surprise? Maybe you saw a spider right by your hand... or a flower bloomed overnight. Or maybe your brother or sister did something nice—that would be a total surprise, huh?",
+                " It’s been a long day. You’re probably tired and maybe sticky, but you’re not done yet! You’re going to",
+                " you remember the little things you were looking for from a book or movie, during the first part of this adventure? What if you were from a book or movie? Who would you want to be? For the very last adventure of this happy day, pretend that’s who you are."],
+                ["You're an adventurous human being. You like to try new things, right? Well, welcome to a place where <i>nobody</i> knows where going next! (Not even me. And who am I? A voice in your head, your alter-ego...or am I a bored computer who wants to take a break from running programs and go <i>play</i>",
+                    "Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:",
+                    "— start the adventure here! (Are you surprised?) Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the",
+                    " - the best of both worlds.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
+            themeQuestions: [
                 "I like to start my days slowly. Adventure means taking my time!",
-                "Let's go. Go! Go! Go!", 
-                ""  
+                "Let's go. Go! Go! Go!",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"Get Going!", aaID:"get_going", values:["parks","swimming_pools","mt_tabor_park", "playgrounds", "for_kids"]},
-                {title:"Start Slow", aaID:"start_slow", values:["for_kids", "keller_fountains", "parks", "tyron_creek","crystal_springs_rhododendron_garden"]},
+                {title:"Get Going!", aaID:"get_going", values:["kid_parks","swimming_pools","mt_tabor_park", "playgrounds", "for_kids", "oregon_zoo"]},
+                {title:"Start Slow", aaID:"start_slow", values:["for_kids", "keller_fountains", "kid_parks", "tyron_creek","crystal_springs_rhododendron_garden"]},
                           ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "On a scale from red to purple, how hungry are you?",
+                "You must be hungry by now! How hungry are you, exactly?",
+                "Are you hungry enough to eat snails? Hungry enough to eat a rattle snake?",
+                "Why don't you get something to eat at picnic at the park?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
-                {title:"I'm hungry", aaID:"", values:["hometown_buffet"]},
-                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["buffets_kid_friendly", "Dwaraka_indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's"]},
-                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys"]},
+            breakButtons: [
+                {title:"I'm hungry", aaID:"", values:["hometown_buffet", "burgerville"]},
+                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["kid_friendly_restaurant", "buffets_kid_friendly", "Dwaraka_indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's"]},
+                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys", "burgerville"]},
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
@@ -1187,10 +1184,9 @@ QuestionTree.prototype.initialize = function (){
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"OMGOMGOMG,I HAVE SO MUCH ENERGY RIGHT NOW!", aaID:"", values:["sky_high_sports", "kids_play_area", "G6_airpark_portland","arcades"]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"OMGOMGOMG,I HAVE SO MUCH ENERGY RIGHT NOW!", aaID:"high_energy", values:["sky_high_sports", "kids_play_area", "oaks_park", "G6_airpark_portland","arcades"]},
+                {title:"I still have some exploring to do", aaID:"explore_more", values:["arial_tram","OMSI","community_garden", "childrens_museum", "oaks_park", "streetcar"]},
+                {title:"I'm ready to sit down!", aaID:"quiet_down", values:["library","laurelhurst_park","sauvie_island", "laurelhurst_park"]},
             ],
 
             build: function(){
@@ -1203,7 +1199,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.kidsTheme.next.next.next.questions = outKids.themeQuestions;
                     tree.root.outsideTree.theme.kidsTheme.next.next.next.buttons = outKids.themeButtons;
                     tree.root.outsideTree.theme.kidsTheme.next.next.next.next.questions = outKids.wrapQuestions;
-                    tree.root.outsideTree.theme.kidsTheme.next.next.next.next.buttons = outKids.wrapButtons; 
+                    tree.root.outsideTree.theme.kidsTheme.next.next.next.next.buttons = outKids.wrapButtons;
                 }
             },
 
@@ -1224,15 +1220,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -1250,7 +1246,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1281,7 +1277,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.nightOutTheme.next.next.next.questions = inNightOut.themeQuestions;
                     tree.root.insideTree.theme.nightOutTheme.next.next.next.buttons = inNightOut.themeButtons;
                     tree.root.insideTree.theme.nightOutTheme.next.next.next.next.questions = inNightOut.wrapQuestions;
-                    tree.root.insideTree.theme.nightOutTheme.next.next.next.next.buttons = inNightOut.wrapButtons; 
+                    tree.root.insideTree.theme.nightOutTheme.next.next.next.next.buttons = inNightOut.wrapButtons;
                 }
             },
 
@@ -1301,15 +1297,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -1327,7 +1323,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1358,7 +1354,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.nightOutTheme.next.next.next.questions = outNightOut.themeQuestions;
                     tree.root.outsideTree.theme.nightOutTheme.next.next.next.buttons = outNightOut.themeButtons;
                     tree.root.outsideTree.theme.nightOutTheme.next.next.next.next.questions = outNightOut.wrapQuestions;
-                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.next.buttons = outNightOut.wrapButtons; 
+                    tree.root.outsideTree.theme.nightOutTheme.next.next.next.next.buttons = outNightOut.wrapButtons;
                 }
             },
 
@@ -1379,15 +1375,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -1405,7 +1401,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1436,7 +1432,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.insideTree.theme.foodieTheme.next.next.next.questions = inFood.themeQuestions;
                     tree.root.insideTree.theme.foodieTheme.next.next.next.buttons = inFood.themeButtons;
                     tree.root.insideTree.theme.foodieTheme.next.next.next.next.questions = inFood.wrapQuestions;
-                    tree.root.insideTree.theme.foodieTheme.next.next.next.next.buttons = inFood.wrapButtons; 
+                    tree.root.insideTree.theme.foodieTheme.next.next.next.next.buttons = inFood.wrapButtons;
                 }
             },
 
@@ -1456,15 +1452,15 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
-            themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+            themeQuestions: [
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
             //Delete any extra button lines
-            //You may want to add more strings for search terms. 
+            //You may want to add more strings for search terms.
                 //tittle: what will be displayed on the button.
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
@@ -1482,7 +1478,7 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [        
+            breakButtons: [
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]},
@@ -1513,7 +1509,7 @@ QuestionTree.prototype.initialize = function (){
                     tree.root.outsideTree.theme.foodieTheme.next.next.next.questions = outFood.themeQuestions;
                     tree.root.outsideTree.theme.foodieTheme.next.next.next.buttons = outFood.themeButtons;
                     tree.root.outsideTree.theme.foodieTheme.next.next.next.next.questions = outFood.wrapQuestions;
-                    tree.root.outsideTree.theme.foodieTheme.next.next.next.next.buttons = outFood.wrapButtons; 
+                    tree.root.outsideTree.theme.foodieTheme.next.next.next.next.buttons = outFood.wrapButtons;
                 }
             },
 
@@ -1522,7 +1518,7 @@ QuestionTree.prototype.initialize = function (){
 
 
 
-         
+
 
         /*Content build Block No Need To edit*/
 
