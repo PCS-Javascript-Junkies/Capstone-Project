@@ -13355,16 +13355,16 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [ 
-                "", 
-                "", 
-                ""  
+                "Do you want to start slow?", 
+                "Do you love the arts (be honest)?" ,
+                "Does the smell of paper and ink inspire?"
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -13374,38 +13374,37 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
+                {title:"Yes, we are! (*Looks around to see if friends are paying attention*) We are cultured individuals", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"Not right now. We need to move!", aaID:"move_much", values:["climbing_wall","arcade","paint_ball", "swimming_pools"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Are you guys hungry?",
+                "Are you in the mood for food?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [        
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
+                {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
+                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "How OUT do you want to go?",
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons", "karaoke_bars", "mississippi_studios", "radio_room", "produce_row", "hipster_bars"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub", "movie_madness"]},
+                {title:"How about some music?", aaID:"music", values:["laurelthirst","mississippi_studios","crystal_ballroom", "doug_fir", "wonder_ballroom", "open_mic_venue"]},
+                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's", "best_strip_club"]}
             ],
 
             build: function(){
@@ -14225,13 +14224,22 @@ var adventureParentTemplate = require('../../templates/adventure-parent-template
 var AdventureParentView = Backbone.View.extend({
   el: '#app-home',
   model: new Adventure(),
-  initialize: function(){
-  //impliment request to server for weather info here...
-  },
+
   render: function () {
     $(this.el).html(adventureParentTemplate);
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
+
+    console.log("still getting your weather")
+
+    $.get( "/weather", function( data ) {
+      var outputHtml = "test";
+      //combine data I want to change w/html...
+      $( "#weather-display" ).html( data );
+      console.log("data=", data);
+      console.log( "Load was performed." );
+    });
+
   }
 });
 
@@ -14425,7 +14433,6 @@ module.exports = ThemeChoiceView;
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
-
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
 
@@ -14588,7 +14595,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1><br>\n     <h2>Click your way through the Rose City<br>\n      and get your own story that you can take and go do</h2>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?\n      </p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>";
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1><br>\n     <h2>Click your way through the Rose City<br>\n      and get your own story that you can take and go do</h2>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n\n    <!--   <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?\n      </p> -->\n\n      <div id=\"weather-display\">\n        //replace me\n      </div>\n    \n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>";
   });
 
 },{"hbsfy/runtime":9}]},{},[13])

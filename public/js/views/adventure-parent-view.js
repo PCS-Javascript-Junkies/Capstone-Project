@@ -15,10 +15,13 @@ var AdventureParentView = Backbone.View.extend({
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
 
-    $.get( "ajax/test.html", function( data ) {
-      var outputHtml = "";
+    console.log("still getting your weather")
+
+    $.get( "/weather", function( data ) {
+      var outputHtml = "test";
       //combine data I want to change w/html...
-      $( "#weather-display" ).html( outputHtml );
+      $( "#weather-display" ).html( data );
+      console.log("data=", data);
       console.log( "Load was performed." );
     });
 
