@@ -24,36 +24,52 @@ var LibraryView = Backbone.View.extend({
     },
     render: function () {
       results =[];
-      temp="";
+      var temp = '';
+       temp += "<div class='progression-image' style='max-width: 1100px; padding-top: 11.5em; padding-bottem: 5em; background: url(../../img/5.jpg) 0% 50% no-repeat; /*background-size:contain;*/'>";
       storyCollection.models.forEach(function(model){
         results.push(model.attributes.results);
       });
 
-      console.log(results, "results");
-      temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
-      results.forEach(function(story){
-      temp += "<div class = 'story' style = 'padding-top:1em'>" + 
-                "<table>" +
-                  "<tbody>" +
-                    "<tr>" +
-                    "<td>" 
-                          for(i=0; i<story.length; i++){
-                            temp += story[i].name + ", "; 
-                             };
+      console.log(results, "<----results");
 
-                    temp += "</td>" +
-                    "</tr>" +
-                  "</tbody>" +
-                "</table>"
+    //results.forEach(function (item){
+      for(i =0; i< results.length; ++i){
+      temp += resultTemplate({adventure: results[i]});
+      }
+    // });
+    temp += "</div>"
+    this.$el.html(temp);
+  }
 
-      });
-      temp += "</div>";
-       
-     $(this.$el).html(temp);
-   }
-  });
-
-temp = '';
-
+});
 
 module.exports = LibraryView;
+
+
+
+
+
+//       temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
+//       results.forEach(function(story){
+//       temp += "<div class = 'story' style = 'padding-top:1em'>" + 
+//                 "<table>" +
+//                   "<tbody>" +
+//                     "<tr>" +
+//                     "<td>" 
+//                           for(i=0; i<story.length; i++){
+//                             temp += story[i].name + ", "; 
+//                              };
+
+//                     temp += "</td>" +
+//                     "</tr>" +
+//                   "</tbody>" +
+//                 "</table>"
+
+//       });
+//       temp += "</div>";
+       
+//      $(this.$el).html(temp);
+//    }
+//   });
+
+// temp = '';

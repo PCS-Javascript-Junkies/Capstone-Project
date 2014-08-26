@@ -14456,39 +14456,56 @@ var LibraryView = Backbone.View.extend({
     },
     render: function () {
       results =[];
-      temp="";
+      var temp = '';
+       temp += "<div class='progression-image' style='max-width: 1100px; padding-top: 11.5em; padding-bottem: 5em; background: url(../../img/5.jpg) 0% 50% no-repeat; /*background-size:contain;*/'>";
       storyCollection.models.forEach(function(model){
         results.push(model.attributes.results);
       });
 
-      console.log(results, "results");
-      temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
-      results.forEach(function(story){
-      temp += "<div class = 'story' style = 'padding-top:1em'>" + 
-                "<table>" +
-                  "<tbody>" +
-                    "<tr>" +
-                    "<td>" 
-                          for(i=0; i<story.length; i++){
-                            temp += story[i].name + ", "; 
-                             };
+      console.log(results, "<----results");
 
-                    temp += "</td>" +
-                    "</tr>" +
-                  "</tbody>" +
-                "</table>"
+    //results.forEach(function (item){
+      for(i =0; i< results.length; ++i){
+      temp += resultTemplate({adventure: results[i]});
+      }
+    // });
+    temp += "</div>"
+    this.$el.html(temp);
+  }
 
-      });
-      temp += "</div>";
-       
-     $(this.$el).html(temp);
-   }
-  });
-
-temp = '';
-
+});
 
 module.exports = LibraryView;
+
+
+
+
+
+//       temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
+//       results.forEach(function(story){
+//       temp += "<div class = 'story' style = 'padding-top:1em'>" + 
+//                 "<table>" +
+//                   "<tbody>" +
+//                     "<tr>" +
+//                     "<td>" 
+//                           for(i=0; i<story.length; i++){
+//                             temp += story[i].name + ", "; 
+//                              };
+
+//                     temp += "</td>" +
+//                     "</tr>" +
+//                   "</tbody>" +
+//                 "</table>"
+
+//       });
+//       temp += "</div>";
+       
+//      $(this.$el).html(temp);
+//    }
+//   });
+
+// temp = '';
+
 },{"../../templates/library-template.hbs":23,"../models/adventure.js":14,"backbone":1,"jquery":10}],20:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
@@ -14588,34 +14605,25 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n        <div class=\"col-md-12\">\n          <h1>";
+  buffer += "\n  <section style =\"float: left; max-width: 18em;\">\n  <table>\n    <tbody>\n    <tr>\n    <td>\n    <h4>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h1>\n          <div class=\"image-container col-md-6\" style=\"background: url(";
+    + "</h4>\n    <a href=";
+  if (helper = helpers.yelpInfoLink) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.yelpInfoLink); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "><img style = \" max-height: 216px; overflow: hidden; \"src=\"";
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + ") 50% 50% no-repeat;background-size: cover;\">\n          </div>\n          <div class=\"business-info col-md-6\">\n            <img src='";
-  if (helper = helpers.rating) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.rating); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "' class=\"rating-stars\"/> \n            <p>out of ";
-  if (helper = helpers.ratingCount) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.ratingCount); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + " reviews</p>\n            <p>";
-  if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "</p>\n          </div>\n        </div>\n      ";
+    + "\"></a>\n    </td>\n    </tr>\n    </tbody>\n    </table>\n  </section>\n";
   return buffer;
   }
 
-  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container\">\n    <div class=\"intro-block\">\n      <h1>Adventure Archive:</h1>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
-  stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  buffer += "\n";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.adventure), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </div>\n  </div>\n</section>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
   return buffer;
   });
 

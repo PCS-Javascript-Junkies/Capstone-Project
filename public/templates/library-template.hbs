@@ -1,24 +1,15 @@
-<section class="question-body">
-  <div class="progression-image" style="background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;">
-  </div>
-  <div class="container">
-    <div class="intro-block">
-      <h1>Adventure Archive:</h1>
-    </div>
-    <div class="col-md-6 result-details">
-        {{#each displayResults.attributes.results}}
-        <div class="col-md-12">
-          <h1>{{name}}</h1>
-          <div class="image-container col-md-6" style="background: url({{img}}) 50% 50% no-repeat;background-size: cover;">
-          </div>
-          <div class="business-info col-md-6">
-            <img src='{{rating}}' class="rating-stars"/> 
-            <p>out of {{ratingCount}} reviews</p>
-            <p>{{address}}</p>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
-</section>
-<div id="map-canvas" style = "height: 400px"/>
+
+{{#each adventure}}
+  <section style ="float: left; max-width: 18em;">
+  <table>
+    <tbody>
+    <tr>
+    <td>
+    <h4>{{name}}</h4>
+    <a href={{yelpInfoLink}}><img style = " max-height: 216px; overflow: hidden; "src="{{img}}"></a>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+  </section>
+{{/each}}
