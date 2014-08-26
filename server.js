@@ -11,7 +11,7 @@ var util = require('util');
 // var forecaster = require('./forecast.js');
 
 //process.env(DB_KEY)
-var db = require('orchestrate')(config.dbKey);
+var db = (require('orchestrate')(config.dbKey) || require('orchestrate')(process.env(DB_KEY)));
 
 var app = express();
 
@@ -40,6 +40,7 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
   res.render('./about.html');
 });
+
 
 // no longer working? is that ok?
 app.get('/api/themes/:weather/:geoLocation', function (req, res) {

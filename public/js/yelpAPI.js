@@ -61,33 +61,38 @@ function yelpAPI(bounds, array, callback){
                 'success' : function(data, textStats, XMLHttpRequest) {
                     console.log("Data We get back from yelp --->",data);
                     var max;
-                    if(data.buisnesses !== undefined || data.buisnesses !== null){
+                    if(data.total !== 0){
                         if(data.businesses.length < 10)
-                          max = businesses.length;
+                          max = data.businesses.length;
                         else
                           max = 10;
-                        randInt = Math.floor((Math.random() * max) + 0);
+
+                        var randInt = Math.floor((Math.random() * max) + 0);
+                        console.log(randInt);
 
                         result.name = data.businesses[randInt].name;
                         result.address = data.businesses[randInt].location.address[0];
                         result.gps = data.businesses[randInt].location.coordinate;
-                        result.img = data.businesses[randInt].image_url;
-                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.rating = data.businesses[randInt].rating_img_url;
+                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.ratingCount = data.businesses[randInt].review_count;
                         result.yelpInfoLink = data.businesses[randInt].url;
-
-                        console.log(result);
+                        if(data.businesses[randInt].image_url !== undefined){
+                            result.img = data.businesses[randInt].image_url;
+                        } else { result.img = "./img/PortlandSign.jpg"};
                         callback();
 
-                }else{
-                    self.yelpAPI(area, array);
-                }
+                    }else{
+                        self.yelpAPI(bounds, array, callback);
+                    }
 
                 }
             });
         });
     });
+// var imageUrl = result.img;
+// var regExImg = /\/ms\./;
+// imageUrl.replace(regExImg, "l.");
 return result;
 }
 

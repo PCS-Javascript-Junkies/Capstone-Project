@@ -1,4 +1,4 @@
-function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
+function googleMaps(startPoint, middlePoint, secondMiddlePoint, endPoint, centerPoint){
  directionsDisplay = new google.maps.DirectionsRenderer();
 
    console.log(document.getElementById("map-canvas"));
@@ -39,6 +39,10 @@ function googleMaps(startPoint, middlePoint, endPoint, centerPoint){
           waypoints: [
             {
               location: middlePoint,
+              stopover:true
+            },
+            {
+              location: secondMiddlePoint,
               stopover:true
             }],
           provideRouteAlternatives: false,

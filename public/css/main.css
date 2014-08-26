@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Gentium Book Basic', serif;
   font-weight: 400;
@@ -33,7 +37,7 @@ header.app-title {
 }
 
 header.app-title .app-heading {
-  padding-top: 100px;
+  padding-top: 70px;
   text-align: center;
 }
 
@@ -53,6 +57,28 @@ header.app-title .app-heading .app-name {
   color: #fff;
   text-shadow: 2px 4px 0px #3d4d6f;
   margin: 0;
+}
+
+header.app-title .app-heading .app-name:after {
+content: '—';
+display: block;
+font-size: 6rem;
+line-height: 0.7;
+padding: 0;
+margin: 0;
+}
+
+header.app-title .app-heading .app-tagline{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 3.9rem;
+  font-family: 'Gentium Book Basic', serif;
+  font-style: italic;
+  color: #fff;
+  padding: 0 20px;
+  text-shadow: 1px 2px 4px #3d4d6f;
+  line-height: 1.1;
+  max-width: 720px;
 }
 
 header.app-title .attribution a {
@@ -91,6 +117,10 @@ header.app-title .attribution a:hover {
 
 .container-960 {
   max-width: 960px;
+}
+
+.container-720 {
+  max-width: 720px;
 }
 
 .button-container {
@@ -135,6 +165,10 @@ header.app-title .attribution a:hover {
   padding: 20px 0;
 }
 
+.btn {
+  white-space: normal;
+}
+
 .btn.btn-primary {
   display: block;
   width:100%;
@@ -152,6 +186,54 @@ header.app-title .attribution a:hover {
   transition: all 0.5s;
 }
 
+.result-details {
+  border-left: 10px solid #eee;
+  padding-left: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.result-details h1 {
+  font-size:2.8rem;
+  padding: 20px 0 10px 0;
+}
+
+.result-details .image-container {
+  height: 30%;
+}
+
+.result-details .business-info {
+  background-size: cover; 
+}
+
+.result-details .rating-stars {
+  padding-top: 10px;
+}
+
+.result-in-story {
+  font-family: "Open Sans", sans-serif;
+  color: #71aed1;
+  padding: 0 3px;
+  border-radius: 3px;
+  background: #E4F5FF;
+  font-weight: 700;
+}
+
+a .result-in-story:hover {
+  background: #8ed5ff;
+}
+
+.yelp-credit {
+  width: 175px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.yelp-credit p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
 footer.main {
   position: fixed;
   width: 100%;
@@ -166,4 +248,69 @@ footer.main p {
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   font-size: 1.3rem;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 80%;
+  }
+  header.app-title {
+    width: 100%;
+    background: url('../img/hood-portland1-fade.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    z-index: 99;
+  }
+
+  header.app-title .app-heading {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  header.app-title .app-heading .app-intro {
+    font-size: 1.8rem;
+    font-family: 'Gentium Book Basic';
+    color: #fff;
+    line-height: 1.3;
+    font-style: italic;
+    margin: 0;
+  }
+
+  header.app-title .app-heading .app-name {
+    font-size: 3.8rem;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 4px 0px #3d4d6f;
+    margin: 0;
+  }
+
+  header.app-title .app-heading .app-name:after {
+  content: '—';
+  display: block;
+  font-size: 3.8rem;
+  line-height: 0.7;
+  padding: 0;
+  margin: 0;
+  }
+
+  header.app-title .app-heading .app-tagline{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-family: 'Gentium Book Basic', serif;
+    font-style: italic;
+    color: #fff;
+    padding: 0 20px;
+    text-shadow: 1px 2px 4px #3d4d6f;
+    line-height: 1.1;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1px) {
+  .navbar-nav>li {
+    float: left;
+  }
 }

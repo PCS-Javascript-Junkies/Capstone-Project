@@ -732,24 +732,27 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inHost={
-            active: true,  //make true when done
+            active: false,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-<<<<<<< HEAD
-                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","","","","",""],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
-=======
-                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","Surely your collective unconcious must be telling you how hungry you all are after that. So you don your suit or your skinny tie, or you remain in the clothes you're in but are sure to tie your shoe, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
->>>>>>> master
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
+<<<<<<< HEAD
+            themeQuestions: [
+                "",
+                "",
+                ""
+=======
             themeQuestions: [ 
                 "Do you want to start slow?", 
-                "Art. Do you heart art?" ,
+                "Do you love the arts (be honest)?" ,
                 "Does the smell of paper and ink inspire?"
+>>>>>>> de131d629cef35f0dde297b1dfcacb9e5a0b4792
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -760,50 +763,45 @@ QuestionTree.prototype.initialize = function (){
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
                 {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
-                {title:"That's why we're here", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
-                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "shanghi_tunnels", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
-                {title:"Not right now. We need to move!", aaID:"move_much", values:["shanghi_tunnels", "climbing_wall","arcade","paint_ball", "swimming_pools"]}
+                {title:"Yes, we are! (*Looks around to see if friends are paying attention*) We are cultured individuals", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"Not right now. We need to move!", aaID:"move_much", values:["climbing_wall","arcade","paint_ball", "swimming_pools"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-<<<<<<< HEAD
-                "Are you guys hungry?",
-=======
-                "All that movement, all that culture - Are you hungry?",
->>>>>>> master
-                "Are you in the mood for food?"
+                "",
+                ""
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
+<<<<<<< HEAD
             breakButtons: [
-                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+=======
+            breakButtons: [        
+                {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
                 {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
                 {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
                 {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
+>>>>>>> de131d629cef35f0dde297b1dfcacb9e5a0b4792
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-<<<<<<< HEAD
-                "How OUT do you want to go?",
-=======
-                "The night is young, grasshoppers! What else is on your agenda?",
->>>>>>> master
+                "",
+                ""
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-<<<<<<< HEAD
-                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons", "karaoke_bars", "mississippi_studios", "radio_room", "produce_row", "hipster_bars"]},
-                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub", "movie_madness"]},
-                {title:"How about some music?", aaID:"music", values:["laurelthirst","mississippi_studios","crystal_ballroom", "doug_fir", "wonder_ballroom", "open_mic_venue"]},
-                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's", "best_strip_club"]}
-=======
-                {title:"Portland hipsters. Lead us there.", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "dig_a_pony", "radio_room", "produce_row", "hipster_bars"]},
-                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","jazz", "movie_madness", "coffee_shop_open_late"]},
+                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "radio_room", "produce_row"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar",""]},
+                {title:"OMG, is NOTHING here not open late?", aaID:"", values:["tattoo","",""]},
                 {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's"]}
->>>>>>> master
             ],
 
             build: function(){
@@ -826,18 +824,20 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outHost={
-            active: true,  //make true when done
+            active: false,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["So your out of town friends or family finally decided to come for a visit, and you want to show them around! A worthy quest. It's beautiful, no? You step outside, wondering where to start. ","You (all of you, collectively... and also, you're all oddly, collectively, humming Dandy Warhols songs) depart for:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, in fact, that you've ditched pants. Did you know public nudity is totally legal? It's an oft-quoted - but somewhat less frequently implimented - statute. Anyway.","Surely your collective unconcious must be telling you how hungry you all are, after that. So you don your suit or your skinny tie... or you remain in the clothes you're in but are sure to tie your shoes, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
+                ["","","","","","","","",""],
+                ["","","","","","","","",""],
+                ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "So you want to get out. How out is out?", 
-                "Art. Do you heart art?" ,
-                "How does biking sound?"
+                "",
+                "",
+                ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -847,37 +847,38 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"We'd rather hit a trail, but we don't want to drive too far", aaID:"city_hike", values:["forest_park", "trail", "rocky_butte", "mt._tabor", "powell_butte_park", "oaks_bottom", "tryon_creek", "council_crest"]},
-                {title:"That's why we're here", aaID:"culture", values:["oregon_zoo", "first_thursday", "garden","chinese_garden", "rose_garden", "trail"]},
-                {title:"Biking is our speed!", aaID:"bike", values:["bike_rentals"]},
-                {title:"Results of exploration by definition must be unexpected. Surprise us!", aaID:"surprise", values:["shanghi_tunnels", "rocky_butte", "saturday_market", "arcade","paint_ball", "ultimate_frisbee", "outdoor_swimming_pools"]}
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "Something to eat, Adventurers?",
-                "In the mood for food?"
+                "",
+                ""
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian", "pok_pok", "pambiche","thai", "greek", "food_cart", "food_pod"]},
-                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick", "salty's_on_the_columbia", "southpark", "iorio", "jake's", "dan_and_louise_oyster_bar","seafood"]},
-                {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts", "pok_pok", "unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house", "food_cart", "food_pod"]},
-                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill", "southpark", "italian", "bistro", "le_pigeon", "fancy_restaurant"]}
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "What is your quest?"
+                "",
+                ""
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"To find the holy grail", aaID:"holy_grail", values:["kennedy_school","crystal_ballroom","powell's_bookstore"]},
-                {title:"Hipster heaven. Lead us there.", aaID:"hipster", values:["ground_kontrol", "bonfire", "ron_tons","mississippi_studios", "dig_a_pony", "radio_room", "produce_row", "hipster_bars"]},
-                {title:"Zen drinks, then nirvana", aaID:"quiet", values:["jade_lounge","wine_bar","jazz", "mcmenamins", "movie_madness", "coffee_shop_open_late"]},
-                {title:"...hold on: most strip clubs per capita. Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "best_strip_club", "sassy's_strip", "magic_gardens", "union_jack's"]}
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
             ],
 
             build: function(){
@@ -1060,7 +1061,7 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:","—start the adventure here! (Are you surprised?)","Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the ","—the best of both worlds.","Okay, now you’re off to the ",". If you’re happy about that, do a handstand. If you’re super excited, do a cartwheel. If you’re beyond excited right now, climb the nearest tree and sing (do not forget to sing! If you know the theme song from Adventure Time, sing that. Otherwise, your choice.). And when your mom or dad asks what you’re doing, tell them you’re just expressing yourself. (Just like that guy who’s painted completely silver, at the Saturday Market on the weekends. He’s expressing himself, too. …No, do not go paint yourself silver right now.)","","is the last part of your palenguitine adventure today! (“Palenguitine” means “awesome,” but it’s not a real word. It was made up just now.) When you’re done at ",",  on your way home, make up your own description of the adventure that no one will ever understand but you (and your brother or sister if you have one with you). Now say the description in Pig Latin. (Hint: pig = sweet = weet-say, and palenguitine = alenguitine-pay.) And have a zeitharunt day tomorrow!"],
+                ["","","","","","","","",""],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
