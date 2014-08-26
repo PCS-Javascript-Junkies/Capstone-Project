@@ -41,6 +41,7 @@ app.get('/about', function (req, res) {
   res.render('./about.html');
 });
 
+
 // no longer working? is that ok?
 app.get('/api/themes/:weather/:geoLocation', function (req, res) {
   var data = {
