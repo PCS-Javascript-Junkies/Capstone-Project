@@ -13,7 +13,6 @@ var WeatherDisplayView = Backbone.View.extend({
       data: "",
       success: function(val){
         $(self.el).html(weatherDisplayTemplate({weatherData: val}));
-        console.log(val);
       }
     });
   }

@@ -14,7 +14,10 @@ function googleMaps(startPoint, middlePoint, secondMiddlePoint, endPoint, center
           case "Northeast Portland, Portland, OR":
             centLatLong.push(45.513,-122.631);
             break;
-          case "west":
+          case "Northwest Portland, Portland, OR":
+            centLatLong.push(45.524,-122.680);
+            break;
+          case "Southwest Portland, Portland, OR":
             centLatLong.push(45.524,-122.680);
             break;
           case "Portland":
