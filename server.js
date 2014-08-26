@@ -101,7 +101,8 @@ app.get("/weather", function (req, res) {
       if (err) throw err;
       console.log('res: ' + util.inspect(res));
       console.log('data: ' + util.inspect(data));
-      //use a return statement to retrieve the return data.forcast.summary (or something) 
+
+        //use a return statement to retrieve the return data.forcast.summary (or something) 
     });
   }
   var results = forecastRequester();
