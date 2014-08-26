@@ -10,7 +10,8 @@ var LocationChoiceView = Backbone.View.extend({
   events: {
     'click #location-se': 'clickSoutheast',
     'click #location-ne': 'clickNortheast',
-    'click #location-west': 'clickWest',
+    'click #location-north': 'clickNorth',
+    'click #location-southwest': 'clickSouthwest',
     'click #location-all': 'clickAll'
   },
   initialize: function () {
@@ -25,16 +26,23 @@ var LocationChoiceView = Backbone.View.extend({
     this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
-  clickWest: function() {
-    this.model.set({geolocation: "west"});
+  clickNorth: function() {
+    this.model.set({geolocation: "Northwest Portland, Portland, OR"});
+    this.model.set({latlong: "45.520449,-122.728701|45.614814,-122.665958"});
+    this.loadThemeChoiceView();
+  },
+  clickSouthwest: function() {
+    this.model.set({geolocation: "Southwest Portland, Portland, OR"});
+    this.model.set({latlong: "45.468856,-122.745953|45.52278,-122.666945"});
     this.loadThemeChoiceView();
   },
   clickAll: function() {
+    this.model.set({latlong: "45.427597,-122.830582|45.681464,-122.399368"})
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {
-    console.log("tree after weather choice", tree.current);
     $(this.el).html(locationChoiceTemplate);
   },
   loadThemeChoiceView: function () {
