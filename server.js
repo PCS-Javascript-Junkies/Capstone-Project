@@ -41,24 +41,6 @@ app.get('/about', function (req, res) {
   res.render('./about.html');
 });
 
-// no longer working? is that ok?
-app.get('/api/themes/:weather/:geoLocation', function (req, res) {
-  var data = {
-    "weather": req.params.weather,
-    "location": req.params.geoLocation,
-  };
-  if (req.params.weather === "outside" && req.params.geoLocation === "se") {
-    var data = {
-      "themes": [{"title":"breweries"}, {"title":"active"}, {"title":"tgif"}]
-    }
-  } else {
-    var data = {
-      "themes": ["not a valid param"]
-    }
-  }
-  res.json(data);
-});
-
 app.get('/api/stories', function (req, res) {
   var list = [];
   db.list('Stories')
@@ -86,91 +68,24 @@ app.post('/api/stories', function (req, res){
 });
 
 app.get("/weather", function (req, res) {
-  function forecastRequester (){
+  function forecastRequester (callback) {
     var options = {
       APIKey: "1f75a50387fa44c9015e4edc8fce57fc",
-      timeout: 1000
+      timeout: 5000
     };
 
-      var forecast = new Forecast(options);
+    var forecast = new Forecast(options);
     var latitude = "45.5234515";
-      var longitude = "-122.6762071";
+    var longitude = "-122.6762071";
 
-    forecast.get(latitude, longitude, function (err, res, data) {
+    var realData;
+    var response = forecast.get(latitude, longitude, function (err, response, data) {
       if (err) throw err;
-      console.log('res: ' + util.inspect(res));
-      console.log('data: ' + util.inspect(data));
-      //use a return statement to retrieve the return data.forcast.summary (or something) 
+      res.json(data);
     });
   }
-  var results = forecastRequester();
-  res.send(200, results);
+  forecastRequester();
 });
-
-// if(queryThis('foo')) { doThat(); }
-
-// function queryThis(parameter) {
-//     // some code
-//     return true;
-// }
-
-//db.deleteCollection('bb-todos');
-
-// app.get('/api/adventures', function (req, res) {
-//   var todos = [];
-//   db.list('Adventures')
-//   .then(function (result) {
-//     result.body.results.forEach(function (item){
-//       todos.push(item.value);
-//     });
-//     res.json(todos);
-//     console.log(todos);
-//   })
-//   .fail(function (err) {
-//     console.error(err);
-//   });
-// });
-
-// app.post('/api/todos', function (req, res){
-//   req.accepts('application/json');
-//   console.log(req.body);
-//   db.put('bb-todos', ('todo' + req.body.creationDate), req.body)
-//   .then(function (){
-//     console.log(req.body);
-//     res.send(200, 'ok, we added your todo, here is what you added');
-//   })
-//   .fail(function (err) {
-//     console.error(err);
-//   });
-// });
-
-// app.get('/api/contacts', function (req, res) {
-//   var contacts = [];
-//   db.list('bb-contacts')
-//   .then(function (result) {
-//     result.body.results.forEach(function (item){
-//       contacts.push(item.value);
-//     });
-//     console.log(contacts);
-//     res.json(contacts);
-//   })
-//   .fail(function (err) {
-//     console.error(err);
-//   });
-// });
-
-// app.post('/api/contacts', function (req, res){
-//   req.accepts('application/json');
-//   console.log(req.body);
-//   db.put('bb-contacts', ('contact' + req.body.creationDate), req.body)
-//   .then(function (result){
-//     res.send(200, 'ok, we added your contact');
-//   })
-//   .fail(function (err) {
-//     console.error(err);
-//   });
-// });
-
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
