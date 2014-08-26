@@ -1,8 +1,10 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
+
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
+var WeatherDisplayView = require('./weather-display-view.js');
 
 var WeatherChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -25,15 +27,18 @@ var WeatherChoiceView = Backbone.View.extend({
     locationChoiceView.render();
   },
   render: function () {
-    var self = this;
-    $.ajax({
-      url: "./weather",
-      data: "",
-      success: function(val){
-        $(self.el).html(weatherChoiceTemplate({weatherData: val}));
-        console.log(val);
-      }
-    });
+    $(this.el).html(weatherChoiceTemplate);
+    var weatherDisplayView = new WeatherDisplayView();
+    weatherDisplayView.render();
+    // var self = this;
+    // $.ajax({
+    //   url: "./weather",
+    //   data: "",
+    //   success: function(val){
+    //     $(self.el).html(weatherChoiceTemplate({weatherData: val}));
+    //     console.log(val);
+    //   }
+    // });
   }
 });
 

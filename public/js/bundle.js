@@ -14253,22 +14253,10 @@ var adventureParentTemplate = require('../../templates/adventure-parent-template
 var AdventureParentView = Backbone.View.extend({
   el: '#app-home',
   model: new Adventure(),
-
   render: function () {
     $(this.el).html(adventureParentTemplate);
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
-
-    console.log("still getting your weather")
-
-    $.get( "/weather", function( data ) {
-      var outputHtml = "test";
-      //combine data I want to change w/html...
-      $( "#weather-display" ).html( data );
-      console.log("data=", data);
-      console.log( "Load was performed." );
-    });
-
   }
 });
 
@@ -14522,8 +14510,10 @@ module.exports = ThemeChoiceView;
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
+
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
+var WeatherDisplayView = require('./weather-display-view.js');
 
 var WeatherChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -14546,20 +14536,46 @@ var WeatherChoiceView = Backbone.View.extend({
     locationChoiceView.render();
   },
   render: function () {
+    $(this.el).html(weatherChoiceTemplate);
+    var weatherDisplayView = new WeatherDisplayView();
+    weatherDisplayView.render();
+    // var self = this;
+    // $.ajax({
+    //   url: "./weather",
+    //   data: "",
+    //   success: function(val){
+    //     $(self.el).html(weatherChoiceTemplate({weatherData: val}));
+    //     console.log(val);
+    //   }
+    // });
+  }
+});
+
+module.exports = WeatherChoiceView;
+},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","./weather-display-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js":[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
+
+var weatherDisplayTemplate = require('../../templates/weather-display-template.hbs');
+
+var WeatherDisplayView = Backbone.View.extend({
+  el: '#weather-display',
+  render: function () {
     var self = this;
     $.ajax({
       url: "./weather",
       data: "",
       success: function(val){
-        $(self.el).html(weatherChoiceTemplate({weatherData: val}));
+        $(self.el).html(weatherDisplayTemplate({weatherData: val}));
         console.log(val);
       }
     });
   }
 });
 
-module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
+module.exports = WeatherDisplayView;
+},{"../../templates/weather-display-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14773,16 +14789,28 @@ var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <div id=\"weather-display\">\n        <div id=\"spinner-container\">\n        </div>\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n  var opts = {\n    lines: 13, // The number of lines to draw\n    length: 17, // The length of each line\n    width: 6, // The line thickness\n    radius: 18, // The radius of the inner circle\n    corners: 1, // Corner roundness (0..1)\n    rotate: 0, // The rotation offset\n    direction: 1, // 1: clockwise, -1: counterclockwise\n    color: '#000', // #rgb or #rrggbb or array of colors\n    speed: 0.7, // Rounds per second\n    trail: 60, // Afterglow percentage\n    shadow: false, // Whether to render a shadow\n    hwaccel: false, // Whether to use hardware acceleration\n    className: 'spinner', // The CSS class to assign to the spinner\n    zIndex: 2e9, // The z-index (defaults to 2000000000)\n    top: '50%', // Top position relative to parent\n    left: '50%' // Left position relative to parent\n  };\n  var target = document.getElementById('spinner-container');\n  // var spinner = new Spinner(opts).spin(target);\n  var spinner = new Spinner().spin();\n  target.appendChild(spinner.el);\n</script>\n";
+  });
+
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs":[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n        <canvas id=\""
+  buffer += "<canvas id=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.icon)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" width=\"64\" height=\"64\">\n        </canvas>\n        <p class=\"question\">Looks like it's "
+    + "\" width=\"64\" height=\"64\">\n</canvas>\n<p class=\"question\">Looks like it's "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.summary)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " and "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.temperature)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " today!</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n      var icons = new Skycons({color: \"#3d4d6f\"}),\n          list  = [\n            \"clear-day\", \"clear-night\", \"partly-cloudy-day\",\n            \"partly-cloudy-night\", \"cloudy\", \"rain\", \"sleet\", \"snow\", \"wind\",\n            \"fog\"\n          ],\n          i;\n\n      for(i = list.length; i--; )\n        icons.set(list[i], list[i]);\n\n      icons.play();\n</script>\n";
+    + " today!</p>\n<script>\n      var icons = new Skycons({color: \"#3d4d6f\"}),\n          list  = [\n            \"clear-day\", \"clear-night\", \"partly-cloudy-day\",\n            \"partly-cloudy-night\", \"cloudy\", \"rain\", \"sleet\", \"snow\", \"wind\",\n            \"fog\"\n          ],\n          i;\n\n      for(i = list.length; i--; )\n        icons.set(list[i], list[i]);\n\n      icons.play();\n</script>";
   return buffer;
   });
 
