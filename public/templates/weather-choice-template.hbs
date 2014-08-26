@@ -10,19 +10,28 @@
   <div class="container container-960">
     <div class="intro-block">
       <h1>How's <span class="title-secondary-word">the</span> Weather Today?</h1>
-
-    <!--   <p class="question">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?
-      </p> -->
-
-      <div id="weather-display">
-        replace me
-      </div>
-    
+        <canvas id="{{weatherData.currently.icon}}" width="64" height="64">
+        </canvas>
+        <p class="question">Looks like it's {{weatherData.currently.summary}} and {{weatherData.currently.temperature}} today!</p>
     </div>
     <div class="button-container">
-      <div class="btn btn-primary" id="choice-outside" role="button">Yes, I want to go outdoors</div>
-      <div class="btn btn-primary" id="choice-inside" role="button">No, I want to stay inside</div>
+      <div class="btn btn-primary" id="choice-outside" role="button">I want to go outdoors</div>
+      <div class="btn btn-primary" id="choice-inside" role="button">I want to stay inside</div>
       </div>
     </div>
   </div>
 </section>
+<script>
+      var icons = new Skycons({color: "#3d4d6f"}),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+      for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+
+      icons.play();
+</script>
