@@ -736,13 +736,9 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-<<<<<<< HEAD
                 ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
-=======
-                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","Surely your collective unconcious must be telling you how hungry you all are after that. So you don your suit or your skinny tie, or you remain in the clothes you're in but are sure to tie your shoe, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
->>>>>>> master
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
@@ -766,11 +762,8 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-<<<<<<< HEAD
                 "Are you guys hungry?",
-=======
                 "All that movement, all that culture - Are you hungry?",
->>>>>>> master
                 "Are you in the mood for food?"
             ],
             //tittle: what will be displayed on the button.
@@ -784,26 +777,17 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-<<<<<<< HEAD
                 "How OUT do you want to go?",
-=======
                 "The night is young, grasshoppers! What else is on your agenda?",
->>>>>>> master
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-<<<<<<< HEAD
                 {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons", "karaoke_bars", "mississippi_studios", "radio_room", "produce_row", "hipster_bars"]},
                 {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub", "movie_madness"]},
                 {title:"How about some music?", aaID:"music", values:["laurelthirst","mississippi_studios","crystal_ballroom", "doug_fir", "wonder_ballroom", "open_mic_venue"]},
                 {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's", "best_strip_club"]}
-=======
-                {title:"Portland hipsters. Lead us there.", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "dig_a_pony", "radio_room", "produce_row", "hipster_bars"]},
-                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","jazz", "movie_madness", "coffee_shop_open_late"]},
-                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's"]}
->>>>>>> master
             ],
 
             build: function(){
