@@ -315,6 +315,9 @@ footer.main p {
     line-height: 1.1;
     max-width: 720px;
   }
+  .navbar-nav>li>a {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 1px) {
