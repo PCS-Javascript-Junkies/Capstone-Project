@@ -15,7 +15,7 @@ var storyCollection = new StoryCollection();
 
 
 var LibraryView = Backbone.View.extend({
-  el: '#adventure-parent',
+  el: '#app-home',
     initialize: function () {
    //   var self = this;
       storyCollection.fetch();
@@ -23,10 +23,33 @@ var LibraryView = Backbone.View.extend({
       this.listenTo(storyCollection, 'sort', this.render); //'refrsh on story sort'
     },
     render: function () {
-      temp ="";
-        console.log(storyCollection.length);
-        console.log(storyCollection);
-      //   $(this.$el).html(temp);
+      results =[];
+      temp="";
+      storyCollection.models.forEach(function(model){
+        results.push(model.attributes.results);
+      });
+
+      console.log(results, "results");
+      temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
+      results.forEach(function(story){
+      temp += "<div class = 'story' style = 'padding-top:1em'>" + 
+                "<table>" +
+                  "<tbody>" +
+                    "<tr>" +
+                    "<td>" 
+                          for(i=0; i<story.length; i++){
+                            temp += story[i].name + ", "; 
+                             };
+
+                    temp += "</td>" +
+                    "</tr>" +
+                  "</tbody>" +
+                "</table>"
+
+      });
+      temp += "</div>";
+       
+     $(this.$el).html(temp);
    }
   });
 
