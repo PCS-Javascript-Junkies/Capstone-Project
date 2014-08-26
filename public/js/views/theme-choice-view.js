@@ -10,8 +10,16 @@ var ThemeChoiceView = Backbone.View.extend({
   events: {
     'click .theme-choice': 'chooseTheme'
   },
-  chooseTheme: function () { //repeat this for all themes...
-    var clickedThemeId = event.target.id + "Theme";
+  chooseTheme: function (event) { //repeat this for all themes...
+    var event = event.target.id;
+    // function firefoxFix(event) {
+    //   var identifier = event.target.id;
+    //   return identifier;
+    //   //return event.target.id;
+    // }
+    // var clickedThemeId = firefoxFix(event) + "Theme";
+    console.log("clicked theme id", clickedThemeId);
+    var clickedThemeId = event + "Theme";
     this.model.set({theme: clickedThemeId});
     this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
     console.log(this.model);

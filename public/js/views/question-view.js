@@ -22,7 +22,7 @@ var QuestionView = Backbone.View.extend({
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  chooseQuestion: function () {
+  chooseQuestion: function (event) {
     var self = this;
     function writeModel() {
       console.log(yelpresult);
@@ -38,7 +38,8 @@ var QuestionView = Backbone.View.extend({
       self.model.attributes["level" + questionLevel] = yelpKeywordArray;
       console.log("model as of now:",self.model);
     }
-    var clickedQuestionId = event.target.id;
+    var event = event.target.id;
+    var clickedQuestionId = event;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
     console.log("location:", this.model.attributes.geolocation);
     var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);

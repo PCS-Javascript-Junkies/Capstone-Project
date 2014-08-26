@@ -14337,7 +14337,7 @@ var QuestionView = Backbone.View.extend({
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
-  chooseQuestion: function () {
+  chooseQuestion: function (event) {
     var self = this;
     function writeModel() {
       console.log(yelpresult);
@@ -14353,7 +14353,8 @@ var QuestionView = Backbone.View.extend({
       self.model.attributes["level" + questionLevel] = yelpKeywordArray;
       console.log("model as of now:",self.model);
     }
-    var clickedQuestionId = event.target.id;
+    var event = event.target.id;
+    var clickedQuestionId = event;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
     console.log("location:", this.model.attributes.geolocation);
     var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
@@ -14435,8 +14436,16 @@ var ThemeChoiceView = Backbone.View.extend({
   events: {
     'click .theme-choice': 'chooseTheme'
   },
-  chooseTheme: function () { //repeat this for all themes...
-    var clickedThemeId = event.target.id + "Theme";
+  chooseTheme: function (event) { //repeat this for all themes...
+    var event = event.target.id;
+    // function firefoxFix(event) {
+    //   var identifier = event.target.id;
+    //   return identifier;
+    //   //return event.target.id;
+    // }
+    // var clickedThemeId = firefoxFix(event) + "Theme";
+    console.log("clicked theme id", clickedThemeId);
+    var clickedThemeId = event + "Theme";
     this.model.set({theme: clickedThemeId});
     this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
     console.log(this.model);
