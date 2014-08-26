@@ -732,7 +732,7 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inHost={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
