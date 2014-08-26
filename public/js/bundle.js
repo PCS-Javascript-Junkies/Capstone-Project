@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
+},{"underscore":11}],2:[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
+},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
+},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
+},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
+},{"./safe-string":6}],8:[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
+},{"handlebars/runtime":8}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,7 +12623,7 @@ return jQuery;
   }
 }).call(this);
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 
 
 
@@ -13362,15 +13362,23 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","","","","",""],
+<<<<<<< HEAD
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
+=======
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? You won't get cold, you're staying inside anyway.","Surely your collective unconcious must be telling you how hungry you all are after that. So you don your suit or your skinny tie, or you remain in the clothes you're in but are sure to tie your shoe, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
+>>>>>>> master
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [ 
                 "Do you want to start slow?", 
+<<<<<<< HEAD
                 "Do you love the arts (be honest)?" ,
+=======
+                "Art. Do you heart art?" ,
+>>>>>>> master
                 "Does the smell of paper and ink inspire?"
             ],
             //Add button content.
@@ -13382,37 +13390,61 @@ QuestionTree.prototype.initialize = function (){
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
                 {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
+<<<<<<< HEAD
                 {title:"Yes, we are! (*Looks around to see if friends are paying attention*) We are cultured individuals", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
                 {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
                 {title:"Not right now. We need to move!", aaID:"move_much", values:["climbing_wall","arcade","paint_ball", "swimming_pools"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Are you guys hungry?",
+=======
+                {title:"That's why we're here", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "shanghi_tunnels", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"Not right now. We need to move!", aaID:"move_much", values:["shanghi_tunnels", "climbing_wall","arcade","paint_ball", "swimming_pools"]}
+            ],
+            //Add strings for the displayed questions
+            breakQuestions: [
+                "All that movement, all that culture - Are you hungry?",
+>>>>>>> master
+                "Are you in the mood for food?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
-            breakButtons: [
+<<<<<<< HEAD
+            breakButtons: [        
                 {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+=======
+            breakButtons: [
+                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
+>>>>>>> master
                 {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
                 {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
                 {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+<<<<<<< HEAD
+                "How OUT do you want to go?",
+=======
+                "The night is young, grasshoppers! What else is on your agenda?",
+>>>>>>> master
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "radio_room", "produce_row"]},
-                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar",""]},
-                {title:"OMG, is NOTHING here not open late?", aaID:"", values:["tattoo","",""]},
+<<<<<<< HEAD
+                {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons", "karaoke_bars", "mississippi_studios", "radio_room", "produce_row", "hipster_bars"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub", "movie_madness"]},
+                {title:"How about some music?", aaID:"music", values:["laurelthirst","mississippi_studios","crystal_ballroom", "doug_fir", "wonder_ballroom", "open_mic_venue"]},
+                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's", "best_strip_club"]}
+=======
+                {title:"Portland hipsters. Lead us there.", aaID:"hipster", values:["ground_kontrol","ron_tons","mississippi_studios", "dig_a_pony", "radio_room", "produce_row", "hipster_bars"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","jazz", "movie_madness", "coffee_shop_open_late"]},
                 {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's"]}
+>>>>>>> master
             ],
 
             build: function(){
@@ -13435,20 +13467,18 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outHost={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["So your out of town friends or family finally decided to come for a visit, and you want to show them around! A worthy quest. It's beautiful, no? You step outside, wondering where to start. ","You (all of you, collectively... and also, you're all oddly, collectively, humming Dandy Warhols songs) depart for:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, in fact, that you've ditched pants. Did you know public nudity is totally legal? It's an oft-quoted - but somewhat less frequently implimented - statute. Anyway.","Surely your collective unconcious must be telling you how hungry you all are, after that. So you don your suit or your skinny tie... or you remain in the clothes you're in but are sure to tie your shoes, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "So you want to get out. How out is out?", 
+                "Art. Do you heart art?" ,
+                "How does biking sound?"
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -13458,38 +13488,37 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"We'd rather hit a trail, but we don't want to drive too far", aaID:"city_hike", values:["forest_park", "trail", "rocky_butte", "mt._tabor", "powell_butte_park", "oaks_bottom", "tryon_creek", "council_crest"]},
+                {title:"That's why we're here", aaID:"culture", values:["oregon_zoo", "first_thursday", "garden","chinese_garden", "rose_garden", "trail"]},
+                {title:"Biking is our speed!", aaID:"bike", values:["bike_rentals"]},
+                {title:"Results of exploration by definition must be unexpected. Surprise us!", aaID:"surprise", values:["shanghi_tunnels", "rocky_butte", "saturday_market", "arcade","paint_ball", "ultimate_frisbee", "outdoor_swimming_pools"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Something to eat, Adventurers?",
+                "In the mood for food?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian", "pok_pok", "pambiche","thai", "greek", "food_cart", "food_pod"]},
+                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick", "salty's_on_the_columbia", "southpark", "iorio", "jake's", "dan_and_louise_oyster_bar","seafood"]},
+                {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts", "pok_pok", "unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house", "food_cart", "food_pod"]},
+                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill", "southpark", "italian", "bistro", "le_pigeon", "fancy_restaurant"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "What is your quest?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"To find the holy grail", aaID:"holy_grail", values:["kennedy_school","crystal_ballroom","powell's_bookstore"]},
+                {title:"Hipster heaven. Lead us there.", aaID:"hipster", values:["ground_kontrol", "bonfire", "ron_tons","mississippi_studios", "dig_a_pony", "radio_room", "produce_row", "hipster_bars"]},
+                {title:"Zen drinks, then nirvana", aaID:"quiet", values:["jade_lounge","wine_bar","jazz", "mcmenamins", "movie_madness", "coffee_shop_open_late"]},
+                {title:"...hold on: most strip clubs per capita. Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "best_strip_club", "sassy's_strip", "magic_gardens", "union_jack's"]}
             ],
 
             build: function(){
@@ -13672,7 +13701,7 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
+                ["Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:","—start the adventure here! (Are you surprised?)","Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the ","—the best of both worlds.","Okay, now you’re off to the ",". If you’re happy about that, do a handstand. If you’re super excited, do a cartwheel. If you’re beyond excited right now, climb the nearest tree and sing (do not forget to sing! If you know the theme song from Adventure Time, sing that. Otherwise, your choice.). And when your mom or dad asks what you’re doing, tell them you’re just expressing yourself. (Just like that guy who’s painted completely silver, at the Saturday Market on the weekends. He’s expressing himself, too. …No, do not go paint yourself silver right now.)","","is the last part of your palenguitine adventure today! (“Palenguitine” means “awesome,” but it’s not a real word. It was made up just now.) When you’re done at ",",  on your way home, make up your own description of the adventure that no one will ever understand but you (and your brother or sister if you have one with you). Now say the description in Pig Latin. (Hint: pig = sweet = weet-say, and palenguitine = alenguitine-pay.) And have a zeitharunt day tomorrow!"],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
@@ -14185,12 +14214,13 @@ QuestionTree.prototype.initialize = function (){
 
 module.exports=QuestionTree;
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
 
 var AdventureParentView = require('./views/adventure-parent-view');
+var LibaryParentView = require('./views/story-library-view');
 
 //var yelpAPI = require('./yelpAPI.js');
 var QuestionTree = require('../database/dbMain.js');
@@ -14200,11 +14230,17 @@ console.log(tree);
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'callAdventureParentView'
+    '': 'callAdventureParentView',
+    'library': 'callLibraryView'
   },
   callAdventureParentView: function () {
     this.adventureParentView = new AdventureParentView();
     this.adventureParentView.render();
+  },
+
+  callLibraryView: function () {
+    this.LibaryParentView = new LibaryParentView();
+    this.LibaryParentView.render();
   }
 });
 
@@ -14212,7 +14248,7 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-parent-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"./views/story-library-view":19,"backbone":1,"jquery":10}],14:[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -14236,7 +14272,7 @@ var Adventure = Backbone.Model.extend({
 });
 
 module.exports = Adventure;
-},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js":[function(require,module,exports){
+},{"backbone":1}],15:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14254,10 +14290,20 @@ var AdventureParentView = Backbone.View.extend({
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
 
+<<<<<<< HEAD
+    console.log("still getting your weather")
+
+    $.get( "/weather", function( data ) {
+      var outputHtml = "test";
+      //combine data I want to change w/html...
+      $( "#weather-display" ).html( data );
+      console.log("data=", data);
+=======
     $.get( "ajax/test.html", function( data ) {
       var outputHtml = "";
       //combine data I want to change w/html...
       $( "#weather-display" ).html( outputHtml );
+>>>>>>> master
       console.log( "Load was performed." );
     });
 
@@ -14265,7 +14311,7 @@ var AdventureParentView = Backbone.View.extend({
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":22,"../models/adventure.js":14,"./weather-choice-view.js":21,"backbone":1,"jquery":10}],16:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14312,7 +14358,7 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js":[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":24,"./theme-choice-view.js":20,"backbone":1,"jquery":10}],17:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14386,7 +14432,7 @@ var QuestionView = Backbone.View.extend({
 });
 
 module.exports = QuestionView;
-},{"../../templates/question-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs","./result-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js":[function(require,module,exports){
+},{"../../templates/question-template.hbs":25,"./result-view.js":18,"backbone":1,"jquery":10}],18:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14423,7 +14469,44 @@ var ResultView = Backbone.View.extend({
 
 module.exports = ResultView;
 
-},{"../../templates/result-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
+},{"../../templates/result-template.hbs":26,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+var Adventure = require('../models/adventure.js');
+Backbone.$ = $;
+
+var resultTemplate = require('../../templates/library-template.hbs');
+
+var StoryCollection = Backbone.Collection.extend({
+  model: Adventure,
+  url:'/api/stories',
+  //comparator: "title"
+});
+
+var storyCollection = new StoryCollection();
+
+
+var LibraryView = Backbone.View.extend({
+  el: '#adventure-parent',
+    initialize: function () {
+   //   var self = this;
+      storyCollection.fetch();
+
+      this.listenTo(storyCollection, 'sort', this.render); //'refrsh on story sort'
+    },
+    render: function () {
+      temp ="";
+        console.log(storyCollection.length);
+        console.log(storyCollection);
+      //   $(this.$el).html(temp);
+   }
+  });
+
+temp = '';
+
+
+module.exports = LibraryView;
+},{"../../templates/library-template.hbs":23,"../models/adventure.js":14,"backbone":1,"jquery":10}],20:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14473,11 +14556,10 @@ console.log("Tree Data -> ", treeData);
 });
 
 module.exports = ThemeChoiceView;
-},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","./question-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
+},{"../../templates/theme-choice-template.hbs":27,"./question-view.js":17,"backbone":1,"jquery":10}],21:[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
-
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
 
@@ -14507,7 +14589,7 @@ var WeatherChoiceView = Backbone.View.extend({
 });
 
 module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
+},{"../../templates/weather-choice-template.hbs":28,"./location-choice-view.js":16,"backbone":1,"jquery":10}],22:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14519,7 +14601,49 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div id=\"adventure-parent\">\n</div>\n";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],23:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n        <div class=\"col-md-12\">\n          <h1>";
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\n          <div class=\"image-container col-md-6\" style=\"background: url(";
+  if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + ") 50% 50% no-repeat;background-size: cover;\">\n          </div>\n          <div class=\"business-info col-md-6\">\n            <img src='";
+  if (helper = helpers.rating) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rating); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "' class=\"rating-stars\"/> \n            <p>out of ";
+  if (helper = helpers.ratingCount) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.ratingCount); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " reviews</p>\n            <p>";
+  if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n          </div>\n        </div>\n      ";
+  return buffer;
+  }
+
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container\">\n    <div class=\"intro-block\">\n      <h1>Adventure Archive:</h1>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
+  stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n  </div>\n</section>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
+  return buffer;
+  });
+
+},{"hbsfy/runtime":9}],24:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14531,7 +14655,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n    </div>\n  </div>\n</section>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],25:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14567,7 +14691,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],26:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14643,7 +14767,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],27:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14673,7 +14797,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":9}],28:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14682,7 +14806,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
+<<<<<<< HEAD
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1><br>\n     <h2>Click your way through the Rose City<br>\n      and get your own story that you can take and go do</h2>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n\n    <!--   <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?\n      </p> -->\n\n      <div id=\"weather-display\">\n        //replace me\n      </div>\n    \n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>";
+=======
   return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n\n    <!--   <p class=\"question\">Looks like it's sunny and 75 degrees in Portland today - How about an outdoor adventure?\n      </p> -->\n\n      <div id=\"weather-display\">\n        replace me\n      </div>\n    \n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">Yes, I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">No, I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>";
+>>>>>>> master
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
+},{"hbsfy/runtime":9}]},{},[13])
