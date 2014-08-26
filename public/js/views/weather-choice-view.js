@@ -25,7 +25,15 @@ var WeatherChoiceView = Backbone.View.extend({
     locationChoiceView.render();
   },
   render: function () {
-    $(this.el).html(weatherChoiceTemplate);
+    var self = this;
+    $.ajax({
+      url: "./weather",
+      data: "",
+      success: function(val){
+        $(self.el).html(weatherChoiceTemplate({weatherData: val}));
+        console.log(val);
+      }
+    });
   }
 });
 
