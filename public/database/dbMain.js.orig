@@ -732,7 +732,7 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inHost={
-            active: true,  //make true when done
+            active: false,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
@@ -742,10 +742,17 @@ QuestionTree.prototype.initialize = function (){
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
+<<<<<<< HEAD
+            themeQuestions: [
+                "",
+                "",
+                ""
+=======
             themeQuestions: [ 
                 "Do you want to start slow?", 
                 "Do you love the arts (be honest)?" ,
                 "Does the smell of paper and ink inspire?"
+>>>>>>> de131d629cef35f0dde297b1dfcacb9e5a0b4792
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -768,11 +775,19 @@ QuestionTree.prototype.initialize = function (){
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
+<<<<<<< HEAD
             breakButtons: [
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]},
+                {title:"", aaID:"", values:["","",""]}
+=======
+            breakButtons: [        
                 {title:"We're hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
                 {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
                 {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
                 {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
+>>>>>>> de131d629cef35f0dde297b1dfcacb9e5a0b4792
             ],
             //Add strings for the displayed questions
             wrapQuestions: [

@@ -73,17 +73,16 @@ function yelpAPI(bounds, array, callback){
                         result.name = data.businesses[randInt].name;
                         result.address = data.businesses[randInt].location.address[0];
                         result.gps = data.businesses[randInt].location.coordinate;
-                        result.img = data.businesses[randInt].image_url;
-                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.rating = data.businesses[randInt].rating_img_url;
+                        result.phoneNumber = data.businesses[randInt].display_phone;
                         result.ratingCount = data.businesses[randInt].review_count;
                         result.yelpInfoLink = data.businesses[randInt].url;
-
-                        console.log(result);
+                        if(data.businesses[randInt].image_url !== undefined){
+                            result.img = data.businesses[randInt].image_url;
+                        } else { result.img = "./img/PortlandSign.jpg"};
                         callback();
 
                     }else{
-                        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!calling again");
                         self.yelpAPI(bounds, array, callback);
                     }
 
