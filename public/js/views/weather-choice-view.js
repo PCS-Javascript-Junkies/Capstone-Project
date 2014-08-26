@@ -1,7 +1,6 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
-
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
 

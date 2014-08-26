@@ -41,6 +41,7 @@ app.get('/about', function (req, res) {
   res.render('./about.html');
 });
 
+
 // no longer working? is that ok?
 app.get('/api/themes/:weather/:geoLocation', function (req, res) {
   var data = {
@@ -86,6 +87,7 @@ app.post('/api/stories', function (req, res){
 });
 
 app.get("/weather", function (req, res) {
+  console.log("getting your weather...")
   function forecastRequester (){
     var options = {
       APIKey: "1f75a50387fa44c9015e4edc8fce57fc",
@@ -98,21 +100,16 @@ app.get("/weather", function (req, res) {
 
     forecast.get(latitude, longitude, function (err, res, data) {
       if (err) throw err;
-      console.log('res: ' + util.inspect(res));
-      console.log('data: ' + util.inspect(data));
-      //use a return statement to retrieve the return data.forcast.summary (or something) 
+      //console.log('res: ' + util.inspect(res));
+      //console.log('tornado: ' + util.inspect(data));
+      console.log(data.currently.summary); //send this result to backbone client
+      console.log(data.currently.temperature);
+    //use a return statement to retrieve the return data.forcast.summary (or something) 
     });
   }
   var results = forecastRequester();
   res.send(200, results);
 });
-
-// if(queryThis('foo')) { doThat(); }
-
-// function queryThis(parameter) {
-//     // some code
-//     return true;
-// }
 
 //db.deleteCollection('bb-todos');
 
