@@ -2,7 +2,6 @@ function yelpAPI(bounds, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
     var slef = this;
-   //   $ = require("../../node_modules/jquery");  //might not need this depending on how the file is linked
       $.getScript( "http://oauth.googlecode.com/svn/code/javascript/oauth.js", function() {
         $.getScript( "http://oauth.googlecode.com/svn/code/javascript/sha1.js", function () {
             var auth = {
@@ -18,7 +17,6 @@ function yelpAPI(bounds, array, callback){
             randInt = Math.floor((Math.random() * array.length) + 0);
 
             var terms = array[randInt];
-            //var near = area;
             var boundit = bounds;
 
 
@@ -28,7 +26,6 @@ function yelpAPI(bounds, array, callback){
             };
             parameters = [];
             parameters.push(['term', terms]);
-            //parameters.push(['location', near]);
             parameters.push(['bounds', boundit]);
             parameters.push(['callback', 'cb']);
             parameters.push(["oauth_consumer_key", auth.consumerKey]);
@@ -59,7 +56,7 @@ function yelpAPI(bounds, array, callback){
                 'dataType' : 'jsonp',
                 'jsonpCallback' : 'cb',
                 'success' : function(data, textStats, XMLHttpRequest) {
-                    console.log("Data We get back from yelp --->",data);
+                    // console.log("Data We get back from yelp --->",data);
                     var max;
                     if(data.total !== 0){
                         if(data.businesses.length < 10)
@@ -90,10 +87,5 @@ function yelpAPI(bounds, array, callback){
             });
         });
     });
-// var imageUrl = result.img;
-// var regExImg = /\/ms\./;
-// imageUrl.replace(regExImg, "l.");
 return result;
 }
-
-//module.exports = yelpAPI;
