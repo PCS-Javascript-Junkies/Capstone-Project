@@ -8,7 +8,6 @@ var resultTemplate = require('../../templates/result-template.hbs');
 var StoryCollection = Backbone.Collection.extend({
   model: Adventure,
   url:'/api/stories',
-  //comparator: "title"
 });
 
 var storyCollection = new StoryCollection();
@@ -19,6 +18,13 @@ var ResultView = Backbone.View.extend({
   render: function () {
     var displayResults = this.model;
     $(this.el).html(resultTemplate({displayResults: displayResults}));
+
+    for(i=0; i<3; ++i){
+        for(j=1; i <3; ++i){
+        if(this.model.changed.results[i].name === this.model.changed.results[j].name && i !== j);
+        //this.model.changed.results[i]
+        };
+    };
 
     beg= this.model.changed.results[0].address + " Portland, OR";
   	mid=this.model.changed.results[1].address + " Portland, OR";
