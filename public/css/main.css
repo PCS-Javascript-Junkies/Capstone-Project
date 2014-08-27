@@ -275,7 +275,7 @@ footer.main p {
   font-size: 1.3rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   html {
     font-size: 80%;
   }
@@ -334,6 +334,13 @@ footer.main p {
   }
   .navbar-nav>li>a {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header.app-title .app-heading {
+    padding-top: 100px;
+    text-align: center;
   }
 }
 
