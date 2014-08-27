@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js":[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
+},{"underscore":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\underscore\\underscore.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars.runtime.js":[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
+},{"./handlebars/base":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js","./handlebars/exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./handlebars/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js","./handlebars/safe-string":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js","./handlebars/utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
+},{"./exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js":[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
+},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
+},{"./base":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\base.js","./exception":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\exception.js","./utils":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js":[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
+},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\utils.js":[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
+},{"./safe-string":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars\\safe-string.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\runtime.js":[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\dist\\cjs\\handlebars.runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js":[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
+},{"handlebars/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\handlebars\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
+},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\underscore\\underscore.js":[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,7 +12623,7 @@ return jQuery;
   }
 }).call(this);
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
+},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\database\\dbMain.js":[function(require,module,exports){
 
 
 
@@ -14183,7 +14183,7 @@ QuestionTree.prototype.initialize = function (){
 
 module.exports=QuestionTree;
 
-},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
+},{}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\main.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14216,7 +14216,7 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-parent-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js","./views/story-library-view":"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
+},{"../database/dbMain.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\database\\dbMain.js","./views/adventure-parent-view":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\adventure-parent-view.js","./views/story-library-view":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\story-library-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js":[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -14240,7 +14240,7 @@ var Adventure = Backbone.Model.extend({
 });
 
 module.exports = Adventure;
-},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js":[function(require,module,exports){
+},{"backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\adventure-parent-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14260,7 +14260,7 @@ var AdventureParentView = Backbone.View.extend({
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\adventure-parent-template.hbs","../models/adventure.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js","./weather-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-choice-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\location-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14315,7 +14315,7 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js":[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\location-choice-template.hbs","./theme-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\theme-choice-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\question-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14378,7 +14378,7 @@ var QuestionView = Backbone.View.extend({
 });
 
 module.exports = QuestionView;
-},{"../../templates/question-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs","./result-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js":[function(require,module,exports){
+},{"../../templates/question-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\question-template.hbs","./result-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\result-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\result-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14421,7 +14421,7 @@ var ResultView = Backbone.View.extend({
 
 module.exports = ResultView;
 
-},{"../../templates/result-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js":[function(require,module,exports){
+},{"../../templates/result-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\result-template.hbs","../models/adventure.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\story-library-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14493,7 +14493,7 @@ module.exports = LibraryView;
 
 
 
-},{"../../templates/library-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs","../../templates/selector-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/selector-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
+},{"../../templates/library-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\library-template.hbs","../../templates/selector-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\selector-template.hbs","../models/adventure.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\models\\adventure.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\theme-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14537,7 +14537,7 @@ var ThemeChoiceView = Backbone.View.extend({
 });
 
 module.exports = ThemeChoiceView;
-},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","./question-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
+},{"../../templates/theme-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\theme-choice-template.hbs","./question-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\question-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14574,7 +14574,7 @@ var WeatherChoiceView = Backbone.View.extend({
 });
 
 module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","./weather-display-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js":[function(require,module,exports){
+},{"../../templates/weather-choice-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-choice-template.hbs","./location-choice-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\location-choice-view.js","./weather-display-view.js":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-display-view.js","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\views\\weather-display-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14596,7 +14596,7 @@ var WeatherDisplayView = Backbone.View.extend({
 });
 
 module.exports = WeatherDisplayView;
-},{"../../templates/weather-display-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
+},{"../../templates/weather-display-template.hbs":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-display-template.hbs","backbone":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\backbone\\backbone.js","jquery":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\jquery\\dist\\jquery.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\adventure-parent-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14608,7 +14608,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div id=\"adventure-parent\">\n</div>\n";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\library-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14641,7 +14641,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\location-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14653,7 +14653,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-north\" role=\"button\">Northwest and North</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-southwest\" role=\"button\">Southwest</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere! Portland and the Surrounding Area</div>\n    </div>\n  </div>\n</section>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\question-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14689,7 +14689,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\result-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14765,7 +14765,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/selector-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\selector-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14777,7 +14777,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\theme-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14807,7 +14807,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14819,7 +14819,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<header class=\"app-title\" id=\"home-page\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <div id=\"weather-display\">\n        <div id=\"spinner-container\">\n        </div>\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n  var opts = {\n    lines: 13, // The number of lines to draw\n    length: 17, // The length of each line\n    width: 6, // The line thickness\n    radius: 18, // The radius of the inner circle\n    corners: 1, // Corner roundness (0..1)\n    rotate: 0, // The rotation offset\n    direction: 1, // 1: clockwise, -1: counterclockwise\n    color: '#000', // #rgb or #rrggbb or array of colors\n    speed: 0.7, // Rounds per second\n    trail: 60, // Afterglow percentage\n    shadow: false, // Whether to render a shadow\n    hwaccel: false, // Whether to use hardware acceleration\n    className: 'spinner', // The CSS class to assign to the spinner\n    zIndex: 2e9, // The z-index (defaults to 2000000000)\n    top: '50%', // Top position relative to parent\n    left: '50%' // Left position relative to parent\n  };\n  var target = document.getElementById('spinner-container');\n  var spinner = new Spinner().spin();\n  target.appendChild(spinner.el);\n</script>\n";
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs":[function(require,module,exports){
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}],"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\templates\\weather-display-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14838,4 +14838,4 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
+},{"hbsfy/runtime":"C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\node_modules\\hbsfy\\runtime.js"}]},{},["C:\\Users\\Matt\\Dropbox\\PCS\\Capstone\\Capstone-Project\\public\\js\\main.js"]);
