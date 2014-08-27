@@ -17,10 +17,17 @@ body {
 }
 
 h1, h2, h3 {
-  font-size: 4rem;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
   margin: 0 0 10px 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
 }
 
 header.main {
@@ -29,11 +36,18 @@ header.main {
 
 header.app-title {
   width: 100%;
-  background: url('../img/hood-portland1-fade.jpg') 50% 50% no-repeat;
   background-size: cover;
   height: 500px;
   position: relative;
   z-index: 99;
+}
+
+header.app-title {
+  background: url('../img/hood-portland1-fade.jpg') 50% 50% no-repeat;
+}
+
+header.app-title#about-page {
+  background: url('../img/about.jpg') 50% 50% no-repeat;
 }
 
 header.app-title .app-heading {
@@ -108,7 +122,6 @@ header.app-title .attribution a:hover {
 
 .navbar a {
   color: #4f638d;
-  text-shadow: 1px 1px #fff;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -148,6 +161,10 @@ header.app-title .attribution a:hover {
   font-size: 4.4rem;
   font-weight: 700;
   margin: 20px 0;
+}
+
+.not-aligned {
+  text-align: left;
 }
 
 .intro-block h1 .title-secondary-word {
