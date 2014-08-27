@@ -581,16 +581,15 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
+                ["So you feel like doing something but you don't want to go outside - never fear, there are many adventures for the likes of you!","Perhaps it's raining. Or maybe it (gasp!) seems like it might be getting ready to start seeming like it might be ready to seem like it might almost feel like...<i>snow</i>. Or sleet, and all that. Either way, you'll be dry at the","Right?","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Plaid Pantry. You strike up a conversation with a woman in line who tells you about her home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","At this point, you're hungry, so you go to",". Satisfied, you scurry to your car (or if public transport is handy, you take that), and depart for ",", where you talk to at least three new strangers. (You ask them about their pets - always a neutral place to start). It is just what the doctor ordered.","As the adventure and your evening conclude, you head back home, mentally decorating your houseboat."],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you like games? (Not a trick question)",
+                "Do you hate games? (Trick question)",
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -600,38 +599,33 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I love games!", aaID:"games_love", values:["guardian_games","table_top_games"]},
+                {title:"I hate games!", aaID:"games_hate", values:["firing_range","swimming_pools",""]},
+                {title:"I prefer cats", aaID:"games_cats", values:["pool_and_billiards"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Hungry yet?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Starving! And adventerous.", aaID:"starving_adventerous", values:[["ethiopian","pambiche","thai", "greek"]]},
+                {title:"Hungry and looking for local favorites", aaID:"local_food", values:["best_local_food"]},
+                {title:"Yes, but nothing too crazy", aaID:"white_bread_apetite", values:["local_buger","best_pizza","bistro"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "If the appocalypse happened right now, are you packed and ready?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Yes - I was born ready", aaID:"born_ready", values:["lazar_tag","paint_ball"]},
+                {title:"No. The world will end in 5 billion years when the sun becomes a red giant", aaID:"geek_ready", values:["arcade", "geek_trivia", "video_games"]},
+                {title:"Actually, the sun will end as a white dwarf. And I'm ready!", aaID:"white_dwarf", values:["arcade", "geek_trivia", "video_games"]}
             ],
 
             build: function(){
