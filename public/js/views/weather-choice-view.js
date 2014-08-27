@@ -1,7 +1,6 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
-
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
 
@@ -26,7 +25,15 @@ var WeatherChoiceView = Backbone.View.extend({
     locationChoiceView.render();
   },
   render: function () {
-    $(this.el).html(weatherChoiceTemplate);
+    var self = this;
+    $.ajax({
+      url: "./weather",
+      data: "",
+      success: function(val){
+        $(self.el).html(weatherChoiceTemplate({weatherData: val}));
+        console.log(val);
+      }
+    });
   }
 });
 
