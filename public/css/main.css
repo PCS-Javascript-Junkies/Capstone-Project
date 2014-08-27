@@ -36,7 +36,6 @@ header.main {
 
 header.app-title {
   width: 100%;
-  background-size: cover;
   height: 500px;
   position: relative;
   z-index: 99;
@@ -44,10 +43,12 @@ header.app-title {
 
 header.app-title {
   background: url('../img/hood-portland1-fade.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }
 
 header.app-title#about-page {
   background: url('../img/about.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }
 
 header.app-title .app-heading {

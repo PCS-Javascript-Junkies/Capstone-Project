@@ -1,3 +1,5 @@
+var prevResults ={};
+
 function yelpAPI(bounds, array, callback){
     var randInt = Math.floor((Math.random() * array.length) + 0);
     var result={};
@@ -56,16 +58,20 @@ function yelpAPI(bounds, array, callback){
                 'dataType' : 'jsonp',
                 'jsonpCallback' : 'cb',
                 'success' : function(data, textStats, XMLHttpRequest) {
-                    // console.log("Data We get back from yelp --->",data);
+                    console.log("Data We get back from yelp --->",data);
                     var max;
-                    if(data.total !== 0){
-                        if(data.businesses.length < 10)
-                          max = data.businesses.length;
-                        else
-                          max = 10;
 
-                        var randInt = Math.floor((Math.random() * max) + 0);
+                    if(data.businesses.length < 10)
+                      max = data.businesses.length;
+                    else
+                      max = 10;
+
+                    var randInt = Math.floor((Math.random() * max) + 0);
+                    if(data.total > 0 && (prevResults.hasOwnProperty(data.businesses[randInt].name) === false)){
+           
                         console.log(randInt);
+
+                        prevResults[data.businesses[randInt].name] = data.businesses[randInt].name;
 
                         result.name = data.businesses[randInt].name;
                         result.address = data.businesses[randInt].location.address[0];
