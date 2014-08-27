@@ -13203,19 +13203,17 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inActive={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["So you feel like doing something but you don't want to go outside - never fear, there are many adventures for the likes of you!","Perhaps it's raining. Or maybe it (gasp!) seems like it might be getting ready to start seeming like it might be ready to seem like it might almost feel like...<i>snow</i>. Or sleet, and all that. Either way, you'll be dry at the","Right?","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Plaid Pantry. You strike up a conversation with a woman in line who tells you about her home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","At this point, you're hungry, so you go to",". Satisfied, you scurry to your car (or if public transport is handy, you take that), and depart for ",", where you talk to at least three new strangers. (You ask them about their pets - always a neutral place to start). It is just what the doctor ordered.","As the adventure and your evening conclude, you head back home, mentally decorating your houseboat."],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["So you feel like doing something but you don't want to go outside - never fear, there are many adventures for the likes of you!","Perhaps it's raining. Or maybe it (gasp!) seems like it might be getting ready to start seeming like it might be ready to seem like it might almost feel like...snow. Or sleet, and all that. Either way, you'll be dry at the","Right?","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Plaid Pantry. You strike up a conversation with a woman in line who tells you about her home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","At this point, you're hungry, so you go to",". Satisfied, you scurry to your car (or if public transport is handy, you take that), and depart for ",", where you talk to at least three new strangers. (You ask them about their pets - always a neutral place to start). It is just what the doctor ordered.","As the adventure and your evening conclude, you head back home, mentally decorating your houseboat."]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
                 "Do you like games? (Not a trick question)",
-                "Do you hate games? (Trick question)",
+                "Do you hate games? (Trick question)"
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -13278,16 +13276,13 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+              ["So you feel like doing something outside - and Portland was made for the likes of you!","The sun is shining (there's a 30% chance of that); or perhaps it's not (if this were a bet, you'd put your money on the latter)... but you don't care! You know that in the Rose City, a little incliment weather doesn't stop anyone from doing anything. So start here: ","As good a place as any. Better, in fact. ","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Space Age gas station (really - how can you not?). You strike up a conversation with a man in line who tells you about his home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","You're hungry - starving, in face, so your next stop is ",". You take a walk around the block and take your legs, or a bike if you have one, or public transport if you have neither legs nor bike, and depart for ",", where you talk to at least sixteen new strangers. (You ask them about their favorite book, because you're smart). It is just what the doctor ordered.","As the adventure and your evening conclude, you stroll back home, mentally decorating your houseboat."]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you like games? (Not a trick question)",
+                "Do you hate games? (Trick question)"
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -13297,38 +13292,33 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I love games!", aaID:"games_love", values:["guardian_games","table_top_games"]},
+                {title:"I hate games!", aaID:"games_hate", values:["firing_range","swimming_pools",""]},
+                {title:"I prefer cats", aaID:"games_cats", values:["pool_and_billiards"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Hungry yet?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Starving! And adventerous.", aaID:"starving_adventerous", values:[["ethiopian","pambiche","thai", "greek"]]},
+                {title:"Hungry and looking for local favorites", aaID:"local_food", values:["best_local_food"]},
+                {title:"Yes, but nothing too crazy", aaID:"white_bread_apetite", values:["local_buger","best_pizza","bistro"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "If the appocalypse happened right now, are you packed and ready?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Yes - I was born ready", aaID:"born_ready", values:["lazar_tag","paint_ball"]},
+                {title:"No. The world will end in 5 billion years when the sun becomes a red giant", aaID:"geek_ready", values:["arcade", "geek_trivia", "video_games"]},
+                {title:"Actually, the sun will end as a white dwarf. But yes, I'm ready", aaID:"white_dwarf", values:["arcade", "geek_trivia", "video_games"]}
             ],
 
             build: function(){
@@ -13356,9 +13346,7 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
