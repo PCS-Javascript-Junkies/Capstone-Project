@@ -10,40 +10,34 @@ var ThemeChoiceView = Backbone.View.extend({
   events: {
     'click .theme-choice': 'chooseTheme'
   },
-  chooseTheme: function (event) { //repeat this for all themes...
+  chooseTheme: function (event) {
     var event = event.target.id;
-    // function firefoxFix(event) {
-    //   var identifier = event.target.id;
-    //   return identifier;
-    //   //return event.target.id;
-    // }
-    // var clickedThemeId = firefoxFix(event) + "Theme";
-    console.log("clicked theme id", clickedThemeId);
     var clickedThemeId = event + "Theme";
     this.model.set({theme: clickedThemeId});
-    this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
-    console.log(this.model);
-    tree.current = tree.current.theme[clickedThemeId].next;
-    //this.selectStory();
-    this.loadQuestionView();
+    var self = this;
+    var callback = function() {
+      setTimeout(function() {
+        self.loadQuestionView();
+      }, 500);
+    }
+    this.pickStory(callback());
   },
-  // selectStory: function () {
-
-  //   this.loadQuestionView();
-  // },
+  pickStory: function(callback) {
+    var pickedTheme = this.model.attributes.theme;
+    var max = 1;
+    var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
+    var pickedStory = tree.current.theme[pickedTheme].stories[index];
+    this.model.set({story: pickedStory});
+  },
   loadQuestionView: function () { //generalized function that calls the generic question view
+    tree.current = tree.current.theme[this.model.attributes.theme].next;
     var questionView = new QuestionView({model: this.model});
     questionView.render();
   },
   render: function () {
     var themes = tree.current.themes;
-    console.log(this.model);
-    console.log(this.model.attributes);
     var treeData = tree.current;
-console.log("Tree Data -> ", treeData);
-    $(this.el).html(themeChoiceTemplate({treeData: treeData}));
-    console.log("theme choice view");
-  },
+    $(this.el).html(themeChoiceTemplate({treeData: treeData}));  },
 });
 
 module.exports = ThemeChoiceView;
