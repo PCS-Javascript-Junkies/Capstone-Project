@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":11}],2:[function(require,module,exports){
+},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
+},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
+},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],5:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
+},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],7:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":6}],8:[function(require,module,exports){
+},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":8}],10:[function(require,module,exports){
+},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],11:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,7 +12623,7 @@ return jQuery;
   }
 }).call(this);
 
-},{}],12:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
 
 
 
@@ -14183,7 +14183,7 @@ QuestionTree.prototype.initialize = function (){
 
 module.exports=QuestionTree;
 
-},{}],13:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14195,7 +14195,6 @@ var LibaryParentView = require('./views/story-library-view');
 var QuestionTree = require('../database/dbMain.js');
 var questionTree = new QuestionTree();
 questionTree.initialize();
-console.log(tree);
 
 var Router = Backbone.Router.extend({
   routes: {
@@ -14217,7 +14216,7 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"./views/story-library-view":19,"backbone":1,"jquery":10}],14:[function(require,module,exports){
+},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-parent-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js","./views/story-library-view":"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -14241,7 +14240,7 @@ var Adventure = Backbone.Model.extend({
 });
 
 module.exports = Adventure;
-},{"backbone":1}],15:[function(require,module,exports){
+},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14253,27 +14252,15 @@ var adventureParentTemplate = require('../../templates/adventure-parent-template
 var AdventureParentView = Backbone.View.extend({
   el: '#app-home',
   model: new Adventure(),
-
   render: function () {
     $(this.el).html(adventureParentTemplate);
     var weatherChoiceView = new WeatherChoiceView({model: this.model});
     weatherChoiceView.render();
-
-    console.log("still getting your weather")
-
-    $.get( "/weather", function( data ) {
-      var outputHtml = "test";
-      //combine data I want to change w/html...
-      $( "#weather-display" ).html( data );
-      console.log("data=", data);
-      console.log( "Load was performed." );
-    });
-
   }
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":22,"../models/adventure.js":14,"./weather-choice-view.js":21,"backbone":1,"jquery":10}],16:[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14286,7 +14273,8 @@ var LocationChoiceView = Backbone.View.extend({
   events: {
     'click #location-se': 'clickSoutheast',
     'click #location-ne': 'clickNortheast',
-    'click #location-west': 'clickWest',
+    'click #location-north': 'clickNorth',
+    'click #location-southwest': 'clickSouthwest',
     'click #location-all': 'clickAll'
   },
   initialize: function () {
@@ -14301,16 +14289,23 @@ var LocationChoiceView = Backbone.View.extend({
     this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.loadThemeChoiceView();
   },
-  clickWest: function() {
-    this.model.set({geolocation: "west"});
+  clickNorth: function() {
+    this.model.set({geolocation: "Northwest Portland, Portland, OR"});
+    this.model.set({latlong: "45.520449,-122.728701|45.614814,-122.665958"});
+    this.loadThemeChoiceView();
+  },
+  clickSouthwest: function() {
+    this.model.set({geolocation: "Southwest Portland, Portland, OR"});
+    this.model.set({latlong: "45.468856,-122.745953|45.52278,-122.666945"});
     this.loadThemeChoiceView();
   },
   clickAll: function() {
+    this.model.set({latlong: "45.427597,-122.830582|45.681464,-122.399368"})
+    this.model.set({latlong: "45.522961,-122.664886|45.588724,-122.53541"});
     this.model.set({geolocation: "Portland"});
     this.loadThemeChoiceView();
   },
   render: function () {
-    console.log("tree after weather choice", tree.current);
     $(this.el).html(locationChoiceTemplate);
   },
   loadThemeChoiceView: function () {
@@ -14320,7 +14315,7 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":24,"./theme-choice-view.js":20,"backbone":1,"jquery":10}],17:[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14341,17 +14336,14 @@ var QuestionView = Backbone.View.extend({
   },
   pickRandomQuestion: function () {
     var max = tree.current.questions.length - 1;
-    console.log(max);
     var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
     return tree.current.questions[index];
   },
   chooseQuestion: function (event) {
     var self = this;
     function writeModel() {
-      console.log(yelpresult);
       if (yelpresult.img !== undefined) {
         var imageUrl = yelpresult.img;
-        console.log(imageUrl);
         var regExImg = /\/ms\./;
         yelpresult.img = yelpresult.img.replace(regExImg, "/l.");
       }
@@ -14359,23 +14351,16 @@ var QuestionView = Backbone.View.extend({
           "results" : self.model.get('results').concat(yelpresult)
       });
       self.model.attributes["level" + questionLevel] = yelpKeywordArray;
-      console.log("model as of now:",self.model);
     }
     var event = event.target.id;
     var clickedQuestionId = event;
     var yelpKeywordArray = tree.current.buttons[clickedQuestionId].values;
-    console.log("location:", this.model.attributes.geolocation);
     var yelpresult = yelpAPI(this.model.attributes.latlong, yelpKeywordArray, writeModel);
   },
   renderNextQuestion: function (callback) {
     if (tree.current.next === null) {
       var resultView = new ResultView({model: this.model});
-      console.log("model result length:",this.model.attributes.results.length);
-      console.log(this.model);
-
         resultView.render();
-
-
     } else {
       questionLevel++;
       imageLevel++;
@@ -14385,7 +14370,6 @@ var QuestionView = Backbone.View.extend({
     }
   },
   render: function () {
-    console.log("render question view");
     var imageLevel = "./img/" + this.model.attributes.imageLevel + ".jpg";
     var questionIndex = this.pickRandomQuestion();
     var currentTree = tree.current;
@@ -14394,7 +14378,7 @@ var QuestionView = Backbone.View.extend({
 });
 
 module.exports = QuestionView;
-},{"../../templates/question-template.hbs":25,"./result-view.js":18,"backbone":1,"jquery":10}],18:[function(require,module,exports){
+},{"../../templates/question-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs","./result-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14431,136 +14415,44 @@ var ResultView = Backbone.View.extend({
 
 module.exports = ResultView;
 
-},{"../../templates/result-template.hbs":26,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
+},{"../../templates/result-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
 Backbone.$ = $;
 
-var selectorTemplate = require('../../templates/selector-template.hbs');
 var resultTemplate = require('../../templates/library-template.hbs');
 
 var StoryCollection = Backbone.Collection.extend({
   model: Adventure,
   url:'/api/stories',
-  comparator: "key"
+  //comparator: "title"
 });
 
 var storyCollection = new StoryCollection();
 
 
 var LibraryView = Backbone.View.extend({
-  el: '#app-home',
+  el: '#adventure-parent',
     initialize: function () {
+   //   var self = this;
       storyCollection.fetch();
-      //this.listenTo(storyCollection, 'sort', this.render); //'refrsh on story sort'
+
+      this.listenTo(storyCollection, 'sort', this.render); //'refrsh on story sort'
     },
     render: function () {
-      console.log("Yay i am here again!");
-      var modelArray =[];
-      var temp ="";
-      var themeSelect = "";
-      var self = this;
-      temp += "<div class='progression-image' style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 11.5em; margin-top: 1em; " +
-        "background: url(../../img/5.jpg) 0% 50% no-repeat;'>  <br>" +
-        selectorTemplate();
-      temp += "</div>"
-    this.$el.html(temp);
-    $('#selectForm').change(function(){self.setPage()});    
-    },
+      temp ="";
+        console.log(storyCollection.length);
+        console.log(storyCollection);
+      //   $(this.$el).html(temp);
+   }
+  });
 
-    setPage: function(select){
-      var temp ="";
-      var themeSelect = "";
-      var results =[];
-      temp = this.$el.html();
-       temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 11.5em; margin-top: 1em;' >"
+temp = '';
 
-      themeSelect= $("#selectForm").val();
-      // storyCollection.models.forEach(function(model){
-      storyCollection.models.forEach(function(model){
-        model.attributes.results.theme= model.attributes.theme;
-      });
-
-      var modelArray= storyCollection.where({theme: themeSelect});
-        modelArray.forEach(function (model){
-          results.unshift(model.attributes.results);
-        });
-
-
-    console.log(results, "<----results");
-
-    for(i =0; i< results.length; ++i){
-      temp += resultTemplate({adventure: results[i]});
-      temp += "<section style ='width: 1em;'>&nbsp;</section>"
-    }
-    temp += "</div>"
-     this.$el.html(temp);
-    }
-
-});
 
 module.exports = LibraryView;
-
-
-
-
-    // setPage: function(select){
-    //   var temp ="";
-    //   var themeSelect = "";
-    //   var results =[];
-    //   temp = this.$el.html();
-    //   themeSelect= $("#selectForm").val();
-    //   // storyCollection.models.forEach(function(model){
-    //   storyCollection.models.forEach(function(model){
-    //     model.attributes.results.theme= model.attributes.theme;
-    //   });
-
-    //   var modelArray= storyCollection.where({theme: themeSelect});
-    //     modelArray.forEach(function (model){
-    //       results.unshift(model.attributes.results);
-    //     });
-
-
-    // console.log(results, "<----results");
-
-    // for(i =0; i< results.length; ++i){
-    //   temp += resultTemplate({adventure: results[i]});
-    //   temp += "<section style ='width: 1em;'>&nbsp;</section>"
-    // }
-    // temp += "</div>"
-    //  this.$el.html(temp);
-    // }
-
-
-//       temp += "<div class='library' style ='padding-top: 10em; padding-left:5em;'>"
-//       results.forEach(function(story){
-//       temp += "<div class = 'story' style = 'padding-top:1em'>" + 
-//                 "<table>" +
-//                   "<tbody>" +
-//                     "<tr>" +
-//                     "<td>" 
-//                           for(i=0; i<story.length; i++){
-//                             temp += story[i].name + ", "; 
-//                              };
-
-//                     temp += "</td>" +
-//                     "</tr>" +
-//                   "</tbody>" +
-//                 "</table>"
-
-//       });
-//       temp += "</div>";
-       
-//      $(this.$el).html(temp);
-//    }
-//   });
-
-// temp = '';
-
-},{"../../templates/library-template.hbs":23,"../../templates/selector-template.hbs":27,"../models/adventure.js":14,"backbone":1,"jquery":10}],20:[function(require,module,exports){
+},{"../../templates/library-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14573,49 +14465,45 @@ var ThemeChoiceView = Backbone.View.extend({
   events: {
     'click .theme-choice': 'chooseTheme'
   },
-  chooseTheme: function (event) { //repeat this for all themes...
+  chooseTheme: function (event) {
     var event = event.target.id;
-    // function firefoxFix(event) {
-    //   var identifier = event.target.id;
-    //   return identifier;
-    //   //return event.target.id;
-    // }
-    // var clickedThemeId = firefoxFix(event) + "Theme";
-    console.log("clicked theme id", clickedThemeId);
     var clickedThemeId = event + "Theme";
     this.model.set({theme: clickedThemeId});
-    this.model.set({story: tree.current.theme[clickedThemeId].stories[0]})
-    console.log(this.model);
-    tree.current = tree.current.theme[clickedThemeId].next;
-    //this.selectStory();
-    this.loadQuestionView();
+    var self = this;
+    var callback = function() {
+      setTimeout(function() {
+        self.loadQuestionView();
+      }, 500);
+    }
+    this.pickStory(callback());
   },
-  // selectStory: function () {
-
-  //   this.loadQuestionView();
-  // },
+  pickStory: function(callback) {
+    var pickedTheme = this.model.attributes.theme;
+    var max = 1;
+    var index = Math.floor(Math.random() * (max - 0 + 1)) + 0;
+    var pickedStory = tree.current.theme[pickedTheme].stories[index];
+    this.model.set({story: pickedStory});
+  },
   loadQuestionView: function () { //generalized function that calls the generic question view
+    tree.current = tree.current.theme[this.model.attributes.theme].next;
     var questionView = new QuestionView({model: this.model});
     questionView.render();
   },
   render: function () {
     var themes = tree.current.themes;
-    console.log(this.model);
-    console.log(this.model.attributes);
     var treeData = tree.current;
-console.log("Tree Data -> ", treeData);
-    $(this.el).html(themeChoiceTemplate({treeData: treeData}));
-    console.log("theme choice view");
-  },
+    $(this.el).html(themeChoiceTemplate({treeData: treeData}));  },
 });
 
 module.exports = ThemeChoiceView;
-},{"../../templates/theme-choice-template.hbs":28,"./question-view.js":17,"backbone":1,"jquery":10}],21:[function(require,module,exports){
+},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","./question-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
+
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
+var WeatherDisplayView = require('./weather-display-view.js');
 
 var WeatherChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
@@ -14638,20 +14526,36 @@ var WeatherChoiceView = Backbone.View.extend({
     locationChoiceView.render();
   },
   render: function () {
+    $(this.el).html(weatherChoiceTemplate);
+    var weatherDisplayView = new WeatherDisplayView();
+    weatherDisplayView.render();
+  }
+});
+
+module.exports = WeatherChoiceView;
+},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","./weather-display-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js":[function(require,module,exports){
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
+
+var weatherDisplayTemplate = require('../../templates/weather-display-template.hbs');
+
+var WeatherDisplayView = Backbone.View.extend({
+  el: '#weather-display',
+  render: function () {
     var self = this;
     $.ajax({
       url: "./weather",
       data: "",
       success: function(val){
-        $(self.el).html(weatherChoiceTemplate({weatherData: val}));
-        console.log(val);
+        $(self.el).html(weatherDisplayTemplate({weatherData: val}));
       }
     });
   }
 });
 
-module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":29,"./location-choice-view.js":16,"backbone":1,"jquery":10}],22:[function(require,module,exports){
+module.exports = WeatherDisplayView;
+},{"../../templates/weather-display-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14663,7 +14567,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div id=\"adventure-parent\">\n</div>\n";
   });
 
-},{"hbsfy/runtime":9}],23:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14674,29 +14578,38 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n  <section style =\"float: left; max-width: 18em;\">\n  <table>\n    <tbody>\n    <tr>\n    <td>\n    <h4 style =\"text-align: center;\">";
+  buffer += "\n        <div class=\"col-md-12\">\n          <h1>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h4>\n    <a href=";
-  if (helper = helpers.yelpInfoLink) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.yelpInfoLink); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "><img style = \" max-height: 190px; overflow: hidden; \"src=\"";
+    + "</h1>\n          <div class=\"image-container col-md-6\" style=\"background: url(";
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\"></a>\n    </td>\n    </tr>\n    </tbody>\n    </table>\n  </section>\n";
+    + ") 50% 50% no-repeat;background-size: cover;\">\n          </div>\n          <div class=\"business-info col-md-6\">\n            <img src='";
+  if (helper = helpers.rating) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rating); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "' class=\"rating-stars\"/> \n            <p>out of ";
+  if (helper = helpers.ratingCount) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.ratingCount); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " reviews</p>\n            <p>";
+  if (helper = helpers.address) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.address); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n          </div>\n        </div>\n      ";
   return buffer;
   }
 
-  buffer += "\n";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.adventure), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  buffer += "<section class=\"question-body\">\n  <div class=\"progression-image\" style=\"background: url('./img/5.jpg') 0% 50% no-repeat; background-size:contain;\">\n  </div>\n  <div class=\"container\">\n    <div class=\"intro-block\">\n      <h1>Adventure Archive:</h1>\n    </div>\n    <div class=\"col-md-6 result-details\">\n        ";
+  stack1 = helpers.each.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.displayResults)),stack1 == null || stack1 === false ? stack1 : stack1.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.results), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n  </div>\n</section>\n<div id=\"map-canvas\" style = \"height: 400px\"/>";
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],24:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14705,10 +14618,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-west\" role=\"button\">West Side</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere!</div>\n    </div>\n  </div>\n</section>";
+  return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-north\" role=\"button\">Northwest and North</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-southwest\" role=\"button\">Southwest</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere! Portland and the Surrounding Area</div>\n    </div>\n  </div>\n</section>";
   });
 
-},{"hbsfy/runtime":9}],25:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14744,7 +14657,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],26:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14820,19 +14733,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],27:[function(require,module,exports){
-// hbsfy compiled Handlebars template
-var Handlebars = require('hbsfy/runtime');
-module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>";
-  });
-
-},{"hbsfy/runtime":9}],28:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14862,7 +14763,19 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],29:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var Handlebars = require('hbsfy/runtime');
+module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <div id=\"weather-display\">\n        <div id=\"spinner-container\">\n        </div>\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n  var opts = {\n    lines: 13, // The number of lines to draw\n    length: 17, // The length of each line\n    width: 6, // The line thickness\n    radius: 18, // The radius of the inner circle\n    corners: 1, // Corner roundness (0..1)\n    rotate: 0, // The rotation offset\n    direction: 1, // 1: clockwise, -1: counterclockwise\n    color: '#000', // #rgb or #rrggbb or array of colors\n    speed: 0.7, // Rounds per second\n    trail: 60, // Afterglow percentage\n    shadow: false, // Whether to render a shadow\n    hwaccel: false, // Whether to use hardware acceleration\n    className: 'spinner', // The CSS class to assign to the spinner\n    zIndex: 2e9, // The z-index (defaults to 2000000000)\n    top: '50%', // Top position relative to parent\n    left: '50%' // Left position relative to parent\n  };\n  var target = document.getElementById('spinner-container');\n  var spinner = new Spinner().spin();\n  target.appendChild(spinner.el);\n</script>\n";
+  });
+
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14871,14 +14784,14 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<header class=\"app-title\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City and get your own story that you can take and go do</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n        <canvas id=\""
+  buffer += "<canvas id=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.icon)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" width=\"64\" height=\"64\">\n        </canvas>\n        <p class=\"question\">Looks like it's "
+    + "\" width=\"64\" height=\"64\">\n</canvas>\n<p class=\"question\">Looks like it's "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.summary)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " and "
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.weatherData)),stack1 == null || stack1 === false ? stack1 : stack1.currently)),stack1 == null || stack1 === false ? stack1 : stack1.temperature)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " today!</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n      var icons = new Skycons({color: \"#3d4d6f\"}),\n          list  = [\n            \"clear-day\", \"clear-night\", \"partly-cloudy-day\",\n            \"partly-cloudy-night\", \"cloudy\", \"rain\", \"sleet\", \"snow\", \"wind\",\n            \"fog\"\n          ],\n          i;\n\n      for(i = list.length; i--; )\n        icons.set(list[i], list[i]);\n\n      icons.play();\n</script>\n";
+    + " today!</p>\n<script>\n      var icons = new Skycons({color: \"#3d4d6f\"}),\n          list  = [\n            \"clear-day\", \"clear-night\", \"partly-cloudy-day\",\n            \"partly-cloudy-night\", \"cloudy\", \"rain\", \"sleet\", \"snow\", \"wind\",\n            \"fog\"\n          ],\n          i;\n\n      for(i = list.length; i--; )\n        icons.set(list[i], list[i]);\n\n      icons.play();\n</script>";
   return buffer;
   });
 
-},{"hbsfy/runtime":9}]},{},[13])
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);

@@ -165,6 +165,14 @@ header.app-title .attribution a:hover {
   padding: 20px 0;
 }
 
+#weather-display {
+  position: relative;
+}
+
+#spinner-container {
+  height: 100px;
+}
+
 .btn {
   white-space: normal;
 }
@@ -306,6 +314,9 @@ footer.main p {
     text-shadow: 1px 2px 4px #3d4d6f;
     line-height: 1.1;
     max-width: 720px;
+  }
+  .navbar-nav>li>a {
+    font-size: 1.8rem;
   }
 }
 
