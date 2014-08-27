@@ -40,7 +40,7 @@ var LibraryView = Backbone.View.extend({
       var results =[];
       temp = this.$el.html();
        temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 2.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >"
+        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >"
 
       themeSelect= $("#selectForm").val();
       storyCollection.models.forEach(function(model){
