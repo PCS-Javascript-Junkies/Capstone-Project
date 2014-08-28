@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js":[function(require,module,exports){
 //     Backbone.js 1.1.2
 
 //     (c) 2010-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1608,7 +1608,7 @@
 
 }));
 
-},{"underscore":11}],2:[function(require,module,exports){
+},{"underscore":"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js":[function(require,module,exports){
 "use strict";
 /*globals Handlebars: true */
 var base = require("./handlebars/base");
@@ -1641,7 +1641,7 @@ var Handlebars = create();
 Handlebars.create = create;
 
 exports["default"] = Handlebars;
-},{"./handlebars/base":3,"./handlebars/exception":4,"./handlebars/runtime":5,"./handlebars/safe-string":6,"./handlebars/utils":7}],3:[function(require,module,exports){
+},{"./handlebars/base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./handlebars/exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js","./handlebars/safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js","./handlebars/utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1822,7 +1822,7 @@ exports.log = log;var createFrame = function(object) {
   return obj;
 };
 exports.createFrame = createFrame;
-},{"./exception":4,"./utils":7}],4:[function(require,module,exports){
+},{"./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js":[function(require,module,exports){
 "use strict";
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -1851,7 +1851,7 @@ function Exception(message, node) {
 Exception.prototype = new Error();
 
 exports["default"] = Exception;
-},{}],5:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/runtime.js":[function(require,module,exports){
 "use strict";
 var Utils = require("./utils");
 var Exception = require("./exception")["default"];
@@ -1989,7 +1989,7 @@ exports.program = program;function invokePartial(partial, name, context, helpers
 exports.invokePartial = invokePartial;function noop() { return ""; }
 
 exports.noop = noop;
-},{"./base":3,"./exception":4,"./utils":7}],6:[function(require,module,exports){
+},{"./base":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/base.js","./exception":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/exception.js","./utils":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js":[function(require,module,exports){
 "use strict";
 // Build out our basic SafeString type
 function SafeString(string) {
@@ -2001,7 +2001,7 @@ SafeString.prototype.toString = function() {
 };
 
 exports["default"] = SafeString;
-},{}],7:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/utils.js":[function(require,module,exports){
 "use strict";
 /*jshint -W004 */
 var SafeString = require("./safe-string")["default"];
@@ -2078,15 +2078,15 @@ exports.escapeExpression = escapeExpression;function isEmpty(value) {
 }
 
 exports.isEmpty = isEmpty;
-},{"./safe-string":6}],8:[function(require,module,exports){
+},{"./safe-string":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars/safe-string.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js":[function(require,module,exports){
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
 module.exports = require('./dist/cjs/handlebars.runtime');
 
-},{"./dist/cjs/handlebars.runtime":2}],9:[function(require,module,exports){
+},{"./dist/cjs/handlebars.runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/dist/cjs/handlebars.runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js":[function(require,module,exports){
 module.exports = require("handlebars/runtime")["default"];
 
-},{"handlebars/runtime":8}],10:[function(require,module,exports){
+},{"handlebars/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/handlebars/runtime.js"}],"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -11278,7 +11278,7 @@ return jQuery;
 
 }));
 
-},{}],11:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/node_modules/underscore/underscore.js":[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12623,7 +12623,7 @@ return jQuery;
   }
 }).call(this);
 
-},{}],12:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js":[function(require,module,exports){
 
 
 
@@ -13981,20 +13981,19 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inFood={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["This is Portland, famed food destination, and today is the day you decide to check it out.","Your stomach is ready, you think, so you start at",". We hope that it was all you hoped for and more, and that you tried something new there. Every menu has something a little bit different, hiding away in the corner or as a special, perhaps, and since this is an adventure, we hope you take advantage of that."," The next place you go is",". Brilliant! Marvelous! The accolades come out of your mouth as you stretch, lay your napkin down, and possibly burp. Eating is hard work sometimes, but it's worth it."," You already know you have good tastes, and we hope we are encouraging you to also try something new. With that in mind, please enjoy",". Wasn't it good?","Finally, just one more place, one more favorite dish to find or local haunt to finally visit. Hey, it's ",", the last place on your list. It's no New York, maybe, but at the end we hope you see Portland can hold its own in the food world. And we hope you tipped your servers."],
+                ["The day is young, or maybe not, and you have many meals to get through.","Your first stop is",", but a true foodie doesn't stop just there."," March along now, pick up your fork, chopstick, napkin, or straw, and enjoy ", ". I feel like now's a good time to tell you about the urban legend in Portland about sous chefs breaking into people's gardens at night, snipping away fresh herbs and homegrown vegetables to feed the public, clamoring for quality food."," We hope that doesn't actually happen, but if it does, it's a good story to tell your friends outside of the normal Portlandia jokes. Anyways, hope the sous chefs are behaving themselves at",", your next destination. ","The end is near now, we're sorry to say, but hopefully you are still a little bit hungry, because it's time for ",". And then, in a food coma after experiencing the range of gustatory pleasures that this city has to offer, you're done. Maybe you have some pictures to post on Instagram to make your friends jealous of what you tried, or if that's not your style, we hope, at least, that you enjoyed yourself and that you tipped your servers."]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you want something trendy, comforting, potentially exotic, or vegan/vegetarian friendly?",
+                "There are so many places to eat; let's narrow it down a bit: the hippest place in town, good old-fashioned comfort food, ethnic food, or just a nice, vegetarian-friendly place?",
+                "So many options! Just pick one and you will feel better; it's all good."
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -14004,38 +14003,37 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Give me a trendy place to eat.", aaID:"trendy", values:["american_(new)","tapas","gastropubs", "french", "asian_fusion"]},
+                {title:"I want comfort food!", aaID:"comforting", values:["southern_food","comfort_food","pub", "breakfast_and_brunch", "pho", "pizza"]},
+                {title:"Variety is the spice of life: let's have a place with food from a different country.", aaID:"exotic", values:["ethiopian","thai","middle_eastern", "indian", "chinese", "vietnamese", "mexican", "peruvian", "german", "scandinavian"]},
+                {title:"No meat, please.", aaID:"vegetarian", values:["vegan","vegetarian"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Do you want more restaurants, in general, a change of pace with different food, or do you need a break from food entirely?",
+                "Ready for a break from food, or do you want to keep going?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I love gluten, savory or sweet.", aaID:"bakeries", values:["bakeries","german_bakery","pastries"]},
+                {title:"Yes, more food in general, please, anything is good!", aaID:"", values:["restaurants","cajun","sandwiches", "argentine", "italian", "modern_european"]},
+                {title:"I need a break - let's get something to drink", aaID:"", values:["shakes","smoothies","specialty_drinks", "juice_bars", "coffee", "tea"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "How about we shop for ingredients, or do you want dessert, or something else entirely?",
+                "There's more to food than restuarants, so choose something new for the end of your adventure:"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Let's go to a grocery store.", aaID:"grocery", values:["organic_food","grocery","specialty_grocery", "coop"]},
+                {title:"Dessert, definitely.", aaID:"dessert", values:["dessert","ice_cream","doughnuts","candy_stores", "chocolate"]},
+                {title:"Um, actually, I want a juice bar or other health food place.", aaID:"healthy", values:["juice_bar","health_food","live/raw_food", "kombucha"]},
+                {title:"I know I chose an indoor adventure, but I heard so much about those food trucks...", aaID:"food_truck", values:["food_trucks","food_pod","food_cart"]}
             ],
 
             build: function(){
@@ -14058,20 +14056,19 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outFood={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["It's a great day to walk, or drive, or bus, or bike around Portland and see what food the city has to offer.","Let's begin then, right? "," will be the first place you order food, and I hope you can sit outside somewhere while you eat."," There is something about eating outside in Portland, right? Watching the people go by, enjoying the precious sun or just enjoying whatever weather the Pacific Northwest serves up, delicious food and good drink on hand. Next up is",", and I hope you left some room for the next two places.","Right off the bat we have"," but budget your time, because next up is","","I hope you're pleasantly full and have experienced some of what this great food city has to offer. That's one adventure down; click back to home and try another, if you want. There's a whole city to explore!"],
+                ["Leave your home and hit the streets, because there is so much good food here and not nearly enough time to try it all. ","We will try our best, though, I promise. Let's start with"," , but I hope you left some room, though, because there are three more places to go!","Like "," the next destination on this delicious tour. Don't be afraid to try new things or to ask your waiter or even the person behind you in line what's best. Don't believe everything you read on the internet, either; most places have at least one hidden gem, no matter the ratings or lack of hylp."," Sorry if that sounds like preaching, but food is important, and a proper mindset is also important, particularly when trying new things. So, without further ado, head over to "," and order whatever you want!"," Finally, head on over to "," and enjoy this last destination. Portland really is a great food city, right?"]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you want something trendy, the classic food truck, something potentially exotic, or vegan/vegetarian friendly?",
+                "There are so many places to eat; let's narrow it down a bit: the hippest place in town, the classic Portland food truck, ethnic food, or just a nice, vegetarian-friendly place?",
+                "So many options! Just pick one and you will feel better; it's all good."
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -14081,38 +14078,36 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Give me a trendy place to eat.", aaID:"trendy", values:["american_(new)","tapas","gastropubs", "french", "asian_fusion"]},
+                {title:"I want food trucks, this is Portland, after all!", aaID:"food_truck", values:["food_truck","food_pod","food_cart"]},
+                {title:"Variety is the spice of life: let's have a place with food from a different country.", aaID:"exotic", values:["ethiopian","thai","middle_eastern", "indian", "chinese", "vietnamese", "mexican", "peruvian", "german", "scandinavian"]},
+                {title:"No meat, please.", aaID:"vegetarian", values:["vegan","vegetarian"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Ok, how about comfort food or something healthier?",
+                "Stereotypical Portland health food, or stereotypical Portland comfort food?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I want comfort food!", aaID:"comforting", values:["southern_food","comfort_food","pub", "breakfast_and_brunch", "pho", "pizza"]},
+                {title:"I want health(ier) food!", aaID:"healthy", values:["juice_bar","health_food","live/raw_food", "kombucha"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "It's the end, how would you like to finish your adventure?",
+                "How you end your foodie adventure?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Let's go to a farmer's market.", aaID:"farmers_market", values:["farmers_market","farm_stand"]},
+                {title:"Let's do something entirely different.", aaID:"", values:["forktown_food_tours","kombucha","bakeries"]},
+                {title:"With dessert, of course.", aaID:"", values:["dessert","ice_cream","doughnuts","candy_stores", "chocolate"]},
+                {title:"With something to drink.", aaID:"", values:["shakes","smoothies","specialty_drinks", "juice_bars", "coffee", "tea"]}
             ],
 
             build: function(){
@@ -14175,7 +14170,7 @@ QuestionTree.prototype.initialize = function (){
 
 module.exports=QuestionTree;
 
-},{}],13:[function(require,module,exports){
+},{}],"/Users/hanna/Code/Capstone-Project/public/js/main.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14208,7 +14203,7 @@ $(function () {
   window.app = new Router();
   Backbone.history.start();
 });
-},{"../database/dbMain.js":12,"./views/adventure-parent-view":15,"./views/story-library-view":19,"backbone":1,"jquery":10}],14:[function(require,module,exports){
+},{"../database/dbMain.js":"/Users/hanna/Code/Capstone-Project/public/database/dbMain.js","./views/adventure-parent-view":"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js","./views/story-library-view":"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js":[function(require,module,exports){
 var Backbone = require('backbone');
 
 var Adventure = Backbone.Model.extend({
@@ -14232,7 +14227,7 @@ var Adventure = Backbone.Model.extend({
 });
 
 module.exports = Adventure;
-},{"backbone":1}],15:[function(require,module,exports){
+},{"backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/adventure-parent-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14252,7 +14247,7 @@ var AdventureParentView = Backbone.View.extend({
 });
 
 module.exports = AdventureParentView;
-},{"../../templates/adventure-parent-template.hbs":23,"../models/adventure.js":14,"./weather-choice-view.js":21,"backbone":1,"jquery":10}],16:[function(require,module,exports){
+},{"../../templates/adventure-parent-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","./weather-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14307,7 +14302,7 @@ var LocationChoiceView = Backbone.View.extend({
 });
 
 module.exports = LocationChoiceView;
-},{"../../templates/location-choice-template.hbs":25,"./theme-choice-view.js":20,"backbone":1,"jquery":10}],17:[function(require,module,exports){
+},{"../../templates/location-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs","./theme-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14370,7 +14365,7 @@ var QuestionView = Backbone.View.extend({
 });
 
 module.exports = QuestionView;
-},{"../../templates/question-template.hbs":26,"./result-view.js":18,"backbone":1,"jquery":10}],18:[function(require,module,exports){
+},{"../../templates/question-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs","./result-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/result-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14406,7 +14401,7 @@ var ResultView = Backbone.View.extend({
 
 module.exports = ResultView;
 
-},{"../../templates/result-template.hbs":27,"../models/adventure.js":14,"backbone":1,"jquery":10}],19:[function(require,module,exports){
+},{"../../templates/result-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/story-library-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 var Adventure = require('../models/adventure.js');
@@ -14478,7 +14473,7 @@ module.exports = LibraryView;
 
 
 
-},{"../../templates/library-template.hbs":24,"../../templates/selector-template.hbs":28,"../models/adventure.js":14,"backbone":1,"jquery":10}],20:[function(require,module,exports){
+},{"../../templates/library-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs","../../templates/selector-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/selector-template.hbs","../models/adventure.js":"/Users/hanna/Code/Capstone-Project/public/js/models/adventure.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/theme-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14522,7 +14517,7 @@ var ThemeChoiceView = Backbone.View.extend({
 });
 
 module.exports = ThemeChoiceView;
-},{"../../templates/theme-choice-template.hbs":29,"./question-view.js":17,"backbone":1,"jquery":10}],21:[function(require,module,exports){
+},{"../../templates/theme-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs","./question-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/question-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-choice-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14559,7 +14554,7 @@ var WeatherChoiceView = Backbone.View.extend({
 });
 
 module.exports = WeatherChoiceView;
-},{"../../templates/weather-choice-template.hbs":30,"./location-choice-view.js":16,"./weather-display-view.js":22,"backbone":1,"jquery":10}],22:[function(require,module,exports){
+},{"../../templates/weather-choice-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs","./location-choice-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/location-choice-view.js","./weather-display-view.js":"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/js/views/weather-display-view.js":[function(require,module,exports){
 var $ = require('jquery');
 var Backbone = require('backbone');
 Backbone.$ = $;
@@ -14581,7 +14576,7 @@ var WeatherDisplayView = Backbone.View.extend({
 });
 
 module.exports = WeatherDisplayView;
-},{"../../templates/weather-display-template.hbs":31,"backbone":1,"jquery":10}],23:[function(require,module,exports){
+},{"../../templates/weather-display-template.hbs":"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs","backbone":"/Users/hanna/Code/Capstone-Project/node_modules/backbone/backbone.js","jquery":"/Users/hanna/Code/Capstone-Project/node_modules/jquery/dist/jquery.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/adventure-parent-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14593,7 +14588,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div id=\"adventure-parent\">\n</div>\n";
   });
 
-},{"hbsfy/runtime":9}],24:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/library-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14626,7 +14621,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],25:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/location-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14638,7 +14633,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>Where Do You Want <span class=\"title-secondary-word\">to</span> Go?</h1>\n      <p class=\"question\">Pick a neighborhood to go explore.</p>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary location-choice\" id=\"location-se\" role=\"button\">Southeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-ne\" role=\"button\">Northeast</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-north\" role=\"button\">Northwest and North</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-southwest\" role=\"button\">Southwest</div>\n      <div class=\"btn btn-primary location-choice\" id=\"location-all\" role=\"button\">Everywhere! Portland and the Surrounding Area</div>\n    </div>\n  </div>\n</section>";
   });
 
-},{"hbsfy/runtime":9}],26:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/question-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14674,7 +14669,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],27:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/result-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14750,7 +14745,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],28:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/selector-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14762,7 +14757,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<section>Want to see other explorers adventures? </section>\n<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>";
   });
 
-},{"hbsfy/runtime":9}],29:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/theme-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14792,7 +14787,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-},{"hbsfy/runtime":9}],30:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-choice-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14804,7 +14799,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<header class=\"app-title\" id=\"home-page\">\n  <div class=\"app-heading container\">\n    <h2 class=\"app-intro\">Welcome to</h2>\n    <h1 class=\"app-name\">Choose Your Own Portland Adventure</h1>\n     <p class=\"app-tagline\">Click your way through the Rose City</p>\n  </div>\n  <span class=\"attribution\"><a href=\"https://www.flickr.com/photos/ronguillen/\">Photo by Ron Guillen, CC License</a></span>\n</header>\n<section class=\"question-body\">\n  <div class=\"container container-960\">\n    <div class=\"intro-block\">\n      <h1>How's <span class=\"title-secondary-word\">the</span> Weather Today?</h1>\n      <div id=\"weather-display\">\n        <div id=\"spinner-container\">\n        </div>\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <div class=\"btn btn-primary\" id=\"choice-outside\" role=\"button\">I want to go outdoors</div>\n      <div class=\"btn btn-primary\" id=\"choice-inside\" role=\"button\">I want to stay inside</div>\n      </div>\n    </div>\n  </div>\n</section>\n<script>\n  var opts = {\n    lines: 13, // The number of lines to draw\n    length: 17, // The length of each line\n    width: 6, // The line thickness\n    radius: 18, // The radius of the inner circle\n    corners: 1, // Corner roundness (0..1)\n    rotate: 0, // The rotation offset\n    direction: 1, // 1: clockwise, -1: counterclockwise\n    color: '#000', // #rgb or #rrggbb or array of colors\n    speed: 0.7, // Rounds per second\n    trail: 60, // Afterglow percentage\n    shadow: false, // Whether to render a shadow\n    hwaccel: false, // Whether to use hardware acceleration\n    className: 'spinner', // The CSS class to assign to the spinner\n    zIndex: 2e9, // The z-index (defaults to 2000000000)\n    top: '50%', // Top position relative to parent\n    left: '50%' // Left position relative to parent\n  };\n  var target = document.getElementById('spinner-container');\n  var spinner = new Spinner().spin();\n  target.appendChild(spinner.el);\n</script>\n";
   });
 
-},{"hbsfy/runtime":9}],31:[function(require,module,exports){
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}],"/Users/hanna/Code/Capstone-Project/public/templates/weather-display-template.hbs":[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var Handlebars = require('hbsfy/runtime');
 module.exports = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -14823,4 +14818,4 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-},{"hbsfy/runtime":9}]},{},[13])
+},{"hbsfy/runtime":"/Users/hanna/Code/Capstone-Project/node_modules/hbsfy/runtime.js"}]},{},["/Users/hanna/Code/Capstone-Project/public/js/main.js"]);
