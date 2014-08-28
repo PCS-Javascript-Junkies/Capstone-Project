@@ -279,7 +279,12 @@ QuestionTree.prototype.initialize = function (){
                 ". Looking good so far if we do say so ourselves! it can only get better by adding ","",
                 "to our little adventure. ","Then its back at it! and through your answers we can tell ",
                 "is going to be the perfect place for you to end your adventure! "],
-               //["","","","","","","","",""],
+               ["If there is one thing Portland is known for, its good beer and wine! well... at least it should be.",
+                "Our magical computer elves have tallied your results, and think that  ",
+                " would be a great place to start!"," Then of course no sophisticated dirking tour would be complete without the wonders of ",
+                ". Looking good so far if we do say so ourselves! it can only get better by adding ","",
+                "to our little adventure. ","Then its back at it! and through your answers the computer elves have decided that ",
+                "is going to be the perfect place for you to end your adventure! "],
                // ["","","","","","","","",""]
             ],
             themeQuestions: [
@@ -288,7 +293,7 @@ QuestionTree.prototype.initialize = function (){
                 "Pop quiz hotshot!... Your at a restaurant, the waiter comes up before you had a chance to look at the menu what do you order? "
             ],
             themeButtons: [
-                {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sports_bars", "good_bars"]},
+                {title:"Beer", aaID:"beer", values:["irish_pubs","pubs","breweries","sports_bars", "good_bars", "omsi_after_dark"]},
                 {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine", "winery"]},
                 {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktail_bars",
                     "lounges","piano_bars","martini_bars"]},
@@ -338,27 +343,30 @@ QuestionTree.prototype.initialize = function (){
 
 
          var outBar={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
-            ],
-            // input stories for this theme
-            // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
-            themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["Ah, I see your are up for a little tour some of the finer things Portland has to offer...our local bars, wineries and breweries",
+                "But its such a nice day outside! what to do!? Well we can't think of a better place to get started than ",
+                "They come highly recommended, then as you wonder through the city might, we suggest that you also stop at","",
+                ". Looking good so far if we do say so ourselves! it can only get better by adding ","",
+                "to our little adventure. ","Then its back at it! and through your answers we can tell ",
+                "is going to be the perfect place for you to end your adventure! "],
+               ["If there is one thing Portland is known for, its good beer, wine, and great weather! well... at last the first two.",
+                "Our magical computer elves have tallied your results, and think that  ",
+                " would be a great place to start!"," Then of course no sophisticated dirking tour would be complete without the wonders of ",
+                ". Looking good so far if we do say so ourselves! it can only get better by adding ","",
+                "to our little adventure. ","Then its back at it! and through your answers the computer elves have decided that ",
+                "is going to be the perfect place for you to end your adventure! "],
+              //  ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Ah, such a great day right? Well how do you want to spend it? sipping some wine, tasting some great beer?",
+                "What kind of establishments would you like to tour on this fine fine eventing?",
+                "If you could pick one type of alcohol to spend the evening trying it would be..."
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -368,38 +376,40 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Beer", aaID:"beer", values:["pubs","breweries", "good_bars", "lots_of_beer", "outside_bars", "bars_with_outdoor_seating"]},
+                {title:"Wine", aaID:"wine", values:["wine_bars","champagne_bars","beer_and_wine", "winery"]},
+                {title:"Mixed Drinks", aaID:"liquor", values:["distilleries","cocktail_bars",
+                    "lounges","piano_bars","martini_bars"]},
+                {title:"Surprise Me", aaID:"all", values:["the_best_irish_pubs","breweries",
+                    "sports_bars","wine_bars", "champagne_bars","beer_and_wine","distilleries",
+                "cocktail_bars","lounges","piano_bars","martini_bars"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "When its time to take a break on our little tour, what sounds nice?",
+                "OK, we are generating your adventure, but we think you will need a little break. On your tour, what kind of things would like to do to take it down a notch?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Music Sounds Nice", aaID:"music", values:["music_venues","piano_bars",
+                    ,"jazz_and_blues", "live_music"]},
+                {title:"Tea & Coffee Please", aaID:"coffee / tea", values:["coffee","tea","bubble_tea"]},
+                {title:"No Breaks for Me!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","breweries","wineries", ""]},
+                {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","grill","bar_food", "food_pod"]},
             ],
             //Add strings for the displayed questions
-            wrapQuestions: [
-                "",
-                ""
-            ],
-            //tittle: what will be displayed on the button.
-            //aaID: just an id to track in the logs. simple id for the button
-            //values: strings of search terms. break up words with '_'
+            wrapQuestions: ["Desert, Drinks again, or greasy food?",
+            "Sadly all good things have to come to an end... but what do we want to end it with?",
+            "Whew, your going to be tired! Now how should we end the night?",],
+
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Desert", aaID:"Desert", values:["cupcakes","desserts","donuts","desert_cart", "waffle_window"]},
+                {title:"Grab One Last Drink", aaID:"again", values:["irish_pubs","pubs",
+                    "breweries","bars_with_outdoor_seating", "wine_bars","champagne_bars","beer_and_wine",
+                    "distilleries","cocktail_bars", "lounges","piano bars"]},
+                {title:"Chow Time", aaID:"food", values:["food_trucks", "chicken_wings","desert", "pizza", "pub_food", "food_outdoor_seating"]},
             ],
 
             build: function(){
@@ -1115,18 +1125,19 @@ QuestionTree.prototype.initialize = function (){
                     "Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:",
                     "— start the adventure here! (Are you surprised?) Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the",
                     " - the best of both worlds.",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""]
+                    // "",
+                    // "",
+                    // "",
+                    // "",
+                    // ""]
+                ],
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
                 "I like to start my days slowly. Adventure means taking my time!",
                 "Let's go. Go! Go! Go!",
-                ""
+                // ""
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -1151,8 +1162,8 @@ QuestionTree.prototype.initialize = function (){
             //values: strings of search terms. break up words with '_'
             breakButtons: [
                 {title:"I'm hungry", aaID:"", values:["hometown_buffet", "burgerville", "kid_friendly_restaurant", "kids_meals", "farmers_market", "food_pod"]},
-                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["kid_friendly_restaurant", "buffets_kid_friendly", "indian_cuisine", "namaste", "super_king","round_table_pizza", "izzy's", "food_carts"]},
-                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","round_table_pizza","Izzys", "burgerville", "kid_friendly_restaurant"]},
+                {title:"I'm starving - and I'm an adventurous eater!", aaID:"starving", values:["kid_friendly_restaurant", "buffets_kid_friendly", "indian_cuisine", "namaste", "super_king","pizza", "food_carts"]},
+                {title:"I'm hungry...aaand mom says I'm picky, but whatever", aaID:"", values:["hometown_buffet","pizza", "burgerville", "kid_friendly_restaurant"]},
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
