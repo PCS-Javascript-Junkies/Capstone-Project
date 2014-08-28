@@ -12936,10 +12936,10 @@ QuestionTree.prototype.initialize = function (){
                 {title:"Music Sounds Nice", aaID:"music", values:["music_venues","piano_bars",
                     ,"jazz_and_blues", "live_music"]},
                 {title:"Tea Time", aaID:"coffee / tea", values:["coffee","tea","bubble_tea"]},
-                {title:"Keep the Party Gong!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","breweries","wineries", ""]},
+                {title:"Keep the Party Going!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","breweries","wineries", ""]},
                 {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","grill","bar_food", "food_pod"]},
             ],
-            wrapQuestions: ["Desert, Drinks again, or greasy food?",
+            wrapQuestions: ["Deesserts, Drinks agains, or greasy food?",
             "Sadly all good things have to come to an end... but what do we want to end it with?",
             "Whew, your going to be tired! how should we end the night?",],
 
