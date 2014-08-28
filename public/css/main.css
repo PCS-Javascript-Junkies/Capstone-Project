@@ -123,6 +123,7 @@ header.app-title .attribution a:hover {
 
 .navbar a {
   color: #4f638d;
+  text-shadow: 1px 1px 2px #fff;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
