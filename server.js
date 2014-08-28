@@ -42,7 +42,7 @@ app.get('/about', function (req, res) {
 
 app.get('/api/stories', function (req, res) {
   var list = [];
-  db.list('Stories')
+  db.list('Stories', { limit: 100 })
   .then(function (result) {
   result.body.results.forEach(function (item){
      list.push(item.value);
