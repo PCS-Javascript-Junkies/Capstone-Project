@@ -1357,20 +1357,19 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inFood={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["This is Portland, famed food destination, and today is the day you decide to check it out.","Your stomach is ready, you think, so you start at",". We hope that it was all you hoped for and more, and that you tried something new there. Every menu has something a little bit different, hiding away in the corner or as a special, perhaps, and since this is an adventure, we hope you take advantage of that."," The next place you go is",". Brilliant! Marvelous! The accolades come out of your mouth as you stretch, lay your napkin down, and possibly burp. Eating is hard work sometimes, but it's worth it."," You already know you have good tastes, and we hope we are encouraging you to also try something new. With that in mind, please enjoy",". Wasn't it good?","Finally, just one more place, one more favorite dish to find or local haunt to finally visit. Hey, it's ",", the last place on your list. It's no New York, maybe, but at the end we hope you see Portland can hold its own in the food world. And we hope you tipped your servers."],
+                ["The day is young, or maybe not, and you have many meals to get through.","Your first stop is",", but a true foodie doesn't stop just there."," March along now, pick up your fork, chopstick, napkin, or straw, and enjoy ", ". I feel like now's a good time to tell you about the urban legend in Portland about sous chefs breaking into people's gardens at night, snipping away fresh herbs and homegrown vegetables to feed the public, clamoring for quality food."," We hope that doesn't actually happen, but if it does, it's a good story to tell your friends outside of the normal Portlandia jokes. Anyways, hope the sous chefs are behaving themselves at",", your next destination. ","The end is near now, we're sorry to say, but hopefully you are still a little bit hungry, because it's time for ",". And then, in a food coma after experiencing the range of gustatory pleasures that this city has to offer, you're done. Maybe you have some pictures to post on Instagram to make your friends jealous of what you tried, or if that's not your style, we hope, at least, that you enjoyed yourself and that you tipped your servers."]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you want something trendy, comforting, potentially exotic, or vegan/vegetarian friendly?",
+                "There are so many places to eat; let's narrow it down a bit: the hippest place in town, good old-fashioned comfort food, ethnic food, or just a nice, vegetarian-friendly place?",
+                "So many options! Just pick one and you will feel better; it's all good."
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -1380,38 +1379,37 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Give me a trendy place to eat.", aaID:"trendy", values:["american_(new)","tapas","gastropubs", "french", "asian_fusion"]},
+                {title:"I want comfort food!", aaID:"comforting", values:["southern_food","comfort_food","pub", "breakfast_and_brunch", "pho", "pizza"]},
+                {title:"Variety is the spice of life: let's have a place with food from a different country.", aaID:"exotic", values:["ethiopian","thai","middle_eastern", "indian", "chinese", "vietnamese", "mexican", "peruvian", "german", "scandinavian"]},
+                {title:"No meat, please.", aaID:"vegetarian", values:["vegan","vegetarian"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Do you want more restaurants, in general, a change of pace with different food, or do you need a break from food entirely?",
+                "Ready for a break from food, or do you want to keep going?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I love gluten, savory or sweet.", aaID:"bakeries", values:["bakeries","german_bakery","pastries"]},
+                {title:"Yes, more food in general, please, anything is good!", aaID:"", values:["restaurants","cajun","sandwiches", "argentine", "italian", "modern_european"]},
+                {title:"I need a break - let's get something to drink", aaID:"", values:["shakes","smoothies","specialty_drinks", "juice_bars", "coffee", "tea"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "How about we shop for ingredients, or do you want dessert, or something else entirely?",
+                "There's more to food than restuarants, so choose something new for the end of your adventure:"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Let's go to a grocery store.", aaID:"grocery", values:["organic_food","grocery","specialty_grocery", "coop"]},
+                {title:"Dessert, definitely.", aaID:"dessert", values:["dessert","ice_cream","doughnuts","candy_stores", "chocolate"]},
+                {title:"Um, actually, I want a juice bar or other health food place.", aaID:"healthy", values:["juice_bar","health_food","live/raw_food", "kombucha"]},
+                {title:"I know I chose an indoor adventure, but I heard so much about those food trucks...", aaID:"food_truck", values:["food_trucks","food_pod","food_cart"]}
             ],
 
             build: function(){
@@ -1434,20 +1432,19 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outFood={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["","","","","","","","",""],
-                ["","","","","","","","",""],
-                ["","","","","","","","",""]
+                ["It's a great day to walk, or drive, or bus, or bike around Portland and see what food the city has to offer.","Let's begin then, right? "," will be the first place you order food, and I hope you can sit outside somewhere while you eat."," There is something about eating outside in Portland, right? Watching the people go by, enjoying the precious sun or just enjoying whatever weather the Pacific Northwest serves up, delicious food and good drink on hand. Next up is",", and I hope you left some room for the next two places.","Right off the bat we have"," but budget your time, because next up is","","I hope you're pleasantly full and have experienced some of what this great food city has to offer. That's one adventure down; click back to home and try another, if you want. There's a whole city to explore!"],
+                ["Leave your home and hit the streets, because there is so much good food here and not nearly enough time to try it all. ","We will try our best, though, I promise. Let's start with"," , but I hope you left some room, though, because there are three more places to go!","Like "," the next destination on this delicious tour. Don't be afraid to try new things or to ask your waiter or even the person behind you in line what's best. Don't believe everything you read on the internet, either; most places have at least one hidden gem, no matter the ratings or lack of hylp."," Sorry if that sounds like preaching, but food is important, and a proper mindset is also important, particularly when trying new things. So, without further ado, head over to "," and order whatever you want!"," Finally, head on over to "," and enjoy this last destination. Portland really is a great food city, right?"]
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
             themeQuestions: [
-                "",
-                "",
-                ""
+                "Do you want something trendy, the classic food truck, something potentially exotic, or vegan/vegetarian friendly?",
+                "There are so many places to eat; let's narrow it down a bit: the hippest place in town, the classic Portland food truck, ethnic food, or just a nice, vegetarian-friendly place?",
+                "So many options! Just pick one and you will feel better; it's all good."
             ],
             //Add button content.
             //Depending on how many search terms you have you want 2-4 buttons
@@ -1457,38 +1454,36 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Give me a trendy place to eat.", aaID:"trendy", values:["american_(new)","tapas","gastropubs", "french", "asian_fusion"]},
+                {title:"I want food trucks, this is Portland, after all!", aaID:"food_truck", values:["food_truck","food_pod","food_cart"]},
+                {title:"Variety is the spice of life: let's have a place with food from a different country.", aaID:"exotic", values:["ethiopian","thai","middle_eastern", "indian", "chinese", "vietnamese", "mexican", "peruvian", "german", "scandinavian"]},
+                {title:"No meat, please.", aaID:"vegetarian", values:["vegan","vegetarian"]}
             ],
             //Add strings for the displayed questions
             breakQuestions: [
-                "",
-                ""
+                "Ok, how about comfort food or something healthier?",
+                "Stereotypical Portland health food, or stereotypical Portland comfort food?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"I want comfort food!", aaID:"comforting", values:["southern_food","comfort_food","pub", "breakfast_and_brunch", "pho", "pizza"]},
+                {title:"I want health(ier) food!", aaID:"healthy", values:["juice_bar","health_food","live/raw_food", "kombucha"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
-                "",
-                ""
+                "It's the end, how would you like to finish your adventure?",
+                "How you end your foodie adventure?"
             ],
             //tittle: what will be displayed on the button.
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]}
+                {title:"Let's go to a farmer's market.", aaID:"farmers_market", values:["farmers_market","farm_stand"]},
+                {title:"Let's do something entirely different.", aaID:"", values:["forktown_food_tours","kombucha","bakeries"]},
+                {title:"With dessert, of course.", aaID:"", values:["dessert","ice_cream","doughnuts","candy_stores", "chocolate"]},
+                {title:"With something to drink.", aaID:"", values:["shakes","smoothies","specialty_drinks", "juice_bars", "coffee", "tea"]}
             ],
 
             build: function(){
