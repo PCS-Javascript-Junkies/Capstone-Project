@@ -12936,10 +12936,10 @@ QuestionTree.prototype.initialize = function (){
                 {title:"Music Sounds Nice", aaID:"music", values:["music_venues","piano_bars",
                     ,"jazz_and_blues", "live_music"]},
                 {title:"Tea Time", aaID:"coffee / tea", values:["coffee","tea","bubble_tea"]},
-                {title:"Keep the Party Gong!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","breweries","wineries", ""]},
+                {title:"Keep the Party Going!", aaID:"again", values:["nice_bars","top_bars", "cocktail_bars","breweries","wineries", ""]},
                 {title:"Chow Time", aaID:"food", values:["food_trucks","cafes","grill","bar_food", "food_pod"]},
             ],
-            wrapQuestions: ["Desert, Drinks again, or greasy food?",
+            wrapQuestions: ["Deesserts, Drinks agains, or greasy food?",
             "Sadly all good things have to come to an end... but what do we want to end it with?",
             "Whew, your going to be tired! how should we end the night?",],
 
@@ -13281,11 +13281,13 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outActive={
-            active: false,  //make true when done
+            active: true,  //make true when done
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-              ["So you feel like doing something outside - and Portland was made for the likes of you!","The sun is shining (there's a 30% chance of that); or perhaps it's not (if this were a bet, you'd put your money on the latter)... but you don't care! You know that in the Rose City, a little incliment weather doesn't stop anyone from doing anything. So start here: ","As good a place as any. Better, in fact. ","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Space Age gas station (really - how can you not?). You strike up a conversation with a man in line who tells you about his home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","You're hungry - starving, in face, so your next stop is ",". You take a walk around the block and take your legs, or a bike if you have one, or public transport if you have neither legs nor bike, and depart for ",", where you talk to at least sixteen new strangers. (You ask them about their favorite book, because you're smart). It is just what the doctor ordered.","As the adventure and your evening conclude, you stroll back home, mentally decorating your houseboat."]
+              ["So you feel like doing something outside - and Portland was made for the likes of you!","The sun is shining (there's a 30% chance of that); or perhaps it's not (if this were a bet, you'd put your money on the latter)... but you don't care! You know that in the Rose City, a little incliment weather doesn't stop anyone from doing anything. So start here: ","As good a place as any. Better, in fact. ","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Space Age gas station (really - how can you not?). You strike up a conversation with a man in line who tells you about his home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","You're hungry - starving, in face, so your next stop is ",". You take a walk around the block and take your legs, or a bike if you have one, or public transport if you have neither legs nor bike, and depart for ",", where you talk to at least sixteen new strangers. (You ask them about their favorite book, because you're smart). It is just what the doctor ordered.","As the adventure and your evening conclude, you stroll back home, mentally decorating your houseboat."],
+            ["So you feel like doing something outside - and Portland was made for the likes of you!","The sun is shining (there's a 30% chance of that); or perhaps it's not (if this were a bet, you'd put your money on the latter)... but you don't care! You know that in the Rose City, a little incliment weather doesn't stop anyone from doing anything. So start here: ","As good a place as any. Better, in fact. ","Next on the adventure is","...but before you head over there, you decide to run a quick errand at the closest Space Age gas station (really - how can you not?). You strike up a conversation with a man in line who tells you about his home, which is a houseboat. Fascinated, you vow to move to a houseboat next chance you get.","You're hungry - starving, in face, so your next stop is ",". You take a walk around the block and take your legs, or a bike if you have one, or public transport if you have neither legs nor bike, and depart for ",", where you talk to at least sixteen new strangers. (You ask them about their favorite book, because you're smart). It is just what the doctor ordered.","As the adventure and your evening conclude, you stroll back home, mentally decorating your houseboat."]
+            
             ],
             //Add strings for the displayed questions
             //the more you add, the more random it will feel.
@@ -13355,6 +13357,7 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
+                ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"],
                 ["So your out of town friends or family finally decided to come for a visit, and the pressure is on to show them around. Whether or not this sounds like a good time to you, it's necessary to demonstrate that your choice of abodes is a wise one. What to do?","You've decided to stay indoors, but you didn't specify which 'indoors' you want. So start here:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, you've decided to all wear kilts. Go - don your best kilt. Who cares what folks say? Go ahead - you won't get chilly, you're staying inside anyway.","Okay, next up: somthing to eat!","With so many great restaurants, known and unknown (and known-known and unknown-unknown), how’s a good host to know what to choose? How about this: ","Scrumptious, right? In Portland, we say 'scrumpt': Like, 'That was so delish and scrumpt.' (Actually, not. Don't say that. Don't ever say that.)" ,"How are you feeling? Good enough to swim the river? Not right now? Okay, well how about going to", "instead? Now go to bed. It's late!"]
             ],
             //Add strings for the displayed questions
@@ -13372,9 +13375,9 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore", "iprc", "historical_society"]},
-                {title:"That's why we're here", aaID:"cultured", values:["library","museum","art", "forestry_center", "historical_society"]},
-                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "shanghi_tunnels", "saturday_market", "firing_range", "kennedy_school", "hot_tub"]},
+                {title:"We may or may not have been called bookworms at some point in our lives", aaID:"bookworm", values:["library","bookstore"]},
+                {title:"That's why we're here", aaID:"cultured", values:["library","museum","art", "historical_society"]},
+                {title:"Nothing too quiet, seriously", aaID:"move_little", values:["avalon", "firing_range", "kennedy_school", "hot_tub"]},
                 {title:"Not right now. We need to move!", aaID:"move_much", values:["shanghi_tunnels", "climbing_wall","arcade","paint_ball", "swimming_pools"]}
             ],
             //Add strings for the displayed questions
@@ -13387,10 +13390,10 @@ QuestionTree.prototype.initialize = function (){
             //aaID: just an id to track in the logs. simple id for the button
             //values: strings of search terms. break up words with '_'
             breakButtons: [
-                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","pambiche","thai", "greek"]},
-                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "dan_and_louise_oyster_bar","seafood"]},
+                {title:"We are indeed hungry - and and adventerous", aaID:"adventurous_eater", values:["ethiopian","thai", "greek"]},
+                {title:"The ocean is not that far - seafood sounds just right", aaID:"seafood", values:["mccormic_and_schmick","southpark", "jake's", "seafood"]},
                 {title:"We want to eat somewhere infamous", aaID:"infamous", values:["montage","voodoo_donuts","unusual_food", "dan_and_louise_oyster_bar", "old_spagetti_factory", "hedge_house"]},
-                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "fancy_restaurant"]}
+                {title:"We don't all get together very often - we'd like to class it up", aaID:"classy", values:["andina", "jake's", "portland_city_grill","italian", "bistro", "le_pigeon", "upscale_restaurant"]}
             ],
             //Add strings for the displayed questions
             wrapQuestions: [
@@ -13402,9 +13405,9 @@ QuestionTree.prototype.initialize = function (){
             //values: strings of search terms. break up words with '_'
             wrapButtons: [
                 {title:"My friends are hip and we want to go out", aaID:"hipster", values:["ground_kontrol","ron_tons", "karaoke_bars", "mississippi_studios", "radio_room", "produce_row", "hipster_bars"]},
-                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub", "movie_madness"]},
+                {title:"We'd like to settle in somewhere quiet", aaID:"quiet", values:["cinema","wine_bar","pub"]},
                 {title:"How about some music?", aaID:"music", values:["laurelthirst","mississippi_studios","crystal_ballroom", "doug_fir", "wonder_ballroom", "open_mic_venue"]},
-                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["mary's_strip_club","devil's_point","acropolis_strip", "sassy's_strip", "magic_gardens", "union_jack's", "best_strip_club"]}
+                {title:"Most strip clubs per capita: Is this true?", aaID:"strip_clubs", values:["best_strip_club"]}
             ],
 
             build: function(){
@@ -13431,6 +13434,7 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
+                ["So your out of town friends or family finally decided to come for a visit, and you want to show them around! A worthy quest. It's beautiful, no? You step outside, wondering where to start. ","You (all of you, collectively... and also, you're all oddly, collectively, humming Dandy Warhols songs) depart for:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, in fact, that you've ditched pants. Did you know public nudity is totally legal? It's an oft-quoted - but somewhat less frequently implimented - statute. Anyway.","Surely your collective unconcious must be telling you how hungry you all are, after that. So you don your suit or your skinny tie... or you remain in the clothes you're in but are sure to tie your shoes, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."],
                 ["So your out of town friends or family finally decided to come for a visit, and you want to show them around! A worthy quest. It's beautiful, no? You step outside, wondering where to start. ","You (all of you, collectively... and also, you're all oddly, collectively, humming Dandy Warhols songs) depart for:","Now you should be feeling Portland-y, very, very Portland-y.","You are so Portland-y, in fact, that you've ditched pants. Did you know public nudity is totally legal? It's an oft-quoted - but somewhat less frequently implimented - statute. Anyway.","Surely your collective unconcious must be telling you how hungry you all are, after that. So you don your suit or your skinny tie... or you remain in the clothes you're in but are sure to tie your shoes, and head out to ","You're saited? Good. You're a juggernaut. You're fabulous. You're a modern-day Captain James Cook. You're going to ","As former mayor Vera Katz is fond of saying, 'Citizens are the riches of a city. For what remains of the evening, you stroll down to the Eastbank Esplanade and meet at least one new friend."]
             ],
             //Add strings for the displayed questions
@@ -13448,8 +13452,8 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"We'd rather hit a trail, but we don't want to drive too far", aaID:"city_hike", values:["forest_park", "trail", "rocky_butte", "mt._tabor", "powell_butte_park", "oaks_bottom", "tryon_creek", "council_crest"]},
-                {title:"That's why we're here", aaID:"culture", values:["oregon_zoo", "first_thursday", "garden","chinese_garden", "rose_garden", "trail"]},
+                {title:"We'd rather hit a trail, but we don't want to drive too far", aaID:"city_hike", values:["forest_park", "trail", "rocky_butte", "city_hikes"]},
+                {title:"That's why we're here", aaID:"culture", values:["oregon_zoo", "first_thursday", "garden","chinese_garden", "gardens", "rose_garden", "trail"]},
                 {title:"Biking is our speed!", aaID:"bike", values:["bike_rentals"]},
                 {title:"Results of exploration by definition must be unexpected. Surprise us!", aaID:"surprise", values:["shanghi_tunnels", "rocky_butte", "saturday_market", "arcade","paint_ball", "ultimate_frisbee", "outdoor_swimming_pools"]}
             ],
