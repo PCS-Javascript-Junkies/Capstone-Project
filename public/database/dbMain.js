@@ -1236,6 +1236,7 @@ QuestionTree.prototype.initialize = function (){
 
 
          var inNightOut={
+            active: true,
             themeStories: [
                 ["The day is over, you got some friends, and staying inside doesn't sound like the thing for you! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
@@ -1316,6 +1317,7 @@ QuestionTree.prototype.initialize = function (){
 
 
         var outNightOut={
+            active: true,
             themeStories: [
                 ["Its time to hit the town! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
