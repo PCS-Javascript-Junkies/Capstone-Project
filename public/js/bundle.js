@@ -12827,7 +12827,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
     },
 
 QuestionTree.prototype.initialize = function (){
-       var tree = new QuestionTree();
+       tree = new QuestionTree();
 
         tree.startTree();
 
