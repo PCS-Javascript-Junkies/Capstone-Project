@@ -12643,7 +12643,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.breweryTheme = null;
         this.kidsTheme = null;
         this.activeTheme = null;
-    };
+    }
 
     function Area() {
         this.aaID="Area Node L2";
@@ -12651,7 +12651,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.questions= null;
         this.area= null;
         this.theme= null;
-    };
+    }
 
     function RootNode() {
         this.aaID = "Root L1";
@@ -12659,9 +12659,9 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.questions = null;
         this.insideTree = null;
         this.outsideTree = null;
-    };
+    }
 
-    this.root = new RootNode;
+    this.root = new RootNode();
     this.current=this.root;
     this.root.insideTree = new Area();
     this.root.insideTree.theme = new Theme();
@@ -12677,7 +12677,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.id = id;
             this.title = title;
             this.next = null;
-        };
+        }
 
         if(inOrOut === "inside"){
             switch(id){
@@ -12752,7 +12752,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.questions= qArray;
             this.buttons= bObj;
             this.next= null;
-        };
+        }
 
         if(inOrOut === "inside"){
             switch(theme){
@@ -13868,7 +13868,7 @@ QuestionTree.prototype.initialize = function (){
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
-                ["TGIF! YES FINALLY ITS FRIDAY NIGHT! Work is over, you just got paid (or at least if feels like it) and it Time to celibate!","Based on your responses we suggest starting at ",
+                ["The day is over, you got some friends, and staying inside doesn't sound like the thing for you! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
@@ -13949,10 +13949,11 @@ QuestionTree.prototype.initialize = function (){
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
-                ["TGIF! YES FINALLY ITS FRIDAY NIGHT! Work is over, you just got paid (or at least if feels like it) and it Time to celibate!","Based on your responses we suggest starting at ",
+                ["Its time to hit the town! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
+
                 // ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions
@@ -14477,18 +14478,19 @@ var LibraryView = Backbone.View.extend({
         " padding-top: 19.5em; margin-top: 1em; " +
         "background: url(../../img/fremont.jpg) 0% 50% no-repeat;'>  <br>" +
         selectorTemplate();
-      temp += "</div>"
+      temp += "</div>";
     this.$el.html(temp);
     $('#selectForm').change(function(){self.setPage()});
     },
 
     setPage: function(select){
+      var self = this;
       var temp ="";
       var themeSelect = "";
       var results =[];
       temp = this.$el.html();
        temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >"
+        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >";
 
       themeSelect= $("#selectForm").val();
       storyCollection.models.forEach(function(model){
@@ -14509,6 +14511,7 @@ var LibraryView = Backbone.View.extend({
     }
     temp += "</div>"
      this.$el.html(temp);
+    $('#selectForm').change(function(){self.setPage()});
     }
 
 });
@@ -14798,7 +14801,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<section>Want to see other explorers adventures? </section>\n<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>";
+  return "\n<section in = \"formSection\">Want to see other explorers adventures? </section>\n<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>\n";
   });
 
 },{"hbsfy/runtime":9}],29:[function(require,module,exports){

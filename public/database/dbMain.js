@@ -17,7 +17,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.breweryTheme = null;
         this.kidsTheme = null;
         this.activeTheme = null;
-    };
+    }
 
     function Area() {
         this.aaID="Area Node L2";
@@ -25,7 +25,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.questions= null;
         this.area= null;
         this.theme= null;
-    };
+    }
 
     function RootNode() {
         this.aaID = "Root L1";
@@ -33,9 +33,9 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.questions = null;
         this.insideTree = null;
         this.outsideTree = null;
-    };
+    }
 
-    this.root = new RootNode;
+    this.root = new RootNode();
     this.current=this.root;
     this.root.insideTree = new Area();
     this.root.insideTree.theme = new Theme();
@@ -51,7 +51,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.id = id;
             this.title = title;
             this.next = null;
-        };
+        }
 
         if(inOrOut === "inside"){
             switch(id){
@@ -126,7 +126,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.questions= qArray;
             this.buttons= bObj;
             this.next= null;
-        };
+        }
 
         if(inOrOut === "inside"){
             switch(theme){
@@ -1242,7 +1242,7 @@ QuestionTree.prototype.initialize = function (){
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
-                ["TGIF! YES FINALLY ITS FRIDAY NIGHT! Work is over, you just got paid (or at least if feels like it) and it Time to celibate!","Based on your responses we suggest starting at ",
+                ["The day is over, you got some friends, and staying inside doesn't sound like the thing for you! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
@@ -1323,10 +1323,11 @@ QuestionTree.prototype.initialize = function (){
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
-                ["TGIF! YES FINALLY ITS FRIDAY NIGHT! Work is over, you just got paid (or at least if feels like it) and it Time to celibate!","Based on your responses we suggest starting at ",
+                ["Its time to hit the town! ","Based on your responses we suggest starting at ",
                 " its the kind of place that can really get the night going off on the right beat"," Then its time to take a breather at ","",
                 "Lets make another stop at",", looking good if we do say so ourselves",
                 "Finally lets end our night out on the town at",""],
+
                 // ["","","","","","","","",""]
             ],
             //Add strings for the displayed questions

@@ -29,18 +29,19 @@ var LibraryView = Backbone.View.extend({
         " padding-top: 19.5em; margin-top: 1em; " +
         "background: url(../../img/fremont.jpg) 0% 50% no-repeat;'>  <br>" +
         selectorTemplate();
-      temp += "</div>"
+      temp += "</div>";
     this.$el.html(temp);
     $('#selectForm').change(function(){self.setPage()});
     },
 
     setPage: function(select){
+      var self = this;
       var temp ="";
       var themeSelect = "";
       var results =[];
       temp = this.$el.html();
        temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >"
+        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >";
 
       themeSelect= $("#selectForm").val();
       storyCollection.models.forEach(function(model){
@@ -61,6 +62,7 @@ var LibraryView = Backbone.View.extend({
     }
     temp += "</div>"
      this.$el.html(temp);
+    $('#selectForm').change(function(){self.setPage()});
     }
 
 });
