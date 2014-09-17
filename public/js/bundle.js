@@ -14488,8 +14488,11 @@ var LibraryView = Backbone.View.extend({
       var temp ="";
       var themeSelect = "";
       var results =[];
+      if($('#library')){
+        $('#library').remove();
+      }
       temp = this.$el.html();
-       temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
+       temp += "<div id='library' style=' padding-left: 2em; max-width: 1100px;" +
         " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >";
 
       themeSelect= $("#selectForm").val();
@@ -14801,7 +14804,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "\n<section in = \"formSection\">Want to see other explorers adventures? </section>\n<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> - Select A Theme - </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>\n";
+  return "\n<section in = \"formSection\">Want to see other explorers adventures? </section>\n<select id = \"selectForm\" style=\"margin-bottom: 1em; display: block;\" name=\"themeList\">\n  <option value=\"\"> &nbsp; - - - - - Select A Theme - - - - - &nbsp; </option>\n  <option value=\"chillTheme\">Taking It Easy</option>\n  <option value=\"kidsTheme\">Fun With the Kids!</option>\n  <option value=\"foodieTheme\">Dinning In Portland</option>\n  <option value=\"hostingTheme\">Hosting Guests</option>\n  <option value=\"activeTheme\">Being Active Guests</option>\n  <option value=\"tgifTheme\">TGIF!</option>\n  <option value=\"nightOutTheme\">Night Out On the Town</option>\n  <option value=\"breweryTheme\">Breweries, Wineries, and More!</option>\n</select>\n";
   });
 
 },{"hbsfy/runtime":9}],29:[function(require,module,exports){

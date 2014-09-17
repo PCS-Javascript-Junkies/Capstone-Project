@@ -39,8 +39,11 @@ var LibraryView = Backbone.View.extend({
       var temp ="";
       var themeSelect = "";
       var results =[];
+      if($('#library')){
+        $('#library').remove();
+      }
       temp = this.$el.html();
-       temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
+       temp += "<div id='library' style=' padding-left: 2em; max-width: 1100px;" +
         " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >";
 
       themeSelect= $("#selectForm").val();
