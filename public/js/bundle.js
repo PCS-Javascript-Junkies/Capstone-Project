@@ -13697,7 +13697,13 @@ QuestionTree.prototype.initialize = function (){
             // input stories for this theme
             // intro, preFirst Place, postFirstPlace, preSecond Place, postSecond Place, preThird place, postThird place, preLast place, Post last
             themeStories: [
-                ["Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:","—start the adventure here! (Are you surprised?)","Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the ","—the best of both worlds.","Okay, now you’re off to the ",". If you’re happy about that, do a handstand. If you’re super excited, do a cartwheel. If you’re beyond excited right now, climb the nearest tree and sing (do not forget to sing! If you know the theme song from Adventure Time, sing that. Otherwise, your choice.). And when your mom or dad asks what you’re doing, tell them you’re just expressing yourself. (Just like that guy who’s painted completely silver, at the Saturday Market on the weekends. He’s expressing himself, too. …No, do not go paint yourself silver right now.)","","is the last part of your palenguitine adventure today! (“Palenguitine” means “awesome,” but it’s not a real word. It was made up just now.) When you’re done at ",",  on your way home, make up your own description of the adventure that no one will ever understand but you (and your brother or sister if you have one with you). Now say the description in Pig Latin. (Hint: pig = sweet = weet-say, and palenguitine = alenguitine-pay.) And have a zeitharunt day tomorrow!"],
+                ["Maybe you’re out with your mom or dad. Sometimes you have to do errands, to the bank, to the post office, or to the grocery store, the most boring trip of all time. You will have to do all those things—but not today! Do you like adventure? Mystery? Surprise? Well, here’s one for you:",
+                "—start the adventure here! (Are you surprised?)",
+                "Are you the kind of kid who likes to do the same thing as your friends, or do you like to do your own thing? Probably a little bit of both, right? Like if everyone colors their hair with red Kool-Aid, you color yours, too—but blue instead of red. The next part of your adventure takes you to the ",
+                "—the best of both worlds.","Okay, now you’re off to the ",
+                ". If you’re happy about that, do a handstand. If you’re super excited, do a cartwheel. If you’re beyond excited right now, climb the nearest tree and sing (do not forget to sing! If you know the theme song from Adventure Time, sing that. Otherwise, your choice.). And when your mom or dad asks what you’re doing, tell them you’re just expressing yourself. (Just like that guy who’s painted completely silver, at the Saturday Market on the weekends. He’s expressing himself, too. …No, do not go paint yourself silver right now.)",
+                "","is the last part of your palenguitine adventure today! (“Palenguitine” means “awesome,” but it’s not a real word. It was made up just now.) When you’re done at ",
+                ",  on your way home, make up your own description of the adventure that no one will ever understand but you (and your brother or sister if you have one with you). Now say the description in Pig Latin. (Hint: pig = sweet = weet-say, and palenguitine = alenguitine-pay.) And have a zeitharunt day tomorrow!"],
                 ["","","","","","","","",""],
                 ["","","","","","","","",""]
             ],
@@ -13716,9 +13722,9 @@ QuestionTree.prototype.initialize = function (){
                 //aaID: just an id to track in the logs. simple id for the button
                 //values: strings of search terms. break up words with '_'
             themeButtons: [
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
-                {title:"", aaID:"", values:["","",""]},
+                {title:"Acades & Jungle Gyms", aaID:"arcade&gym", values:["","",""]},
+                {title:"Educational", aaID:"educational", values:["","",""]},
+                {title:"Wet & Wild", aaID:"", values:["","",""]},
                 {title:"", aaID:"", values:["","",""]}
             ],
             //Add strings for the displayed questions
