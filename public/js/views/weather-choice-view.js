@@ -5,14 +5,20 @@ Backbone.$ = $;
 var weatherChoiceTemplate = require('../../templates/weather-choice-template.hbs');
 var LocationChoiceView = require('./location-choice-view.js');
 var WeatherDisplayView = require('./weather-display-view.js');
+var GettingStartedChoiceView = require('/getting-started.js')
 
 var WeatherChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
+    'click #choice-get-started': 'clickGetStarted',
     'click #choice-outside': 'clickOutside',
     'click #choice-inside': 'clickInside'
   },
   initialize: function () {
+  },
+  clickGetStarted: function() {
+  var gettingStartedChoiceView = new GettingStartedChoiceView({model: this.model});
+    gettingStartedChoiceView.render();
   },
   clickOutside: function() {
     this.model.set({weather: "outside"});
