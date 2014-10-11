@@ -52,7 +52,7 @@ var LibraryView = Backbone.View.extend({
       });
 
       var modelArray= storyCollection.where({theme: themeSelect});
-        modelArray.forEach(function (model){
+      modelArray.forEach(function (model){
           results.unshift(model.attributes.results);
         });
 
@@ -60,7 +60,7 @@ var LibraryView = Backbone.View.extend({
     console.log(results, "<----results");
 
     for(i =0; i< results.length; ++i){
-      temp += resultTemplate({adventure: results[i]});
+      temp += resultTemplate({adventure: results[i]})+"<i class= 'icon-arrow-right'></i>";
       temp += "<section style ='width: 1em;'>&nbsp;</section>"
     }
     temp += "</div>"

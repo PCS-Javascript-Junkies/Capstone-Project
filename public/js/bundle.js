@@ -14507,7 +14507,7 @@ var LibraryView = Backbone.View.extend({
       });
 
       var modelArray= storyCollection.where({theme: themeSelect});
-        modelArray.forEach(function (model){
+      modelArray.forEach(function (model){
           results.unshift(model.attributes.results);
         });
 
@@ -14515,7 +14515,7 @@ var LibraryView = Backbone.View.extend({
     console.log(results, "<----results");
 
     for(i =0; i< results.length; ++i){
-      temp += resultTemplate({adventure: results[i]});
+      temp += resultTemplate({adventure: results[i]})+"<i class= 'icon-arrow-right'></i>";
       temp += "<section style ='width: 1em;'>&nbsp;</section>"
     }
     temp += "</div>"
@@ -14655,11 +14655,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n  <section style =\"float: left; max-width: 18em;\">\n  <table>\n    <tbody>\n    <tr>\n    <td>\n    <h4 style =\"text-align: center;\">";
+  buffer += "\n  <section style =\"float: left; max-width: 18em;\">\n    <table>\n      <tbody>\n        <tr>\n          <td>\n          <h4 style =\"text-align: center;\">";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h4>\n    <a href=";
+    + "</h4>\n          <a href=";
   if (helper = helpers.yelpInfoLink) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.yelpInfoLink); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -14667,13 +14667,13 @@ function program1(depth0,data) {
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\"></a>\n    </td>\n    </tr>\n    </tbody>\n    </table>\n  </section>\n";
+    + "\"></a>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </section>\n";
   return buffer;
   }
 
-  buffer += "\n";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.adventure), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
   return buffer;
   });
 
