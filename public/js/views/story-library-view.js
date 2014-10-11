@@ -29,18 +29,22 @@ var LibraryView = Backbone.View.extend({
         " padding-top: 19.5em; margin-top: 1em; " +
         "background: url(../../img/fremont.jpg) 0% 50% no-repeat;'>  <br>" +
         selectorTemplate();
-      temp += "</div>"
+      temp += "</div>";
     this.$el.html(temp);
     $('#selectForm').change(function(){self.setPage()});
     },
 
     setPage: function(select){
+      var self = this;
       var temp ="";
       var themeSelect = "";
       var results =[];
+      if($('#library')){
+        $('#library').remove();
+      }
       temp = this.$el.html();
-       temp += "<div  style=' padding-left: 2em; max-width: 1100px;" +
-        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >"
+       temp += "<div id='library' style=' padding-left: 2em; max-width: 1100px;" +
+        " padding-top: 4.5em; margin-top: 1em; margin-right: auto; margin-left: auto;' >";
 
       themeSelect= $("#selectForm").val();
       storyCollection.models.forEach(function(model){
@@ -48,7 +52,7 @@ var LibraryView = Backbone.View.extend({
       });
 
       var modelArray= storyCollection.where({theme: themeSelect});
-        modelArray.forEach(function (model){
+      modelArray.forEach(function (model){
           results.unshift(model.attributes.results);
         });
 
@@ -56,11 +60,12 @@ var LibraryView = Backbone.View.extend({
     console.log(results, "<----results");
 
     for(i =0; i< results.length; ++i){
-      temp += resultTemplate({adventure: results[i]});
+      temp += resultTemplate({adventure: results[i]})+"<i class= 'icon-arrow-right'></i>";
       temp += "<section style ='width: 1em;'>&nbsp;</section>"
     }
     temp += "</div>"
      this.$el.html(temp);
+    $('#selectForm').change(function(){self.setPage()});
     }
 
 });

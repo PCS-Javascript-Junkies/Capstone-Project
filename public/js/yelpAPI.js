@@ -26,7 +26,7 @@ function yelpAPI(bounds, array, callback){
                 consumerSecret : auth.consumerSecret,
                 tokenSecret : auth.accessTokenSecret
             };
-            parameters = [];
+            var parameters = [];
             parameters.push(['term', terms]);
             parameters.push(['bounds', boundit]);
             parameters.push(['callback', 'cb']);
@@ -93,5 +93,6 @@ function yelpAPI(bounds, array, callback){
             });
         });
     });
+console.log("Previous Results---->", prevResults);
 return result;
 }

@@ -1,0 +1,629 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bg",
+				"bgc	background-color"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"st",
+				"style	HTML/Element"
+			],
+			[
+				"repla",
+				"replaceChild	jsDOM"
+			],
+			[
+				"remove",
+				"removeChild	jsDOM"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"proce",
+				"process.argv"
+			],
+			[
+				"conso",
+				"console.log"
+			],
+			[
+				"on",
+				"on('data"
+			],
+			[
+				"con",
+				"console.log"
+			],
+			[
+				"http",
+				"http.get"
+			],
+			[
+				"mod",
+				"module.exports"
+			],
+			[
+				"createS",
+				"http.createServer"
+			],
+			[
+				"readFile",
+				"fs.readFileSync"
+			],
+			[
+				"proc",
+				"process.argv"
+			],
+			[
+				"pro",
+				"process.argv"
+			],
+			[
+				"log",
+				"console.log"
+			],
+			[
+				"forea",
+				"_.forEach"
+			],
+			[
+				"D",
+				"DOCTYPE  (doctype)"
+			],
+			[
+				"shallow",
+				"shallow"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"pre",
+				"presents  (variable)"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"img",
+				"img_wrapper"
+			],
+			[
+				"b",
+				"bolder"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"get",
+				"getElementById  (function)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: HTML - Anchor"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"tag",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"sublime linter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"",
+				"API-Completion-Package: Settings – User"
+			],
+			[
+				"API",
+				"API-Completion-Package: Settings – Default"
+			],
+			[
+				"a",
+				"API-Completion-Package: Settings – User"
+			],
+			[
+				"pacl",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"jsh",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"set",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jshint",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"projec",
+				"Project: Add Folder"
+			],
+			[
+				"projects",
+				"Project: Close"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 365.0,
+		"history":
+		[
+			"restart",
+			"rm Sublime Text 3/Installed Packages/SideBarEnhancements.sublime-package",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/matthew/Desktop/PCS/test.js",
+		"/home/matthew/Desktop/PCS/Capstone/Capstone-Project/public/js/views/database.js",
+		"/home/matthew/Desktop/PCS/jsHomework/hw9testing/MattHW9/public/js/main.js",
+		"/home/matthew/Desktop/PCS/jsHomework/hw9testing/MattHW9/server.js",
+		"/home/matthew/Desktop/PCS/jsHomework/hw9testing/MattHW9/templates/index.html",
+		"/home/matthew/Desktop/PCS/jsHomework/hw9testing/MattHW9/templates/mystyle.css",
+		"/home/matthew/Desktop/PCS/Group-Project/index.html",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/MattTicTacToe.css",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/MattGUI.js",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/tictactoe-model-template.js",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/MattModel.js",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/MattMain.js",
+		"/home/matthew/Desktop/work/notesHW8",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-8/MattTicTacToe.html",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-4/crouse/mattHW4.js",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-5/matt/mattC.js",
+		"/home/matthew/Desktop/PCS/jsHomework/MattTicTacToe.css",
+		"/home/matthew/Desktop/PCS/jsHomework/test.html",
+		"/home/matthew/Desktop/PCS/jsHomework/MattGUI.js",
+		"/home/matthew/Desktop/PCS/jsHomework/MattModel.js",
+		"/home/matthew/Desktop/PCS/jsHomework/MattTicTacToe.html",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-5/MattMaint.js",
+		"/home/matthew/Desktop/work/marketo.html",
+		"/home/matthew/Desktop/work/workNotes.txt",
+		"/home/matthew/Desktop/work/unsub.html",
+		"/home/matthew/Desktop/work/OneLoginFinalCustomUnsub.html",
+		"/home/matthew/Desktop/work/currentV8.html",
+		"/home/matthew/Desktop/work/currentV9.html",
+		"/home/matthew/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/matthew/Desktop/work/currentV1.html",
+		"/home/matthew/Desktop/work/original.html",
+		"/home/matthew/Desktop/work/latest.html",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-4/crouse/question2.js",
+		"/home/matthew/Desktop/work/working.html",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-5/README.md",
+		"/home/matthew/Desktop/PCS/html email/notes.txt",
+		"/home/matthew/Desktop/work/currentV2.html",
+		"/home/matthew/Desktop/work/currentV3.html",
+		"/home/matthew/Desktop/work/currentV4.html",
+		"/home/matthew/Desktop/PCS/html email/stage_4.2_email_css_mobile.html",
+		"/home/matthew/Desktop/PCS/learnNode/toupper.js",
+		"/home/matthew/Desktop/PCS/learnNode/fileServer.js",
+		"/home/matthew/Desktop/PCS/learnNode/httpCollect.js",
+		"/home/matthew/Desktop/PCS/html email/stage_3.3_email_css_fixed.html",
+		"/home/matthew/Desktop/PCS/html email/stage_3.3_email_css_blocks.html",
+		"/home/matthew/Desktop/PCS/html email/stage_3.2_email_css_scaffold.html",
+		"/home/matthew/Desktop/PCS/html email/stage_2.3_email_html_combined.html",
+		"/home/matthew/Downloads/htmlemails/stage_2.2_email_html_blocks.html",
+		"/home/matthew/Downloads/htmlemails/stage_2.1_email_html_scaffold.html",
+		"/home/matthew/Downloads/htmlemails/stage_4.2_email_css_mobile.html",
+		"/home/matthew/Desktop/PCS/learnNode/server.js",
+		"/home/matthew/Desktop/PCS/learnNode/module.js",
+		"/home/matthew/Desktop/PCS/learnNode/htttp.js",
+		"/home/matthew/Desktop/PCS/learnNode/mymodule.js",
+		"/home/matthew/Desktop/PCS/learnNode/fileread.js",
+		"/home/matthew/.config/sublime-text-3/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/home/matthew/.config/sublime-text-3/Packages/JavaScript and jQuery API Completions/sublime-API-Completions-Package.sublime-settings",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW3/mattHw3.js",
+		"/home/matthew/Desktop/PCS/learnNode/fileread",
+		"/home/matthew/Desktop/PCS/jsHomework/hw4pic.ora",
+		"/home/matthew/Desktop/PCS/test-tts/app.js",
+		"/home/matthew/Desktop/PCS/test-tts/test.js",
+		"/home/matthew/Desktop/PCS/learnNode/myprogram.js",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-4/Crousem/README.txt",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW3/deque-template.js",
+		"/home/matthew/Desktop/WebDev/testing.js",
+		"/home/matthew/Desktop/WebDev/name3.js",
+		"/home/matthew/Desktop/WebDev/name2.js",
+		"/home/matthew/Desktop/WebDev/name.js",
+		"/home/matthew/Desktop/WebDev/index.js",
+		"/home/matthew/Desktop/WebDev/plus.js",
+		"/home/matthew/Desktop/PCS/jsClass/hw2/hw2/js/hw2.js",
+		"/home/matthew/Desktop/PCS/jsClass/jsn-sum14-1/hw1.js",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW3/deque1.js",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW1/solutionV-RomanNvms.js",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW2/HW-week2.md",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW3/HW3.md",
+		"/home/matthew/Desktop/PCS/retro.txt",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW3/solution-cards3.js",
+		"/home/matthew/.config/sublime-text-3/Packages/JSHint Gutter/.jshintrc",
+		"/home/matthew/Desktop/PCS/jsHomework/jsn-sum14-4/Crousem/hw4.js",
+		"/home/matthew/Desktop/PCS/jsClass/js-night/core-js-lessons/exercises/HW2/HW-week2.md",
+		"/home/matthew/Desktop/PCS/jsClass/js-night/core-js-lessons/exercises/HW2/cards2-template.js",
+		"/home/matthew/Desktop/PCS/js-night/core-js-lessons/exercises/HW1/solution6b-cardsVerify.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/base.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/style.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/index.html",
+		"/home/matthew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/jquery.bxslider.min.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/jquery.equal.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/jquery.fitvids.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/jquery.magnific.popup.min.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/jquery.min.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/modernizr.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/owl.carousel.min.js",
+		"/home/matthew/Desktop/PCS/jsClass/jsn-sum14-1/README.md",
+		"/home/matthew/Desktop/PCS/jsClass/jsn-sum14-1/template1a-cards.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/lib/retina.min.js",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/bxslider.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/font-awesome.min.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/magnific-popups.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/owl.carousel.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/css/lib/owl.theme.css",
+		"/home/matthew/Desktop/WebDev/portfolio/Portfolio/js/main.js",
+		"/home/matthew/Desktop/PCS/jsClass/hw2/hw2/js/js-night/hw2.2.js",
+		"/home/matthew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/matthew/Desktop/PCS/jsClass/js-night/core-js-lessons/exercises/HW2/pseudo-array-template.js",
+		"/home/matthew/.config/sublime-text-3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/home/matthew/Desktop/PCS/jsClass/hw2/hw1.js",
+		"/home/matthew/class/test.js",
+		"/home/matthew/.config/sublime-text-3/Packages/User/Node.sublime-build",
+		"/home/matthew/Desktop/PCS/Group-Project/testing.html",
+		"/home/matthew/Desktop/PCS/Group-Project/Css_Files/mattCSS.css",
+		"/home/matthew/Desktop/PCS/gitpractice/practice/index.html",
+		"/home/matthew/Desktop/PCS/gitpractice/practice/index.html.orig",
+		"/home/matthew/Desktop/PCS/projects/test.html",
+		"/home/matthew/Desktop/index.html",
+		"/home/matthew/Desktop/PCS/Group-Project/Css_Files/test.css",
+		"/home/matthew/Desktop/PCS/projects/pcs-primer-exercise/stylesheets/style.css",
+		"/home/matthew/Desktop/PCS/projects/pcs-primer-exercise/contacts.html",
+		"/home/matthew/Desktop/PCS/gitpractice/practice/prac.html",
+		"/home/matthew/Desktop/PCS/projects/pcs-primer-exercise/about.html",
+		"/home/matthew/Desktop/PCS/projects/pcs-primer-exercise/home.html",
+		"/home/matthew/Desktop/PCS/projects/bashTools/startBash.sh",
+		"/home/matthew/Desktop/PCS/Group-Project/matt.html",
+		"/home/matthew/Ubuntu One/projects/pcs-primer-exercise/home.html",
+		"/home/matthew/Ubuntu One/SublimeProjects/Testing2.html",
+		"/home/matthew/Ubuntu One/SublimeProjects/index.html"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"/home/matthew/Desktop/PCS/Capstone",
+			"/home/matthew/Desktop/PCS/Capstone/Capstone-Project",
+			"/home/matthew/Desktop/PCS/Capstone",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"db",
+			"current",
+			"node",
+			"database",
+			"x1y0",
+			"x0y0",
+			"textContent",
+			"this.",
+			"[O]",
+			"[X]",
+			"'[O][O][O]'",
+			"'[X][X][X]'",
+			"[X][X][X]",
+			"loginbutton",
+			"mktEditable",
+			"<div class=\"mktEditable\"",
+			"padding: .5em 0em .5em 0em",
+			"1em 0em 1em 0em",
+			"height",
+			"000000",
+			"collapese",
+			"get started",
+			"click",
+			"<a",
+			"img",
+			"get started",
+			"img",
+			"login",
+			"bgcolor",
+			"title",
+			"mktEditable",
+			"class",
+			"center",
+			"colapse",
+			"eight",
+			"weight",
+			"eight",
+			"ul",
+			"x",
+			"array",
+			"board",
+			"some",
+			"somecards",
+			"id",
+			"factory",
+			"makeCard",
+			"cardBox",
+			"alias",
+			"twelve col",
+			"twelve",
+			"MOMENTUM",
+			"intersection",
+			"merged",
+			"p",
+			"y",
+			"x",
+			"ul",
+			"Message",
+			"appt",
+			"apt",
+			"logo",
+			"header"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"value",
+			"",
+			"O",
+			"X",
+			"[O]",
+			"'XXX'",
+			"XXX",
+			"",
+			".2em 0em .2em 0em",
+			".5em 0em .5em 0em",
+			"X",
+			"this.array",
+			"board",
+			"array",
+			"ID",
+			"cardFactory",
+			"cardObj",
+			"cardBox",
+			"CM WebDevelopment",
+			"intersec",
+			"intersection",
+			"prop",
+			"objB",
+			"objA",
+			"Massage"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "capstone.sublime-project.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/work/class.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

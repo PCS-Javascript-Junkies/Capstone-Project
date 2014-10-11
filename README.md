@@ -1,6 +1,10 @@
 Capstone-Project
 ================
 
-This project was started on July 30th.
+The "Chose Your Own Adventure" app it still in production. To contribute fork the repo, and add a pull request. 
 
-It's still July 30...
+This app was built by:
+
+Matt Crouse
+Charity Heller
+Hanna Liebl
