@@ -17,6 +17,9 @@ var storyCollection = new StoryCollection();
 
 var LibraryView = Backbone.View.extend({
   el: '#app-home',
+  
+  //need to initialize data by pulling it done. 
+  //Needs to be done BEFORE the render.
     initialize: function () {
       storyCollection.fetch();
     },

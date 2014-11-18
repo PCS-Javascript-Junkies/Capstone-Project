@@ -1,12 +1,30 @@
+//**************************************************************//
+//          This document creates a database for                //
+//          the Portland Adventure app. It utilizes             //
+//          a tree structure to organize data, allowing         //
+//          the front end developer the freedom to get          //
+//          data when needed without frequent database calls    //
+//                                                              //
+//          section 1) Tool building                            //
+//          section 2) building the structure                   //
+//          section 3) populating Data                          //
+//                                                              //
+//**************************************************************//
 
 
+//**************************************************************//
+//          SECTION 1 TOOL BUILDING                             //
+//**************************************************************//
+              
 
+//create a root node.
 function QuestionTree() {
     this.root = null;
     this.current =null;
 }
 
-
+//build the tree architecture. This toolbox, contains the constructors
+//to build the top of the tree. 
 QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
     function Theme() {
         this.chillTheme = null;
@@ -35,6 +53,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
         this.outsideTree = null;
     }
 
+    //utilizes the tool box to build the top of the tree.
     this.root = new RootNode();
     this.current=this.root;
     this.root.insideTree = new Area();
@@ -43,7 +62,7 @@ QuestionTree.prototype.startTree = function(insideOutsideQ, AreaQ){
     this.root.outsideTree.theme = new Theme();
     };
 
-
+//tool box for the theme architecture.
 QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         function Node(){
             this.aaID = "List Head Node";
@@ -53,6 +72,8 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.next = null;
         }
 
+//build the theme architecture, hanging it off the top of the tree
+//already setup.
         if(inOrOut === "inside"){
             switch(id){
                 case "chill":
@@ -117,6 +138,8 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         }
     };
 
+//now hang questions off the themes. this tool box contains a constructor to build a theme
+//this also allows user input from the console. 
     QuestionTree.prototype.addToTheme = function (inOrOut, theme, title, type, qArray, bObj){
         var pointer;
         function Node() {
@@ -128,6 +151,7 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
             this.next= null;
         }
 
+//utilize the question tool box to hang questions off of the various themes. 
         if(inOrOut === "inside"){
             switch(theme){
                 case "chill":
@@ -200,6 +224,11 @@ QuestionTree.prototype.buildTheme = function (inOrOut, id, title){
         }
     },
 
+
+//**************************************************************//
+//          SECTION  2 BUILDING THE STRUCTURE                   //
+//**************************************************************//
+
 QuestionTree.prototype.initialize = function (){
        tree = new QuestionTree();
 
@@ -265,9 +294,9 @@ QuestionTree.prototype.initialize = function (){
 
 
 
-        /**
-         * Here is the Generated content block.
-         */
+//**************************************************************//
+//          SECTION 3 POULATING DATA                            //
+//**************************************************************//
 
 
          var inBar={

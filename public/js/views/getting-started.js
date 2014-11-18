@@ -8,17 +8,14 @@ var LocationChoiceView = require('./location-choice-view.js');
 var GettingStartedChoiceView = Backbone.View.extend({
   el: '#adventure-parent',
   events: {
-    //'click #location-se': 'clickSoutheast',
   },
+  // no need for the initialize because we are 
+  // specifically calling render in our server.js
   initialize: function () {
   },
   render: function () {
     $(this.el).html(gettingStartedTemplate);
   },
-  // load.LocationChoiceView: function () {
-  //   var locationChoiceView = new LocationChoiceView({model: this.model});
-  //   locationChoiceView.render();
-  // }
 });
 
 module.exports = GettingStartedChoiceView;

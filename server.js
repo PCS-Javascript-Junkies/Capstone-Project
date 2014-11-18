@@ -1,3 +1,4 @@
+// include all of our dependencies 
 var fs = require('fs');
 var express = require('express');
 var path = require('path');
@@ -8,27 +9,33 @@ var consolidate = require('consolidate');
 var Handlebars = require('handlebars');
 var Forecast = require('forecast.io');
 var util = require('util');
-// var forecaster = require('./forecast.js');
 
-//process.env(DB_KEY)
+
+//if we are on our dev systems with the db.key we will use that. Otherwise use the one
+//provided from the host
 var db = (require('orchestrate')(config.dbKey) || require('orchestrate')(process.env(DB_KEY)));
 
 var app = express();
+ 
+//http request logger Sometimes, while debugging your Web app
+//it can be useful to log HTTP traffic.
+//The body parser is used to process json. http://tinyurl.com/lbv7ezk
+//express static states where the static files are located. _dirname is a node global
+app.use(logger('dev')); 
+app.use(bodyParser.json()); 
+app.use(express.static(path.join(__dirname, 'public'))); 
 
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.engine('html', consolidate.handlebars);
-app.set('view engine', 'html');
-app.set('views', __dirname + '/server-templates');
+app.engine('html', consolidate.handlebars); //registers the template engine.
+app.set('view engine', 'html'); //maps the command html, to view engine
+app.set('views', __dirname + '/server-templates'); //maps the location of our views to "views"
 
 var partials = "./server-templates/partials/";
 fs.readdirSync(partials).forEach(function (file) {
   var source = fs.readFileSync(partials + file, "utf8"),
       partial = /(.+)\.html/.exec(file).pop();
 
-  Handlebars.registerPartial(partial, source);
+  Handlebars.registerPartial(partial, source); //registers a list of partials in handlebars for quick use
 });
 
 // express routes
